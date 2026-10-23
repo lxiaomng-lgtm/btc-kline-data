@@ -1,0 +1,32 @@
+name: Update BTC candles
+on:
+  schedule:
+    - cron: '0,15,30,45 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-btc.yml'
+      - 'scripts/update_btc.py'
+permissions:
+  contents: write
+concurrency:
+  group: btc-candle-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect, validate and publish latest.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_btc.py
+      - name: Retain success or failure receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: btc-update-${{ github.run_id }}-${{ github.run_attempt }}
+          path: run-report.json
+          retention-days: 30
