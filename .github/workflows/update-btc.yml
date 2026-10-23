@@ -1,7 +1,7 @@
 name: Update BTC candles
 on:
   schedule:
-    - cron: '0,15,30,45 * * * *'
+    - cron: '11,26,41,56 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Collect, validate and publish latest.json
