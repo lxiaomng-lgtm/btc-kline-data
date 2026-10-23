@@ -43,6 +43,13 @@ def main():
         endpoint=f'https://api.github.com/repos/{repo}/contents/latest.json'
         previous_meta=request_json(endpoint+'?ref=main',token=token)
         previous=json.loads(base64.b64decode(previous_meta['content']))
+        # Start runners four minutes early to absorb some scheduler/queue delay.
+        if os.getenv('GITHUB_EVENT_NAME')=='schedule':
+            target=int((time.time()+240)//900)*900
+            report['target_close_at']=bj(target)
+            while time.time()<target+1:
+                time.sleep(min(15,target+1-time.time()))
+        acquisition_started=time.time()
         for attempt in range(1,7):
             astart=time.time()
             try:
@@ -51,7 +58,7 @@ def main():
                 break
             except Exception as e:
                 report['attempts'].append({'request_started_at':bj(astart),'response_completed_at':bj(time.time()),'status':'failed','error':str(e)})
-                if attempt==6 or time.time()-started>65: raise
+                if attempt==6 or time.time()-acquisition_started>65: raise
                 time.sleep(3)
         result=copy.deepcopy(previous)
         result.update({'mode':'automatic_snapshot','symbol':'BITSTAMP:BTCUSD','interval_seconds':900,'timezone':'Asia/Shanghai','count':192,'snapshot_received_at':bj(received),'automatic_updates':not args.dry_run,'candles':[{'beijing_time':dt.datetime.fromtimestamp(t,TZ).strftime('%Y-%m-%d %H:%M:%S+08:00'),'timestamp':t,**{k:str(x[k]) for k in ('open','high','low','close','volume')}} for x,t in zip(rows,times)],'source_url':SOURCE,'request_started_at':bj(astart),'collected_at':bj(received),'latest_candle_close_at':bj(times[-1]+900),'update_status':'validated','collection_delay_seconds':round(received-(times[-1]+900),3),'validation':{'count':192,'duplicates':0,'missing':0,'abnormal':0},'workflow_run_url':f'https://github.com/{repo}/actions/runs/{os.getenv("GITHUB_RUN_ID", "local")}'})
