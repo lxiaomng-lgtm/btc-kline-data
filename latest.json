@@ -4,27 +4,9 @@
   "interval_seconds": 900,
   "timezone": "Asia/Shanghai",
   "count": 192,
-  "snapshot_received_at": "2026-10-26T04:35:01.694+08:00",
+  "snapshot_received_at": "2026-10-26T05:04:16.840+08:00",
   "automatic_updates": true,
   "candles": [
-    {
-      "beijing_time": "2026-10-24 04:30:00+08:00",
-      "timestamp": 1792787400,
-      "open": "81312.56",
-      "high": "81372.64",
-      "low": "81248.75",
-      "close": "81372.64",
-      "volume": "24.78428491"
-    },
-    {
-      "beijing_time": "2026-10-24 04:45:00+08:00",
-      "timestamp": 1792788300,
-      "open": "81377.64",
-      "high": "81393.91",
-      "low": "81304.43",
-      "close": "81304.44",
-      "volume": "9.52868579"
-    },
     {
       "beijing_time": "2026-10-24 05:00:00+08:00",
       "timestamp": 1792789200,
@@ -1734,19 +1716,37 @@
       "low": "80447.20",
       "close": "80447.20",
       "volume": "1.77772125"
+    },
+    {
+      "beijing_time": "2026-10-26 04:30:00+08:00",
+      "timestamp": 1792960200,
+      "open": "80447.20",
+      "high": "80464.98",
+      "low": "80378.02",
+      "close": "80378.03",
+      "volume": "7.91992300"
+    },
+    {
+      "beijing_time": "2026-10-26 04:45:00+08:00",
+      "timestamp": 1792961100,
+      "open": "80375.96",
+      "high": "80402.03",
+      "low": "80334.66",
+      "close": "80383.42",
+      "volume": "3.45536612"
     }
   ],
   "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=900&limit=192&exclude_current_candle=true",
-  "request_started_at": "2026-10-26T04:35:01.448+08:00",
-  "collected_at": "2026-10-26T04:35:01.694+08:00",
-  "latest_candle_close_at": "2026-10-26T04:30:00.000+08:00",
+  "request_started_at": "2026-10-26T05:04:16.064+08:00",
+  "collected_at": "2026-10-26T05:04:16.840+08:00",
+  "latest_candle_close_at": "2026-10-26T05:00:00.000+08:00",
   "update_status": "validated",
-  "collection_delay_seconds": 301.694,
+  "collection_delay_seconds": 256.841,
   "validation": {
     "count": 192,
     "duplicates": 0,
     "missing": 0,
     "abnormal": 0
   },
-  "workflow_run_url": "https://github.com/lxiaomng-lgtm/btc-kline-data/actions/runs/40231444047"
+  "workflow_run_url": "https://github.com/lxiaomng-lgtm/btc-kline-data/actions/runs/40233719973"
 }
