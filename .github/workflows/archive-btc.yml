@@ -9,6 +9,7 @@ on:
       - '.github/workflows/archive-btc.yml'
       - 'scripts/archive_btc.py'
       - 'scripts/analyze_history.py'
+      - 'scripts/backtest_baseline.py'
 permissions:
   contents: write
 concurrency:
@@ -22,6 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: python3 scripts/archive_btc.py
       - run: python3 scripts/analyze_history.py
+      - run: python3 scripts/backtest_baseline.py
       - name: Publish validated archive
         run: |
           git config user.name 'github-actions[bot]'
