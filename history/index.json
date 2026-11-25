@@ -1,0 +1,377 @@
+{
+  "source": "Bitstamp",
+  "pair": "BTC/USD",
+  "step": 900,
+  "timezone": "Asia/Shanghai",
+  "months": [
+    {
+      "path": "history/15m/2021-11.csv",
+      "count": 2880,
+      "first_open": 1635696000,
+      "last_close": 1638288000
+    },
+    {
+      "path": "history/15m/2021-12.csv",
+      "count": 2976,
+      "first_open": 1638288000,
+      "last_close": 1640966400
+    },
+    {
+      "path": "history/15m/2022-01.csv",
+      "count": 2976,
+      "first_open": 1640966400,
+      "last_close": 1643644800
+    },
+    {
+      "path": "history/15m/2022-02.csv",
+      "count": 2688,
+      "first_open": 1643644800,
+      "last_close": 1646064000
+    },
+    {
+      "path": "history/15m/2022-03.csv",
+      "count": 2976,
+      "first_open": 1646064000,
+      "last_close": 1648742400
+    },
+    {
+      "path": "history/15m/2022-04.csv",
+      "count": 2880,
+      "first_open": 1648742400,
+      "last_close": 1651334400
+    },
+    {
+      "path": "history/15m/2022-05.csv",
+      "count": 2976,
+      "first_open": 1651334400,
+      "last_close": 1654012800
+    },
+    {
+      "path": "history/15m/2022-06.csv",
+      "count": 2880,
+      "first_open": 1654012800,
+      "last_close": 1656604800
+    },
+    {
+      "path": "history/15m/2022-07.csv",
+      "count": 2976,
+      "first_open": 1656604800,
+      "last_close": 1659283200
+    },
+    {
+      "path": "history/15m/2022-08.csv",
+      "count": 2976,
+      "first_open": 1659283200,
+      "last_close": 1661961600
+    },
+    {
+      "path": "history/15m/2022-09.csv",
+      "count": 2880,
+      "first_open": 1661961600,
+      "last_close": 1664553600
+    },
+    {
+      "path": "history/15m/2022-10.csv",
+      "count": 2976,
+      "first_open": 1664553600,
+      "last_close": 1667232000
+    },
+    {
+      "path": "history/15m/2022-11.csv",
+      "count": 2880,
+      "first_open": 1667232000,
+      "last_close": 1669824000
+    },
+    {
+      "path": "history/15m/2022-12.csv",
+      "count": 2976,
+      "first_open": 1669824000,
+      "last_close": 1672502400
+    },
+    {
+      "path": "history/15m/2023-01.csv",
+      "count": 2976,
+      "first_open": 1672502400,
+      "last_close": 1675180800
+    },
+    {
+      "path": "history/15m/2023-02.csv",
+      "count": 2688,
+      "first_open": 1675180800,
+      "last_close": 1677600000
+    },
+    {
+      "path": "history/15m/2023-03.csv",
+      "count": 2976,
+      "first_open": 1677600000,
+      "last_close": 1680278400
+    },
+    {
+      "path": "history/15m/2023-04.csv",
+      "count": 2880,
+      "first_open": 1680278400,
+      "last_close": 1682870400
+    },
+    {
+      "path": "history/15m/2023-05.csv",
+      "count": 2976,
+      "first_open": 1682870400,
+      "last_close": 1685548800
+    },
+    {
+      "path": "history/15m/2023-06.csv",
+      "count": 2880,
+      "first_open": 1685548800,
+      "last_close": 1688140800
+    },
+    {
+      "path": "history/15m/2023-07.csv",
+      "count": 2976,
+      "first_open": 1688140800,
+      "last_close": 1690819200
+    },
+    {
+      "path": "history/15m/2023-08.csv",
+      "count": 2976,
+      "first_open": 1690819200,
+      "last_close": 1693497600
+    },
+    {
+      "path": "history/15m/2023-09.csv",
+      "count": 2880,
+      "first_open": 1693497600,
+      "last_close": 1696089600
+    },
+    {
+      "path": "history/15m/2023-10.csv",
+      "count": 2976,
+      "first_open": 1696089600,
+      "last_close": 1698768000
+    },
+    {
+      "path": "history/15m/2023-11.csv",
+      "count": 2880,
+      "first_open": 1698768000,
+      "last_close": 1701360000
+    },
+    {
+      "path": "history/15m/2023-12.csv",
+      "count": 2976,
+      "first_open": 1701360000,
+      "last_close": 1704038400
+    },
+    {
+      "path": "history/15m/2024-01.csv",
+      "count": 2976,
+      "first_open": 1704038400,
+      "last_close": 1706716800
+    },
+    {
+      "path": "history/15m/2024-02.csv",
+      "count": 2784,
+      "first_open": 1706716800,
+      "last_close": 1709222400
+    },
+    {
+      "path": "history/15m/2024-03.csv",
+      "count": 2976,
+      "first_open": 1709222400,
+      "last_close": 1711900800
+    },
+    {
+      "path": "history/15m/2024-04.csv",
+      "count": 2880,
+      "first_open": 1711900800,
+      "last_close": 1714492800
+    },
+    {
+      "path": "history/15m/2024-05.csv",
+      "count": 2976,
+      "first_open": 1714492800,
+      "last_close": 1717171200
+    },
+    {
+      "path": "history/15m/2024-06.csv",
+      "count": 2880,
+      "first_open": 1717171200,
+      "last_close": 1719763200
+    },
+    {
+      "path": "history/15m/2024-07.csv",
+      "count": 2976,
+      "first_open": 1719763200,
+      "last_close": 1722441600
+    },
+    {
+      "path": "history/15m/2024-08.csv",
+      "count": 2976,
+      "first_open": 1722441600,
+      "last_close": 1725120000
+    },
+    {
+      "path": "history/15m/2024-09.csv",
+      "count": 2880,
+      "first_open": 1725120000,
+      "last_close": 1727712000
+    },
+    {
+      "path": "history/15m/2024-10.csv",
+      "count": 2976,
+      "first_open": 1727712000,
+      "last_close": 1730390400
+    },
+    {
+      "path": "history/15m/2024-11.csv",
+      "count": 2880,
+      "first_open": 1730390400,
+      "last_close": 1732982400
+    },
+    {
+      "path": "history/15m/2024-12.csv",
+      "count": 2976,
+      "first_open": 1732982400,
+      "last_close": 1735660800
+    },
+    {
+      "path": "history/15m/2025-01.csv",
+      "count": 2976,
+      "first_open": 1735660800,
+      "last_close": 1738339200
+    },
+    {
+      "path": "history/15m/2025-02.csv",
+      "count": 2688,
+      "first_open": 1738339200,
+      "last_close": 1740758400
+    },
+    {
+      "path": "history/15m/2025-03.csv",
+      "count": 2976,
+      "first_open": 1740758400,
+      "last_close": 1743436800
+    },
+    {
+      "path": "history/15m/2025-04.csv",
+      "count": 2880,
+      "first_open": 1743436800,
+      "last_close": 1746028800
+    },
+    {
+      "path": "history/15m/2025-05.csv",
+      "count": 2976,
+      "first_open": 1746028800,
+      "last_close": 1748707200
+    },
+    {
+      "path": "history/15m/2025-06.csv",
+      "count": 2880,
+      "first_open": 1748707200,
+      "last_close": 1751299200
+    },
+    {
+      "path": "history/15m/2025-07.csv",
+      "count": 2976,
+      "first_open": 1751299200,
+      "last_close": 1753977600
+    },
+    {
+      "path": "history/15m/2025-08.csv",
+      "count": 2976,
+      "first_open": 1753977600,
+      "last_close": 1756656000
+    },
+    {
+      "path": "history/15m/2025-09.csv",
+      "count": 2880,
+      "first_open": 1756656000,
+      "last_close": 1759248000
+    },
+    {
+      "path": "history/15m/2025-10.csv",
+      "count": 2976,
+      "first_open": 1759248000,
+      "last_close": 1761926400
+    },
+    {
+      "path": "history/15m/2025-11.csv",
+      "count": 2880,
+      "first_open": 1761926400,
+      "last_close": 1764518400
+    },
+    {
+      "path": "history/15m/2025-12.csv",
+      "count": 2976,
+      "first_open": 1764518400,
+      "last_close": 1767196800
+    },
+    {
+      "path": "history/15m/2026-01.csv",
+      "count": 2976,
+      "first_open": 1767196800,
+      "last_close": 1769875200
+    },
+    {
+      "path": "history/15m/2026-02.csv",
+      "count": 2688,
+      "first_open": 1769875200,
+      "last_close": 1772294400
+    },
+    {
+      "path": "history/15m/2026-03.csv",
+      "count": 2976,
+      "first_open": 1772294400,
+      "last_close": 1774972800
+    },
+    {
+      "path": "history/15m/2026-04.csv",
+      "count": 2880,
+      "first_open": 1774972800,
+      "last_close": 1777564800
+    },
+    {
+      "path": "history/15m/2026-05.csv",
+      "count": 2976,
+      "first_open": 1777564800,
+      "last_close": 1780243200
+    },
+    {
+      "path": "history/15m/2026-06.csv",
+      "count": 2880,
+      "first_open": 1780243200,
+      "last_close": 1782835200
+    },
+    {
+      "path": "history/15m/2026-07.csv",
+      "count": 2976,
+      "first_open": 1782835200,
+      "last_close": 1785513600
+    },
+    {
+      "path": "history/15m/2026-08.csv",
+      "count": 2976,
+      "first_open": 1785513600,
+      "last_close": 1788192000
+    },
+    {
+      "path": "history/15m/2026-09.csv",
+      "count": 2880,
+      "first_open": 1788192000,
+      "last_close": 1790784000
+    },
+    {
+      "path": "history/15m/2026-10.csv",
+      "count": 2976,
+      "first_open": 1790784000,
+      "last_close": 1793462400
+    },
+    {
+      "path": "history/15m/2026-11.csv",
+      "count": 2340,
+      "first_open": 1793462400,
+      "last_close": 1795568400
+    }
+  ],
+  "count": 177636,
+  "latest_close": 1795568400,
+  "validated_at": "2026-11-25T09:07:14.689583+08:00"
+}
