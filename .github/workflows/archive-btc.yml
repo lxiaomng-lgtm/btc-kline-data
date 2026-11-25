@@ -8,6 +8,7 @@ on:
     paths:
       - '.github/workflows/archive-btc.yml'
       - 'scripts/archive_btc.py'
+      - 'scripts/analyze_history.py'
 permissions:
   contents: write
 concurrency:
@@ -20,6 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/archive_btc.py
+      - run: python3 scripts/analyze_history.py
       - name: Publish validated archive
         run: |
           git config user.name 'github-actions[bot]'
