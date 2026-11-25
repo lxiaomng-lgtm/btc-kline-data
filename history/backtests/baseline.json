@@ -1,0 +1,180 @@
+{
+  "source": "Bitstamp daily Beijing boundaries",
+  "initial_usd": 100000,
+  "one_way_cost": 0.0015,
+  "execution": "prior closed daily signal, next daily open; terminal liquidation cost; no leverage or cash interest",
+  "limitations": "Historical test is not prospective; daily-close drawdown only; fixed10 is a new benchmark, not existing B ledger; no ETF, macro or Chan rules; no parameter optimization.",
+  "results": {
+    "development": {
+      "hold": {
+        "start": "2022-05-20",
+        "end": "2023-12-31",
+        "days": 591,
+        "final_usd": 139376.46,
+        "net_return_pct": 39.376,
+        "annualized_pct": 22.775,
+        "max_daily_close_drawdown_pct": 49.755,
+        "orders": 1,
+        "cost_usd_including_terminal_liquidation": 359.15
+      },
+      "fixed10": {
+        "start": "2022-05-20",
+        "end": "2023-12-31",
+        "days": 591,
+        "final_usd": 105204.49,
+        "net_return_pct": 5.204,
+        "annualized_pct": 3.185,
+        "max_daily_close_drawdown_pct": 5.866,
+        "orders": 591,
+        "cost_usd_including_terminal_liquidation": 166.52
+      },
+      "sma200": {
+        "start": "2022-05-20",
+        "end": "2023-12-31",
+        "days": 591,
+        "final_usd": 182683.43,
+        "net_return_pct": 82.683,
+        "annualized_pct": 45.122,
+        "max_daily_close_drawdown_pct": 20.217,
+        "orders": 5,
+        "cost_usd_including_terminal_liquidation": 1161.59
+      },
+      "sma50_200": {
+        "start": "2022-05-20",
+        "end": "2023-12-31",
+        "days": 591,
+        "final_usd": 139286.45,
+        "net_return_pct": 39.286,
+        "annualized_pct": 22.726,
+        "max_daily_close_drawdown_pct": 20.217,
+        "orders": 3,
+        "cost_usd_including_terminal_liquidation": 701.29
+      },
+      "breakout20_10": {
+        "start": "2022-05-20",
+        "end": "2023-12-31",
+        "days": 591,
+        "final_usd": 96026.23,
+        "net_return_pct": -3.974,
+        "annualized_pct": -2.475,
+        "max_daily_close_drawdown_pct": 40.131,
+        "orders": 28,
+        "cost_usd_including_terminal_liquidation": 3145.07
+      }
+    },
+    "validation": {
+      "hold": {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "days": 366,
+        "final_usd": 223802.24,
+        "net_return_pct": 123.802,
+        "annualized_pct": 123.429,
+        "max_daily_close_drawdown_pct": 26.234,
+        "orders": 1,
+        "cost_usd_including_terminal_liquidation": 485.98
+      },
+      "fixed10": {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "days": 366,
+        "final_usd": 109463.84,
+        "net_return_pct": 9.464,
+        "annualized_pct": 9.443,
+        "max_daily_close_drawdown_pct": 2.606,
+        "orders": 366,
+        "cost_usd_including_terminal_liquidation": 132.75
+      },
+      "sma200": {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "days": 366,
+        "final_usd": 180608.43,
+        "net_return_pct": 80.608,
+        "annualized_pct": 80.388,
+        "max_daily_close_drawdown_pct": 26.878,
+        "orders": 11,
+        "cost_usd_including_terminal_liquidation": 2400.78
+      },
+      "sma50_200": {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "days": 366,
+        "final_usd": 197372.81,
+        "net_return_pct": 97.373,
+        "annualized_pct": 97.095,
+        "max_daily_close_drawdown_pct": 25.274,
+        "orders": 3,
+        "cost_usd_including_terminal_liquidation": 872.81
+      },
+      "breakout20_10": {
+        "start": "2024-01-01",
+        "end": "2024-12-31",
+        "days": 366,
+        "final_usd": 149092.16,
+        "net_return_pct": 49.092,
+        "annualized_pct": 48.969,
+        "max_daily_close_drawdown_pct": 28.598,
+        "orders": 20,
+        "cost_usd_including_terminal_liquidation": 3704.42
+      }
+    },
+    "historical_test": {
+      "hold": {
+        "start": "2025-01-01",
+        "end": "2026-11-24",
+        "days": 693,
+        "final_usd": 62384.73,
+        "net_return_pct": -37.615,
+        "annualized_pct": -22.018,
+        "max_daily_close_drawdown_pct": 53.409,
+        "orders": 1,
+        "cost_usd_including_terminal_liquidation": 243.49
+      },
+      "fixed10": {
+        "start": "2025-01-01",
+        "end": "2026-11-24",
+        "days": 693,
+        "final_usd": 96642.55,
+        "net_return_pct": -3.357,
+        "annualized_pct": -1.784,
+        "max_daily_close_drawdown_pct": 6.785,
+        "orders": 693,
+        "cost_usd_including_terminal_liquidation": 174.33
+      },
+      "sma200": {
+        "start": "2025-01-01",
+        "end": "2026-11-24",
+        "days": 693,
+        "final_usd": 83529.88,
+        "net_return_pct": -16.47,
+        "annualized_pct": -9.049,
+        "max_daily_close_drawdown_pct": 30.119,
+        "orders": 20,
+        "cost_usd_including_terminal_liquidation": 2579.77
+      },
+      "sma50_200": {
+        "start": "2025-01-01",
+        "end": "2026-11-24",
+        "days": 693,
+        "final_usd": 55896.0,
+        "net_return_pct": -44.104,
+        "annualized_pct": -26.403,
+        "max_daily_close_drawdown_pct": 49.733,
+        "orders": 5,
+        "cost_usd_including_terminal_liquidation": 715.16
+      },
+      "breakout20_10": {
+        "start": "2025-01-01",
+        "end": "2026-11-24",
+        "days": 693,
+        "final_usd": 108196.45,
+        "net_return_pct": 8.196,
+        "annualized_pct": 4.239,
+        "max_daily_close_drawdown_pct": 24.451,
+        "orders": 26,
+        "cost_usd_including_terminal_liquidation": 3969.91
+      }
+    }
+  }
+}
