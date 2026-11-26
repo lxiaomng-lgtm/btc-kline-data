@@ -2,10 +2,11 @@ name: BTC historical strategy research
 on:
   workflow_dispatch:
   push:
-    branches: [main, research-btc]
+    branches: [main, research-btc, research-mtf]
     paths:
       - '.github/workflows/research-btc.yml'
       - 'scripts/research_*.py'
+      - 'scripts/multiframe_btc.py'
   workflow_run:
     workflows: ['Archive BTC history']
     types: [completed]
@@ -36,8 +37,15 @@ jobs:
         id: derivatives
         continue-on-error: true
         run: python3 scripts/research_derivatives.py
+      - name: Run daily, 3h and 45m strategy research
+        id: multiframe
+        continue-on-error: true
+        env:
+          DERIVATIVES_OUTCOME: ${{ steps.derivatives.outcome }}
+        run: python3 scripts/multiframe_btc.py
       - name: Publish completed research outputs
         env:
+          MULTIFRAME_OUTCOME: ${{ steps.multiframe.outcome }}
           ETF_OUTCOME: ${{ steps.etf.outcome }}
           DERIVATIVES_OUTCOME: ${{ steps.derivatives.outcome }}
         run: |
@@ -53,6 +61,12 @@ jobs:
           if [ "$DERIVATIVES_OUTCOME" = success ]; then
             git add research/market.json research/market_hourly.csv research/funding.csv research/funding_okx.csv research/liquidation_sample.json
           fi
+          if [ "$MULTIFRAME_OUTCOME" = success ]; then
+            git add research/multiframe/
+            if [ -d research/multiframe_observations ]; then
+              git add research/multiframe_observations/
+            fi
+          fi
           git restore --worktree -- research/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Publish BTC research results'
@@ -66,5 +80,5 @@ jobs:
           done
           exit 1
       - name: Flag data source failures
-        if: steps.etf.outcome == 'failure' || steps.derivatives.outcome == 'failure'
+        if: steps.etf.outcome == 'failure' || steps.derivatives.outcome == 'failure' || steps.multiframe.outcome == 'failure'
         run: exit 1
