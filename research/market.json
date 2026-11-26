@@ -1,8 +1,8 @@
 {
-  "observed_at_utc": "2026-11-26T08:19:03+00:00",
+  "observed_at_utc": "2026-11-26T07:03:05+00:00",
   "coverage_utc": {
     "from": "2026-08-28T00:00:00+00:00",
-    "through": "2026-11-26T08:00:00+00:00"
+    "through": "2026-11-26T07:00:00+00:00"
   },
   "definitions": {
     "oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
@@ -13,76 +13,76 @@
   },
   "coverage": {
     "futures_delta_btc": {
-      "n": 2160,
-      "missing": 8,
+      "n": 2136,
+      "missing": 31,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "last": "2026-11-24T23:00:00+00:00"
     },
     "futures_volume_btc": {
-      "n": 2160,
-      "missing": 8,
+      "n": 2136,
+      "missing": 31,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "last": "2026-11-24T23:00:00+00:00"
     },
     "cvd_segment_btc": {
-      "n": 2160,
-      "missing": 8,
+      "n": 2136,
+      "missing": 31,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "last": "2026-11-24T23:00:00+00:00"
     },
     "oi_btc": {
       "n": 2159,
-      "missing": 9,
+      "missing": 8,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-25T23:00:00+00:00"
     },
     "oi_usdt": {
       "n": 2159,
-      "missing": 9,
+      "missing": 8,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-25T23:00:00+00:00"
     },
     "spot_binance_close_usdt": {
-      "n": 2168,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T07:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_close_usd": {
-      "n": 2168,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T07:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "bitstamp_close_usd": {
-      "n": 2168,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T07:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_vs_binance_bps": {
-      "n": 2168,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T07:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2168,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T07:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     }
   },
   "funding_events_last_90_days": 195,
-  "okx_funding_events_last_90_days": 272,
+  "okx_funding_events_last_90_days": 271,
   "liquidation_hours_verified": 6,
   "liquidation_trades_flagged": 2,
   "next_hour_price_study": {
     "futures_delta_btc": {
-      "n": 2160,
-      "pearson_r": 0.02275,
-      "mean_return_pct": -0.01144,
-      "up_pct": 48.843
+      "n": 2136,
+      "pearson_r": 0.0265,
+      "mean_return_pct": -0.01228,
+      "up_pct": 48.783
     },
     "oi_btc": {
       "n": 2157,
@@ -91,16 +91,16 @@
       "up_pct": 48.864
     },
     "coinbase_vs_binance_bps": {
-      "n": 2167,
-      "pearson_r": -0.01466,
-      "mean_return_pct": -0.01136,
-      "up_pct": 48.823
+      "n": 2166,
+      "pearson_r": -0.01469,
+      "mean_return_pct": -0.01134,
+      "up_pct": 48.846
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2167,
-      "pearson_r": -0.00072,
-      "mean_return_pct": -0.01136,
-      "up_pct": 48.823
+      "n": 2166,
+      "pearson_r": -0.0007,
+      "mean_return_pct": -0.01134,
+      "up_pct": 48.846
     },
     "funding_rate": {
       "n": 195,
@@ -123,11 +123,13 @@
   },
   "research_caveat": "Descriptive only. first_observed_utc records when the row was first stored, and may precede later field backfills. Historical file arrival times are unknown and Deribit may delay public liquidation flags. These inputs were not used in simulated signals.",
   "source_error_counts": {
+    "futures": 1,
     "funding_api": 1,
     "oi_api": 1,
     "futures_api": 1
   },
   "source_error_examples": {
+    "('futures', 1795564800)": "HTTP Error 404: Not Found",
     "('funding_api', 0)": "HTTP Error 451: ",
     "('oi_api', 0)": "HTTP Error 451: ",
     "('futures_api', 0)": "HTTP Error 451: "
