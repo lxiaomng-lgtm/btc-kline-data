@@ -3,7 +3,7 @@
     "recent": "https://farside.co.uk/btc/",
     "history": "https://farside.co.uk/bitcoin-etf-flow-all-data/"
   },
-  "observed_at": "2026-11-26T07:01:06.793472+00:00",
+  "observed_at": "2026-11-26T07:03:04.890300+00:00",
   "from": "2024-01-11",
   "through": "2026-11-25",
   "counts": {
@@ -16,7 +16,7 @@
     "date": "2026-11-25",
     "total_usd_m": -453.0
   },
-  "rounding": "Tolerance is 0.05 USDm per displayed numeric fund plus 0.05 USDm for Total. Dash remains blank; only the two pre-listing exceptions can qualify as complete.",
+  "rounding": "FINAL requires exact displayed sums and two matching pages. The historical-only tolerance is 0.05 USDm per numeric fund plus 0.05 USDm for Total. Dash remains blank; only the pre-listing exceptions can qualify as complete.",
   "same_window": "09:30 to 16:00 fixed New York clock window, including early-close days. Descriptive, no assumed availability.",
   "forward_window": "Entry at 00:00 UTC session date +2 calendar days, hold 24h. Using revised history without original publish timestamps. Descriptive only; gross price moves without trades.",
   "all_years": {
@@ -174,7 +174,7 @@
     }
   },
   "page_sha256": {
-    "recent": "8513885fbe5ab9198fc8c8d8329a49d7011312f63bb237b88dd01874f83e5e3d",
-    "history": "3f1d3c7ec2b8507737b1a3b3b96ea69ee62796f464dfd1723417f63fa8bff853"
+    "recent": "788bc23f9967207277dc5d3b389f319918758c6f2171d239b230ac722ba1a185",
+    "history": "5cb238bd1eb57b07967843ae0e0705960934d1806bd6f6e1c3831c56333bfa11"
   }
 }
