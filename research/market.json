@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-11-26T06:54:00+00:00",
+  "observed_at_utc": "2026-11-26T06:56:42+00:00",
   "coverage_utc": {
     "from": "2026-08-28T00:00:00+00:00",
     "through": "2026-11-26T06:00:00+00:00"
@@ -7,7 +7,7 @@
   "definitions": {
     "oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
     "cvd": "Binance USD-M BTCUSDT hourly signed CVD increment = 2*taker_buy_base - total_base; the cumulative CVD resets after a missing hour",
-    "funding": "Binance USD-M BTCUSDT funding settlement rates, sourced from API and monthly archive",
+    "funding": "Separate Binance BTCUSDT and OKX BTC-USDT-SWAP settled funding rates. Binance archive lags when its API rejects the runner.",
     "liquidation": "Deribit BTC-PERPETUAL trades bearing liquidation flags; fixed 00:00 and 12:00 UTC one-hour samples, not full-market liquidations",
     "premium": "Matched UTC hourly Coinbase BTC/USD close vs Binance spot BTC/USDT (includes USD/USDT basis) and vs Bitstamp BTC/USD"
   },
@@ -43,10 +43,10 @@
       "last": "2026-11-25T23:00:00+00:00"
     },
     "spot_binance_close_usdt": {
-      "n": 2160,
-      "missing": 6,
+      "n": 2166,
+      "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "last": "2026-11-26T05:00:00+00:00"
     },
     "coinbase_close_usd": {
       "n": 2166,
@@ -61,10 +61,10 @@
       "last": "2026-11-26T05:00:00+00:00"
     },
     "coinbase_vs_binance_bps": {
-      "n": 2160,
-      "missing": 6,
+      "n": 2166,
+      "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "last": "2026-11-26T05:00:00+00:00"
     },
     "coinbase_vs_bitstamp_bps": {
       "n": 2166,
@@ -74,6 +74,7 @@
     }
   },
   "funding_events_last_90_days": 195,
+  "okx_funding_events_last_90_days": 271,
   "liquidation_hours_verified": 6,
   "liquidation_trades_flagged": 2,
   "next_hour_price_study": {
@@ -90,10 +91,10 @@
       "up_pct": 48.864
     },
     "coinbase_vs_binance_bps": {
-      "n": 2160,
-      "pearson_r": -0.01445,
-      "mean_return_pct": -0.01144,
-      "up_pct": 48.843
+      "n": 2165,
+      "pearson_r": -0.01509,
+      "mean_return_pct": -0.01115,
+      "up_pct": 48.868
     },
     "coinbase_vs_bitstamp_bps": {
       "n": 2165,
@@ -107,6 +108,12 @@
       "mean_return_pct": -0.03429,
       "up_pct": 46.667
     },
+    "okx_funding_rate": {
+      "n": 271,
+      "pearson_r": 0.01331,
+      "mean_return_pct": -0.03247,
+      "up_pct": 44.28
+    },
     "liquidation_sample": {
       "n": 6,
       "pearson_r": -0.29533,
@@ -119,14 +126,12 @@
     "futures": 1,
     "funding_api": 1,
     "oi_api": 1,
-    "futures_api": 1,
-    "spot_api": 1
+    "futures_api": 1
   },
   "source_error_examples": {
     "('futures', 1795564800)": "HTTP Error 404: Not Found",
     "('funding_api', 0)": "HTTP Error 451: ",
     "('oi_api', 0)": "HTTP Error 451: ",
-    "('futures_api', 0)": "HTTP Error 451: ",
-    "('spot_api', 0)": "HTTP Error 451: "
+    "('futures_api', 0)": "HTTP Error 451: "
   }
 }
