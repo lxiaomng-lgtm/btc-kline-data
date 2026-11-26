@@ -30,6 +30,10 @@ def main():
     now=dt.datetime.now(TZ)
     end=int(now.timestamp())//STEP*STEP
     start=dt.datetime(now.year-5,now.month,1,tzinfo=TZ)
+    archived = sorted(ROOT.glob("????-??.csv"))
+    if archived:
+        earliest = dt.datetime.strptime(archived[0].stem, "%Y-%m").replace(tzinfo=TZ)
+        start = min(start, earliest)
     month=start
     manifest=[]
     while int(month.timestamp())<end:

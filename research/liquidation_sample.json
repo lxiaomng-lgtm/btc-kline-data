@@ -1,0 +1,58 @@
+{
+  "2026-11-23T00:00:00+00:00": {
+    "through_exclusive": "2026-11-23T01:00:00+00:00",
+    "first_observed_utc": "2026-11-26T06:54:00+00:00",
+    "verified_trades": 47009,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
+  },
+  "2026-11-23T12:00:00+00:00": {
+    "through_exclusive": "2026-11-23T13:00:00+00:00",
+    "first_observed_utc": "2026-11-26T06:54:00+00:00",
+    "verified_trades": 34878,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
+  },
+  "2026-11-24T00:00:00+00:00": {
+    "through_exclusive": "2026-11-24T01:00:00+00:00",
+    "first_observed_utc": "2026-11-26T06:54:00+00:00",
+    "verified_trades": 32805,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
+  },
+  "2026-11-24T12:00:00+00:00": {
+    "through_exclusive": "2026-11-24T13:00:00+00:00",
+    "first_observed_utc": "2026-11-26T06:54:00+00:00",
+    "verified_trades": 42753,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
+  },
+  "2026-11-25T00:00:00+00:00": {
+    "through_exclusive": "2026-11-25T01:00:00+00:00",
+    "first_observed_utc": "2026-11-26T06:54:00+00:00",
+    "verified_trades": 29269,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
+  },
+  "2026-11-25T12:00:00+00:00": {
+    "through_exclusive": "2026-11-25T13:00:00+00:00",
+    "first_observed_utc": "2026-11-26T06:54:00+00:00",
+    "verified_trades": 43684,
+    "flags": {
+      "T": 2
+    },
+    "liquidated_trade_usd": 5000.0,
+    "buy_trade_usd": 5000.0,
+    "sell_trade_usd": 0.0
+  }
+}
