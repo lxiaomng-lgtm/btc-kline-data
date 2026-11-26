@@ -512,7 +512,7 @@ def sweep(points, opens, report_path):
     return cut, static, stresses, folds, rollup, evaluate
 
 
-def shadow(points, through):
+def shadow(points, through, paper=False):
     if os.getenv("GITHUB_REF_NAME") != "main":
         return None
     now = int(datetime.now(TZ).timestamp())
@@ -520,10 +520,13 @@ def shadow(points, through):
     t = point[0]
     if not 0 <= now-t <= M45+STEP or t > through:
         return None
-    path = OUT / "multiframe_shadow" / (datetime.fromtimestamp(t, TZ).strftime("%Y-%m-%dT%H%M")+".json")
+    folder = OUT / "multiframe_shadow"
+    if paper:
+        folder = folder / "paper_signals"
+    path = folder / (datetime.fromtimestamp(t, TZ).strftime("%Y-%m-%dT%H%M")+".json")
     if path.exists():
         return path
-    path.parent.mkdir(exist_ok=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
     rules = [Rule(f, bear) for f in FAMILIES for bear in ("ban", "bounce")
              if bear == "ban" or f not in ("daily", "3h_45m")]
     report = {"signal_close_bjt": stamp(t), "captured_at_bjt": stamp(now),
@@ -532,6 +535,9 @@ def shadow(points, through):
               "daily_regime": point[6], "etf_total_musd": point[9], "derivatives_multiplier": point[10],
               "run_id": os.getenv("GITHUB_RUN_ID"), "source_sha256": sha256(Path(__file__).read_bytes()).hexdigest(),
               "targets": {r.key: raw_target(r, point) for r in rules}}
+    if paper:
+        report["targets"].update({"daily:ban:0.20:signal": raw_target(Rule("daily", cap=.20), point),
+                                  "buy_hold_10": .10, "cash": 0.})
     write_json(path, report)
     return path
 
@@ -553,6 +559,7 @@ def main():
     points = features(rows)
     if args.shadow_only:
         print("Shadow observation:", shadow(points, through), flush=True)
+        print("Paper observation:", shadow(points, through, True), flush=True)
         return
     # Prefix reruns must yield byte-equivalent feature state before each cutoff.
     for length in (len(rows)//2, len(rows)-160):
