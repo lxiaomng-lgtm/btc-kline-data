@@ -5,7 +5,6 @@ import os
 import re
 import time
 from datetime import datetime
-from decimal import Decimal
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -16,7 +15,7 @@ TAKER = .004
 SLIPPAGE = .0005
 START = 10_000.
 RULES = ("daily:ban:0.10:signal", "daily:ban:0.20:signal", "three:ban:0.10:signal",
-         "three_etf:ban:0.10:signal", "three_etf_derivatives:ban:0.10:signal")
+         "three_etf:ban:0.10:signal", "three_etf_derivatives:ban:0.10:signal", "buy_hold_10", "cash")
 ROOT = OUT/"paper_edge"
 
 
@@ -92,7 +91,7 @@ def main():
     run=os.environ["GITHUB_RUN_ID"]
     # The workflow already pushed the immutable signal and fast-forwarded the checkout.
     matches=[]
-    for path in sorted((OUT/"multiframe_shadow").glob("*.json"),reverse=True)[:3]:
+    for path in sorted((OUT/"multiframe_shadow"/"paper_signals").glob("*.json"),reverse=True)[:3]:
         doc=json.loads(path.read_text())
         if str(doc["run_id"])==run:
             matches.append((path,doc))
@@ -125,8 +124,14 @@ def main():
         print("Signal too old for a paper execution")
         return
     quote, errors=next_book(verified)
-    targets={name:doc["targets"].get(name,2*doc["targets"][RULES[0]]) for name in RULES}
-    accounts={name:account_state(prior.get(name,zero),value,quote) for name,value in targets.items()}
+    targets={name:doc["targets"][name] for name in RULES}
+    accounts={}
+    for name,value in targets.items():
+        previous=prior.get(name,zero)
+        if quote and previous["position_btc"]>0 and name=="buy_hold_10":
+            mid=(quote["bid"]+quote["ask"])/2
+            value=previous["position_btc"]*mid/(previous["cash_usd"]+previous["position_btc"]*mid)
+        accounts[name]=account_state(previous,value,quote)
     write_json(journal,{"run_id":run,"signal_file":str(path),"signal_at":doc["signal_close_bjt"],
               "git_publication_commit_at":committed_at,"confirmed_published_at":stamp(verified),
               "publication_commit":commit["sha"],"signal_blob":observed["sha"],
