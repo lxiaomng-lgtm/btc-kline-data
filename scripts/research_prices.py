@@ -5,6 +5,8 @@ import json
 from bisect import bisect_left, bisect_right
 from collections import Counter, defaultdict, deque
 from datetime import datetime, timedelta
+from hashlib import sha256
+from os import getenv
 from decimal import Decimal
 from itertools import groupby
 from pathlib import Path
@@ -299,11 +301,20 @@ def multiframe_targets(daily, six_hour, daily_signals, six_hour_signals):
 def main():
     OUT.mkdir(exist_ok=True)
     rows, audit = load_prices()
+    tail = OUT / "bitstamp_tail_15m.csv"
+    tmp_tail = tail.with_suffix(".tmp")
+    with tmp_tail.open("w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(FIELDS)
+        for t, *values in rows[audit["archived_bars"]:]:
+            writer.writerow((t, stamp(t), *values))
+    tmp_tail.replace(tail)
     report = {"audit": audit, "cost_per_side": COSTS,
               "execution": "Prior completed bar target; next open, long-only cash/spot, paid terminal liquidation. Drawdown at each strategy bar close including liquidation. Fixed10 rebalances each bar. Costs include assumed fees plus slippage, not taxes.",
               "split_note": "Historical holdout begins 2025. This is retrospective, not prospective. Validation and holdout start flat. Price rules fixed across costs; do not select models from the holdout table.",
               "periods": {}}
     six_hour, six_hour_signals = None, None
+    prospective = None
     for name, period in PERIODS.items():
         bars = list(aggregate(rows, period))
         dates = [local(t).strftime("%Y-%m-%d") for t, *_ in bars]
@@ -314,6 +325,7 @@ def main():
             six_hour, six_hour_signals = bars, targets
         if name == "1d":
             targets["combined_mtf"] = multiframe_targets(bars, six_hour, targets, six_hour_signals)
+            prospective = (end(bars[-1][0], period), regime, targets["regime"][-1])
         # A prefix run must emit the exact same signals as the same segment of the full run.
         for cutoff in (validation, holdout, len(bars)-7):
             prefix, _, _ = signals(bars[:cutoff], name)
@@ -358,7 +370,26 @@ def main():
     report["five_year_descriptive_statistics"] = {"from": stamp(seasonal_start),
                                                    "through_exclusive": stamp(seasonal_stop), **season}
     write_json(OUT / "prices.json", report)
+    if getenv("GITHUB_ACTIONS") == "true" and getenv("GITHUB_REF_NAME") == "main":
+        seal_shadow(*prospective, audit)
     print(json.dumps(audit, ensure_ascii=False))
+
+
+def seal_shadow(source_close, regime, target, audit):
+    now = datetime.now(TZ)
+    if now - local(source_close) > timedelta(hours=24):
+        raise ValueError("Daily source bar is stale for shadow observation")
+    log = OUT / "shadow_signals"
+    log.mkdir(exist_ok=True)
+    path = log / f"{local(source_close).date()}.json"
+    if path.exists():
+        return
+    write_json(path, {"observed_at_bjt": now.isoformat(), "closed_daily_bar_at_bjt": stamp(source_close),
+                      "regime": regime, "target_spot_weight": target,
+                      "source_data_through": audit["through_close"],
+                      "code_sha256": sha256(Path(__file__).read_bytes()).hexdigest(),
+                      "pipeline_run_id": getenv("GITHUB_RUN_ID"),
+                      "purpose": "Prospective research observation. No fills and no ledger activity."})
 
 
 if __name__ == "__main__":

@@ -23,7 +23,8 @@ COINBASE = "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/ca
 DERIBIT = "https://history.deribit.com/api/v2/public"
 HOUR = 3600
 DAY = 24 * HOUR
-FIELDS = ("open_utc", "futures_delta_btc", "futures_volume_btc", "oi_btc", "oi_usdt",
+FIELDS = ("open_utc", "futures_delta_btc", "futures_volume_btc", "cvd_segment_btc",
+          "oi_btc", "oi_usdt",
           "spot_binance_close_usdt", "coinbase_close_usd", "bitstamp_close_usd",
           "coinbase_vs_binance_bps", "coinbase_vs_bitstamp_bps", "first_observed_utc")
 
@@ -118,44 +119,44 @@ def write_rows(path, rows, fields, observed):
     tmp.replace(path)
 
 
+def complete_deribit_window(begin_ms, end_ms):
+    result = api(f"{DERIBIT}/get_last_trades_by_instrument_and_time",
+                 instrument_name="BTC-PERPETUAL", start_timestamp=begin_ms, end_timestamp=end_ms-1,
+                 sorting="asc", count=10000)["result"]
+    if result["has_more"]:
+        mid = (begin_ms + end_ms)//2
+        if mid == begin_ms:
+            raise ValueError(f"Liquidation sampling exceeded page capacity at {begin_ms}")
+        yield from complete_deribit_window(begin_ms, mid)
+        yield from complete_deribit_window(mid, end_ms)
+    else:
+        for trade in result["trades"]:
+            if not begin_ms <= trade["timestamp"] < end_ms:
+                raise ValueError(f"Deribit returned an out-of-window trade: {trade['timestamp']}")
+            yield trade
+
+
 def deribit_window(start, stop):
-    pair = "BTC-PERPETUAL"
-    first = api(f"{DERIBIT}/get_last_trades_by_instrument_and_time",
-                instrument_name=pair, start_timestamp=start*1000, end_timestamp=stop*1000,
-                sorting="asc", count=10000)["result"]
-    batch = first["trades"]
-    expected = batch[0]["trade_seq"] if batch else None
-    trades = 0
+    ids = set()
     flags = Counter()
-    liquidation_usd = 0.
     buy_usd = sell_usd = 0.
-    for _ in range(50):
-        for trade in batch:
-            if trade["timestamp"] >= stop*1000:
-                return trades, dict(flags), liquidation_usd, buy_usd, sell_usd
-            if trade["timestamp"] < start*1000 or trade["trade_seq"] != expected:
-                raise ValueError(f"Trade sequence discontinuity at {expected}")
-            trades += 1
-            expected += 1
-            flag = trade.get("liquidation")
-            if flag:
-                flags[flag] += 1
-                amount = float(trade["amount"])
-                if not math.isfinite(amount) or amount <= 0 or trade["direction"] not in ("buy", "sell"):
-                    raise ValueError("Invalid liquidation amount or side")
-                liquidation_usd += amount
-                if trade["direction"] == "buy":
-                    buy_usd += amount
-                else:
-                    sell_usd += amount
-        if not first["has_more"]:
-            return trades, dict(flags), liquidation_usd, buy_usd, sell_usd
-        next_page = api(f"{DERIBIT}/get_last_trades_by_instrument",
-                        instrument_name=pair, start_seq=expected, sorting="asc", count=10000)["result"]
-        batch = [trade for trade in next_page["trades"] if trade["trade_seq"] >= expected]
-        if not batch:
-            raise ValueError(f"Could not verify trade range through {utc(stop)}")
-    raise ValueError(f"Page limit for liquidation sample through {utc(stop)}")
+    for trade in complete_deribit_window(start*1000, stop*1000):
+        key = trade["trade_id"]
+        if key in ids:
+            raise ValueError(f"Duplicate Deribit trade {key}")
+        ids.add(key)
+        flag = trade.get("liquidation")
+        if flag:
+            flags[flag] += 1
+            amount = float(trade["amount"])
+            side = trade["direction"]
+            if not math.isfinite(amount) or amount <= 0 or side not in ("buy", "sell"):
+                raise ValueError("Invalid liquidation amount or side")
+            if side == "buy":
+                buy_usd += amount
+            else:
+                sell_usd += amount
+    return len(ids), dict(flags), buy_usd+sell_usd, buy_usd, sell_usd
 
 
 def main():
@@ -234,7 +235,14 @@ def main():
             for t, oi, notional in vals:
                 if t in rows and math.isfinite(oi) and math.isfinite(notional) and min(oi, notional) > 0:
                     rows[t].update(oi_btc=oi, oi_usdt=notional)
-    for t, row in rows.items():
+    previous_cvd_t = None
+    cvd = 0.
+    for t, row in sorted(rows.items()):
+        delta = row.get("futures_delta_btc")
+        if delta is not None:
+            cvd = cvd + delta if previous_cvd_t == t - HOUR else delta
+            row["cvd_segment_btc"] = cvd
+            previous_cvd_t = t
         if t+HOUR-900 in prices:
             row["bitstamp_close_usd"] = prices[t+HOUR-900][1]
         cb = row.get("coinbase_close_usd")
@@ -248,7 +256,7 @@ def main():
     liq_file = OUT / "liquidation_sample.json"
     saved = json.loads(liq_file.read_text()) if liq_file.exists() else {}
     liq_jobs = {}
-    for day in range(today-7*DAY, today, DAY):
+    for day in range(today-3*DAY, today, DAY):
         for hour in (0, 12):
             a = day + hour*HOUR
             if utc(a) not in saved:
@@ -291,7 +299,7 @@ def main():
     write_json(OUT / "market.json", {
         "observed_at_utc": observed, "coverage_utc": {"from": utc(start), "through": utc(end)},
         "definitions": {"oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
-                        "cvd": "Binance USD-M BTCUSDT hourly signed CVD increment = 2*taker_buy_base - total_base; net BTC per fully closed hour, no cross-gap cumulative total",
+                        "cvd": "Binance USD-M BTCUSDT hourly signed CVD increment = 2*taker_buy_base - total_base; the cumulative CVD resets after a missing hour",
                         "funding": "Binance USD-M BTCUSDT funding settlement rates, sourced from API and monthly archive",
                         "liquidation": "Deribit BTC-PERPETUAL trades bearing liquidation flags; fixed 00:00 and 12:00 UTC one-hour samples, not full-market liquidations",
                         "premium": "Matched UTC hourly Coinbase BTC/USD close vs Binance spot BTC/USDT (includes USD/USDT basis) and vs Bitstamp BTC/USD"},
@@ -299,7 +307,7 @@ def main():
         "liquidation_hours_verified": len(saved),
         "liquidation_trades_flagged": sum(sum(r["flags"].values()) for r in saved.values()),
         "next_hour_price_study": studies,
-        "research_caveat": "Descriptive only. Historical file arrival times are unknown and Deribit may delay public liquidation flags. These inputs were not used in simulated signals.",
+        "research_caveat": "Descriptive only. first_observed_utc records when the row was first stored, and may precede later field backfills. Historical file arrival times are unknown and Deribit may delay public liquidation flags. These inputs were not used in simulated signals.",
         "source_error_counts": dict(Counter(str(k[0] if isinstance(k, tuple) else "liquidation") for k in errors)),
         "source_error_examples": {str(k): v for k,v in list(errors.items())[:12]},
     })

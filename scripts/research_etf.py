@@ -114,11 +114,17 @@ def relationship(pairs):
 def lookup_prices():
     result = {}
     paths = sorted(Path("history/15m").glob("*.csv"))
+    tail = OUT / "bitstamp_tail_15m.csv"
+    if tail.exists():
+        paths.append(tail)
     for f in paths:
         with f.open() as stream:
             for row in csv.DictReader(stream):
                 t = int(row["timestamp"])
-                result[t] = float(row["open"]), float(row["close"])
+                value = float(row["open"]), float(row["close"])
+                if t in result and result[t] != value:
+                    raise ValueError(f"Conflicting Bitstamp price at {stamp(t)}")
+                result[t] = value
     return result
 
 
