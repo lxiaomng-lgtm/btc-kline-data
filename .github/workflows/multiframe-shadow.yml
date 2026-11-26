@@ -1,0 +1,42 @@
+name: BTC multiframe shadow observations
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/multiframe-shadow.yml'
+      - 'scripts/multiframe_btc.py'
+  schedule:
+    # Offset by six minutes from each UTC 45-minute boundary.
+    - cron: '6,51 0,3,6,9,12,15,18,21 * * *'
+    - cron: '36 1,4,7,10,13,16,19,22 * * *'
+    - cron: '21 2,5,8,11,14,17,20,23 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: btc-multiframe-shadow
+  cancel-in-progress: false
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Observe the most recent complete signal
+        run: python3 scripts/multiframe_btc.py --shadow-only
+      - name: Publish new observation
+        run: |
+          if [ ! -d research/multiframe_shadow ]; then exit 0; fi
+          git add research/multiframe_shadow/
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Publish BTC multiframe shadow signal'
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 4
+          done
+          exit 1
