@@ -1,12 +1,12 @@
 {
-  "observed_at_utc": "2026-11-26T06:50:18+00:00",
+  "observed_at_utc": "2026-11-26T06:54:00+00:00",
   "coverage_utc": {
     "from": "2026-08-28T00:00:00+00:00",
     "through": "2026-11-26T06:00:00+00:00"
   },
   "definitions": {
     "oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
-    "cvd": "Binance USD-M BTCUSDT hourly signed CVD increment = 2*taker_buy_base - total_base; net BTC per fully closed hour, no cross-gap cumulative total",
+    "cvd": "Binance USD-M BTCUSDT hourly signed CVD increment = 2*taker_buy_base - total_base; the cumulative CVD resets after a missing hour",
     "funding": "Binance USD-M BTCUSDT funding settlement rates, sourced from API and monthly archive",
     "liquidation": "Deribit BTC-PERPETUAL trades bearing liquidation flags; fixed 00:00 and 12:00 UTC one-hour samples, not full-market liquidations",
     "premium": "Matched UTC hourly Coinbase BTC/USD close vs Binance spot BTC/USDT (includes USD/USDT basis) and vs Bitstamp BTC/USD"
@@ -19,6 +19,12 @@
       "last": "2026-11-24T23:00:00+00:00"
     },
     "futures_volume_btc": {
+      "n": 2136,
+      "missing": 30,
+      "first": "2026-08-28T00:00:00+00:00",
+      "last": "2026-11-24T23:00:00+00:00"
+    },
+    "cvd_segment_btc": {
       "n": 2136,
       "missing": 30,
       "first": "2026-08-28T00:00:00+00:00",
@@ -49,10 +55,10 @@
       "last": "2026-11-26T05:00:00+00:00"
     },
     "bitstamp_close_usd": {
-      "n": 2163,
-      "missing": 3,
+      "n": 2166,
+      "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T02:00:00+00:00"
+      "last": "2026-11-26T05:00:00+00:00"
     },
     "coinbase_vs_binance_bps": {
       "n": 2160,
@@ -61,15 +67,15 @@
       "last": "2026-11-25T23:00:00+00:00"
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2163,
-      "missing": 3,
+      "n": 2166,
+      "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T02:00:00+00:00"
+      "last": "2026-11-26T05:00:00+00:00"
     }
   },
   "funding_events_last_90_days": 195,
-  "liquidation_hours_verified": 0,
-  "liquidation_trades_flagged": 0,
+  "liquidation_hours_verified": 6,
+  "liquidation_trades_flagged": 2,
   "next_hour_price_study": {
     "futures_delta_btc": {
       "n": 2136,
@@ -90,10 +96,10 @@
       "up_pct": 48.843
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2162,
-      "pearson_r": -0.00085,
-      "mean_return_pct": -0.01126,
-      "up_pct": 48.844
+      "n": 2165,
+      "pearson_r": -0.00029,
+      "mean_return_pct": -0.01115,
+      "up_pct": 48.868
     },
     "funding_rate": {
       "n": 195,
@@ -102,30 +108,25 @@
       "up_pct": 46.667
     },
     "liquidation_sample": {
-      "n": 0
+      "n": 6,
+      "pearson_r": -0.29533,
+      "mean_return_pct": 0.05531,
+      "up_pct": 16.667
     }
   },
-  "research_caveat": "Descriptive only. Historical file arrival times are unknown and Deribit may delay public liquidation flags. These inputs were not used in simulated signals.",
+  "research_caveat": "Descriptive only. first_observed_utc records when the row was first stored, and may precede later field backfills. Historical file arrival times are unknown and Deribit may delay public liquidation flags. These inputs were not used in simulated signals.",
   "source_error_counts": {
     "futures": 1,
     "funding_api": 1,
     "oi_api": 1,
     "futures_api": 1,
-    "spot_api": 1,
-    "liquidation": 14
+    "spot_api": 1
   },
   "source_error_examples": {
     "('futures', 1795564800)": "HTTP Error 404: Not Found",
     "('funding_api', 0)": "HTTP Error 451: ",
     "('oi_api', 0)": "HTTP Error 451: ",
     "('futures_api', 0)": "HTTP Error 451: ",
-    "('spot_api', 0)": "HTTP Error 451: ",
-    "1795046400": "Trade sequence discontinuity at 322240184",
-    "1795089600": "Trade sequence discontinuity at 322598351",
-    "1795132800": "Trade sequence discontinuity at 322996152",
-    "1795176000": "Trade sequence discontinuity at 323480263",
-    "1795219200": "Trade sequence discontinuity at 323879642",
-    "1795262400": "Trade sequence discontinuity at 324401188",
-    "1795305600": "Trade sequence discontinuity at 324771879"
+    "('spot_api', 0)": "HTTP Error 451: "
   }
 }
