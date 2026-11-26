@@ -16,8 +16,8 @@ from archive_btc import FIELDS, STEP, TZ, fetch
 
 OUT = Path("research")
 PERIODS = {"15m": 900, "45m": 2700, "3h": 10800, "6h": 21600,
-           "1d": 86400, "1w": "week", "1M": "month"}
-NAMES = ("cash", "hold", "fixed10", "trend", "breakout", "chan", "regime", "combined")
+           "1d": 86400, "1d_08": "day_08", "1w": "week", "1M": "month"}
+NAMES = ("cash", "hold", "buy10", "fixed10", "trend", "breakout", "chan", "regime", "regime10", "combined")
 COSTS = (0.0015, 0.003, 0.006)
 LENGTHS = {"1w": (4, 13), "1M": (3, 10)}
 
@@ -104,6 +104,8 @@ def load_prices():
 def key(t, period):
     if isinstance(period, int):
         return (t + 28800) // period * period - 28800
+    if period == "day_08":
+        return t // 86400 * 86400
     day = local(t).replace(hour=0, minute=0, second=0)
     start = day - timedelta(days=day.weekday()) if period == "week" else day.replace(day=1)
     return int(start.timestamp())
@@ -112,6 +114,8 @@ def key(t, period):
 def end(t, period):
     if isinstance(period, int):
         return t + period
+    if period == "day_08":
+        return t + 86400
     if period == "week":
         return t + 604800
     d = local(t)
@@ -222,7 +226,7 @@ def signals(bars, horizon):
                 regime, state = "range", breakout * 0.25
                 combo = 0.25 * structural
         regimes[regime] += 1
-        values = (0, 1, 0.1, trend, breakout, structural, state, combo)
+        values = (0, 1, 0.1, 0.1, trend, breakout, structural, state, state * 0.10, combo)
         for name, weight in zip(NAMES, values):
             result[name].append(weight)
     return result, regimes, regime

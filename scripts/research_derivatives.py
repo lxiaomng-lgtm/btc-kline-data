@@ -19,6 +19,7 @@ from research_prices import OUT, stamp, write_json
 
 VISION = "https://data.binance.vision/data"
 FAPI = "https://fapi.binance.com"
+OKX_FUNDING = "https://www.okx.com/api/v5/public/funding-rate-history"
 COINBASE = "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/candles"
 DERIBIT = "https://history.deribit.com/api/v2/public"
 HOUR = 3600
@@ -159,6 +160,42 @@ def deribit_window(start, stop):
     return len(ids), dict(flags), buy_usd+sell_usd, buy_usd, sell_usd
 
 
+def okx_settlements(start, now):
+    out = {}
+    cursor = (now+1)*1000
+    for _ in range(8):
+        res = api(OKX_FUNDING, instId="BTC-USDT-SWAP", after=cursor, limit=100)
+        if res.get("code") != "0":
+            raise ValueError(f"OKX funding API error: {res.get('code')}")
+        page = res["data"]
+        if not page:
+            break
+        times = [int(r["fundingTime"]) for r in page]
+        if max(times) >= cursor or len(set(times)) != len(times):
+            raise ValueError("Invalid OKX funding pagination")
+        for r, millis in zip(page, times):
+            t = millis//1000
+            if t < start or not r.get("realizedRate"):
+                continue
+            rate = float(r["realizedRate"])
+            if r.get("instId") != "BTC-USDT-SWAP" or not math.isfinite(rate) or abs(rate)>1:
+                raise ValueError("Invalid OKX funding record")
+            out[t] = rate
+        cursor = min(times)
+        if cursor < start*1000:
+            break
+    return out
+
+
+def funding_study(data, prices, start):
+    pairs = []
+    for t, row in data.items():
+        h = (t//HOUR+1)*HOUR
+        if start <= t and h in prices and h+HOUR-900 in prices:
+            pairs.append((row["funding_rate"], prices[h+HOUR-900][1]/prices[h][0]-1))
+    return relationship(pairs)
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     now = int(time.time())
@@ -196,16 +233,23 @@ def main():
                                      symbol="BTCUSDT", period="1h", limit=72)
     jobs[("futures_api", 0)] = lambda: api(f"{FAPI}/fapi/v1/klines",
                                           symbol="BTCUSDT", interval="1h", limit=72)
-    jobs[("spot_api", 0)] = lambda: api("https://api.binance.com/api/v3/klines",
+    jobs[("spot_api", 0)] = lambda: api("https://data-api.binance.vision/api/v3/klines",
                                        symbol="BTCUSDT", interval="1h", limit=72)
 
+    okx_funding = {}
+    okx_path = OUT / "funding_okx.csv"
+    jobs[("okx_funding", 0)] = lambda: okx_settlements(start, now)
     funding = {}
     funding_path = OUT / "funding.csv"
     funding_fields = ("open_utc", "funding_rate", "first_observed_utc")
     read_previous(funding_path, funding, funding_fields)
+    read_previous(okx_path, okx_funding, funding_fields)
 
     for (source, _), values in run_jobs(jobs, errors):
-        if source == "coinbase":
+        if source == "okx_funding":
+            for t, rate in values.items():
+                okx_funding.setdefault(t, {})["funding_rate"] = rate
+        elif source == "coinbase":
             for bar in values:
                 t = int(bar["start"])
                 p = float(bar["close"])
@@ -252,6 +296,7 @@ def main():
                     row[f"coinbase_vs_{venue}_bps"] = 10000*(cb/row[field]-1)
     write_rows(hourly, rows, FIELDS, observed)
     write_rows(funding_path, funding, funding_fields, observed)
+    write_rows(okx_path, okx_funding, funding_fields, observed)
 
     liq_file = OUT / "liquidation_sample.json"
     saved = json.loads(liq_file.read_text()) if liq_file.exists() else {}
@@ -287,12 +332,8 @@ def main():
                     value = value/prior-1
                 pairs.append((value, prices[t+2*HOUR-900][1] / prices[t+HOUR][0] - 1))
             studies[name] = relationship(pairs)
-    pairs = []
-    for t,r in funding.items():
-        h = (t//HOUR+1)*HOUR
-        if start <= t and h in prices and h+HOUR-900 in prices:
-            pairs.append((r["funding_rate"], prices[h+HOUR-900][1]/prices[h][0]-1))
-    studies["funding_rate"] = relationship(pairs)
+    studies["funding_rate"] = funding_study(funding, prices, start)
+    studies["okx_funding_rate"] = funding_study(okx_funding, prices, start)
     pairs = [(row["liquidated_trade_usd"], prices[t+2*HOUR-900][1]/prices[t+HOUR][0]-1)
              for s,row in saved.items() if (t:=stamp_utc(s))+HOUR in prices and t+2*HOUR-900 in prices]
     studies["liquidation_sample"] = relationship(pairs)
@@ -300,10 +341,11 @@ def main():
         "observed_at_utc": observed, "coverage_utc": {"from": utc(start), "through": utc(end)},
         "definitions": {"oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
                         "cvd": "Binance USD-M BTCUSDT hourly signed CVD increment = 2*taker_buy_base - total_base; the cumulative CVD resets after a missing hour",
-                        "funding": "Binance USD-M BTCUSDT funding settlement rates, sourced from API and monthly archive",
+                        "funding": "Separate Binance BTCUSDT and OKX BTC-USDT-SWAP settled funding rates. Binance archive lags when its API rejects the runner.",
                         "liquidation": "Deribit BTC-PERPETUAL trades bearing liquidation flags; fixed 00:00 and 12:00 UTC one-hour samples, not full-market liquidations",
                         "premium": "Matched UTC hourly Coinbase BTC/USD close vs Binance spot BTC/USDT (includes USD/USDT basis) and vs Bitstamp BTC/USD"},
         "coverage": coverage, "funding_events_last_90_days": sum(t>=start for t in funding),
+        "okx_funding_events_last_90_days": sum(t>=start for t in okx_funding),
         "liquidation_hours_verified": len(saved),
         "liquidation_trades_flagged": sum(sum(r["flags"].values()) for r in saved.values()),
         "next_hour_price_study": studies,
