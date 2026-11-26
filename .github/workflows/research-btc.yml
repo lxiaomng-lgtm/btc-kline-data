@@ -37,10 +37,23 @@ jobs:
         continue-on-error: true
         run: python3 scripts/research_derivatives.py
       - name: Publish completed research outputs
+        env:
+          ETF_OUTCOME: ${{ steps.etf.outcome }}
+          DERIVATIVES_OUTCOME: ${{ steps.derivatives.outcome }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add research/
+          git add research/prices.json research/bitstamp_tail_15m.csv
+          if [ -d research/shadow_signals ]; then
+            git add research/shadow_signals/
+          fi
+          if [ "$ETF_OUTCOME" = success ]; then
+            git add research/etf.json research/etf_history.csv research/etf_observations/
+          fi
+          if [ "$DERIVATIVES_OUTCOME" = success ]; then
+            git add research/market.json research/market_hourly.csv research/funding.csv research/funding_okx.csv research/liquidation_sample.json
+          fi
+          git restore --worktree -- research/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Publish BTC research results'
           branch="${GITHUB_REF_NAME}"
