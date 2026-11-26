@@ -3,7 +3,7 @@ import csv
 import json
 import os
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
+from research_derivatives import complete_deribit_window
 
 from research_prices import OUT, write_json
 
@@ -35,6 +35,20 @@ def main():
         "funding_okx":recent_csv(OUT/"funding_okx.csv","open_utc",since,observed),
         "deribit_liquidation_samples":{k:r for k,r in json.loads((OUT/"liquidation_sample.json").read_text()).items()
             if since<=datetime.fromisoformat(k)<=observed}}
+    # Preserve the trade records behind a sampled window if a liquidation flag was observed.
+    samples=snapshots["deribit_liquidation_samples"]
+    flagged=[(k,r) for k,r in samples.items() if r["flags"]]
+    if flagged:
+        begin,record=max(flagged)
+        start=int(datetime.fromisoformat(begin).timestamp()*1000)
+        end=int(datetime.fromisoformat(record["through_exclusive"]).timestamp()*1000)
+        try:
+            trades=[r for r in complete_deribit_window(start,end) if r.get("liquidation")]
+            snapshots["deribit_flagged_trade_records"]={"window_start":begin,
+                "window_end":record["through_exclusive"],"capture_time_utc":datetime.now(timezone.utc).isoformat(),
+                "matching_trade_ids":len({r["trade_id"] for r in trades}),"trades":trades}
+        except (OSError,ValueError,KeyError) as err:
+            snapshots["deribit_flagged_trade_error"]=str(err)
     write_json(path,snapshots)
     print("Captured source records",path,flush=True)
 
