@@ -1,15 +1,15 @@
 {
   "audit": {
-    "archived_bars": 177743,
+    "archived_bars": 177755,
     "snapshot_bars": 192,
     "overlap_exact_ohlcv": 192,
     "snapshot_appended": 0,
-    "bitstamp_gap_or_tail_bars": 12,
-    "total_bars": 177755,
+    "bitstamp_gap_or_tail_bars": 1,
+    "total_bars": 177756,
     "from": "2021-11-01T00:00:00+08:00",
-    "through_close": "2026-11-26T14:45:00+08:00",
+    "through_close": "2026-11-26T15:00:00+08:00",
     "snapshot_close": "2026-11-26T10:30:00+08:00",
-    "archive_close": "2026-11-26T11:45:00+08:00",
+    "archive_close": "2026-11-26T14:45:00+08:00",
     "missing": 0,
     "duplicates": 0,
     "invalid_ohlcv": 0
@@ -23,10 +23,10 @@
   "split_note": "Historical holdout begins 2025. This is retrospective, not prospective. Validation and holdout start flat. Price rules fixed across costs; do not select models from the holdout table.",
   "periods": {
     "15m": {
-      "bars": 177755,
+      "bars": 177756,
       "regime_counts": {
         "warmup": 60,
-        "range": 129008,
+        "range": 129009,
         "bull_trend": 25207,
         "bear_trend": 23480
       },
@@ -702,7 +702,7 @@
         },
         "historical_holdout": {
           "start": "2025-01-01T00:00:00+08:00",
-          "through_close": "2026-11-26T14:45:00+08:00",
+          "through_close": "2026-11-26T15:00:00+08:00",
           "cost_scenarios": {
             "0.0015": {
               "cash": {
@@ -711,39 +711,39 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 66683
+                "bars": 66684
               },
               "hold": {
-                "net_return_pct": -36.7931,
+                "net_return_pct": -36.7504,
                 "max_close_drawdown_pct": 55.8828,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.2447,
+                "cost_pct_of_starting_capital": 0.2448,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "buy10": {
-                "net_return_pct": -3.6843,
+                "net_return_pct": -3.68,
                 "max_close_drawdown_pct": 7.162,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0245,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "fixed10": {
-                "net_return_pct": -4.1757,
+                "net_return_pct": -4.1693,
                 "max_close_drawdown_pct": 7.6746,
-                "orders_including_terminal_exit": 66526,
+                "orders_including_terminal_exit": 66527,
                 "cost_pct_of_starting_capital": 1.3861,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "trend": {
-                "net_return_pct": -88.7024,
+                "net_return_pct": -88.6948,
                 "max_close_drawdown_pct": 89.7204,
                 "orders_including_terminal_exit": 1340,
                 "cost_pct_of_starting_capital": 86.5555,
                 "position_bar_pct": 50.421,
-                "bars": 66683
+                "bars": 66684
               },
               "breakout": {
                 "net_return_pct": -99.1628,
@@ -751,15 +751,15 @@
                 "orders_including_terminal_exit": 3052,
                 "cost_pct_of_starting_capital": 96.7748,
                 "position_bar_pct": 35.82,
-                "bars": 66683
+                "bars": 66684
               },
               "chan": {
-                "net_return_pct": -91.3232,
+                "net_return_pct": -91.3174,
                 "max_close_drawdown_pct": 91.8236,
                 "orders_including_terminal_exit": 1528,
                 "cost_pct_of_starting_capital": 94.3898,
-                "position_bar_pct": 50.41,
-                "bars": 66683
+                "position_bar_pct": 50.411,
+                "bars": 66684
               },
               "regime": {
                 "net_return_pct": -99.6091,
@@ -767,7 +767,7 @@
                 "orders_including_terminal_exit": 6094,
                 "cost_pct_of_starting_capital": 99.5649,
                 "position_bar_pct": 37.087,
-                "bars": 66683
+                "bars": 66684
               },
               "regime10": {
                 "net_return_pct": -42.3843,
@@ -775,15 +775,15 @@
                 "orders_including_terminal_exit": 6094,
                 "cost_pct_of_starting_capital": 41.1784,
                 "position_bar_pct": 37.087,
-                "bars": 66683
+                "bars": 66684
               },
               "combined": {
-                "net_return_pct": -99.0933,
-                "max_close_drawdown_pct": 99.0933,
+                "net_return_pct": -99.0932,
+                "max_close_drawdown_pct": 99.0932,
                 "orders_including_terminal_exit": 5450,
                 "cost_pct_of_starting_capital": 99.3921,
                 "position_bar_pct": 50.277,
-                "bars": 66683
+                "bars": 66684
               }
             },
             "0.003": {
@@ -793,39 +793,39 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 66683
+                "bars": 66684
               },
               "hold": {
-                "net_return_pct": -36.9825,
+                "net_return_pct": -36.9399,
                 "max_close_drawdown_pct": 55.8828,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.4887,
+                "cost_pct_of_starting_capital": 0.4889,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "buy10": {
-                "net_return_pct": -3.7082,
+                "net_return_pct": -3.704,
                 "max_close_drawdown_pct": 7.162,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.049,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "fixed10": {
-                "net_return_pct": -5.5073,
+                "net_return_pct": -5.501,
                 "max_close_drawdown_pct": 8.4237,
-                "orders_including_terminal_exit": 66526,
-                "cost_pct_of_starting_capital": 2.7529,
+                "orders_including_terminal_exit": 66527,
+                "cost_pct_of_starting_capital": 2.753,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "trend": {
-                "net_return_pct": -98.4863,
+                "net_return_pct": -98.4852,
                 "max_close_drawdown_pct": 98.5561,
                 "orders_including_terminal_exit": 1340,
                 "cost_pct_of_starting_capital": 100.9751,
                 "position_bar_pct": 50.421,
-                "bars": 66683
+                "bars": 66684
               },
               "breakout": {
                 "net_return_pct": -99.9914,
@@ -833,15 +833,15 @@
                 "orders_including_terminal_exit": 3052,
                 "cost_pct_of_starting_capital": 98.5557,
                 "position_bar_pct": 35.82,
-                "bars": 66683
+                "bars": 66684
               },
               "chan": {
-                "net_return_pct": -99.1231,
+                "net_return_pct": -99.1225,
                 "max_close_drawdown_pct": 99.1561,
                 "orders_including_terminal_exit": 1528,
                 "cost_pct_of_starting_capital": 103.0703,
-                "position_bar_pct": 50.41,
-                "bars": 66683
+                "position_bar_pct": 50.411,
+                "bars": 66684
               },
               "regime": {
                 "net_return_pct": -99.9981,
@@ -849,7 +849,7 @@
                 "orders_including_terminal_exit": 6094,
                 "cost_pct_of_starting_capital": 100.4145,
                 "position_bar_pct": 37.087,
-                "bars": 66683
+                "bars": 66684
               },
               "regime10": {
                 "net_return_pct": -66.1598,
@@ -857,7 +857,7 @@
                 "orders_including_terminal_exit": 6094,
                 "cost_pct_of_starting_capital": 65.4057,
                 "position_bar_pct": 37.087,
-                "bars": 66683
+                "bars": 66684
               },
               "combined": {
                 "net_return_pct": -99.9899,
@@ -865,7 +865,7 @@
                 "orders_including_terminal_exit": 5450,
                 "cost_pct_of_starting_capital": 100.4448,
                 "position_bar_pct": 50.277,
-                "bars": 66683
+                "bars": 66684
               }
             },
             "0.006": {
@@ -875,31 +875,31 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 66683
+                "bars": 66684
               },
               "hold": {
-                "net_return_pct": -37.3595,
+                "net_return_pct": -37.3172,
                 "max_close_drawdown_pct": 55.8828,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.9745,
+                "cost_pct_of_starting_capital": 0.9748,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "buy10": {
-                "net_return_pct": -3.7561,
+                "net_return_pct": -3.7519,
                 "max_close_drawdown_pct": 7.162,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.098,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "fixed10": {
-                "net_return_pct": -8.1153,
+                "net_return_pct": -8.1093,
                 "max_close_drawdown_pct": 10.0349,
-                "orders_including_terminal_exit": 66526,
-                "cost_pct_of_starting_capital": 5.4303,
+                "orders_including_terminal_exit": 66527,
+                "cost_pct_of_starting_capital": 5.4304,
                 "position_bar_pct": 100.0,
-                "bars": 66683
+                "bars": 66684
               },
               "trend": {
                 "net_return_pct": -99.9728,
@@ -907,7 +907,7 @@
                 "orders_including_terminal_exit": 1340,
                 "cost_pct_of_starting_capital": 103.1218,
                 "position_bar_pct": 50.421,
-                "bars": 66683
+                "bars": 66684
               },
               "breakout": {
                 "net_return_pct": -100.0,
@@ -915,15 +915,15 @@
                 "orders_including_terminal_exit": 3052,
                 "cost_pct_of_starting_capital": 99.6077,
                 "position_bar_pct": 35.82,
-                "bars": 66683
+                "bars": 66684
               },
               "chan": {
                 "net_return_pct": -99.991,
                 "max_close_drawdown_pct": 99.9912,
                 "orders_including_terminal_exit": 1528,
                 "cost_pct_of_starting_capital": 101.4757,
-                "position_bar_pct": 50.41,
-                "bars": 66683
+                "position_bar_pct": 50.411,
+                "bars": 66684
               },
               "regime": {
                 "net_return_pct": -100.0,
@@ -931,7 +931,7 @@
                 "orders_including_terminal_exit": 6094,
                 "cost_pct_of_starting_capital": 100.5098,
                 "position_bar_pct": 37.087,
-                "bars": 66683
+                "bars": 66684
               },
               "regime10": {
                 "net_return_pct": -88.326,
@@ -939,7 +939,7 @@
                 "orders_including_terminal_exit": 6094,
                 "cost_pct_of_starting_capital": 88.056,
                 "position_bar_pct": 37.087,
-                "bars": 66683
+                "bars": 66684
               },
               "combined": {
                 "net_return_pct": -100.0,
@@ -947,7 +947,7 @@
                 "orders_including_terminal_exit": 5449,
                 "cost_pct_of_starting_capital": 100.1326,
                 "position_bar_pct": 50.277,
-                "bars": 66683
+                "bars": 66684
               }
             }
           },
@@ -958,79 +958,79 @@
               "orders_including_terminal_exit": 0,
               "cost_pct_of_starting_capital": 0.0,
               "position_bar_pct": 0.0,
-              "bars": 66683
+              "bars": 66684
             },
             "hold": {
-              "net_return_pct": -36.7931,
+              "net_return_pct": -36.7504,
               "max_close_drawdown_pct": 55.8828,
               "orders_including_terminal_exit": 2,
-              "cost_pct_of_starting_capital": 0.2447,
+              "cost_pct_of_starting_capital": 0.2448,
               "position_bar_pct": 100.0,
-              "bars": 66683
+              "bars": 66684
             },
             "buy10": {
-              "net_return_pct": -3.6843,
+              "net_return_pct": -3.68,
               "max_close_drawdown_pct": 7.162,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.0245,
               "position_bar_pct": 100.0,
-              "bars": 66683
+              "bars": 66684
             },
             "fixed10": {
-              "net_return_pct": -4.1757,
+              "net_return_pct": -4.1693,
               "max_close_drawdown_pct": 7.6746,
-              "orders_including_terminal_exit": 66526,
+              "orders_including_terminal_exit": 66527,
               "cost_pct_of_starting_capital": 1.3861,
               "position_bar_pct": 100.0,
-              "bars": 66683
+              "bars": 66684
             },
             "trend": {
-              "net_return_pct": -88.394,
+              "net_return_pct": -88.3861,
               "max_close_drawdown_pct": 89.3179,
               "orders_including_terminal_exit": 1340,
               "cost_pct_of_starting_capital": 82.4013,
               "position_bar_pct": 50.421,
-              "bars": 66683
+              "bars": 66684
             },
             "breakout": {
               "net_return_pct": -99.2377,
               "max_close_drawdown_pct": 99.2535,
               "orders_including_terminal_exit": 3052,
               "cost_pct_of_starting_capital": 99.3452,
-              "position_bar_pct": 35.822,
-              "bars": 66683
+              "position_bar_pct": 35.821,
+              "bars": 66684
             },
             "chan": {
-              "net_return_pct": -89.9928,
+              "net_return_pct": -89.986,
               "max_close_drawdown_pct": 90.5443,
               "orders_including_terminal_exit": 1528,
               "cost_pct_of_starting_capital": 98.8877,
-              "position_bar_pct": 50.41,
-              "bars": 66683
+              "position_bar_pct": 50.411,
+              "bars": 66684
             },
             "regime": {
               "net_return_pct": -99.5266,
               "max_close_drawdown_pct": 99.5266,
               "orders_including_terminal_exit": 6094,
               "cost_pct_of_starting_capital": 99.9084,
-              "position_bar_pct": 37.089,
-              "bars": 66683
+              "position_bar_pct": 37.088,
+              "bars": 66684
             },
             "regime10": {
               "net_return_pct": -41.2848,
               "max_close_drawdown_pct": 41.2848,
               "orders_including_terminal_exit": 6094,
               "cost_pct_of_starting_capital": 41.401,
-              "position_bar_pct": 37.089,
-              "bars": 66683
+              "position_bar_pct": 37.088,
+              "bars": 66684
             },
             "combined": {
-              "net_return_pct": -98.8335,
-              "max_close_drawdown_pct": 98.8335,
+              "net_return_pct": -98.8333,
+              "max_close_drawdown_pct": 98.8333,
               "orders_including_terminal_exit": 5450,
               "cost_pct_of_starting_capital": 101.4186,
               "position_bar_pct": 50.277,
-              "bars": 66683
+              "bars": 66684
             }
           }
         },
@@ -1370,7 +1370,7 @@
         },
         "holdout_2026": {
           "start": "2026-01-01T00:00:00+08:00",
-          "through_close": "2026-11-26T14:45:00+08:00",
+          "through_close": "2026-11-26T15:00:00+08:00",
           "cost_scenarios": {
             "0.0015": {
               "cash": {
@@ -1379,79 +1379,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 31643
+                "bars": 31644
               },
               "hold": {
-                "net_return_pct": -31.3937,
+                "net_return_pct": -31.3474,
                 "max_close_drawdown_pct": 43.0553,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.2528,
+                "cost_pct_of_starting_capital": 0.2529,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "buy10": {
-                "net_return_pct": -3.1436,
+                "net_return_pct": -3.139,
                 "max_close_drawdown_pct": 4.7368,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0253,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "fixed10": {
-                "net_return_pct": -3.5429,
+                "net_return_pct": -3.5365,
                 "max_close_drawdown_pct": 5.338,
-                "orders_including_terminal_exit": 31585,
+                "orders_including_terminal_exit": 31586,
                 "cost_pct_of_starting_capital": 0.6573,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "trend": {
-                "net_return_pct": -61.9671,
+                "net_return_pct": -61.9414,
                 "max_close_drawdown_pct": 64.1093,
                 "orders_including_terminal_exit": 624,
-                "cost_pct_of_starting_capital": 56.3892,
-                "position_bar_pct": 49.48,
-                "bars": 31643
+                "cost_pct_of_starting_capital": 56.3893,
+                "position_bar_pct": 49.482,
+                "bars": 31644
               },
               "breakout": {
                 "net_return_pct": -91.1178,
                 "max_close_drawdown_pct": 91.3901,
                 "orders_including_terminal_exit": 1434,
                 "cost_pct_of_starting_capital": 79.6761,
-                "position_bar_pct": 35.291,
-                "bars": 31643
+                "position_bar_pct": 35.289,
+                "bars": 31644
               },
               "chan": {
-                "net_return_pct": -71.0584,
+                "net_return_pct": -71.0388,
                 "max_close_drawdown_pct": 73.1556,
                 "orders_including_terminal_exit": 708,
                 "cost_pct_of_starting_capital": 63.9071,
-                "position_bar_pct": 48.614,
-                "bars": 31643
+                "position_bar_pct": 48.616,
+                "bars": 31644
               },
               "regime": {
                 "net_return_pct": -93.9082,
                 "max_close_drawdown_pct": 93.9082,
                 "orders_including_terminal_exit": 2913,
                 "cost_pct_of_starting_capital": 86.7723,
-                "position_bar_pct": 36.523,
-                "bars": 31643
+                "position_bar_pct": 36.522,
+                "bars": 31644
               },
               "regime10": {
                 "net_return_pct": -24.2983,
                 "max_close_drawdown_pct": 24.2983,
                 "orders_including_terminal_exit": 2913,
                 "cost_pct_of_starting_capital": 22.3859,
-                "position_bar_pct": 36.523,
-                "bars": 31643
+                "position_bar_pct": 36.522,
+                "bars": 31644
               },
               "combined": {
-                "net_return_pct": -90.4146,
-                "max_close_drawdown_pct": 90.4146,
+                "net_return_pct": -90.413,
+                "max_close_drawdown_pct": 90.413,
                 "orders_including_terminal_exit": 2575,
                 "cost_pct_of_starting_capital": 84.8665,
-                "position_bar_pct": 48.579,
-                "bars": 31643
+                "position_bar_pct": 48.581,
+                "bars": 31644
               }
             },
             "0.003": {
@@ -1461,79 +1461,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 31643
+                "bars": 31644
               },
               "hold": {
-                "net_return_pct": -31.5992,
+                "net_return_pct": -31.553,
                 "max_close_drawdown_pct": 43.0553,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.5049,
+                "cost_pct_of_starting_capital": 0.5051,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "buy10": {
-                "net_return_pct": -3.1685,
+                "net_return_pct": -3.1638,
                 "max_close_drawdown_pct": 4.7368,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0506,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "fixed10": {
-                "net_return_pct": -4.1868,
+                "net_return_pct": -4.1804,
                 "max_close_drawdown_pct": 5.9068,
-                "orders_including_terminal_exit": 31585,
-                "cost_pct_of_starting_capital": 1.3101,
+                "orders_including_terminal_exit": 31586,
+                "cost_pct_of_starting_capital": 1.3102,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "trend": {
-                "net_return_pct": -85.0838,
+                "net_return_pct": -85.0737,
                 "max_close_drawdown_pct": 85.6368,
                 "orders_including_terminal_exit": 624,
-                "cost_pct_of_starting_capital": 78.3473,
-                "position_bar_pct": 49.48,
-                "bars": 31643
+                "cost_pct_of_starting_capital": 78.3474,
+                "position_bar_pct": 49.482,
+                "bars": 31644
               },
               "breakout": {
                 "net_return_pct": -98.9664,
                 "max_close_drawdown_pct": 98.9867,
                 "orders_including_terminal_exit": 1434,
                 "cost_pct_of_starting_capital": 92.0516,
-                "position_bar_pct": 35.291,
-                "bars": 31643
+                "position_bar_pct": 35.289,
+                "bars": 31644
               },
               "chan": {
-                "net_return_pct": -89.9931,
+                "net_return_pct": -89.9863,
                 "max_close_drawdown_pct": 90.578,
                 "orders_including_terminal_exit": 708,
                 "cost_pct_of_starting_capital": 87.2761,
-                "position_bar_pct": 48.614,
-                "bars": 31643
+                "position_bar_pct": 48.616,
+                "bars": 31644
               },
               "regime": {
                 "net_return_pct": -99.5305,
                 "max_close_drawdown_pct": 99.5305,
                 "orders_including_terminal_exit": 2913,
                 "cost_pct_of_starting_capital": 96.2343,
-                "position_bar_pct": 36.523,
-                "bars": 31643
+                "position_bar_pct": 36.522,
+                "bars": 31644
               },
               "regime10": {
                 "net_return_pct": -41.4106,
                 "max_close_drawdown_pct": 41.4106,
                 "orders_including_terminal_exit": 2913,
                 "cost_pct_of_starting_capital": 39.7293,
-                "position_bar_pct": 36.523,
-                "bars": 31643
+                "position_bar_pct": 36.522,
+                "bars": 31644
               },
               "combined": {
-                "net_return_pct": -98.888,
-                "max_close_drawdown_pct": 98.888,
+                "net_return_pct": -98.8878,
+                "max_close_drawdown_pct": 98.8878,
                 "orders_including_terminal_exit": 2575,
                 "cost_pct_of_starting_capital": 96.9594,
-                "position_bar_pct": 48.579,
-                "bars": 31643
+                "position_bar_pct": 48.581,
+                "bars": 31644
               }
             },
             "0.006": {
@@ -1543,79 +1543,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 31643
+                "bars": 31644
               },
               "hold": {
-                "net_return_pct": -32.0084,
+                "net_return_pct": -31.9625,
                 "max_close_drawdown_pct": 43.0553,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 1.0068,
+                "cost_pct_of_starting_capital": 1.0071,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "buy10": {
-                "net_return_pct": -3.2181,
+                "net_return_pct": -3.2135,
                 "max_close_drawdown_pct": 4.7368,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.1012,
+                "cost_pct_of_starting_capital": 0.1013,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "fixed10": {
-                "net_return_pct": -5.4617,
+                "net_return_pct": -5.4554,
                 "max_close_drawdown_pct": 7.0341,
-                "orders_including_terminal_exit": 31585,
-                "cost_pct_of_starting_capital": 2.6029,
+                "orders_including_terminal_exit": 31586,
+                "cost_pct_of_starting_capital": 2.603,
                 "position_bar_pct": 100.0,
-                "bars": 31643
+                "bars": 31644
               },
               "trend": {
-                "net_return_pct": -97.7057,
+                "net_return_pct": -97.7042,
                 "max_close_drawdown_pct": 97.7219,
                 "orders_including_terminal_exit": 624,
                 "cost_pct_of_starting_capital": 90.8521,
-                "position_bar_pct": 49.48,
-                "bars": 31643
+                "position_bar_pct": 49.482,
+                "bars": 31644
               },
               "breakout": {
                 "net_return_pct": -99.986,
                 "max_close_drawdown_pct": 99.9862,
                 "orders_including_terminal_exit": 1434,
                 "cost_pct_of_starting_capital": 96.2601,
-                "position_bar_pct": 35.291,
-                "bars": 31643
+                "position_bar_pct": 35.289,
+                "bars": 31644
               },
               "chan": {
-                "net_return_pct": -98.8037,
+                "net_return_pct": -98.8029,
                 "max_close_drawdown_pct": 98.8393,
                 "orders_including_terminal_exit": 708,
                 "cost_pct_of_starting_capital": 99.6497,
-                "position_bar_pct": 48.614,
-                "bars": 31643
+                "position_bar_pct": 48.616,
+                "bars": 31644
               },
               "regime": {
                 "net_return_pct": -99.9972,
                 "max_close_drawdown_pct": 99.9972,
                 "orders_including_terminal_exit": 2913,
                 "cost_pct_of_starting_capital": 98.9481,
-                "position_bar_pct": 36.523,
-                "bars": 31643
+                "position_bar_pct": 36.522,
+                "bars": 31644
               },
               "regime10": {
                 "net_return_pct": -64.905,
                 "max_close_drawdown_pct": 64.905,
                 "orders_including_terminal_exit": 2913,
                 "cost_pct_of_starting_capital": 63.5842,
-                "position_bar_pct": 36.523,
-                "bars": 31643
+                "position_bar_pct": 36.522,
+                "bars": 31644
               },
               "combined": {
                 "net_return_pct": -99.985,
                 "max_close_drawdown_pct": 99.985,
                 "orders_including_terminal_exit": 2575,
                 "cost_pct_of_starting_capital": 100.1482,
-                "position_bar_pct": 48.579,
-                "bars": 31643
+                "position_bar_pct": 48.581,
+                "bars": 31644
               }
             }
           },
@@ -1626,89 +1626,89 @@
               "orders_including_terminal_exit": 0,
               "cost_pct_of_starting_capital": 0.0,
               "position_bar_pct": 0.0,
-              "bars": 31643
+              "bars": 31644
             },
             "hold": {
-              "net_return_pct": -31.3937,
+              "net_return_pct": -31.3474,
               "max_close_drawdown_pct": 43.0553,
               "orders_including_terminal_exit": 2,
-              "cost_pct_of_starting_capital": 0.2528,
+              "cost_pct_of_starting_capital": 0.2529,
               "position_bar_pct": 100.0,
-              "bars": 31643
+              "bars": 31644
             },
             "buy10": {
-              "net_return_pct": -3.1436,
+              "net_return_pct": -3.139,
               "max_close_drawdown_pct": 4.7368,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.0253,
               "position_bar_pct": 100.0,
-              "bars": 31643
+              "bars": 31644
             },
             "fixed10": {
-              "net_return_pct": -3.5429,
+              "net_return_pct": -3.5365,
               "max_close_drawdown_pct": 5.338,
-              "orders_including_terminal_exit": 31585,
+              "orders_including_terminal_exit": 31586,
               "cost_pct_of_starting_capital": 0.6573,
               "position_bar_pct": 100.0,
-              "bars": 31643
+              "bars": 31644
             },
             "trend": {
-              "net_return_pct": -58.3533,
+              "net_return_pct": -58.3252,
               "max_close_drawdown_pct": 60.9151,
               "orders_including_terminal_exit": 624,
               "cost_pct_of_starting_capital": 58.6266,
-              "position_bar_pct": 49.48,
-              "bars": 31643
+              "position_bar_pct": 49.482,
+              "bars": 31644
             },
             "breakout": {
               "net_return_pct": -91.487,
               "max_close_drawdown_pct": 91.7657,
               "orders_including_terminal_exit": 1434,
               "cost_pct_of_starting_capital": 81.1922,
-              "position_bar_pct": 35.291,
-              "bars": 31643
+              "position_bar_pct": 35.289,
+              "bars": 31644
             },
             "chan": {
-              "net_return_pct": -68.9539,
+              "net_return_pct": -68.933,
               "max_close_drawdown_pct": 71.0771,
               "orders_including_terminal_exit": 708,
-              "cost_pct_of_starting_capital": 65.6959,
-              "position_bar_pct": 48.611,
-              "bars": 31643
+              "cost_pct_of_starting_capital": 65.696,
+              "position_bar_pct": 48.613,
+              "bars": 31644
             },
             "regime": {
               "net_return_pct": -92.8094,
               "max_close_drawdown_pct": 92.8094,
               "orders_including_terminal_exit": 2913,
               "cost_pct_of_starting_capital": 93.4571,
-              "position_bar_pct": 36.523,
-              "bars": 31643
+              "position_bar_pct": 36.522,
+              "bars": 31644
             },
             "regime10": {
               "net_return_pct": -23.0419,
               "max_close_drawdown_pct": 23.0419,
               "orders_including_terminal_exit": 2913,
               "cost_pct_of_starting_capital": 22.6123,
-              "position_bar_pct": 36.523,
-              "bars": 31643
+              "position_bar_pct": 36.522,
+              "bars": 31644
             },
             "combined": {
-              "net_return_pct": -88.5967,
-              "max_close_drawdown_pct": 88.5967,
+              "net_return_pct": -88.5948,
+              "max_close_drawdown_pct": 88.5948,
               "orders_including_terminal_exit": 2575,
               "cost_pct_of_starting_capital": 91.2185,
-              "position_bar_pct": 48.576,
-              "bars": 31643
+              "position_bar_pct": 48.578,
+              "bars": 31644
             }
           }
         }
       }
     },
     "45m": {
-      "bars": 59251,
+      "bars": 59252,
       "regime_counts": {
         "warmup": 60,
-        "bull_trend": 9154,
+        "bull_trend": 9155,
         "range": 41362,
         "bear_trend": 8675
       },
@@ -2384,7 +2384,7 @@
         },
         "historical_holdout": {
           "start": "2025-01-01T00:00:00+08:00",
-          "through_close": "2026-11-26T14:15:00+08:00",
+          "through_close": "2026-11-26T15:00:00+08:00",
           "cost_scenarios": {
             "0.0015": {
               "cash": {
@@ -2393,79 +2393,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 22227
+                "bars": 22228
               },
               "hold": {
-                "net_return_pct": -36.7574,
+                "net_return_pct": -36.7504,
                 "max_close_drawdown_pct": 55.8828,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.2448,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "buy10": {
-                "net_return_pct": -3.6807,
+                "net_return_pct": -3.68,
                 "max_close_drawdown_pct": 7.162,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0245,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "fixed10": {
-                "net_return_pct": -3.613,
+                "net_return_pct": -3.6121,
                 "max_close_drawdown_pct": 7.3622,
-                "orders_including_terminal_exit": 22208,
-                "cost_pct_of_starting_capital": 0.8073,
+                "orders_including_terminal_exit": 22209,
+                "cost_pct_of_starting_capital": 0.8075,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "trend": {
-                "net_return_pct": -58.9042,
+                "net_return_pct": -58.8997,
                 "max_close_drawdown_pct": 62.0624,
                 "orders_including_terminal_exit": 428,
                 "cost_pct_of_starting_capital": 40.4737,
-                "position_bar_pct": 50.295,
-                "bars": 22227
+                "position_bar_pct": 50.297,
+                "bars": 22228
               },
               "breakout": {
-                "net_return_pct": -78.1252,
+                "net_return_pct": -78.1228,
                 "max_close_drawdown_pct": 78.711,
                 "orders_including_terminal_exit": 1000,
                 "cost_pct_of_starting_capital": 75.0952,
-                "position_bar_pct": 36.082,
-                "bars": 22227
+                "position_bar_pct": 36.085,
+                "bars": 22228
               },
               "chan": {
-                "net_return_pct": -67.7853,
+                "net_return_pct": -67.7817,
                 "max_close_drawdown_pct": 70.2054,
                 "orders_including_terminal_exit": 496,
                 "cost_pct_of_starting_capital": 41.0101,
-                "position_bar_pct": 49.786,
-                "bars": 22227
+                "position_bar_pct": 49.789,
+                "bars": 22228
               },
               "regime": {
-                "net_return_pct": -85.0011,
-                "max_close_drawdown_pct": 85.1649,
+                "net_return_pct": -84.9995,
+                "max_close_drawdown_pct": 85.1632,
                 "orders_including_terminal_exit": 2053,
                 "cost_pct_of_starting_capital": 77.7765,
-                "position_bar_pct": 37.549,
-                "bars": 22227
+                "position_bar_pct": 37.552,
+                "bars": 22228
               },
               "regime10": {
-                "net_return_pct": -17.0375,
-                "max_close_drawdown_pct": 17.1333,
+                "net_return_pct": -17.0366,
+                "max_close_drawdown_pct": 17.1324,
                 "orders_including_terminal_exit": 2053,
                 "cost_pct_of_starting_capital": 16.5613,
-                "position_bar_pct": 37.549,
-                "bars": 22227
+                "position_bar_pct": 37.552,
+                "bars": 22228
               },
               "combined": {
-                "net_return_pct": -80.1017,
-                "max_close_drawdown_pct": 80.269,
+                "net_return_pct": -80.0995,
+                "max_close_drawdown_pct": 80.2668,
                 "orders_including_terminal_exit": 1821,
                 "cost_pct_of_starting_capital": 71.625,
-                "position_bar_pct": 49.989,
-                "bars": 22227
+                "position_bar_pct": 49.991,
+                "bars": 22228
               }
             },
             "0.003": {
@@ -2475,79 +2475,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 22227
+                "bars": 22228
               },
               "hold": {
-                "net_return_pct": -36.9469,
+                "net_return_pct": -36.9399,
                 "max_close_drawdown_pct": 55.8828,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.4888,
+                "cost_pct_of_starting_capital": 0.4889,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "buy10": {
-                "net_return_pct": -3.7047,
+                "net_return_pct": -3.704,
                 "max_close_drawdown_pct": 7.162,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.049,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "fixed10": {
-                "net_return_pct": -4.3936,
+                "net_return_pct": -4.3929,
                 "max_close_drawdown_pct": 7.7954,
-                "orders_including_terminal_exit": 22208,
-                "cost_pct_of_starting_capital": 1.6082,
+                "orders_including_terminal_exit": 22209,
+                "cost_pct_of_starting_capital": 1.6086,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "trend": {
-                "net_return_pct": -78.3739,
+                "net_return_pct": -78.3715,
                 "max_close_drawdown_pct": 79.5509,
                 "orders_including_terminal_exit": 428,
                 "cost_pct_of_starting_capital": 62.3166,
-                "position_bar_pct": 50.295,
-                "bars": 22227
+                "position_bar_pct": 50.297,
+                "bars": 22228
               },
               "breakout": {
-                "net_return_pct": -95.1191,
+                "net_return_pct": -95.1186,
                 "max_close_drawdown_pct": 95.2133,
                 "orders_including_terminal_exit": 1000,
                 "cost_pct_of_starting_capital": 91.5398,
-                "position_bar_pct": 36.082,
-                "bars": 22227
+                "position_bar_pct": 36.085,
+                "bars": 22228
               },
               "chan": {
-                "net_return_pct": -84.6913,
+                "net_return_pct": -84.6896,
                 "max_close_drawdown_pct": 85.4974,
                 "orders_including_terminal_exit": 496,
                 "cost_pct_of_starting_capital": 61.6225,
-                "position_bar_pct": 49.786,
-                "bars": 22227
+                "position_bar_pct": 49.789,
+                "bars": 22228
               },
               "regime": {
-                "net_return_pct": -97.5834,
-                "max_close_drawdown_pct": 97.599,
+                "net_return_pct": -97.5831,
+                "max_close_drawdown_pct": 97.5987,
                 "orders_including_terminal_exit": 2053,
                 "cost_pct_of_starting_capital": 90.6987,
-                "position_bar_pct": 37.549,
-                "bars": 22227
+                "position_bar_pct": 37.552,
+                "bars": 22228
               },
               "regime10": {
-                "net_return_pct": -30.8776,
-                "max_close_drawdown_pct": 30.9266,
+                "net_return_pct": -30.8769,
+                "max_close_drawdown_pct": 30.9258,
                 "orders_including_terminal_exit": 2053,
                 "cost_pct_of_starting_capital": 30.362,
-                "position_bar_pct": 37.549,
-                "bars": 22227
+                "position_bar_pct": 37.552,
+                "bars": 22228
               },
               "combined": {
-                "net_return_pct": -95.5994,
-                "max_close_drawdown_pct": 95.6168,
+                "net_return_pct": -95.599,
+                "max_close_drawdown_pct": 95.6163,
                 "orders_including_terminal_exit": 1821,
                 "cost_pct_of_starting_capital": 88.2764,
-                "position_bar_pct": 49.989,
-                "bars": 22227
+                "position_bar_pct": 49.991,
+                "bars": 22228
               }
             },
             "0.006": {
@@ -2557,79 +2557,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 22227
+                "bars": 22228
               },
               "hold": {
-                "net_return_pct": -37.3241,
+                "net_return_pct": -37.3172,
                 "max_close_drawdown_pct": 55.8828,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.9747,
+                "cost_pct_of_starting_capital": 0.9748,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "buy10": {
-                "net_return_pct": -3.7526,
+                "net_return_pct": -3.7519,
                 "max_close_drawdown_pct": 7.162,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.098,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "fixed10": {
-                "net_return_pct": -5.9358,
+                "net_return_pct": -5.9356,
                 "max_close_drawdown_pct": 8.6558,
-                "orders_including_terminal_exit": 22208,
-                "cost_pct_of_starting_capital": 3.1905,
+                "orders_including_terminal_exit": 22209,
+                "cost_pct_of_starting_capital": 3.1913,
                 "position_bar_pct": 100.0,
-                "bars": 22227
+                "bars": 22228
               },
               "trend": {
-                "net_return_pct": -94.0113,
+                "net_return_pct": -94.0106,
                 "max_close_drawdown_pct": 94.1384,
                 "orders_including_terminal_exit": 428,
                 "cost_pct_of_starting_capital": 80.8561,
-                "position_bar_pct": 50.295,
-                "bars": 22227
+                "position_bar_pct": 50.297,
+                "bars": 22228
               },
               "breakout": {
                 "net_return_pct": -99.757,
                 "max_close_drawdown_pct": 99.7588,
                 "orders_including_terminal_exit": 1000,
                 "cost_pct_of_starting_capital": 95.5094,
-                "position_bar_pct": 36.082,
-                "bars": 22227
+                "position_bar_pct": 36.085,
+                "bars": 22228
               },
               "chan": {
-                "net_return_pct": -96.543,
+                "net_return_pct": -96.5427,
                 "max_close_drawdown_pct": 96.5752,
                 "orders_including_terminal_exit": 496,
                 "cost_pct_of_starting_capital": 78.1043,
-                "position_bar_pct": 49.786,
-                "bars": 22227
+                "position_bar_pct": 49.789,
+                "bars": 22228
               },
               "regime": {
                 "net_return_pct": -99.9373,
                 "max_close_drawdown_pct": 99.9373,
                 "orders_including_terminal_exit": 2053,
                 "cost_pct_of_starting_capital": 92.9713,
-                "position_bar_pct": 37.549,
-                "bars": 22227
+                "position_bar_pct": 37.552,
+                "bars": 22228
               },
               "regime10": {
-                "net_return_pct": -52.0165,
-                "max_close_drawdown_pct": 52.0165,
+                "net_return_pct": -52.016,
+                "max_close_drawdown_pct": 52.016,
                 "orders_including_terminal_exit": 2053,
-                "cost_pct_of_starting_capital": 51.4458,
-                "position_bar_pct": 37.549,
-                "bars": 22227
+                "cost_pct_of_starting_capital": 51.4459,
+                "position_bar_pct": 37.552,
+                "bars": 22228
               },
               "combined": {
                 "net_return_pct": -99.7848,
                 "max_close_drawdown_pct": 99.7848,
                 "orders_including_terminal_exit": 1821,
                 "cost_pct_of_starting_capital": 93.3471,
-                "position_bar_pct": 49.989,
-                "bars": 22227
+                "position_bar_pct": 49.991,
+                "bars": 22228
               }
             }
           },
@@ -2640,79 +2640,79 @@
               "orders_including_terminal_exit": 0,
               "cost_pct_of_starting_capital": 0.0,
               "position_bar_pct": 0.0,
-              "bars": 22227
+              "bars": 22228
             },
             "hold": {
-              "net_return_pct": -36.7574,
+              "net_return_pct": -36.7504,
               "max_close_drawdown_pct": 55.8828,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.2448,
               "position_bar_pct": 100.0,
-              "bars": 22227
+              "bars": 22228
             },
             "buy10": {
-              "net_return_pct": -3.6807,
+              "net_return_pct": -3.68,
               "max_close_drawdown_pct": 7.162,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.0245,
               "position_bar_pct": 100.0,
-              "bars": 22227
+              "bars": 22228
             },
             "fixed10": {
-              "net_return_pct": -3.613,
+              "net_return_pct": -3.6121,
               "max_close_drawdown_pct": 7.3622,
-              "orders_including_terminal_exit": 22208,
-              "cost_pct_of_starting_capital": 0.8073,
+              "orders_including_terminal_exit": 22209,
+              "cost_pct_of_starting_capital": 0.8075,
               "position_bar_pct": 100.0,
-              "bars": 22227
+              "bars": 22228
             },
             "trend": {
-              "net_return_pct": -57.0861,
+              "net_return_pct": -57.0813,
               "max_close_drawdown_pct": 60.6053,
               "orders_including_terminal_exit": 428,
-              "cost_pct_of_starting_capital": 40.9008,
-              "position_bar_pct": 50.295,
-              "bars": 22227
+              "cost_pct_of_starting_capital": 40.9009,
+              "position_bar_pct": 50.297,
+              "bars": 22228
             },
             "breakout": {
-              "net_return_pct": -79.3456,
+              "net_return_pct": -79.3433,
               "max_close_drawdown_pct": 80.6822,
               "orders_including_terminal_exit": 1000,
               "cost_pct_of_starting_capital": 75.1756,
-              "position_bar_pct": 36.082,
-              "bars": 22227
+              "position_bar_pct": 36.085,
+              "bars": 22228
             },
             "chan": {
-              "net_return_pct": -66.5666,
+              "net_return_pct": -66.5629,
               "max_close_drawdown_pct": 69.3015,
               "orders_including_terminal_exit": 496,
               "cost_pct_of_starting_capital": 41.7435,
-              "position_bar_pct": 49.786,
-              "bars": 22227
+              "position_bar_pct": 49.789,
+              "bars": 22228
             },
             "regime": {
-              "net_return_pct": -85.5452,
-              "max_close_drawdown_pct": 85.7204,
+              "net_return_pct": -85.5436,
+              "max_close_drawdown_pct": 85.7188,
               "orders_including_terminal_exit": 2053,
               "cost_pct_of_starting_capital": 77.8372,
-              "position_bar_pct": 37.549,
-              "bars": 22227
+              "position_bar_pct": 37.552,
+              "bars": 22228
             },
             "regime10": {
-              "net_return_pct": -17.3878,
-              "max_close_drawdown_pct": 17.4974,
+              "net_return_pct": -17.3869,
+              "max_close_drawdown_pct": 17.4965,
               "orders_including_terminal_exit": 2053,
               "cost_pct_of_starting_capital": 16.526,
-              "position_bar_pct": 37.549,
-              "bars": 22227
+              "position_bar_pct": 37.552,
+              "bars": 22228
             },
             "combined": {
-              "net_return_pct": -80.3513,
+              "net_return_pct": -80.3492,
               "max_close_drawdown_pct": 80.7555,
               "orders_including_terminal_exit": 1821,
               "cost_pct_of_starting_capital": 71.2168,
-              "position_bar_pct": 49.989,
-              "bars": 22227
+              "position_bar_pct": 49.991,
+              "bars": 22228
             }
           }
         },
@@ -3052,7 +3052,7 @@
         },
         "holdout_2026": {
           "start": "2026-01-01T00:00:00+08:00",
-          "through_close": "2026-11-26T14:15:00+08:00",
+          "through_close": "2026-11-26T15:00:00+08:00",
           "cost_scenarios": {
             "0.0015": {
               "cash": {
@@ -3061,79 +3061,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 10547
+                "bars": 10548
               },
               "hold": {
-                "net_return_pct": -31.355,
+                "net_return_pct": -31.3474,
                 "max_close_drawdown_pct": 42.9958,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.2529,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "buy10": {
-                "net_return_pct": -3.1397,
+                "net_return_pct": -3.139,
                 "max_close_drawdown_pct": 4.7258,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0253,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "fixed10": {
-                "net_return_pct": -3.2726,
+                "net_return_pct": -3.2717,
                 "max_close_drawdown_pct": 5.0893,
-                "orders_including_terminal_exit": 10540,
-                "cost_pct_of_starting_capital": 0.3933,
+                "orders_including_terminal_exit": 10541,
+                "cost_pct_of_starting_capital": 0.3935,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "trend": {
-                "net_return_pct": -26.5394,
+                "net_return_pct": -26.5313,
                 "max_close_drawdown_pct": 33.8656,
                 "orders_including_terminal_exit": 206,
                 "cost_pct_of_starting_capital": 26.9369,
-                "position_bar_pct": 48.526,
-                "bars": 10547
+                "position_bar_pct": 48.531,
+                "bars": 10548
               },
               "breakout": {
-                "net_return_pct": -47.9218,
+                "net_return_pct": -47.916,
                 "max_close_drawdown_pct": 51.2719,
                 "orders_including_terminal_exit": 458,
                 "cost_pct_of_starting_capital": 50.2016,
-                "position_bar_pct": 35.64,
-                "bars": 10547
+                "position_bar_pct": 35.647,
+                "bars": 10548
               },
               "chan": {
-                "net_return_pct": -33.2008,
+                "net_return_pct": -33.1934,
                 "max_close_drawdown_pct": 38.7385,
                 "orders_including_terminal_exit": 232,
                 "cost_pct_of_starting_capital": 28.7717,
-                "position_bar_pct": 50.156,
-                "bars": 10547
+                "position_bar_pct": 50.161,
+                "bars": 10548
               },
               "regime": {
-                "net_return_pct": -56.2043,
-                "max_close_drawdown_pct": 56.5263,
+                "net_return_pct": -56.1994,
+                "max_close_drawdown_pct": 56.5215,
                 "orders_including_terminal_exit": 982,
-                "cost_pct_of_starting_capital": 57.9576,
-                "position_bar_pct": 37.044,
-                "bars": 10547
+                "cost_pct_of_starting_capital": 57.9577,
+                "position_bar_pct": 37.05,
+                "bars": 10548
               },
               "regime10": {
-                "net_return_pct": -7.7888,
-                "max_close_drawdown_pct": 7.8572,
+                "net_return_pct": -7.7878,
+                "max_close_drawdown_pct": 7.8562,
                 "orders_including_terminal_exit": 982,
                 "cost_pct_of_starting_capital": 8.4076,
-                "position_bar_pct": 37.044,
-                "bars": 10547
+                "position_bar_pct": 37.05,
+                "bars": 10548
               },
               "combined": {
-                "net_return_pct": -51.0251,
-                "max_close_drawdown_pct": 51.348,
+                "net_return_pct": -51.0197,
+                "max_close_drawdown_pct": 51.3426,
                 "orders_including_terminal_exit": 881,
                 "cost_pct_of_starting_capital": 51.2813,
-                "position_bar_pct": 50.223,
-                "bars": 10547
+                "position_bar_pct": 50.228,
+                "bars": 10548
               }
             },
             "0.003": {
@@ -3143,79 +3143,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 10547
+                "bars": 10548
               },
               "hold": {
-                "net_return_pct": -31.5606,
+                "net_return_pct": -31.553,
                 "max_close_drawdown_pct": 42.9958,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.505,
+                "cost_pct_of_starting_capital": 0.5051,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "buy10": {
-                "net_return_pct": -3.1646,
+                "net_return_pct": -3.1638,
                 "max_close_drawdown_pct": 4.7258,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0506,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "fixed10": {
-                "net_return_pct": -3.659,
+                "net_return_pct": -3.6583,
                 "max_close_drawdown_pct": 5.4184,
-                "orders_including_terminal_exit": 10540,
-                "cost_pct_of_starting_capital": 0.785,
+                "orders_including_terminal_exit": 10541,
+                "cost_pct_of_starting_capital": 0.7854,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "trend": {
-                "net_return_pct": -46.0667,
+                "net_return_pct": -46.0608,
                 "max_close_drawdown_pct": 50.4151,
                 "orders_including_terminal_exit": 206,
                 "cost_pct_of_starting_capital": 46.5822,
-                "position_bar_pct": 48.526,
-                "bars": 10547
+                "position_bar_pct": 48.531,
+                "bars": 10548
               },
               "breakout": {
-                "net_return_pct": -73.8004,
+                "net_return_pct": -73.7975,
                 "max_close_drawdown_pct": 75.2642,
                 "orders_including_terminal_exit": 458,
                 "cost_pct_of_starting_capital": 75.3046,
-                "position_bar_pct": 35.64,
-                "bars": 10547
+                "position_bar_pct": 35.647,
+                "bars": 10548
               },
               "chan": {
-                "net_return_pct": -52.8332,
+                "net_return_pct": -52.828,
                 "max_close_drawdown_pct": 56.2212,
                 "orders_including_terminal_exit": 232,
                 "cost_pct_of_starting_capital": 49.1569,
-                "position_bar_pct": 50.156,
-                "bars": 10547
+                "position_bar_pct": 50.161,
+                "bars": 10548
               },
               "regime": {
-                "net_return_pct": -81.8038,
-                "max_close_drawdown_pct": 81.8291,
+                "net_return_pct": -81.8018,
+                "max_close_drawdown_pct": 81.8271,
                 "orders_including_terminal_exit": 982,
                 "cost_pct_of_starting_capital": 81.7782,
-                "position_bar_pct": 37.044,
-                "bars": 10547
+                "position_bar_pct": 37.05,
+                "bars": 10548
               },
               "regime10": {
-                "net_return_pct": -15.5413,
-                "max_close_drawdown_pct": 15.5533,
+                "net_return_pct": -15.5404,
+                "max_close_drawdown_pct": 15.5524,
                 "orders_including_terminal_exit": 982,
                 "cost_pct_of_starting_capital": 16.1071,
-                "position_bar_pct": 37.044,
-                "bars": 10547
+                "position_bar_pct": 37.05,
+                "bars": 10548
               },
               "combined": {
-                "net_return_pct": -76.5778,
-                "max_close_drawdown_pct": 76.5924,
+                "net_return_pct": -76.5752,
+                "max_close_drawdown_pct": 76.5898,
                 "orders_including_terminal_exit": 881,
                 "cost_pct_of_starting_capital": 75.7317,
-                "position_bar_pct": 50.223,
-                "bars": 10547
+                "position_bar_pct": 50.228,
+                "bars": 10548
               }
             },
             "0.006": {
@@ -3225,79 +3225,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 10547
+                "bars": 10548
               },
               "hold": {
-                "net_return_pct": -31.97,
+                "net_return_pct": -31.9625,
                 "max_close_drawdown_pct": 42.9958,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 1.0071,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "buy10": {
-                "net_return_pct": -3.2143,
+                "net_return_pct": -3.2135,
                 "max_close_drawdown_pct": 4.7258,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.1013,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "fixed10": {
-                "net_return_pct": -4.4272,
+                "net_return_pct": -4.4269,
                 "max_close_drawdown_pct": 6.0732,
-                "orders_including_terminal_exit": 10540,
-                "cost_pct_of_starting_capital": 1.5638,
+                "orders_including_terminal_exit": 10541,
+                "cost_pct_of_starting_capital": 1.5646,
                 "position_bar_pct": 100.0,
-                "bars": 10547
+                "bars": 10548
               },
               "trend": {
-                "net_return_pct": -70.9292,
+                "net_return_pct": -70.926,
                 "max_close_drawdown_pct": 72.3332,
                 "orders_including_terminal_exit": 206,
-                "cost_pct_of_starting_capital": 71.3562,
-                "position_bar_pct": 48.526,
-                "bars": 10547
+                "cost_pct_of_starting_capital": 71.3563,
+                "position_bar_pct": 48.531,
+                "bars": 10548
               },
               "breakout": {
-                "net_return_pct": -93.3693,
+                "net_return_pct": -93.3685,
                 "max_close_drawdown_pct": 93.626,
                 "orders_including_terminal_exit": 458,
                 "cost_pct_of_starting_capital": 94.2383,
-                "position_bar_pct": 35.64,
-                "bars": 10547
+                "position_bar_pct": 35.647,
+                "bars": 10548
               },
               "chan": {
-                "net_return_pct": -76.4841,
+                "net_return_pct": -76.4815,
                 "max_close_drawdown_pct": 77.6872,
                 "orders_including_terminal_exit": 232,
                 "cost_pct_of_starting_capital": 73.9071,
-                "position_bar_pct": 50.156,
-                "bars": 10547
+                "position_bar_pct": 50.161,
+                "bars": 10548
               },
               "regime": {
-                "net_return_pct": -96.859,
-                "max_close_drawdown_pct": 96.861,
+                "net_return_pct": -96.8587,
+                "max_close_drawdown_pct": 96.8606,
                 "orders_including_terminal_exit": 982,
                 "cost_pct_of_starting_capital": 95.8382,
-                "position_bar_pct": 37.044,
-                "bars": 10547
+                "position_bar_pct": 37.05,
+                "bars": 10548
               },
               "regime10": {
-                "net_return_pct": -29.1457,
-                "max_close_drawdown_pct": 29.1502,
+                "net_return_pct": -29.1449,
+                "max_close_drawdown_pct": 29.1494,
                 "orders_including_terminal_exit": 982,
                 "cost_pct_of_starting_capital": 29.6157,
-                "position_bar_pct": 37.044,
-                "bars": 10547
+                "position_bar_pct": 37.05,
+                "bars": 10548
               },
               "combined": {
-                "net_return_pct": -94.643,
-                "max_close_drawdown_pct": 94.643,
+                "net_return_pct": -94.6424,
+                "max_close_drawdown_pct": 94.6424,
                 "orders_including_terminal_exit": 881,
-                "cost_pct_of_starting_capital": 93.2116,
-                "position_bar_pct": 50.223,
-                "bars": 10547
+                "cost_pct_of_starting_capital": 93.2117,
+                "position_bar_pct": 50.228,
+                "bars": 10548
               }
             }
           },
@@ -3308,90 +3308,90 @@
               "orders_including_terminal_exit": 0,
               "cost_pct_of_starting_capital": 0.0,
               "position_bar_pct": 0.0,
-              "bars": 10547
+              "bars": 10548
             },
             "hold": {
-              "net_return_pct": -31.355,
+              "net_return_pct": -31.3474,
               "max_close_drawdown_pct": 42.9958,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.2529,
               "position_bar_pct": 100.0,
-              "bars": 10547
+              "bars": 10548
             },
             "buy10": {
-              "net_return_pct": -3.1397,
+              "net_return_pct": -3.139,
               "max_close_drawdown_pct": 4.7258,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.0253,
               "position_bar_pct": 100.0,
-              "bars": 10547
+              "bars": 10548
             },
             "fixed10": {
-              "net_return_pct": -3.2726,
+              "net_return_pct": -3.2717,
               "max_close_drawdown_pct": 5.0893,
-              "orders_including_terminal_exit": 10540,
-              "cost_pct_of_starting_capital": 0.3933,
+              "orders_including_terminal_exit": 10541,
+              "cost_pct_of_starting_capital": 0.3935,
               "position_bar_pct": 100.0,
-              "bars": 10547
+              "bars": 10548
             },
             "trend": {
-              "net_return_pct": -20.9093,
+              "net_return_pct": -20.9005,
               "max_close_drawdown_pct": 29.8085,
               "orders_including_terminal_exit": 206,
               "cost_pct_of_starting_capital": 28.1434,
-              "position_bar_pct": 48.526,
-              "bars": 10547
+              "position_bar_pct": 48.531,
+              "bars": 10548
             },
             "breakout": {
-              "net_return_pct": -45.6162,
+              "net_return_pct": -45.6102,
               "max_close_drawdown_pct": 50.52,
               "orders_including_terminal_exit": 458,
               "cost_pct_of_starting_capital": 48.6625,
-              "position_bar_pct": 35.631,
-              "bars": 10547
+              "position_bar_pct": 35.637,
+              "bars": 10548
             },
             "chan": {
-              "net_return_pct": -30.8889,
+              "net_return_pct": -30.8813,
               "max_close_drawdown_pct": 37.2919,
               "orders_including_terminal_exit": 232,
               "cost_pct_of_starting_capital": 29.5455,
-              "position_bar_pct": 50.147,
-              "bars": 10547
+              "position_bar_pct": 50.152,
+              "bars": 10548
             },
             "regime": {
-              "net_return_pct": -57.1748,
-              "max_close_drawdown_pct": 57.6272,
+              "net_return_pct": -57.17,
+              "max_close_drawdown_pct": 57.6225,
               "orders_including_terminal_exit": 982,
               "cost_pct_of_starting_capital": 55.1655,
-              "position_bar_pct": 37.034,
-              "bars": 10547
+              "position_bar_pct": 37.04,
+              "bars": 10548
             },
             "regime10": {
-              "net_return_pct": -8.0258,
-              "max_close_drawdown_pct": 8.1238,
+              "net_return_pct": -8.0248,
+              "max_close_drawdown_pct": 8.1227,
               "orders_including_terminal_exit": 982,
               "cost_pct_of_starting_capital": 8.3661,
-              "position_bar_pct": 37.034,
-              "bars": 10547
+              "position_bar_pct": 37.04,
+              "bars": 10548
             },
             "combined": {
-              "net_return_pct": -51.0689,
+              "net_return_pct": -51.0635,
               "max_close_drawdown_pct": 51.5559,
               "orders_including_terminal_exit": 881,
               "cost_pct_of_starting_capital": 50.2009,
-              "position_bar_pct": 50.213,
-              "bars": 10547
+              "position_bar_pct": 50.218,
+              "bars": 10548
             }
           }
         }
       }
     },
     "3h": {
-      "bars": 14812,
+      "bars": 14813,
       "regime_counts": {
         "warmup": 60,
         "bull_trend": 2543,
-        "range": 9919,
+        "range": 9920,
         "bear_trend": 2290
       },
       "latest_closed_regime": "range",
@@ -4066,7 +4066,7 @@
         },
         "historical_holdout": {
           "start": "2025-01-01T00:00:00+08:00",
-          "through_close": "2026-11-26T12:00:00+08:00",
+          "through_close": "2026-11-26T15:00:00+08:00",
           "cost_scenarios": {
             "0.0015": {
               "cash": {
@@ -4075,79 +4075,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 5556
+                "bars": 5557
               },
               "hold": {
-                "net_return_pct": -36.5251,
+                "net_return_pct": -36.7504,
                 "max_close_drawdown_pct": 55.075,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.2451,
+                "cost_pct_of_starting_capital": 0.2448,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "buy10": {
-                "net_return_pct": -3.6574,
+                "net_return_pct": -3.68,
                 "max_close_drawdown_pct": 7.0584,
                 "orders_including_terminal_exit": 2,
                 "cost_pct_of_starting_capital": 0.0245,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "fixed10": {
-                "net_return_pct": -3.2551,
+                "net_return_pct": -3.2895,
                 "max_close_drawdown_pct": 7.0129,
-                "orders_including_terminal_exit": 5555,
-                "cost_pct_of_starting_capital": 0.4254,
+                "orders_including_terminal_exit": 5556,
+                "cost_pct_of_starting_capital": 0.4253,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "trend": {
                 "net_return_pct": -32.7949,
                 "max_close_drawdown_pct": 44.06,
                 "orders_including_terminal_exit": 116,
                 "cost_pct_of_starting_capital": 14.0242,
-                "position_bar_pct": 47.642,
-                "bars": 5556
+                "position_bar_pct": 47.634,
+                "bars": 5557
               },
               "breakout": {
                 "net_return_pct": -62.3086,
                 "max_close_drawdown_pct": 64.8135,
                 "orders_including_terminal_exit": 272,
                 "cost_pct_of_starting_capital": 27.2091,
-                "position_bar_pct": 36.195,
-                "bars": 5556
+                "position_bar_pct": 36.189,
+                "bars": 5557
               },
               "chan": {
                 "net_return_pct": -42.7267,
                 "max_close_drawdown_pct": 53.8515,
                 "orders_including_terminal_exit": 126,
                 "cost_pct_of_starting_capital": 13.6628,
-                "position_bar_pct": 48.596,
-                "bars": 5556
+                "position_bar_pct": 48.587,
+                "bars": 5557
               },
               "regime": {
                 "net_return_pct": -50.26,
                 "max_close_drawdown_pct": 51.9126,
                 "orders_including_terminal_exit": 505,
                 "cost_pct_of_starting_capital": 30.9207,
-                "position_bar_pct": 37.833,
-                "bars": 5556
+                "position_bar_pct": 37.826,
+                "bars": 5557
               },
               "regime10": {
                 "net_return_pct": -6.4011,
                 "max_close_drawdown_pct": 6.91,
                 "orders_including_terminal_exit": 505,
                 "cost_pct_of_starting_capital": 4.1936,
-                "position_bar_pct": 37.833,
-                "bars": 5556
+                "position_bar_pct": 37.826,
+                "bars": 5557
               },
               "combined": {
                 "net_return_pct": -41.4048,
                 "max_close_drawdown_pct": 44.6449,
                 "orders_including_terminal_exit": 451,
                 "cost_pct_of_starting_capital": 27.75,
-                "position_bar_pct": 48.686,
-                "bars": 5556
+                "position_bar_pct": 48.677,
+                "bars": 5557
               }
             },
             "0.003": {
@@ -4157,79 +4157,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 5556
+                "bars": 5557
               },
               "hold": {
-                "net_return_pct": -36.7152,
+                "net_return_pct": -36.9399,
                 "max_close_drawdown_pct": 55.075,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.4895,
+                "cost_pct_of_starting_capital": 0.4889,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "buy10": {
-                "net_return_pct": -3.6814,
+                "net_return_pct": -3.704,
                 "max_close_drawdown_pct": 7.0584,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.0491,
+                "cost_pct_of_starting_capital": 0.049,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "fixed10": {
-                "net_return_pct": -3.6681,
+                "net_return_pct": -3.7022,
                 "max_close_drawdown_pct": 7.2322,
-                "orders_including_terminal_exit": 5555,
-                "cost_pct_of_starting_capital": 0.8489,
+                "orders_including_terminal_exit": 5556,
+                "cost_pct_of_starting_capital": 0.8488,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "trend": {
                 "net_return_pct": -43.5278,
                 "max_close_drawdown_pct": 50.3857,
                 "orders_including_terminal_exit": 116,
                 "cost_pct_of_starting_capital": 25.8957,
-                "position_bar_pct": 47.642,
-                "bars": 5556
+                "position_bar_pct": 47.634,
+                "bars": 5557
               },
               "breakout": {
                 "net_return_pct": -74.9361,
                 "max_close_drawdown_pct": 76.3549,
                 "orders_including_terminal_exit": 272,
                 "cost_pct_of_starting_capital": 46.0367,
-                "position_bar_pct": 36.195,
-                "bars": 5556
+                "position_bar_pct": 36.189,
+                "bars": 5557
               },
               "chan": {
                 "net_return_pct": -52.59,
                 "max_close_drawdown_pct": 59.5582,
                 "orders_including_terminal_exit": 126,
                 "cost_pct_of_starting_capital": 25.1092,
-                "position_bar_pct": 48.596,
-                "bars": 5556
+                "position_bar_pct": 48.587,
+                "bars": 5557
               },
               "regime": {
                 "net_return_pct": -67.7826,
                 "max_close_drawdown_pct": 68.2274,
                 "orders_including_terminal_exit": 505,
                 "cost_pct_of_starting_capital": 51.3311,
-                "position_bar_pct": 37.833,
-                "bars": 5556
+                "position_bar_pct": 37.826,
+                "bars": 5557
               },
               "regime10": {
                 "net_return_pct": -10.3759,
                 "max_close_drawdown_pct": 10.5268,
                 "orders_including_terminal_exit": 505,
                 "cost_pct_of_starting_capital": 8.2097,
-                "position_bar_pct": 37.833,
-                "bars": 5556
+                "position_bar_pct": 37.826,
+                "bars": 5557
               },
               "combined": {
                 "net_return_pct": -59.4611,
                 "max_close_drawdown_pct": 60.3455,
                 "orders_including_terminal_exit": 451,
                 "cost_pct_of_starting_capital": 47.1026,
-                "position_bar_pct": 48.686,
-                "bars": 5556
+                "position_bar_pct": 48.677,
+                "bars": 5557
               }
             },
             "0.006": {
@@ -4239,79 +4239,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 5556
+                "bars": 5557
               },
               "hold": {
-                "net_return_pct": -37.0938,
+                "net_return_pct": -37.3172,
                 "max_close_drawdown_pct": 55.075,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.9761,
+                "cost_pct_of_starting_capital": 0.9748,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "buy10": {
-                "net_return_pct": -3.7294,
+                "net_return_pct": -3.7519,
                 "max_close_drawdown_pct": 7.0584,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.0981,
+                "cost_pct_of_starting_capital": 0.098,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "fixed10": {
-                "net_return_pct": -4.4887,
+                "net_return_pct": -4.5224,
                 "max_close_drawdown_pct": 7.6691,
-                "orders_including_terminal_exit": 5555,
-                "cost_pct_of_starting_capital": 1.6906,
+                "orders_including_terminal_exit": 5556,
+                "cost_pct_of_starting_capital": 1.6904,
                 "position_bar_pct": 100.0,
-                "bars": 5556
+                "bars": 5557
               },
               "trend": {
                 "net_return_pct": -60.1253,
                 "max_close_drawdown_pct": 62.3894,
                 "orders_including_terminal_exit": 116,
                 "cost_pct_of_starting_capital": 44.4767,
-                "position_bar_pct": 47.642,
-                "bars": 5556
+                "position_bar_pct": 47.634,
+                "bars": 5557
               },
               "breakout": {
                 "net_return_pct": -88.917,
                 "max_close_drawdown_pct": 89.3226,
                 "orders_including_terminal_exit": 272,
                 "cost_pct_of_starting_capital": 68.3773,
-                "position_bar_pct": 36.195,
-                "bars": 5556
+                "position_bar_pct": 36.189,
+                "bars": 5557
               },
               "chan": {
                 "net_return_pct": -67.5135,
                 "max_close_drawdown_pct": 70.2082,
                 "orders_including_terminal_exit": 126,
                 "cost_pct_of_starting_capital": 42.7827,
-                "position_bar_pct": 48.596,
-                "bars": 5556
+                "position_bar_pct": 48.587,
+                "bars": 5557
               },
               "regime": {
                 "net_return_pct": -86.4838,
                 "max_close_drawdown_pct": 86.5471,
                 "orders_including_terminal_exit": 505,
                 "cost_pct_of_starting_capital": 73.8791,
-                "position_bar_pct": 37.833,
-                "bars": 5556
+                "position_bar_pct": 37.826,
+                "bars": 5557
               },
               "regime10": {
                 "net_return_pct": -17.8262,
                 "max_close_drawdown_pct": 17.8667,
                 "orders_including_terminal_exit": 505,
                 "cost_pct_of_starting_capital": 15.7391,
-                "position_bar_pct": 37.833,
-                "bars": 5556
+                "position_bar_pct": 37.826,
+                "bars": 5557
               },
               "combined": {
                 "net_return_pct": -80.5962,
                 "max_close_drawdown_pct": 80.6192,
                 "orders_including_terminal_exit": 451,
                 "cost_pct_of_starting_capital": 70.0952,
-                "position_bar_pct": 48.686,
-                "bars": 5556
+                "position_bar_pct": 48.677,
+                "bars": 5557
               }
             }
           },
@@ -4322,79 +4322,79 @@
               "orders_including_terminal_exit": 0,
               "cost_pct_of_starting_capital": 0.0,
               "position_bar_pct": 0.0,
-              "bars": 5556
+              "bars": 5557
             },
             "hold": {
-              "net_return_pct": -36.5251,
+              "net_return_pct": -36.7504,
               "max_close_drawdown_pct": 55.075,
               "orders_including_terminal_exit": 2,
-              "cost_pct_of_starting_capital": 0.2451,
+              "cost_pct_of_starting_capital": 0.2448,
               "position_bar_pct": 100.0,
-              "bars": 5556
+              "bars": 5557
             },
             "buy10": {
-              "net_return_pct": -3.6574,
+              "net_return_pct": -3.68,
               "max_close_drawdown_pct": 7.0584,
               "orders_including_terminal_exit": 2,
               "cost_pct_of_starting_capital": 0.0245,
               "position_bar_pct": 100.0,
-              "bars": 5556
+              "bars": 5557
             },
             "fixed10": {
-              "net_return_pct": -3.2551,
+              "net_return_pct": -3.2895,
               "max_close_drawdown_pct": 7.0129,
-              "orders_including_terminal_exit": 5555,
-              "cost_pct_of_starting_capital": 0.4254,
+              "orders_including_terminal_exit": 5556,
+              "cost_pct_of_starting_capital": 0.4253,
               "position_bar_pct": 100.0,
-              "bars": 5556
+              "bars": 5557
             },
             "trend": {
               "net_return_pct": -23.6598,
               "max_close_drawdown_pct": 34.7558,
               "orders_including_terminal_exit": 116,
               "cost_pct_of_starting_capital": 15.0945,
-              "position_bar_pct": 47.642,
-              "bars": 5556
+              "position_bar_pct": 47.634,
+              "bars": 5557
             },
             "breakout": {
               "net_return_pct": -63.173,
               "max_close_drawdown_pct": 65.8146,
               "orders_including_terminal_exit": 272,
               "cost_pct_of_starting_capital": 25.6896,
-              "position_bar_pct": 36.195,
-              "bars": 5556
+              "position_bar_pct": 36.189,
+              "bars": 5557
             },
             "chan": {
               "net_return_pct": -44.1503,
               "max_close_drawdown_pct": 52.5821,
               "orders_including_terminal_exit": 126,
               "cost_pct_of_starting_capital": 13.342,
-              "position_bar_pct": 48.596,
-              "bars": 5556
+              "position_bar_pct": 48.587,
+              "bars": 5557
             },
             "regime": {
               "net_return_pct": -45.9838,
               "max_close_drawdown_pct": 47.333,
               "orders_including_terminal_exit": 505,
               "cost_pct_of_starting_capital": 32.0301,
-              "position_bar_pct": 37.833,
-              "bars": 5556
+              "position_bar_pct": 37.826,
+              "bars": 5557
             },
             "regime10": {
               "net_return_pct": -5.6033,
               "max_close_drawdown_pct": 5.959,
               "orders_including_terminal_exit": 505,
               "cost_pct_of_starting_capital": 4.2138,
-              "position_bar_pct": 37.833,
-              "bars": 5556
+              "position_bar_pct": 37.826,
+              "bars": 5557
             },
             "combined": {
               "net_return_pct": -36.2579,
               "max_close_drawdown_pct": 37.6612,
               "orders_including_terminal_exit": 451,
               "cost_pct_of_starting_capital": 28.9755,
-              "position_bar_pct": 48.686,
-              "bars": 5556
+              "position_bar_pct": 48.677,
+              "bars": 5557
             }
           }
         },
@@ -4734,7 +4734,7 @@
         },
         "holdout_2026": {
           "start": "2026-01-01T00:00:00+08:00",
-          "through_close": "2026-11-26T12:00:00+08:00",
+          "through_close": "2026-11-26T15:00:00+08:00",
           "cost_scenarios": {
             "0.0015": {
               "cash": {
@@ -4743,79 +4743,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 2636
+                "bars": 2637
               },
               "hold": {
-                "net_return_pct": -31.1027,
+                "net_return_pct": -31.3474,
                 "max_close_drawdown_pct": 41.9354,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.2533,
+                "cost_pct_of_starting_capital": 0.2529,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "buy10": {
-                "net_return_pct": -3.1145,
+                "net_return_pct": -3.139,
                 "max_close_drawdown_pct": 4.6081,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.0254,
+                "cost_pct_of_starting_capital": 0.0253,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "fixed10": {
-                "net_return_pct": -3.11,
+                "net_return_pct": -3.1444,
                 "max_close_drawdown_pct": 4.7796,
-                "orders_including_terminal_exit": 2637,
+                "orders_including_terminal_exit": 2638,
                 "cost_pct_of_starting_capital": 0.2122,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "trend": {
                 "net_return_pct": -11.2565,
                 "max_close_drawdown_pct": 26.3608,
                 "orders_including_terminal_exit": 52,
                 "cost_pct_of_starting_capital": 7.2038,
-                "position_bar_pct": 43.475,
-                "bars": 2636
+                "position_bar_pct": 43.458,
+                "bars": 2637
               },
               "breakout": {
                 "net_return_pct": -38.4779,
                 "max_close_drawdown_pct": 42.8279,
                 "orders_including_terminal_exit": 126,
                 "cost_pct_of_starting_capital": 15.5462,
-                "position_bar_pct": 34.294,
-                "bars": 2636
+                "position_bar_pct": 34.281,
+                "bars": 2637
               },
               "chan": {
                 "net_return_pct": -11.7425,
                 "max_close_drawdown_pct": 26.4045,
                 "orders_including_terminal_exit": 54,
                 "cost_pct_of_starting_capital": 7.5285,
-                "position_bar_pct": 44.879,
-                "bars": 2636
+                "position_bar_pct": 44.862,
+                "bars": 2637
               },
               "regime": {
                 "net_return_pct": -26.7263,
                 "max_close_drawdown_pct": 31.9316,
                 "orders_including_terminal_exit": 233,
                 "cost_pct_of_starting_capital": 17.2727,
-                "position_bar_pct": 36.305,
-                "bars": 2636
+                "position_bar_pct": 36.291,
+                "bars": 2637
               },
               "regime10": {
                 "net_return_pct": -2.8559,
                 "max_close_drawdown_pct": 3.7525,
                 "orders_including_terminal_exit": 233,
                 "cost_pct_of_starting_capital": 1.9763,
-                "position_bar_pct": 36.305,
-                "bars": 2636
+                "position_bar_pct": 36.291,
+                "bars": 2637
               },
               "combined": {
                 "net_return_pct": -17.9629,
                 "max_close_drawdown_pct": 24.7725,
                 "orders_including_terminal_exit": 196,
                 "cost_pct_of_starting_capital": 14.6856,
-                "position_bar_pct": 45.372,
-                "bars": 2636
+                "position_bar_pct": 45.355,
+                "bars": 2637
               }
             },
             "0.003": {
@@ -4825,79 +4825,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 2636
+                "bars": 2637
               },
               "hold": {
-                "net_return_pct": -31.3091,
+                "net_return_pct": -31.553,
                 "max_close_drawdown_pct": 41.9354,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.5058,
+                "cost_pct_of_starting_capital": 0.5051,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "buy10": {
-                "net_return_pct": -3.1394,
+                "net_return_pct": -3.1638,
                 "max_close_drawdown_pct": 4.6081,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.0507,
+                "cost_pct_of_starting_capital": 0.0506,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "fixed10": {
-                "net_return_pct": -3.3189,
+                "net_return_pct": -3.3531,
                 "max_close_drawdown_pct": 4.9466,
-                "orders_including_terminal_exit": 2637,
-                "cost_pct_of_starting_capital": 0.424,
+                "orders_including_terminal_exit": 2638,
+                "cost_pct_of_starting_capital": 0.4239,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "trend": {
                 "net_return_pct": -17.9154,
                 "max_close_drawdown_pct": 28.1071,
                 "orders_including_terminal_exit": 52,
                 "cost_pct_of_starting_capital": 13.8605,
-                "position_bar_pct": 43.475,
-                "bars": 2636
+                "position_bar_pct": 43.458,
+                "bars": 2637
               },
               "breakout": {
                 "net_return_pct": -49.0729,
                 "max_close_drawdown_pct": 52.3176,
                 "orders_including_terminal_exit": 126,
                 "cost_pct_of_starting_capital": 28.536,
-                "position_bar_pct": 34.294,
-                "bars": 2636
+                "position_bar_pct": 34.281,
+                "bars": 2637
               },
               "chan": {
                 "net_return_pct": -18.6095,
                 "max_close_drawdown_pct": 28.1498,
                 "orders_including_terminal_exit": 54,
                 "cost_pct_of_starting_capital": 14.4575,
-                "position_bar_pct": 44.879,
-                "bars": 2636
+                "position_bar_pct": 44.862,
+                "bars": 2637
               },
               "regime": {
                 "net_return_pct": -40.0505,
                 "max_close_drawdown_pct": 43.7829,
                 "orders_including_terminal_exit": 233,
                 "cost_pct_of_starting_capital": 31.4464,
-                "position_bar_pct": 36.305,
-                "bars": 2636
+                "position_bar_pct": 36.291,
+                "bars": 2637
               },
               "regime10": {
                 "net_return_pct": -4.785,
                 "max_close_drawdown_pct": 5.4062,
                 "orders_including_terminal_exit": 233,
                 "cost_pct_of_starting_capital": 3.9133,
-                "position_bar_pct": 36.305,
-                "bars": 2636
+                "position_bar_pct": 36.291,
+                "bars": 2637
               },
               "combined": {
                 "net_return_pct": -30.2382,
                 "max_close_drawdown_pct": 34.2401,
                 "orders_including_terminal_exit": 196,
                 "cost_pct_of_starting_capital": 27.1643,
-                "position_bar_pct": 45.372,
-                "bars": 2636
+                "position_bar_pct": 45.355,
+                "bars": 2637
               }
             },
             "0.006": {
@@ -4907,79 +4907,79 @@
                 "orders_including_terminal_exit": 0,
                 "cost_pct_of_starting_capital": 0.0,
                 "position_bar_pct": 0.0,
-                "bars": 2636
+                "bars": 2637
               },
               "hold": {
-                "net_return_pct": -31.72,
+                "net_return_pct": -31.9625,
                 "max_close_drawdown_pct": 41.9354,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 1.0086,
+                "cost_pct_of_starting_capital": 1.0071,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "buy10": {
-                "net_return_pct": -3.1891,
+                "net_return_pct": -3.2135,
                 "max_close_drawdown_pct": 4.6081,
                 "orders_including_terminal_exit": 2,
-                "cost_pct_of_starting_capital": 0.1014,
+                "cost_pct_of_starting_capital": 0.1013,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "fixed10": {
-                "net_return_pct": -3.7353,
+                "net_return_pct": -3.7693,
                 "max_close_drawdown_pct": 5.2798,
-                "orders_including_terminal_exit": 2637,
-                "cost_pct_of_starting_capital": 0.8461,
+                "orders_including_terminal_exit": 2638,
+                "cost_pct_of_starting_capital": 0.8459,
                 "position_bar_pct": 100.0,
-                "bars": 2636
+                "bars": 2637
               },
               "trend": {
                 "net_return_pct": -29.772,
                 "max_close_drawdown_pct": 34.3134,
                 "orders_including_terminal_exit": 52,
                 "cost_pct_of_starting_capital": 25.6963,
-                "position_bar_pct": 43.475,
-                "bars": 2636
+                "position_bar_pct": 43.458,
+                "bars": 2637
               },
               "breakout": {
                 "net_return_pct": -65.1035,
                 "max_close_drawdown_pct": 66.8335,
                 "orders_including_terminal_exit": 126,
                 "cost_pct_of_starting_capital": 48.501,
-                "position_bar_pct": 34.294,
-                "bars": 2636
+                "position_bar_pct": 34.281,
+                "bars": 2637
               },
               "chan": {
                 "net_return_pct": -30.7824,
                 "max_close_drawdown_pct": 34.3093,
                 "orders_including_terminal_exit": 54,
                 "cost_pct_of_starting_capital": 26.7037,
-                "position_bar_pct": 44.879,
-                "bars": 2636
+                "position_bar_pct": 44.862,
+                "bars": 2637
               },
               "regime": {
                 "net_return_pct": -59.8711,
                 "max_close_drawdown_pct": 61.9732,
                 "orders_including_terminal_exit": 233,
                 "cost_pct_of_starting_capital": 52.65,
-                "position_bar_pct": 36.305,
-                "bars": 2636
+                "position_bar_pct": 36.291,
+                "bars": 2637
               },
               "regime10": {
                 "net_return_pct": -8.529,
                 "max_close_drawdown_pct": 9.0297,
                 "orders_including_terminal_exit": 233,
                 "cost_pct_of_starting_capital": 7.6729,
-                "position_bar_pct": 36.305,
-                "bars": 2636
+                "position_bar_pct": 36.291,
+                "bars": 2637
               },
               "combined": {
                 "net_return_pct": -49.5537,
                 "max_close_drawdown_pct": 51.948,
                 "orders_including_terminal_exit": 196,
                 "cost_pct_of_starting_capital": 46.7845,
-                "position_bar_pct": 45.372,
-                "bars": 2636
+                "position_bar_pct": 45.355,
+                "bars": 2637
               }
             }
           },
@@ -4990,79 +4990,79 @@
               "orders_including_terminal_exit": 0,
               "cost_pct_of_starting_capital": 0.0,
               "position_bar_pct": 0.0,
-              "bars": 2636
+              "bars": 2637
             },
             "hold": {
-              "net_return_pct": -31.1027,
+              "net_return_pct": -31.3474,
               "max_close_drawdown_pct": 41.9354,
               "orders_including_terminal_exit": 2,
-              "cost_pct_of_starting_capital": 0.2533,
+              "cost_pct_of_starting_capital": 0.2529,
               "position_bar_pct": 100.0,
-              "bars": 2636
+              "bars": 2637
             },
             "buy10": {
-              "net_return_pct": -3.1145,
+              "net_return_pct": -3.139,
               "max_close_drawdown_pct": 4.6081,
               "orders_including_terminal_exit": 2,
-              "cost_pct_of_starting_capital": 0.0254,
+              "cost_pct_of_starting_capital": 0.0253,
               "position_bar_pct": 100.0,
-              "bars": 2636
+              "bars": 2637
             },
             "fixed10": {
-              "net_return_pct": -3.11,
+              "net_return_pct": -3.1444,
               "max_close_drawdown_pct": 4.7796,
-              "orders_including_terminal_exit": 2637,
+              "orders_including_terminal_exit": 2638,
               "cost_pct_of_starting_capital": 0.2122,
               "position_bar_pct": 100.0,
-              "bars": 2636
+              "bars": 2637
             },
             "trend": {
               "net_return_pct": -6.5517,
               "max_close_drawdown_pct": 20.8276,
               "orders_including_terminal_exit": 52,
               "cost_pct_of_starting_capital": 7.5579,
-              "position_bar_pct": 43.513,
-              "bars": 2636
+              "position_bar_pct": 43.496,
+              "bars": 2637
             },
             "breakout": {
               "net_return_pct": -34.5694,
               "max_close_drawdown_pct": 39.7,
               "orders_including_terminal_exit": 126,
               "cost_pct_of_starting_capital": 16.0998,
-              "position_bar_pct": 34.294,
-              "bars": 2636
+              "position_bar_pct": 34.281,
+              "bars": 2637
             },
             "chan": {
               "net_return_pct": -10.4023,
               "max_close_drawdown_pct": 21.8419,
               "orders_including_terminal_exit": 54,
               "cost_pct_of_starting_capital": 7.8393,
-              "position_bar_pct": 44.879,
-              "bars": 2636
+              "position_bar_pct": 44.862,
+              "bars": 2637
             },
             "regime": {
               "net_return_pct": -22.1349,
               "max_close_drawdown_pct": 28.1473,
               "orders_including_terminal_exit": 233,
               "cost_pct_of_starting_capital": 17.9012,
-              "position_bar_pct": 36.305,
-              "bars": 2636
+              "position_bar_pct": 36.291,
+              "bars": 2637
             },
             "regime10": {
               "net_return_pct": -2.2366,
               "max_close_drawdown_pct": 3.1252,
               "orders_including_terminal_exit": 233,
               "cost_pct_of_starting_capital": 1.9859,
-              "position_bar_pct": 36.305,
-              "bars": 2636
+              "position_bar_pct": 36.291,
+              "bars": 2637
             },
             "combined": {
               "net_return_pct": -12.9059,
               "max_close_drawdown_pct": 19.0501,
               "orders_including_terminal_exit": 196,
               "cost_pct_of_starting_capital": 15.4076,
-              "position_bar_pct": 45.372,
-              "bars": 2636
+              "position_bar_pct": 45.355,
+              "bars": 2637
             }
           }
         }

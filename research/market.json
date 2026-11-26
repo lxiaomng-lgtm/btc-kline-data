@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-11-26T07:00:22+00:00",
+  "observed_at_utc": "2026-11-26T07:01:07+00:00",
   "coverage_utc": {
     "from": "2026-08-28T00:00:00+00:00",
     "through": "2026-11-26T07:00:00+00:00"
@@ -55,10 +55,10 @@
       "last": "2026-11-26T06:00:00+00:00"
     },
     "bitstamp_close_usd": {
-      "n": 2166,
-      "missing": 1,
+      "n": 2167,
+      "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T05:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_vs_binance_bps": {
       "n": 2167,
@@ -67,10 +67,10 @@
       "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2166,
-      "missing": 1,
+      "n": 2167,
+      "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T05:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     }
   },
   "funding_events_last_90_days": 195,
@@ -91,16 +91,16 @@
       "up_pct": 48.864
     },
     "coinbase_vs_binance_bps": {
-      "n": 2165,
-      "pearson_r": -0.01509,
-      "mean_return_pct": -0.01115,
-      "up_pct": 48.868
+      "n": 2166,
+      "pearson_r": -0.01469,
+      "mean_return_pct": -0.01134,
+      "up_pct": 48.846
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2165,
-      "pearson_r": -0.00029,
-      "mean_return_pct": -0.01115,
-      "up_pct": 48.868
+      "n": 2166,
+      "pearson_r": -0.0007,
+      "mean_return_pct": -0.01134,
+      "up_pct": 48.846
     },
     "funding_rate": {
       "n": 195,
