@@ -1,0 +1,48 @@
+name: BTC profitability edge research
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, research-edge]
+    paths:
+      - '.github/workflows/research-edge.yml'
+      - 'scripts/research_edge.py'
+  workflow_run:
+    workflows: ['BTC historical strategy research']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: btc-edge-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Verify Python sources
+        run: python3 -m py_compile scripts/research_edge.py scripts/research_paper_edge.py scripts/multiframe_btc.py
+      - name: Run five-year event and costed execution research
+        run: python3 scripts/research_edge.py
+      - name: Capture timestamped exchange source snapshots
+        if: github.ref_name == 'main'
+        run: python3 scripts/research_edge_capture.py
+      - name: Publish independent research outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/edge
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish BTC edge research'
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 4
+          done
+          exit 1

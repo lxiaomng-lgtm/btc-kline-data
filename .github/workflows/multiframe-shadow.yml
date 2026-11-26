@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/multiframe-shadow.yml'
       - 'scripts/multiframe_btc.py'
+      - 'scripts/research_paper_edge.py'
   schedule:
     # Offset by six minutes from each UTC 45-minute boundary.
     - cron: '6,51 0,3,6,9,12,15,18,21 * * *'
@@ -32,6 +33,26 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Publish BTC multiframe shadow signal'
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 4
+          done
+          exit 1
+      - name: Record next observed executable quote and paper accounts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/research_paper_edge.py
+      - name: Publish paper ledger without backfills
+        run: |
+          if [ ! -d research/paper_edge ]; then exit 0; fi
+          git add research/paper_edge/
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Append prospective BTC paper journal'
           for attempt in 1 2 3 4 5; do
             if git pull --rebase origin main && git push origin HEAD:main; then
               exit 0
