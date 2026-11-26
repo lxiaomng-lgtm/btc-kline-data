@@ -56,19 +56,20 @@ def next_book(after, seconds=45):
     return None, list(dict.fromkeys(errors))
 
 
-def account_state(prior, target, q):
+def account_state(prior, target, q, buy_and_hold=False):
     cash,balance,peak,prior_dd = (prior[k] for k in ("cash_usd","position_btc","peak_usd","maximum_drawdown"))
     result={"status":"awaiting_valid_quote","fill_price_usd":None,"signed_quantity_btc":0.,
             "fee_usd":0.,"cash_usd":cash,"position_btc":balance,"nav_usd":prior["nav_usd"],
             "peak_usd":peak,"drawdown":prior["drawdown"],"maximum_drawdown":prior_dd,
-            "target_weight":target}
+            "target_weight":target,"last_processed_target":prior.get("last_processed_target")}
     if not q:
         return result
     mid=(q["bid"]+q["ask"])/2
     marked=cash+balance*mid
     delta=target*marked-balance*mid
     result["status"]="marked_no_order"
-    if abs(delta)>=5 or (target==0 and balance>0):
+    changed = target != prior.get("last_processed_target")
+    if (changed or target==0 and balance>0) and (abs(delta)>=5 or target==0 and balance>0) and not (buy_and_hold and balance>0):
         buying=delta>0
         price=q["ask"]*(1+SLIPPAGE) if buying else q["bid"]*(1-SLIPPAGE)
         qty=min(q["ask_btc"],cash/(price*(1+TAKER)),delta/price) if buying else -min(q["bid_btc"],balance,-delta/price)
@@ -77,6 +78,9 @@ def account_state(prior, target, q):
             cash-=qty*price+fee
             balance+=qty
             result.update(status="paper_fill",fill_price_usd=price,signed_quantity_btc=qty,fee_usd=fee)
+    result["last_processed_target"] = target
+    if min(cash,balance) < -1e-8:
+        raise AssertionError("Paper trade would create a negative balance")
     marked=cash+balance*mid
     peak=max(peak,marked)
     dd=1-marked/peak
@@ -128,10 +132,7 @@ def main():
     accounts={}
     for name,value in targets.items():
         previous=prior.get(name,zero)
-        if quote and previous["position_btc"]>0 and name=="buy_hold_10":
-            mid=(quote["bid"]+quote["ask"])/2
-            value=previous["position_btc"]*mid/(previous["cash_usd"]+previous["position_btc"]*mid)
-        accounts[name]=account_state(previous,value,quote)
+        accounts[name]=account_state(previous,value,quote,name=="buy_hold_10")
     write_json(journal,{"run_id":run,"signal_file":str(path),"signal_at":doc["signal_close_bjt"],
               "git_publication_commit_at":committed_at,"confirmed_published_at":stamp(verified),
               "publication_commit":commit["sha"],"signal_blob":observed["sha"],
