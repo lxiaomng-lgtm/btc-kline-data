@@ -20,6 +20,12 @@
     0.006
   ],
   "comparison_to": "2026-11-26T08:00:00+08:00",
+  "event_rows": 567,
+  "tested_cells": {
+    "development": 133,
+    "validation": 104,
+    "historical_reused": 124
+  },
   "attribution": {
     "daily:ban:0.10:signal": {
       "zero_cost": {
