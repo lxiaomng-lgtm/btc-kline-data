@@ -296,7 +296,7 @@ class Position:
             self.campaign_cash = 0.
 
 
-def run(points, opens, a, b, rule, fee, latency, targets):
+def run(points, opens, a, b, rule, fee, latency, targets, observer=None):
     p = Position()
     peak = last = 1.
     dd = exposure = 0.
@@ -315,6 +315,7 @@ def run(points, opens, a, b, rule, fee, latency, targets):
         regime = point[6]
         h3_close_at = point[12]
         target = targets[i]
+        reason = 'signal'
         eligible = (not is_h3 or t == h3_close_at or i == a)
         if is_h3:
             close, atr = point[13:15]
@@ -334,6 +335,7 @@ def run(points, opens, a, b, rule, fee, latency, targets):
                     target = 0.
                     frozen = True
                     stops += 1
+                    reason = 'atr_stop'
         if is_daily and i != a and t != point[11]:
             target = p.target
         previous = p.qty
@@ -342,7 +344,10 @@ def run(points, opens, a, b, rule, fee, latency, targets):
             pre_trade = p.cash + p.qty*price
             peak = max(peak, pre_trade)
             dd = max(dd, 1-pre_trade/peak)
+            before = (p.qty, p.cash, p.fees, p.orders) if observer else None
             p.trade(target, price, fee)
+            if observer:
+                observer(t+latency, price, p, *before, reason, regime)
             post_trade = p.cash + p.qty*price
             dd = max(dd, 1-post_trade/peak)
             if p.qty > previous and regime == "bear":
@@ -354,7 +359,10 @@ def run(points, opens, a, b, rule, fee, latency, targets):
         marked = value
         market_qty = p.qty
         if i+1 == b:
+            before = (p.qty, p.cash, p.fees, p.orders) if observer else None
             p.trade(0., mark, fee)
+            if observer:
+                observer(points[i+1][0], mark, p, *before, 'terminal', regime)
             value = p.cash
         ri = 0 if regime == "bull" else 1 if regime == "range" else 2
         regime_log[ri] += math.log(value/last)
