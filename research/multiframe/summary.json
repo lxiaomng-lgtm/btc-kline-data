@@ -1,5 +1,5 @@
 {
-  "run_id": "45782021084",
+  "run_id": "45782554191",
   "price_audit": {
     "archived_bars": 177755,
     "snapshot_bars": 192,
@@ -1445,7 +1445,7 @@
   },
   "external_coverage": {
     "observed_etf_files": 1,
-    "observed_derivatives_files": 0,
+    "observed_derivatives_files": 1,
     "etf_first_eligible_in_price_clock": "2026-11-26T15:30:00+08:00",
     "derivatives_first_eligible_in_price_clock": null,
     "splits": {
