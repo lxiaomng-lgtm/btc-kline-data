@@ -96,10 +96,13 @@ def classification(day, historical, recent):
     if total is None:
         return "PENDING"
     known = [x for x in values if x is not None]
-    if abs(sum(known) - total) > Decimal("0.05") * (len(known) + 1):
-        return "TOTAL_MISMATCH"
+    residual = abs(sum(known) - total)
     if recent is not None:
-        return "FINAL" if recent == historical else "PENDING"
+        if recent != historical:
+            return "PENDING"
+        return "FINAL" if residual == 0 else "TOTAL_MISMATCH"
+    if residual > Decimal("0.05") * (len(known) + 1):
+        return "TOTAL_MISMATCH"
     return "HISTORICAL_ONLY"
 
 
@@ -183,7 +186,7 @@ def main():
         "sources": URLS, "observed_at": observed.isoformat(), "from": sessions[0][0],
         "through": sessions[-1][0], "counts": dict(counts),
         "latest_double_verified": {"date": finals[-1][0], "total_usd_m": float(finals[-1][-2])},
-        "rounding": "Tolerance is 0.05 USDm per displayed numeric fund plus 0.05 USDm for Total. Dash remains blank; only the two pre-listing exceptions can qualify as complete.",
+        "rounding": "FINAL requires exact displayed sums and two matching pages. The historical-only tolerance is 0.05 USDm per numeric fund plus 0.05 USDm for Total. Dash remains blank; only the pre-listing exceptions can qualify as complete.",
         "same_window": "09:30 to 16:00 fixed New York clock window, including early-close days. Descriptive, no assumed availability.",
         "forward_window": "Entry at 00:00 UTC session date +2 calendar days, hold 24h. Using revised history without original publish timestamps. Descriptive only; gross price moves without trades.",
         "all_years": {k: relationship(v) for k, v in samples.items()},
