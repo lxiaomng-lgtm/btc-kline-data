@@ -1,14 +1,14 @@
 {
-  "run_id": "45782554191",
+  "run_id": "45785043593",
   "price_audit": {
     "archived_bars": 177755,
     "snapshot_bars": 192,
     "overlap_exact_ohlcv": 192,
     "snapshot_appended": 0,
-    "bitstamp_gap_or_tail_bars": 6,
-    "total_bars": 177761,
+    "bitstamp_gap_or_tail_bars": 7,
+    "total_bars": 177762,
     "from": "2021-11-01T00:00:00+08:00",
-    "through_close": "2026-11-26T16:15:00+08:00",
+    "through_close": "2026-11-26T16:30:00+08:00",
     "snapshot_close": "2026-11-26T10:30:00+08:00",
     "archive_close": "2026-11-26T14:45:00+08:00",
     "missing": 0,
@@ -1445,7 +1445,7 @@
   },
   "external_coverage": {
     "observed_etf_files": 1,
-    "observed_derivatives_files": 1,
+    "observed_derivatives_files": 2,
     "etf_first_eligible_in_price_clock": "2026-11-26T15:30:00+08:00",
     "derivatives_first_eligible_in_price_clock": null,
     "splits": {
