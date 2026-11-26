@@ -1,8 +1,8 @@
 {
-  "observed_at_utc": "2026-11-26T06:58:41+00:00",
+  "observed_at_utc": "2026-11-26T07:00:22+00:00",
   "coverage_utc": {
     "from": "2026-08-28T00:00:00+00:00",
-    "through": "2026-11-26T06:00:00+00:00"
+    "through": "2026-11-26T07:00:00+00:00"
   },
   "definitions": {
     "oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
@@ -14,61 +14,61 @@
   "coverage": {
     "futures_delta_btc": {
       "n": 2136,
-      "missing": 30,
+      "missing": 31,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-24T23:00:00+00:00"
     },
     "futures_volume_btc": {
       "n": 2136,
-      "missing": 30,
+      "missing": 31,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-24T23:00:00+00:00"
     },
     "cvd_segment_btc": {
       "n": 2136,
-      "missing": 30,
+      "missing": 31,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-24T23:00:00+00:00"
     },
     "oi_btc": {
       "n": 2159,
-      "missing": 7,
+      "missing": 8,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-25T23:00:00+00:00"
     },
     "oi_usdt": {
       "n": 2159,
-      "missing": 7,
+      "missing": 8,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-25T23:00:00+00:00"
     },
     "spot_binance_close_usdt": {
-      "n": 2166,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T05:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_close_usd": {
-      "n": 2166,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T05:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "bitstamp_close_usd": {
       "n": 2166,
-      "missing": 0,
+      "missing": 1,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-26T05:00:00+00:00"
     },
     "coinbase_vs_binance_bps": {
-      "n": 2166,
+      "n": 2167,
       "missing": 0,
       "first": "2026-08-28T00:00:00+00:00",
-      "last": "2026-11-26T05:00:00+00:00"
+      "last": "2026-11-26T06:00:00+00:00"
     },
     "coinbase_vs_bitstamp_bps": {
       "n": 2166,
-      "missing": 0,
+      "missing": 1,
       "first": "2026-08-28T00:00:00+00:00",
       "last": "2026-11-26T05:00:00+00:00"
     }

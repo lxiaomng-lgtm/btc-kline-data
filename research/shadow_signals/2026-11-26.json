@@ -1,0 +1,10 @@
+{
+  "observed_at_bjt": "2026-11-26T15:00:20.302942+08:00",
+  "closed_daily_bar_at_bjt": "2026-11-26T00:00:00+08:00",
+  "regime": "bear_trend",
+  "target_spot_weight": 0,
+  "source_data_through": "2026-11-26T14:45:00+08:00",
+  "code_sha256": "71a4ef5e7f6c4090723bbbfc776bb9932ff1b7140266f0f63dd529dbfdbd62e9",
+  "pipeline_run_id": "45772027261",
+  "purpose": "Prospective research observation. No fills and no ledger activity."
+}

@@ -3,7 +3,7 @@
     "recent": "https://farside.co.uk/btc/",
     "history": "https://farside.co.uk/bitcoin-etf-flow-all-data/"
   },
-  "observed_at": "2026-11-26T06:58:41.256328+00:00",
+  "observed_at": "2026-11-26T07:00:21.648602+00:00",
   "from": "2024-01-11",
   "through": "2026-11-25",
   "counts": {
@@ -174,7 +174,7 @@
     }
   },
   "page_sha256": {
-    "recent": "a0e10aa8c081a194358d77be451e8581616143c969c3e1cb956c52f7fd394899",
-    "history": "9de33a03e03f94ea4e6da7ec81e77d7bebd07cda88e2916cbda1c6d7cc36785a"
+    "recent": "98fe98aa515373b4946ca87cf379376a7d43abf7ee1ccfedb7ff4ff5a45562c0",
+    "history": "f413254765b20e25143f836c0286ec2cd24edd7fb6f38b214ba881a69bf76148"
   }
 }
