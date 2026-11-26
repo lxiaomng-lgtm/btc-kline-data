@@ -1,13 +1,11 @@
 """Event discovery, execution experiments, and transaction attribution."""
 import csv
-import itertools
 import math
 import random
 from bisect import bisect_left, bisect_right
 from collections import Counter, defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime
 from itertools import groupby
-from pathlib import Path
 from statistics import mean, median, stdev
 from urllib.request import urlopen
 
@@ -119,7 +117,6 @@ def discover(rows, points):
     streak = direction = state_age = 0
     old_state = None
     break_level = None
-    atr_pct = [None] * len(candles)
     for i, (t,o,h,l,c) in enumerate(candles):
         sign = 1 if simple[i]>0 else -1 if simple[i]<0 else 0
         streak = streak+1 if sign and sign == direction else (1 if sign else 0)
@@ -134,7 +131,6 @@ def discover(rows, points):
         base_vol = stdev(simple[i-64:i-32])
         prior_volume = median(volumes[i-32:i])
         actual = points[i]
-        atr_pct[i] = actual[4]/c
         breakout = c > prev_high
         pullback = bool(break_level and 0 < i-break_level[0] <= 8 and l <= break_level[1] <= c)
         if pullback:
@@ -169,10 +165,10 @@ def discover(rows, points):
     for reg,a,b,n in state_rows[1:-1]:
         duration[reg].append(n/32)
     durations = {k: {"runs":len(v),"median_days":median(v),"max_days":max(v)} for k,v in duration.items()}
-    return candles, events, durations, atr_pct, first
+    return events, durations, first
 
 
-def event_table(rows, points, candles, events, splits, first):
+def event_table(rows, points, events, splits, first):
     prices = [(float(r[1]),float(r[2]),float(r[3]),float(r[4])) for r in rows]
     out = []
     # Monotonic queues compute exact interval extrema in time linear in the source history.
@@ -232,11 +228,16 @@ def event_table(rows, points, candles, events, splits, first):
                     p10_pct=100*ordered[int(.1*(len(ordered)-1))],p50_pct=100*median(net),
                     p90_pct=100*ordered[int(.9*(len(ordered)-1))],win_pct=100*len(wins)/len(net),
                     payoff=mean(wins)/mean(loss) if wins and loss else None,
-                    mae_p10_pct=100*mae[int(.1*(len(mae)-1))],worst_mae_pct=100*min(mae),p_value=p,holm_p=None,
+                    mae_p10_pct=100*mae[int(.1*(len(mae)-1))],worst_mae_pct=100*min(mae),
+                    surge3_pct=100*sum(x>=.03 for x in gross)/len(gross),
+                    dump3_pct=100*sum(x<=-.03 for x in gross)/len(gross),p_value=p,holm_p=None,
                     excess_vs_unconditional_pp=None))
-    base = {(r["split"],r["hours"]):r["net_mean_pct"] for r in out if r["signal"]=="unconditional"}
+    base = {(r["split"],r["hours"]):r for r in out if r["signal"]=="unconditional"}
     for r in out:
-        r["excess_vs_unconditional_pp"] = r["net_mean_pct"]-base[r["split"],r["hours"]]
+        reference = base[r["split"],r["hours"]]
+        r["excess_vs_unconditional_pp"] = r["net_mean_pct"]-reference["net_mean_pct"]
+        r["surge3_lift_pp"] = r["surge3_pct"]-reference["surge3_pct"]
+        r["dump3_lift_pp"] = r["dump3_pct"]-reference["dump3_pct"]
     for split in splits:
         tests = sorted((r for r in out if r["split"]==split and r["p_value"] is not None),
                        key=lambda r:r["p_value"])
@@ -280,7 +281,7 @@ def metrics(nav, exposure, fees, orders, clock, periods):
                 months_positive=sum(r>0 for r in monthly.values()),months=len(monthly),monthly_pct=monthly)
 
 
-def schedules(points, first, setup_events=None):
+def schedules(points, setup_events=None):
     daily_vol = 0.
     previous = None
     direction = 0.
@@ -391,7 +392,7 @@ def experiment(points, opens, events, event_rows, splits):
     if chosen and chosen["passed_validation"]:
         c=chosen["development"]
         setup=(events[c["signal"]],int(c["hours"]/.75))
-    signals,vol=schedules(points,clock[0],setup)
+    signals,vol=schedules(points,setup)
     rates,err=treasury_rates()
     timings=[r[0] for r in rates]
     cash_rates=[rates[n][1] if (n:=bisect_right(timings,t)-1)>=0 else 0. for t in clock]
@@ -450,8 +451,8 @@ def main():
     splits={"development":(day_start("2022-02-01"),day_start("2024-01-01")),
             "validation":(day_start("2024-01-01"),day_start("2025-01-01")),
             "historical_reused":(day_start("2025-01-01"),last)}
-    candles,events,durations,_,first=discover(rows,points)
-    table=event_table(rows,points,candles,events,splits,first)
+    events,durations,first=discover(rows,points)
+    table=event_table(rows,points,events,splits,first)
     print(f"events: {len(table)}",flush=True)
     start=bisect_left(clock,splits["historical_reused"][0])
     stop=bisect_left(clock,last)
@@ -460,6 +461,8 @@ def main():
     models=experiment(points,opens,events,table,splits)
     sig={split:[r for r in table if r["split"]==split and r["signal"]!="unconditional" and r["holm_p"] is not None and r["holm_p"]<=.05] for split in splits}
     write_json(ROOT/"summary.json",dict(audit=audit,fees_per_side=FEES,comparison_to=stamp(last),
+               event_rows=len(table),
+               tested_cells={name:sum(r["split"]==name and r["p_value"] is not None for r in table) for name in splits},
                attribution=trade,market_regime_duration=durations,significant_positive_net=sig,execution=models))
     print("research complete",flush=True)
 
