@@ -1,0 +1,180 @@
+{
+  "sources": {
+    "recent": "https://farside.co.uk/btc/",
+    "history": "https://farside.co.uk/bitcoin-etf-flow-all-data/"
+  },
+  "observed_at": "2026-11-26T06:50:18.221551+00:00",
+  "from": "2024-01-11",
+  "through": "2026-11-25",
+  "counts": {
+    "HISTORICAL_ONLY": 706,
+    "NO_FLOW_ROW": 16,
+    "PENDING": 3,
+    "FINAL": 13
+  },
+  "latest_double_verified": {
+    "date": "2026-11-25",
+    "total_usd_m": -453.0
+  },
+  "rounding": "Tolerance is 0.05 USDm per displayed numeric fund plus 0.05 USDm for Total. Dash remains blank; only the two pre-listing exceptions can qualify as complete.",
+  "same_window": "09:30 to 16:00 fixed New York clock window, including early-close days. Descriptive, no assumed availability.",
+  "forward_window": "Entry at 00:00 UTC session date +2 calendar days, hold 24h. Using revised history without original publish timestamps. Descriptive only; gross price moves without trades.",
+  "all_years": {
+    "same_session": {
+      "n": 719,
+      "pearson_r": 0.3323,
+      "mean_return_pct": -0.06136,
+      "up_pct": 50.209
+    },
+    "late_entry_24h": {
+      "n": 717,
+      "pearson_r": 0.00128,
+      "mean_return_pct": 0.0641,
+      "up_pct": 51.046
+    },
+    "divergence_inflow_btc_down": {
+      "n": 165,
+      "pearson_r": 0.00793,
+      "mean_return_pct": -0.03236,
+      "up_pct": 50.303
+    },
+    "divergence_outflow_btc_up": {
+      "n": 105,
+      "pearson_r": -0.04093,
+      "mean_return_pct": 0.00522,
+      "up_pct": 49.524
+    },
+    "agreement_inflow_btc_up": {
+      "n": 255,
+      "pearson_r": -0.00246,
+      "mean_return_pct": 0.14208,
+      "up_pct": 51.765
+    },
+    "agreement_outflow_btc_down": {
+      "n": 192,
+      "pearson_r": -0.01057,
+      "mean_return_pct": 0.07564,
+      "up_pct": 51.562
+    }
+  },
+  "by_calendar_year": {
+    "2024": {
+      "same_session": {
+        "n": 244,
+        "pearson_r": 0.27309,
+        "mean_return_pct": -0.05829,
+        "up_pct": 50.82
+      },
+      "late_entry_24h": {
+        "n": 244,
+        "pearson_r": -0.02658,
+        "mean_return_pct": 0.32246,
+        "up_pct": 54.508
+      },
+      "divergence_inflow_btc_down": {
+        "n": 69,
+        "pearson_r": 0.08381,
+        "mean_return_pct": -0.02411,
+        "up_pct": 50.725
+      },
+      "divergence_outflow_btc_up": {
+        "n": 28,
+        "pearson_r": 0.16624,
+        "mean_return_pct": -0.30567,
+        "up_pct": 39.286
+      },
+      "agreement_inflow_btc_up": {
+        "n": 96,
+        "pearson_r": -0.03607,
+        "mean_return_pct": 0.48484,
+        "up_pct": 57.292
+      },
+      "agreement_outflow_btc_down": {
+        "n": 51,
+        "pearson_r": -0.24061,
+        "mean_return_pct": 0.83053,
+        "up_pct": 62.745
+      }
+    },
+    "2025": {
+      "same_session": {
+        "n": 250,
+        "pearson_r": 0.30155,
+        "mean_return_pct": -0.11121,
+        "up_pct": 49.2
+      },
+      "late_entry_24h": {
+        "n": 250,
+        "pearson_r": -0.00549,
+        "mean_return_pct": 0.01734,
+        "up_pct": 50.0
+      },
+      "divergence_inflow_btc_down": {
+        "n": 64,
+        "pearson_r": -0.09975,
+        "mean_return_pct": -0.05856,
+        "up_pct": 43.75
+      },
+      "divergence_outflow_btc_up": {
+        "n": 41,
+        "pearson_r": -0.12474,
+        "mean_return_pct": 0.33645,
+        "up_pct": 53.659
+      },
+      "agreement_inflow_btc_up": {
+        "n": 82,
+        "pearson_r": 0.01792,
+        "mean_return_pct": 0.08224,
+        "up_pct": 53.659
+      },
+      "agreement_outflow_btc_down": {
+        "n": 63,
+        "pearson_r": 0.01192,
+        "mean_return_pct": -0.19769,
+        "up_pct": 49.206
+      }
+    },
+    "2026": {
+      "same_session": {
+        "n": 225,
+        "pearson_r": 0.51186,
+        "mean_return_pct": -0.00932,
+        "up_pct": 50.667
+      },
+      "late_entry_24h": {
+        "n": 223,
+        "pearson_r": -0.01157,
+        "mean_return_pct": -0.16615,
+        "up_pct": 48.43
+      },
+      "divergence_inflow_btc_down": {
+        "n": 32,
+        "pearson_r": 0.08783,
+        "mean_return_pct": 0.00222,
+        "up_pct": 62.5
+      },
+      "divergence_outflow_btc_up": {
+        "n": 36,
+        "pearson_r": -0.08461,
+        "mean_return_pct": -0.1302,
+        "up_pct": 52.778
+      },
+      "agreement_inflow_btc_up": {
+        "n": 77,
+        "pearson_r": -0.01067,
+        "mean_return_pct": -0.22152,
+        "up_pct": 42.857
+      },
+      "agreement_outflow_btc_down": {
+        "n": 78,
+        "pearson_r": -0.02799,
+        "mean_return_pct": -0.19717,
+        "up_pct": 46.154
+      }
+    }
+  },
+  "page_sha256": {
+    "recent": "534094ec3f370ca584bc109725fc1ac39c42462000ff8be770c6b6e086cb4760",
+    "history": "179ac17030c1df89f346fd07f87087babf9334daa093230cb39d7d9f228afa80"
+  }
+}
