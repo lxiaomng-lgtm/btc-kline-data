@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T03:57:12+00:00",
+  "generated_utc": "2026-11-27T03:59:34+00:00",
   "signals_expected_in_monitored_window": 26,
   "slots_not_recorded_utc": [
     "2026-11-26T09:00:00+00:00",
@@ -24,7 +24,7 @@
     "2026-11-27T01:30:00+00:00"
   ],
   "status": "review",
-  "paper_records": 6,
+  "paper_records": 7,
   "simulated_fills": 1,
   "paper_invalid_records": [],
   "paper_warnings": [
@@ -32,15 +32,15 @@
     "20 missed shadow reporting slots since first ledger or last 24h; no replay"
   ],
   "paper_last": {
-    "signal_at": "2026-11-27T11:00:00+08:00",
-    "confirmed_published_at": "2026-11-27T11:35:10.087193+08:00",
+    "signal_at": "2026-11-27T11:45:00+08:00",
+    "confirmed_published_at": "2026-11-27T11:55:21.702109+08:00",
     "quote": {
-      "exchange_at": "2026-11-27T11:35:10.299773+08:00",
-      "received_at": "2026-11-27T11:35:11.336423+08:00",
-      "bid": 61497.27,
-      "ask": 61504.3,
-      "bid_btc": 0.322,
-      "ask_btc": 0.00162627,
+      "exchange_at": "2026-11-27T11:55:24.316834+08:00",
+      "received_at": "2026-11-27T11:55:24.905651+08:00",
+      "bid": 61383.9,
+      "ask": 61383.91,
+      "bid_btc": 0.5,
+      "ask_btc": 0.30814626,
       "source": "https://www.bitstamp.net/api/v2/order_book/btcusd/"
     }
   },
@@ -71,8 +71,8 @@
       "max_drawdown_pct": 0.0
     },
     "buy_hold_10": {
-      "nav_usd": 10009.651049961767,
-      "return_pct": 0.09651049961767466,
+      "nav_usd": 10007.72464309201,
+      "return_pct": 0.07724643092008598,
       "max_drawdown_pct": 0.08898197843092426
     },
     "cash": {
@@ -106,210 +106,7 @@
     "oi/2023-11-11": "Invalid OI at 2023-11-11T22:00:00+00:00",
     "oi/2023-06-06": "Invalid OI at 2023-06-06T11:30:00+00:00",
     "oi/2022-03-08": "Invalid OI at 2022-03-08T00:00:00+00:00; Invalid OI at 2022-03-08T00:15:00+00:00; Invalid OI at 2022-03-08T00:30:00+00:00; Invalid OI at 2022-03-08T00:45:00+00:00; Invalid OI at 2022-03-08T01:00:00+00:00",
-    "oi/2022-03-07": "Invalid OI at 2022-03-07T15:30:00+00:00; Invalid OI at 2022-03-07T15:45:00+00:00; Invalid OI at 2022-03-07T16:00:00+00:00; Invalid OI at 2022-03-07T16:15:00+00:00; Invalid OI at 2022-03-07T16:30:00+00:00; Invalid OI at 2022-03-07T16:45:00+00:00; Invalid OI at 2022-03-07T17:00:00+00:00; Invalid OI at 2022-03-07T17:15:00+00:00; Invalid OI at 2022-03-07T17:30:00+00:00; Invalid OI at 2022-03-07T17:45:00+00:00; Invalid OI at 2022-03-07T18:00:00+00:00; Invalid OI at 2022-03-07T18:15:00+00:00; Invalid OI at 2022-03-07T18:30:00+00:00; Invalid OI at 2022-03-07T18:45:00+00:00; Invalid OI at 2022-03-07T19:00:00+00:00; Invalid OI at 2022-03-07T19:15:00+00:00; Invalid OI at 2022-03-07T19:30:00+00:00; Invalid OI at 2022-03-07T19:45:00+00:00; Invalid OI at 2022-03-07T20:00:00+00:00; Invalid OI at 2022-03-07T20:15:00+00:00; Invalid OI at 2022-03-07T20:30:00+00:00; Invalid OI at 2022-03-07T20:45:00+00:00; Invalid OI at 2022-03-07T21:00:00+00:00; Invalid OI at 2022-03-07T21:15:00+00:00; Invalid OI at 2022-03-07T21:30:00+00:00; Invalid OI at 2022-03-07T21:45:00+00:00; Invalid OI at 2022-03-07T22:00:00+00:00; Invalid OI at 2022-03-07T22:15:00+00:00; Invalid OI at 2022-03-07T22:30:00+00:00; Invalid OI at 2022-03-07T22:45:00+00:00; Invalid OI at 2022-03-07T23:00:00+00:00; Invalid OI at 2022-03-07T23:15:00+00:00; Invalid OI at 2022-03-07T23:30:00+00:00; Invalid OI at 2022-03-07T23:45:00+00:00",
-    "coinbase/2021-12-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2021-12-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2021-12-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2021-12-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2021-12-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2021-12-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-01-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-01-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-01-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-01-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-03-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-03-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-04-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-04-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-04-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-04-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-04-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-04-30": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-06-02": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-06-05": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-06-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-06-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-06-14": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-06-17": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-08-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-08-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-08-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-08-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-08-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-08-19": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-09-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-09-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-09-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-09-30": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-10-03": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-10-06": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-11-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-11-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-11-14": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-11-17": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-11-20": "HTTP Error 429: Too Many Requests",
-    "coinbase/2022-11-23": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-01-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-01-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-01-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-01-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-01-19": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-01-22": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-02-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-02-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-03-02": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-03-05": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-03-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-03-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-04-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-04-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-04-19": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-04-22": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-04-25": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-04-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-05-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-06-09": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-06-12": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-06-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-06-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-06-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-07-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-07-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-07-30": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-08-02": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-08-05": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-08-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-09-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-09-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-09-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-09-19": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-09-22": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-11-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-11-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-12-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-12-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-12-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2023-12-30": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-01-29": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-02-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-02-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-02-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-02-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-02-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-03-20": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-03-23": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-03-26": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-03-29": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-04-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-04-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-05-16": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-05-19": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-05-22": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-05-25": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-05-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-05-31": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-07-03": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-07-06": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-07-09": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-07-12": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-07-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-07-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-08-20": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-08-23": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-08-26": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-08-29": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-09-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-09-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-10-22": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-10-25": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-10-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-10-31": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-11-03": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-11-06": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-12-09": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-12-12": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-12-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-12-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-12-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2024-12-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-01-26": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-01-29": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-02-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-02-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-02-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-02-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-03-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-03-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-03-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-03-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-03-30": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-04-02": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-05-05": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-05-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-05-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-05-14": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-05-17": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-05-20": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-06-22": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-06-25": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-06-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-07-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-07-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-07-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-08-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-08-27": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-08-30": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-09-02": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-09-05": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-09-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-10-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-10-14": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-10-17": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-10-20": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-10-23": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-10-26": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-11-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-12-01": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-12-04": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-12-07": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-12-10": "HTTP Error 429: Too Many Requests",
-    "coinbase/2025-12-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-02-02": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-02-05": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-02-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-02-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-02-14": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-02-17": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-03-13": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-03-25": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-03-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-03-31": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-04-03": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-04-06": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-05-06": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-05-12": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-05-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-05-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-05-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-05-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-07-08": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-07-11": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-07-14": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-07-17": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-07-20": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-07-23": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-08-25": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-08-28": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-08-31": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-09-03": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-09-06": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-09-09": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-10-12": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-10-15": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-10-18": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-10-21": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-10-24": "HTTP Error 429: Too Many Requests",
-    "coinbase/2026-10-27": "HTTP Error 429: Too Many Requests"
+    "oi/2022-03-07": "Invalid OI at 2022-03-07T15:30:00+00:00; Invalid OI at 2022-03-07T15:45:00+00:00; Invalid OI at 2022-03-07T16:00:00+00:00; Invalid OI at 2022-03-07T16:15:00+00:00; Invalid OI at 2022-03-07T16:30:00+00:00; Invalid OI at 2022-03-07T16:45:00+00:00; Invalid OI at 2022-03-07T17:00:00+00:00; Invalid OI at 2022-03-07T17:15:00+00:00; Invalid OI at 2022-03-07T17:30:00+00:00; Invalid OI at 2022-03-07T17:45:00+00:00; Invalid OI at 2022-03-07T18:00:00+00:00; Invalid OI at 2022-03-07T18:15:00+00:00; Invalid OI at 2022-03-07T18:30:00+00:00; Invalid OI at 2022-03-07T18:45:00+00:00; Invalid OI at 2022-03-07T19:00:00+00:00; Invalid OI at 2022-03-07T19:15:00+00:00; Invalid OI at 2022-03-07T19:30:00+00:00; Invalid OI at 2022-03-07T19:45:00+00:00; Invalid OI at 2022-03-07T20:00:00+00:00; Invalid OI at 2022-03-07T20:15:00+00:00; Invalid OI at 2022-03-07T20:30:00+00:00; Invalid OI at 2022-03-07T20:45:00+00:00; Invalid OI at 2022-03-07T21:00:00+00:00; Invalid OI at 2022-03-07T21:15:00+00:00; Invalid OI at 2022-03-07T21:30:00+00:00; Invalid OI at 2022-03-07T21:45:00+00:00; Invalid OI at 2022-03-07T22:00:00+00:00; Invalid OI at 2022-03-07T22:15:00+00:00; Invalid OI at 2022-03-07T22:30:00+00:00; Invalid OI at 2022-03-07T22:45:00+00:00; Invalid OI at 2022-03-07T23:00:00+00:00; Invalid OI at 2022-03-07T23:15:00+00:00; Invalid OI at 2022-03-07T23:30:00+00:00; Invalid OI at 2022-03-07T23:45:00+00:00"
   },
   "input_quality": {
     "spot": {
@@ -317,7 +114,7 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 15132,
+      "age_seconds": 15274,
       "status": "available"
     },
     "perp": {
@@ -338,7 +135,7 @@
         "2026-11-26T02:45:00+00:00"
       ],
       "last_event_utc": "2026-11-25T23:45:00+00:00",
-      "age_seconds": 101532,
+      "age_seconds": 101674,
       "status": "gap"
     },
     "oi": {
@@ -359,7 +156,7 @@
         "2026-11-26T02:45:00+00:00"
       ],
       "last_event_utc": "2026-11-25T23:45:00+00:00",
-      "age_seconds": 101532,
+      "age_seconds": 101674,
       "status": "gap"
     },
     "premium": {
@@ -367,17 +164,54 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-27T03:00:00+00:00",
-      "age_seconds": 3432,
+      "age_seconds": 3574,
       "status": "available"
     }
   },
   "workflows": {
-    "BTC profitability edge research": [
+    "BTC flow research and quality": [
       {
-        "id": 45937020097,
+        "id": 45937231810,
+        "event": "workflow_run",
+        "status": "pending",
+        "conclusion": null,
+        "created_at": "2026-11-27T03:58:47Z"
+      },
+      {
+        "id": 45937112633,
         "event": "workflow_run",
         "status": "in_progress",
         "conclusion": null,
+        "created_at": "2026-11-27T03:57:26Z"
+      },
+      {
+        "id": 45936995564,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "created_at": "2026-11-27T03:56:07Z"
+      },
+      {
+        "id": 45936911751,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:55:12Z"
+      }
+    ],
+    "BTC profitability edge research": [
+      {
+        "id": 45937156717,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:57:55Z"
+      },
+      {
+        "id": 45937020097,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
         "created_at": "2026-11-27T03:56:23Z"
       },
       {
@@ -402,28 +236,12 @@
         "created_at": "2026-11-26T08:39:40Z"
       }
     ],
-    "BTC flow research and quality": [
-      {
-        "id": 45936995564,
-        "event": "push",
-        "status": "pending",
-        "conclusion": null,
-        "created_at": "2026-11-27T03:56:07Z"
-      },
-      {
-        "id": 45936911751,
-        "event": "push",
-        "status": "in_progress",
-        "conclusion": null,
-        "created_at": "2026-11-27T03:55:12Z"
-      }
-    ],
     "BTC historical strategy research": [
       {
         "id": 45936995565,
         "event": "push",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "created_at": "2026-11-27T03:56:07Z"
       },
       {
@@ -446,20 +264,6 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-26T08:39:40Z"
-      },
-      {
-        "id": 45782554191,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T08:22:04Z"
-      },
-      {
-        "id": 45772388783,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T07:02:29Z"
       }
     ],
     "BTC multiframe shadow observations": [
@@ -511,13 +315,6 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-26T08:39:40Z"
-      },
-      {
-        "id": 45782554037,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T08:22:04Z"
       }
     ],
     "Archive BTC history": [
@@ -568,5 +365,22 @@
     "duplicates": 0,
     "invalid_ohlcv": 0
   },
-  "price_snapshot_age_seconds": 2533
+  "live_capture_coverage": {
+    "spot": {
+      "rows_in_request": 95,
+      "first_event_utc": "2026-11-26T04:00:00+00:00",
+      "last_event_utc": "2026-11-27T03:30:00+00:00"
+    },
+    "coinbase": {
+      "rows_in_request": 96,
+      "first_event_utc": "2026-11-26T03:45:00+00:00",
+      "last_event_utc": "2026-11-27T03:30:00+00:00"
+    },
+    "coinbase_bitstamp_15m_premium": {
+      "rows_in_request": 96,
+      "first_event_utc": "2026-11-26T04:00:00+00:00",
+      "last_event_utc": "2026-11-27T03:45:00+00:00"
+    }
+  },
+  "price_snapshot_age_seconds": 2678
 }
