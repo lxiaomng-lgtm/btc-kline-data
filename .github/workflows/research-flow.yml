@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/research-flow.yml'
       - 'scripts/research_flow.py'
+      - 'scripts/research_flow_vendor.py'
   workflow_run:
     workflows: ['BTC profitability edge research']
     types: [completed]
@@ -54,6 +55,9 @@ jobs:
           else
             python3 scripts/research_flow.py
           fi
+      - name: Verify cross-venue Bybit raw trade sample
+        if: github.event_name != 'schedule'
+        run: python scripts/research_flow_vendor.py
       - name: Retain normalized interval datasets
         if: github.event_name != 'schedule'
         uses: actions/upload-artifact@v4

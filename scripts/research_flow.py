@@ -128,11 +128,15 @@ def acquire(today, monitor=False):
                     if row[0]=="create_time" or not row[2]:
                         continue
                     t=int(datetime.fromisoformat(row[0]).replace(tzinfo=UTC).timestamp())
-                    value=float(row[2])
                     if t%STEP:
                         continue
-                    if not math.isfinite(value) or value<=0:
-                        raise ValueError("Invalid OI")
+                    try:
+                        value=float(row[2])
+                        if not math.isfinite(value) or value<=0:
+                            raise ValueError("non-positive or nonfinite OI")
+                    except ValueError:
+                        rejects.append(f"Invalid OI at {utc(t)}")
+                        continue
                 elif kind=="funding":
                     if not row[0].isdigit():
                         continue
