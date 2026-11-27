@@ -1,5 +1,5 @@
 {
-  "run_id": "45936040524",
+  "run_id": "45936163613",
   "per_side_cost": 0.0045,
   "state_outcomes": {
     "cells": 189,
@@ -229,9 +229,10 @@
     }
   },
   "strict_point_in_time": {
-    "receipts": 1,
+    "receipts": 2,
     "days_with_same_receipt_spot_and_perp": 0,
     "usable_signal_observations": 0,
+    "median_venue_alignment_age_hours": null,
     "per_feature_signal_coverage": {
       "spot_imbalance": 0,
       "perp_imbalance": 0,

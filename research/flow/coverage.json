@@ -1,6 +1,6 @@
 {
-  "run_id": "45936040524",
-  "generated_utc": "2026-11-27T03:46:22.261007+00:00",
+  "run_id": "45936163613",
+  "generated_utc": "2026-11-27T03:47:19.202143+00:00",
   "price_audit": {
     "archived_bars": 177755,
     "snapshot_bars": 192,
@@ -124,7 +124,7 @@
     "oi/2022-03-07": "Invalid OI"
   },
   "exact_duplicates_across_files": {},
-  "live_receipt": "research/flow/observations/20261127T034556-45936040524-1.json",
+  "live_receipt": "research/flow/observations/20261127T034713-45936163613-1.json",
   "live_errors": {
     "perp": "HTTP Error 451: ",
     "binance_oi": "HTTP Error 451: ",
@@ -134,7 +134,7 @@
     "Bitstamp recent trade tape": {
       "url": "https://www.bitstamp.net/api/v2/transactions/btcusd/?time=hour",
       "status": 200,
-      "bytes": 105060
+      "bytes": 105978
     },
     "Coinbase public candle probe": {
       "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/candles?start=1795564800&end=1795568400&granularity=FIFTEEN_MINUTE",
@@ -164,7 +164,7 @@
     "OKX historic perpetual candle probe": {
       "url": "https://www.okx.com/api/v5/market/history-candles?instId=BTC-USDT-SWAP&bar=15m&limit=2",
       "status": 200,
-      "bytes": 227
+      "bytes": 230
     },
     "OKX archive catalogue": {
       "url": "https://www.okx.com/historical-data",

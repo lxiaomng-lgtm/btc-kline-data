@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T03:46:20+00:00",
+  "generated_utc": "2026-11-27T03:47:18+00:00",
   "signals_expected_in_monitored_window": 26,
   "slots_not_recorded_utc": [
     "2026-11-26T09:00:00+00:00",
@@ -114,7 +114,7 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 14480,
+      "age_seconds": 14538,
       "status": "available"
     },
     "perp": {
@@ -135,7 +135,7 @@
         "2026-11-26T02:45:00+00:00"
       ],
       "last_event_utc": "2026-11-25T23:45:00+00:00",
-      "age_seconds": 100880,
+      "age_seconds": 100938,
       "status": "gap"
     },
     "oi": {
@@ -156,7 +156,7 @@
         "2026-11-26T02:45:00+00:00"
       ],
       "last_event_utc": "2026-11-25T23:45:00+00:00",
-      "age_seconds": 100880,
+      "age_seconds": 100938,
       "status": "gap"
     },
     "premium": {
@@ -177,11 +177,78 @@
         "2026-11-26T20:00:00+00:00"
       ],
       "last_event_utc": "2026-11-26T08:00:00+00:00",
-      "age_seconds": 71180,
+      "age_seconds": 71238,
       "status": "gap"
     }
   },
   "workflows": {
+    "BTC historical strategy research": [
+      {
+        "id": 45936152762,
+        "event": "workflow_run",
+        "status": "in_progress",
+        "conclusion": null,
+        "created_at": "2026-11-27T03:46:58Z"
+      },
+      {
+        "id": 45785043593,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T08:39:40Z"
+      },
+      {
+        "id": 45782554191,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T08:22:04Z"
+      },
+      {
+        "id": 45772388783,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T07:02:29Z"
+      },
+      {
+        "id": 45772059231,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T06:59:52Z"
+      },
+      {
+        "id": 45772027261,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T06:59:34Z"
+      }
+    ],
+    "Archive BTC history": [
+      {
+        "id": 45936118362,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:46:35Z"
+      },
+      {
+        "id": 45772027311,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T06:59:34Z"
+      },
+      {
+        "id": 45750872508,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-26T03:44:55Z"
+      }
+    ],
     "BTC multiframe shadow observations": [
       {
         "id": 45935007600,
@@ -268,13 +335,6 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-25T19:35:21Z"
-      },
-      {
-        "id": 45585428953,
-        "event": "schedule",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-25T09:26:31Z"
       }
     ],
     "BTC profitability edge research": [
@@ -291,59 +351,6 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-26T08:39:40Z"
-      }
-    ],
-    "BTC historical strategy research": [
-      {
-        "id": 45785043593,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T08:39:40Z"
-      },
-      {
-        "id": 45782554191,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T08:22:04Z"
-      },
-      {
-        "id": 45772388783,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T07:02:29Z"
-      },
-      {
-        "id": 45772059231,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T06:59:52Z"
-      },
-      {
-        "id": 45772027261,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T06:59:34Z"
-      }
-    ],
-    "Archive BTC history": [
-      {
-        "id": 45772027311,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T06:59:34Z"
-      },
-      {
-        "id": 45750872508,
-        "event": "schedule",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T03:44:55Z"
       }
     ]
   },
@@ -362,5 +369,5 @@
     "duplicates": 0,
     "invalid_ohlcv": 0
   },
-  "price_snapshot_age_seconds": 1882
+  "price_snapshot_age_seconds": 1939
 }
