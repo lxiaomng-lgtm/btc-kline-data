@@ -1,5 +1,5 @@
 {
-  "run_id": "45936557884",
+  "run_id": "45936657179",
   "per_side_cost": 0.0045,
   "state_outcomes": {
     "cells": 189,
@@ -7,8 +7,8 @@
     "adjusted_positive_cells": 0
   },
   "lead_lag": {
-    "cells": 135,
-    "adjusted_cells": 10
+    "cells": 153,
+    "adjusted_cells": 8
   },
   "models": {
     "spot_perp/3h": {
@@ -195,19 +195,111 @@
         "paired_loss_improvement_holm_p": 1.0
       }
     },
+    "with_oi_funding_premium/3h": {
+      "matched_samples": {
+        "development": 2000,
+        "validation": 1008,
+        "reused_historical": 1988
+      },
+      "status": "retrospective_event_clock_simulation",
+      "validation": {
+        "price": {
+          "mse": 8.040043199869055e-05,
+          "direction_accuracy": 0.5307539682539683,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 8.086531511192217e-05,
+          "direction_accuracy": 0.5198412698412699,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.87109375,
+        "paired_loss_improvement_holm_p": 1.0
+      },
+      "reused_historical": {
+        "price": {
+          "mse": 5.375383769780592e-05,
+          "direction_accuracy": 0.5120724346076458,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 5.422909111375741e-05,
+          "direction_accuracy": 0.46730382293762573,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.96826171875,
+        "paired_loss_improvement_holm_p": 1.0
+      }
+    },
+    "with_oi_funding_premium/24h": {
+      "matched_samples": {
+        "development": 451,
+        "validation": 228,
+        "reused_historical": 446
+      },
+      "status": "retrospective_event_clock_simulation",
+      "validation": {
+        "price": {
+          "mse": 0.0007567055066259262,
+          "direction_accuracy": 0.4956140350877193,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.000815904498558293,
+          "direction_accuracy": 0.49122807017543857,
+          "trades": 1,
+          "net_pct": -1.3760329779279434,
+          "trade_close_drawdown_pct": 1.3760329779279434
+        },
+        "net_difference_pp": -1.3760329779279434,
+        "paired_loss_improvement_p": 0.892578125,
+        "paired_loss_improvement_holm_p": 1.0
+      },
+      "reused_historical": {
+        "price": {
+          "mse": 0.0004957968766205684,
+          "direction_accuracy": 0.47085201793721976,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.0005060364191715289,
+          "direction_accuracy": 0.5067264573991032,
+          "trades": 16,
+          "net_pct": -11.61020616654872,
+          "trade_close_drawdown_pct": 11.822912155760035
+        },
+        "net_difference_pp": -11.61020616654872,
+        "paired_loss_improvement_p": 0.90087890625,
+        "paired_loss_improvement_holm_p": 1.0
+      }
+    },
     "with_oi_funding_premium_etf/3h": {
       "matched_samples": {
         "development": 0,
-        "validation": 0,
-        "reused_historical": 258
+        "validation": 968,
+        "reused_historical": 1955
       },
       "status": "insufficient_common_chronological_history"
     },
     "with_oi_funding_premium_etf/24h": {
       "matched_samples": {
         "development": 0,
-        "validation": 0,
-        "reused_historical": 58
+        "validation": 220,
+        "reused_historical": 443
       },
       "status": "insufficient_common_chronological_history"
     },
@@ -229,7 +321,7 @@
     }
   },
   "strict_point_in_time": {
-    "receipts": 4,
+    "receipts": 5,
     "days_with_same_receipt_spot_and_perp": 0,
     "usable_signal_observations": 0,
     "median_venue_alignment_age_hours": null,
