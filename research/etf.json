@@ -3,7 +3,7 @@
     "recent": "https://farside.co.uk/btc/",
     "history": "https://farside.co.uk/bitcoin-etf-flow-all-data/"
   },
-  "observed_at": "2026-11-26T08:40:18.897470+00:00",
+  "observed_at": "2026-11-27T03:47:25.361099+00:00",
   "from": "2024-01-11",
   "through": "2026-11-25",
   "counts": {
@@ -27,10 +27,10 @@
       "up_pct": 50.209
     },
     "late_entry_24h": {
-      "n": 717,
-      "pearson_r": 0.00128,
-      "mean_return_pct": 0.0641,
-      "up_pct": 51.046
+      "n": 718,
+      "pearson_r": 0.00121,
+      "mean_return_pct": 0.06427,
+      "up_pct": 51.114
     },
     "divergence_inflow_btc_down": {
       "n": 165,
@@ -51,10 +51,10 @@
       "up_pct": 51.765
     },
     "agreement_outflow_btc_down": {
-      "n": 192,
-      "pearson_r": -0.01057,
-      "mean_return_pct": 0.07564,
-      "up_pct": 51.562
+      "n": 193,
+      "pearson_r": -0.01055,
+      "mean_return_pct": 0.0762,
+      "up_pct": 51.813
     }
   },
   "by_calendar_year": {
@@ -142,10 +142,10 @@
         "up_pct": 50.667
       },
       "late_entry_24h": {
-        "n": 223,
-        "pearson_r": -0.01157,
-        "mean_return_pct": -0.16615,
-        "up_pct": 48.43
+        "n": 224,
+        "pearson_r": -0.01198,
+        "mean_return_pct": -0.16459,
+        "up_pct": 48.661
       },
       "divergence_inflow_btc_down": {
         "n": 32,
@@ -166,15 +166,15 @@
         "up_pct": 42.857
       },
       "agreement_outflow_btc_down": {
-        "n": 78,
-        "pearson_r": -0.02799,
-        "mean_return_pct": -0.19717,
-        "up_pct": 46.154
+        "n": 79,
+        "pearson_r": -0.02757,
+        "mean_return_pct": -0.19235,
+        "up_pct": 46.835
       }
     }
   },
   "page_sha256": {
-    "recent": "853c1958678208859bc04da6a724af87f8079c740af88bd673bd227859d4abbd",
-    "history": "82070841adaa6b5a1003bd2dbd72b0dc87c79c4c0c9c50c0f2c3bb14afbe5529"
+    "recent": "32e9e16b6155252da6f9ea433660b0378d35ee2e381627ebf232bc48d52b6597",
+    "history": "0e08e7d914fc79c2e9854530d89adf6d82f6ca488f2eded397d59bed383fd1b3"
   }
 }

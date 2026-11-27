@@ -1,16 +1,16 @@
 {
-  "run_id": "45785043593",
+  "run_id": "45936152762",
   "price_audit": {
-    "archived_bars": 177755,
+    "archived_bars": 177839,
     "snapshot_bars": 192,
     "overlap_exact_ohlcv": 192,
     "snapshot_appended": 0,
-    "bitstamp_gap_or_tail_bars": 7,
-    "total_bars": 177762,
+    "bitstamp_gap_or_tail_bars": 0,
+    "total_bars": 177839,
     "from": "2021-11-01T00:00:00+08:00",
-    "through_close": "2026-11-26T16:30:00+08:00",
-    "snapshot_close": "2026-11-26T10:30:00+08:00",
-    "archive_close": "2026-11-26T14:45:00+08:00",
+    "through_close": "2026-11-27T11:45:00+08:00",
+    "snapshot_close": "2026-11-27T11:15:00+08:00",
+    "archive_close": "2026-11-27T11:45:00+08:00",
     "missing": 0,
     "duplicates": 0,
     "invalid_ohlcv": 0
@@ -20,15 +20,15 @@
     "max_close_drawdown_pct": 1.1115,
     "orders_including_terminal_exit": 47,
     "cost_pct_of_starting_capital": 0.3881,
-    "position_bar_pct": 33.141,
-    "bars": 694
+    "position_bar_pct": 33.094,
+    "bars": 695
   },
   "holdout_from": "2025-01-01T08:00:00+08:00",
-  "holdout_through": "2026-11-26T08:00:00+08:00",
+  "holdout_through": "2026-11-27T08:00:00+08:00",
   "holdout_anchor": {
     "hold100": {
-      "net_pct": -35.61434,
-      "cagr_pct": -20.68261,
+      "net_pct": -35.49677,
+      "cagr_pct": -20.58006,
       "drawdown_pct": 55.74407,
       "orders": 2,
       "campaigns": 1,
@@ -36,54 +36,54 @@
       "payoff": null,
       "avg_exposure_pct": 100.0,
       "time_invested_pct": 100.0,
-      "cost_pct": 0.2465,
+      "cost_pct": 0.24668,
       "stops": 0,
       "bear_add_orders": 0,
       "regime_log_pct": {
         "bull": 21.64616,
         "range": -42.72406,
-        "bear": -22.95003
+        "bear": -22.76759
       },
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       }
     },
     "hold10": {
-      "net_pct": -3.56624,
-      "cagr_pct": -1.893,
+      "net_pct": -3.55447,
+      "cagr_pct": -1.88401,
       "drawdown_pct": 7.24815,
       "orders": 2,
       "campaigns": 1,
       "win_pct": 0.0,
       "payoff": null,
-      "avg_exposure_pct": 9.47164,
+      "avg_exposure_pct": 9.46768,
       "time_invested_pct": 100.0,
-      "cost_pct": 0.02468,
+      "cost_pct": 0.0247,
       "stops": 0,
       "bear_add_orders": 0,
       "regime_log_pct": {
         "bull": 2.06152,
         "range": -4.26338,
-        "bear": -1.42953
+        "bear": -1.41732
       },
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       }
     },
     "daily": {
       "net_pct": 1.8545,
-      "cagr_pct": 0.97175,
+      "cagr_pct": 0.97035,
       "drawdown_pct": 1.36626,
       "orders": 47,
       "campaigns": 12,
       "win_pct": 33.333,
       "payoff": 4.08302,
-      "avg_exposure_pct": 2.16853,
-      "time_invested_pct": 33.1412,
+      "avg_exposure_pct": 2.16541,
+      "time_invested_pct": 33.0935,
       "cost_pct": 0.38818,
       "stops": 0,
       "bear_add_orders": 0,
@@ -95,19 +95,19 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       }
     },
     "daily:ban:0.10:signal": {
       "net_pct": 1.8545,
-      "cagr_pct": 0.97175,
+      "cagr_pct": 0.97035,
       "drawdown_pct": 1.36626,
       "orders": 47,
       "campaigns": 12,
       "win_pct": 33.333,
       "payoff": 4.08302,
-      "avg_exposure_pct": 2.16853,
-      "time_invested_pct": 33.1412,
+      "avg_exposure_pct": 2.16541,
+      "time_invested_pct": 33.0935,
       "cost_pct": 0.38818,
       "stops": 0,
       "bear_add_orders": 0,
@@ -119,22 +119,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 37.46884,
-      "excess_hold10_pp": 5.42074,
+      "excess_hold100_pp": 37.35127,
+      "excess_hold10_pp": 5.40897,
       "excess_daily_pp": 0.0
     },
     "daily_3h:ban:0.10:signal": {
       "net_pct": -5.55818,
-      "cagr_pct": -2.96479,
+      "cagr_pct": -2.96059,
       "drawdown_pct": 6.14466,
       "orders": 599,
       "campaigns": 155,
       "win_pct": 16.129,
       "payoff": 2.46018,
-      "avg_exposure_pct": 1.96274,
-      "time_invested_pct": 35.3386,
+      "avg_exposure_pct": 1.95991,
+      "time_invested_pct": 35.2878,
       "cost_pct": 3.53392,
       "stops": 0,
       "bear_add_orders": 0,
@@ -146,22 +146,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 30.05616,
-      "excess_hold10_pp": -1.99194,
+      "excess_hold100_pp": 29.93859,
+      "excess_hold10_pp": -2.00371,
       "excess_daily_pp": -7.41268
     },
     "daily_3h:bounce:0.10:signal": {
       "net_pct": -5.95917,
-      "cagr_pct": -3.18184,
+      "cagr_pct": -3.17734,
       "drawdown_pct": 6.47352,
       "orders": 650,
       "campaigns": 176,
       "win_pct": 15.341,
       "payoff": 2.51875,
-      "avg_exposure_pct": 2.03234,
-      "time_invested_pct": 38.1124,
+      "avg_exposure_pct": 2.02941,
+      "time_invested_pct": 38.0576,
       "cost_pct": 3.68008,
       "stops": 0,
       "bear_add_orders": 30,
@@ -173,22 +173,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 29.65517,
-      "excess_hold10_pp": -2.39293,
+      "excess_hold100_pp": 29.5376,
+      "excess_hold10_pp": -2.4047,
       "excess_daily_pp": -7.81367
     },
     "daily_45m:ban:0.10:signal": {
       "net_pct": -11.00663,
-      "cagr_pct": -5.95242,
+      "cagr_pct": -5.94411,
       "drawdown_pct": 11.13549,
       "orders": 2343,
       "campaigns": 811,
       "win_pct": 14.18,
       "payoff": 2.48274,
-      "avg_exposure_pct": 1.60596,
-      "time_invested_pct": 35.8474,
+      "avg_exposure_pct": 1.60365,
+      "time_invested_pct": 35.7959,
       "cost_pct": 11.32691,
       "stops": 0,
       "bear_add_orders": 0,
@@ -200,49 +200,49 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 24.60771,
-      "excess_hold10_pp": -7.44039,
+      "excess_hold100_pp": 24.49014,
+      "excess_hold10_pp": -7.45216,
       "excess_daily_pp": -12.86113
     },
     "daily_45m:bounce:0.10:signal": {
-      "net_pct": -11.52544,
-      "cagr_pct": -6.24136,
+      "net_pct": -11.52213,
+      "cagr_pct": -6.23082,
       "drawdown_pct": 11.66963,
       "orders": 2508,
       "campaigns": 889,
       "win_pct": 15.186,
-      "payoff": 2.31059,
-      "avg_exposure_pct": 1.67538,
-      "time_invested_pct": 38.6077,
-      "cost_pct": 11.86211,
+      "payoff": 2.31153,
+      "avg_exposure_pct": 1.67399,
+      "time_invested_pct": 38.5926,
+      "cost_pct": 11.86212,
       "stops": 0,
       "bear_add_orders": 86,
       "regime_log_pct": {
         "bull": -3.23896,
         "range": -8.37931,
-        "bear": -0.62723
+        "bear": -0.62349
       },
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 24.0889,
-      "excess_hold10_pp": -7.9592,
-      "excess_daily_pp": -13.37994
+      "excess_hold100_pp": 23.97464,
+      "excess_hold10_pp": -7.96766,
+      "excess_daily_pp": -13.37663
     },
     "3h_45m:ban:0.10:signal": {
       "net_pct": -11.76623,
-      "cagr_pct": -6.37575,
+      "cagr_pct": -6.36687,
       "drawdown_pct": 12.097,
       "orders": 1480,
       "campaigns": 488,
       "win_pct": 14.139,
       "payoff": 2.49036,
-      "avg_exposure_pct": 1.56033,
-      "time_invested_pct": 21.9921,
+      "avg_exposure_pct": 1.55808,
+      "time_invested_pct": 21.9604,
       "cost_pct": 10.99691,
       "stops": 0,
       "bear_add_orders": 87,
@@ -254,22 +254,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 23.84811,
-      "excess_hold10_pp": -8.19999,
+      "excess_hold100_pp": 23.73054,
+      "excess_hold10_pp": -8.21176,
       "excess_daily_pp": -13.62073
     },
     "three:ban:0.10:signal": {
       "net_pct": -6.2053,
-      "cagr_pct": -3.31529,
+      "cagr_pct": -3.3106,
       "drawdown_pct": 6.39784,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 14.023,
       "payoff": 2.74622,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 6.46276,
       "stops": 0,
       "bear_add_orders": 0,
@@ -281,22 +281,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 29.40904,
-      "excess_hold10_pp": -2.63906,
+      "excess_hold100_pp": 29.29147,
+      "excess_hold10_pp": -2.65083,
       "excess_daily_pp": -8.0598
     },
     "three:bounce:0.10:signal": {
       "net_pct": -6.66099,
-      "cagr_pct": -3.56278,
+      "cagr_pct": -3.55775,
       "drawdown_pct": 6.83638,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 14.133,
       "payoff": 2.63696,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 6.68282,
       "stops": 0,
       "bear_add_orders": 36,
@@ -308,22 +308,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 28.95335,
-      "excess_hold10_pp": -3.09475,
+      "excess_hold100_pp": 28.83578,
+      "excess_hold10_pp": -3.10652,
       "excess_daily_pp": -8.51549
     },
     "three_etf:ban:0.10:signal": {
       "net_pct": -6.2053,
-      "cagr_pct": -3.31529,
+      "cagr_pct": -3.3106,
       "drawdown_pct": 6.39784,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 14.023,
       "payoff": 2.74622,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 6.46276,
       "stops": 0,
       "bear_add_orders": 0,
@@ -335,22 +335,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 29.40904,
-      "excess_hold10_pp": -2.63906,
+      "excess_hold100_pp": 29.29147,
+      "excess_hold10_pp": -2.65083,
       "excess_daily_pp": -8.0598
     },
     "three_etf:bounce:0.10:signal": {
       "net_pct": -6.66099,
-      "cagr_pct": -3.56278,
+      "cagr_pct": -3.55775,
       "drawdown_pct": 6.83638,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 14.133,
       "payoff": 2.63696,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 6.68282,
       "stops": 0,
       "bear_add_orders": 36,
@@ -362,22 +362,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 28.95335,
-      "excess_hold10_pp": -3.09475,
+      "excess_hold100_pp": 28.83578,
+      "excess_hold10_pp": -3.10652,
       "excess_daily_pp": -8.51549
     },
     "three_etf_derivatives:ban:0.10:signal": {
       "net_pct": -6.2053,
-      "cagr_pct": -3.31529,
+      "cagr_pct": -3.3106,
       "drawdown_pct": 6.39784,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 14.023,
       "payoff": 2.74622,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 6.46276,
       "stops": 0,
       "bear_add_orders": 0,
@@ -389,22 +389,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 29.40904,
-      "excess_hold10_pp": -2.63906,
+      "excess_hold100_pp": 29.29147,
+      "excess_hold10_pp": -2.65083,
       "excess_daily_pp": -8.0598
     },
     "three_etf_derivatives:bounce:0.10:signal": {
       "net_pct": -6.66099,
-      "cagr_pct": -3.56278,
+      "cagr_pct": -3.55775,
       "drawdown_pct": 6.83638,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 14.133,
       "payoff": 2.63696,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 6.68282,
       "stops": 0,
       "bear_add_orders": 36,
@@ -416,22 +416,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 28.95335,
-      "excess_hold10_pp": -3.09475,
+      "excess_hold100_pp": 28.83578,
+      "excess_hold10_pp": -3.10652,
       "excess_daily_pp": -8.51549
     },
     "three_chan:ban:0.10:signal": {
       "net_pct": -5.60958,
-      "cagr_pct": -2.99259,
+      "cagr_pct": -2.98835,
       "drawdown_pct": 5.82886,
       "orders": 1346,
       "campaigns": 435,
       "win_pct": 13.563,
       "payoff": 2.97477,
-      "avg_exposure_pct": 0.86169,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.86046,
+      "time_invested_pct": 19.7302,
       "cost_pct": 6.06189,
       "stops": 0,
       "bear_add_orders": 0,
@@ -443,22 +443,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 30.00476,
-      "excess_hold10_pp": -2.04334,
+      "excess_hold100_pp": 29.88719,
+      "excess_hold10_pp": -2.05511,
       "excess_daily_pp": -7.46408
     },
     "three_chan:bounce:0.10:signal": {
       "net_pct": -6.09731,
-      "cagr_pct": -3.25671,
+      "cagr_pct": -3.2521,
       "drawdown_pct": 6.26043,
       "orders": 1415,
       "campaigns": 467,
       "win_pct": 13.704,
       "payoff": 2.8222,
-      "avg_exposure_pct": 0.88474,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.88347,
+      "time_invested_pct": 20.67,
       "cost_pct": 6.28149,
       "stops": 0,
       "bear_add_orders": 37,
@@ -470,24 +470,24 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 29.51703,
-      "excess_hold10_pp": -2.53107,
+      "excess_hold100_pp": 29.39946,
+      "excess_hold10_pp": -2.54284,
       "excess_daily_pp": -7.95181
     },
     "validation_selected": {
       "daily": {
         "rule": "daily:ban:0.20:signal",
         "net_pct": 3.70067,
-        "cagr_pct": 1.93084,
+        "cagr_pct": 1.92804,
         "drawdown_pct": 2.70957,
         "orders": 47,
         "campaigns": 12,
         "win_pct": 33.333,
         "payoff": 4.05178,
-        "avg_exposure_pct": 4.316,
-        "time_invested_pct": 33.1412,
+        "avg_exposure_pct": 4.30979,
+        "time_invested_pct": 33.0935,
         "cost_pct": 0.78487,
         "stops": 0,
         "bear_add_orders": 0,
@@ -499,23 +499,23 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         },
-        "excess_hold100_pp": 39.31501,
-        "excess_hold10_pp": 7.26691,
+        "excess_hold100_pp": 39.19744,
+        "excess_hold10_pp": 7.25514,
         "excess_daily_pp": 1.84617
       },
       "daily_3h": {
         "rule": "daily_3h:ban:0.35:signal",
         "net_pct": -18.29965,
-        "cagr_pct": -10.09069,
+        "cagr_pct": -10.07693,
         "drawdown_pct": 19.9975,
         "orders": 599,
         "campaigns": 155,
         "win_pct": 16.129,
         "payoff": 2.42289,
-        "avg_exposure_pct": 6.8551,
-        "time_invested_pct": 35.3386,
+        "avg_exposure_pct": 6.84524,
+        "time_invested_pct": 35.2878,
         "cost_pct": 11.44623,
         "stops": 0,
         "bear_add_orders": 0,
@@ -527,10 +527,10 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         },
-        "excess_hold100_pp": 17.31469,
-        "excess_hold10_pp": -14.73341,
+        "excess_hold100_pp": 17.19712,
+        "excess_hold10_pp": -14.74518,
         "excess_daily_pp": -20.15415
       },
       "daily_45m": null,
@@ -542,14 +542,14 @@
     },
     "zero_delay_frozen_daily": {
       "net_pct": 1.87451,
-      "cagr_pct": 0.98219,
+      "cagr_pct": 0.98077,
       "drawdown_pct": 1.33913,
       "orders": 47,
       "campaigns": 12,
       "win_pct": 33.333,
       "payoff": 4.07096,
-      "avg_exposure_pct": 2.16992,
-      "time_invested_pct": 33.1412,
+      "avg_exposure_pct": 2.16679,
+      "time_invested_pct": 33.0935,
       "cost_pct": 0.38811,
       "stops": 0,
       "bear_add_orders": 0,
@@ -561,21 +561,21 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       }
     }
   },
   "oos_0_30pct": {
     "daily:ban:0.10:signal": {
       "net_pct": 1.46459,
-      "cagr_pct": 0.76814,
+      "cagr_pct": 0.76703,
       "drawdown_pct": 1.45809,
       "orders": 47,
       "campaigns": 12,
       "win_pct": 33.333,
       "payoff": 3.48597,
-      "avg_exposure_pct": 2.16853,
-      "time_invested_pct": 33.1412,
+      "avg_exposure_pct": 2.16541,
+      "time_invested_pct": 33.0935,
       "cost_pct": 0.77487,
       "stops": 0,
       "bear_add_orders": 0,
@@ -587,22 +587,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 37.2718,
-      "excess_hold10_pp": 5.05498,
+      "excess_hold100_pp": 37.15458,
+      "excess_hold10_pp": 5.04322,
       "excess_daily_pp": 0.0
     },
     "daily_3h:ban:0.10:signal": {
       "net_pct": -8.93952,
-      "cagr_pct": -4.80899,
+      "cagr_pct": -4.80224,
       "drawdown_pct": 9.29508,
       "orders": 599,
       "campaigns": 155,
       "win_pct": 12.258,
       "payoff": 2.19733,
-      "avg_exposure_pct": 1.96274,
-      "time_invested_pct": 35.3386,
+      "avg_exposure_pct": 1.95991,
+      "time_invested_pct": 35.2878,
       "cost_pct": 6.94157,
       "stops": 0,
       "bear_add_orders": 0,
@@ -614,22 +614,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 26.86769,
-      "excess_hold10_pp": -5.34913,
+      "excess_hold100_pp": 26.75047,
+      "excess_hold10_pp": -5.36089,
       "excess_daily_pp": -10.40411
     },
     "daily_3h:bounce:0.10:signal": {
       "net_pct": -9.468,
-      "cagr_pct": -5.10014,
+      "cagr_pct": -5.09299,
       "drawdown_pct": 9.8215,
       "orders": 650,
       "campaigns": 176,
       "win_pct": 11.364,
       "payoff": 2.30008,
-      "avg_exposure_pct": 2.03234,
-      "time_invested_pct": 38.1124,
+      "avg_exposure_pct": 2.02941,
+      "time_invested_pct": 38.0576,
       "cost_pct": 7.22318,
       "stops": 0,
       "bear_add_orders": 30,
@@ -641,22 +641,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 26.33921,
-      "excess_hold10_pp": -5.87761,
+      "excess_hold100_pp": 26.22199,
+      "excess_hold10_pp": -5.88937,
       "excess_daily_pp": -10.93259
     },
     "daily_45m:ban:0.10:signal": {
       "net_pct": -21.0997,
-      "cagr_pct": -11.72577,
+      "cagr_pct": -11.70993,
       "drawdown_pct": 21.15405,
       "orders": 2343,
       "campaigns": 811,
       "win_pct": 9.001,
       "payoff": 2.05115,
-      "avg_exposure_pct": 1.60596,
-      "time_invested_pct": 35.8474,
+      "avg_exposure_pct": 1.60365,
+      "time_invested_pct": 35.7959,
       "cost_pct": 21.3681,
       "stops": 0,
       "bear_add_orders": 0,
@@ -668,49 +668,49 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 14.70751,
-      "excess_hold10_pp": -17.50931,
+      "excess_hold100_pp": 14.59029,
+      "excess_hold10_pp": -17.52107,
       "excess_daily_pp": -22.56429
     },
     "daily_45m:bounce:0.10:signal": {
-      "net_pct": -22.01666,
-      "cagr_pct": -12.26719,
+      "net_pct": -22.01375,
+      "cagr_pct": -12.24894,
       "drawdown_pct": 22.08162,
       "orders": 2508,
       "campaigns": 889,
       "win_pct": 9.674,
-      "payoff": 1.91638,
-      "avg_exposure_pct": 1.67538,
-      "time_invested_pct": 38.6077,
+      "payoff": 1.91736,
+      "avg_exposure_pct": 1.67399,
+      "time_invested_pct": 38.5926,
       "cost_pct": 22.3163,
       "stops": 0,
       "bear_add_orders": 86,
       "regime_log_pct": {
         "bull": -7.4421,
         "range": -16.16854,
-        "bear": -1.25686
+        "bear": -1.25312
       },
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 13.79055,
-      "excess_hold10_pp": -18.42627,
-      "excess_daily_pp": -23.48125
+      "excess_hold100_pp": 13.67624,
+      "excess_hold10_pp": -18.43512,
+      "excess_daily_pp": -23.47834
     },
     "3h_45m:ban:0.10:signal": {
       "net_pct": -21.51972,
-      "cagr_pct": -11.9734,
+      "cagr_pct": -11.95724,
       "drawdown_pct": 21.60021,
       "orders": 1480,
       "campaigns": 488,
       "win_pct": 9.221,
       "payoff": 2.12455,
-      "avg_exposure_pct": 1.56033,
-      "time_invested_pct": 21.9921,
+      "avg_exposure_pct": 1.55808,
+      "time_invested_pct": 21.9604,
       "cost_pct": 20.7797,
       "stops": 0,
       "bear_add_orders": 87,
@@ -722,22 +722,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 14.28749,
-      "excess_hold10_pp": -17.92933,
+      "excess_hold100_pp": 14.17027,
+      "excess_hold10_pp": -17.94109,
       "excess_daily_pp": -22.98431
     },
     "three:ban:0.10:signal": {
       "net_pct": -12.27892,
-      "cagr_pct": -6.66245,
+      "cagr_pct": -6.65319,
       "drawdown_pct": 12.32393,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 9.195,
       "payoff": 2.31409,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 12.50659,
       "stops": 0,
       "bear_add_orders": 0,
@@ -749,22 +749,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 23.52829,
-      "excess_hold10_pp": -8.68853,
+      "excess_hold100_pp": 23.41107,
+      "excess_hold10_pp": -8.70029,
       "excess_daily_pp": -13.74351
     },
     "three:bounce:0.10:signal": {
       "net_pct": -12.914,
-      "cagr_pct": -7.01869,
+      "cagr_pct": -7.00896,
       "drawdown_pct": 12.95869,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 9.422,
       "payoff": 2.18515,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 12.91767,
       "stops": 0,
       "bear_add_orders": 36,
@@ -776,22 +776,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 22.89321,
-      "excess_hold10_pp": -9.32361,
+      "excess_hold100_pp": 22.77599,
+      "excess_hold10_pp": -9.33537,
       "excess_daily_pp": -14.37859
     },
     "three_etf:ban:0.10:signal": {
       "net_pct": -12.27892,
-      "cagr_pct": -6.66245,
+      "cagr_pct": -6.65319,
       "drawdown_pct": 12.32393,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 9.195,
       "payoff": 2.31409,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 12.50659,
       "stops": 0,
       "bear_add_orders": 0,
@@ -803,22 +803,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 23.52829,
-      "excess_hold10_pp": -8.68853,
+      "excess_hold100_pp": 23.41107,
+      "excess_hold10_pp": -8.70029,
       "excess_daily_pp": -13.74351
     },
     "three_etf:bounce:0.10:signal": {
       "net_pct": -12.914,
-      "cagr_pct": -7.01869,
+      "cagr_pct": -7.00896,
       "drawdown_pct": 12.95869,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 9.422,
       "payoff": 2.18515,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 12.91767,
       "stops": 0,
       "bear_add_orders": 36,
@@ -830,22 +830,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 22.89321,
-      "excess_hold10_pp": -9.32361,
+      "excess_hold100_pp": 22.77599,
+      "excess_hold10_pp": -9.33537,
       "excess_daily_pp": -14.37859
     },
     "three_etf_derivatives:ban:0.10:signal": {
       "net_pct": -12.27892,
-      "cagr_pct": -6.66245,
+      "cagr_pct": -6.65319,
       "drawdown_pct": 12.32393,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 9.195,
       "payoff": 2.31409,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 12.50659,
       "stops": 0,
       "bear_add_orders": 0,
@@ -857,22 +857,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 23.52829,
-      "excess_hold10_pp": -8.68853,
+      "excess_hold100_pp": 23.41107,
+      "excess_hold10_pp": -8.70029,
       "excess_daily_pp": -13.74351
     },
     "three_etf_derivatives:bounce:0.10:signal": {
       "net_pct": -12.914,
-      "cagr_pct": -7.01869,
+      "cagr_pct": -7.00896,
       "drawdown_pct": 12.95869,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 9.422,
       "payoff": 2.18515,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 12.91767,
       "stops": 0,
       "bear_add_orders": 36,
@@ -884,22 +884,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 22.89321,
-      "excess_hold10_pp": -9.32361,
+      "excess_hold100_pp": 22.77599,
+      "excess_hold10_pp": -9.33537,
       "excess_daily_pp": -14.37859
     },
     "three_chan:ban:0.10:signal": {
       "net_pct": -11.33575,
-      "cagr_pct": -6.13562,
+      "cagr_pct": -6.12707,
       "drawdown_pct": 11.38124,
       "orders": 1346,
       "campaigns": 435,
       "win_pct": 8.736,
       "payoff": 2.55909,
-      "avg_exposure_pct": 0.86169,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.86046,
+      "time_invested_pct": 19.7302,
       "cost_pct": 11.75551,
       "stops": 0,
       "bear_add_orders": 0,
@@ -911,22 +911,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 24.47146,
-      "excess_hold10_pp": -7.74536,
+      "excess_hold100_pp": 24.35424,
+      "excess_hold10_pp": -7.75712,
       "excess_daily_pp": -12.80034
     },
     "three_chan:bounce:0.10:signal": {
       "net_pct": -12.00485,
-      "cagr_pct": -6.50908,
+      "cagr_pct": -6.50003,
       "drawdown_pct": 12.05,
       "orders": 1415,
       "campaigns": 467,
       "win_pct": 8.779,
       "payoff": 2.44374,
-      "avg_exposure_pct": 0.88474,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.88347,
+      "time_invested_pct": 20.67,
       "cost_pct": 12.16742,
       "stops": 0,
       "bear_add_orders": 37,
@@ -938,24 +938,24 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 23.80236,
-      "excess_hold10_pp": -8.41446,
+      "excess_hold100_pp": 23.68514,
+      "excess_hold10_pp": -8.42622,
       "excess_daily_pp": -13.46944
     }
   },
   "oos_0_60pct": {
     "daily:ban:0.10:signal": {
       "net_pct": 0.68923,
-      "cagr_pct": 0.36214,
+      "cagr_pct": 0.36162,
       "drawdown_pct": 1.65128,
       "orders": 47,
       "campaigns": 12,
       "win_pct": 33.333,
       "payoff": 2.58648,
-      "avg_exposure_pct": 2.16853,
-      "time_invested_pct": 33.1412,
+      "avg_exposure_pct": 2.16541,
+      "time_invested_pct": 33.0935,
       "cost_pct": 1.5438,
       "stops": 0,
       "bear_add_orders": 0,
@@ -967,22 +967,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 36.88045,
-      "excess_hold10_pp": 4.32788,
+      "excess_hold100_pp": 36.76393,
+      "excess_hold10_pp": 4.31617,
       "excess_daily_pp": 0.0
     },
     "daily_3h:ban:0.10:signal": {
       "net_pct": -15.34333,
-      "cagr_pct": -8.39291,
+      "cagr_pct": -8.38135,
       "drawdown_pct": 15.54714,
       "orders": 599,
       "campaigns": 155,
       "win_pct": 7.742,
       "payoff": 1.67987,
-      "avg_exposure_pct": 1.96274,
-      "time_invested_pct": 35.3386,
+      "avg_exposure_pct": 1.95991,
+      "time_invested_pct": 35.2878,
       "cost_pct": 13.39595,
       "stops": 0,
       "bear_add_orders": 0,
@@ -994,22 +994,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 20.84789,
-      "excess_hold10_pp": -11.70468,
+      "excess_hold100_pp": 20.73137,
+      "excess_hold10_pp": -11.71639,
       "excess_daily_pp": -16.03256
     },
     "daily_3h:bounce:0.10:signal": {
       "net_pct": -16.09778,
-      "cagr_pct": -8.82347,
+      "cagr_pct": -8.81135,
       "drawdown_pct": 16.29977,
       "orders": 650,
       "campaigns": 176,
       "win_pct": 6.818,
       "payoff": 1.84163,
-      "avg_exposure_pct": 2.03234,
-      "time_invested_pct": 38.1124,
+      "avg_exposure_pct": 2.02941,
+      "time_invested_pct": 38.0576,
       "cost_pct": 13.91869,
       "stops": 0,
       "bear_add_orders": 30,
@@ -1021,22 +1021,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 20.09344,
-      "excess_hold10_pp": -12.45913,
+      "excess_hold100_pp": 19.97692,
+      "excess_hold10_pp": -12.47084,
       "excess_daily_pp": -16.78701
     },
     "daily_45m:ban:0.10:signal": {
       "net_pct": -37.98159,
-      "cagr_pct": -22.231,
+      "cagr_pct": -22.20286,
       "drawdown_pct": 38.00583,
       "orders": 2343,
       "campaigns": 811,
       "win_pct": 4.932,
       "payoff": 1.27304,
-      "avg_exposure_pct": 1.60596,
-      "time_invested_pct": 35.8474,
+      "avg_exposure_pct": 1.60365,
+      "time_invested_pct": 35.7959,
       "cost_pct": 38.16043,
       "stops": 0,
       "bear_add_orders": 0,
@@ -1048,49 +1048,49 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": -1.79037,
-      "excess_hold10_pp": -34.34294,
+      "excess_hold100_pp": -1.90689,
+      "excess_hold10_pp": -34.35465,
       "excess_daily_pp": -38.67082
     },
     "daily_45m:bounce:0.10:signal": {
-      "net_pct": -39.41452,
-      "cagr_pct": -23.18189,
+      "net_pct": -39.41226,
+      "cagr_pct": -23.15123,
       "drawdown_pct": 39.44235,
       "orders": 2508,
       "campaigns": 889,
       "win_pct": 5.174,
-      "payoff": 1.23263,
-      "avg_exposure_pct": 1.67538,
-      "time_invested_pct": 38.6077,
-      "cost_pct": 39.64929,
+      "payoff": 1.2327,
+      "avg_exposure_pct": 1.67399,
+      "time_invested_pct": 38.5926,
+      "cost_pct": 39.64931,
       "stops": 0,
       "bear_add_orders": 86,
       "regime_log_pct": {
         "bull": -15.84838,
         "range": -31.74699,
-        "bear": -2.51612
+        "bear": -2.51239
       },
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": -3.2233,
-      "excess_hold10_pp": -35.77587,
-      "excess_daily_pp": -40.10375
+      "excess_hold100_pp": -3.33756,
+      "excess_hold10_pp": -35.78532,
+      "excess_daily_pp": -40.10149
     },
     "3h_45m:ban:0.10:signal": {
       "net_pct": -37.91139,
-      "cagr_pct": -22.18468,
+      "cagr_pct": -22.15659,
       "drawdown_pct": 37.9378,
       "orders": 1480,
       "campaigns": 488,
       "win_pct": 5.943,
       "payoff": 1.2229,
-      "avg_exposure_pct": 1.56033,
-      "time_invested_pct": 21.9921,
+      "avg_exposure_pct": 1.55808,
+      "time_invested_pct": 21.9604,
       "cost_pct": 37.22451,
       "stops": 0,
       "bear_add_orders": 87,
@@ -1102,22 +1102,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": -1.72017,
-      "excess_hold10_pp": -34.27274,
+      "excess_hold100_pp": -1.83669,
+      "excess_hold10_pp": -34.28445,
       "excess_daily_pp": -38.60062
     },
     "three:ban:0.10:signal": {
       "net_pct": -23.27174,
-      "cagr_pct": -13.01315,
+      "cagr_pct": -12.9957,
       "drawdown_pct": 23.28808,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 5.517,
       "payoff": 1.46711,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 23.44424,
       "stops": 0,
       "bear_add_orders": 0,
@@ -1129,22 +1129,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 12.91948,
-      "excess_hold10_pp": -19.63309,
+      "excess_hold100_pp": 12.80296,
+      "excess_hold10_pp": -19.6448,
       "excess_daily_pp": -23.96097
     },
     "three:bounce:0.10:signal": {
       "net_pct": -24.19137,
-      "cagr_pct": -13.56341,
+      "cagr_pct": -13.54528,
       "drawdown_pct": 24.20751,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 5.567,
       "payoff": 1.40554,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 24.16154,
       "stops": 0,
       "bear_add_orders": 36,
@@ -1156,22 +1156,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 11.99985,
-      "excess_hold10_pp": -20.55272,
+      "excess_hold100_pp": 11.88333,
+      "excess_hold10_pp": -20.56443,
       "excess_daily_pp": -24.8806
     },
     "three_etf:ban:0.10:signal": {
       "net_pct": -23.27174,
-      "cagr_pct": -13.01315,
+      "cagr_pct": -12.9957,
       "drawdown_pct": 23.28808,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 5.517,
       "payoff": 1.46711,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 23.44424,
       "stops": 0,
       "bear_add_orders": 0,
@@ -1183,22 +1183,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 12.91948,
-      "excess_hold10_pp": -19.63309,
+      "excess_hold100_pp": 12.80296,
+      "excess_hold10_pp": -19.6448,
       "excess_daily_pp": -23.96097
     },
     "three_etf:bounce:0.10:signal": {
       "net_pct": -24.19137,
-      "cagr_pct": -13.56341,
+      "cagr_pct": -13.54528,
       "drawdown_pct": 24.20751,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 5.567,
       "payoff": 1.40554,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 24.16154,
       "stops": 0,
       "bear_add_orders": 36,
@@ -1210,22 +1210,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 11.99985,
-      "excess_hold10_pp": -20.55272,
+      "excess_hold100_pp": 11.88333,
+      "excess_hold10_pp": -20.56443,
       "excess_daily_pp": -24.8806
     },
     "three_etf_derivatives:ban:0.10:signal": {
       "net_pct": -23.27174,
-      "cagr_pct": -13.01315,
+      "cagr_pct": -12.9957,
       "drawdown_pct": 23.28808,
       "orders": 1329,
       "campaigns": 435,
       "win_pct": 5.517,
       "payoff": 1.46711,
-      "avg_exposure_pct": 0.89583,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.89454,
+      "time_invested_pct": 19.7302,
       "cost_pct": 23.44424,
       "stops": 0,
       "bear_add_orders": 0,
@@ -1237,22 +1237,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 12.91948,
-      "excess_hold10_pp": -19.63309,
+      "excess_hold100_pp": 12.80296,
+      "excess_hold10_pp": -19.6448,
       "excess_daily_pp": -23.96097
     },
     "three_etf_derivatives:bounce:0.10:signal": {
       "net_pct": -24.19137,
-      "cagr_pct": -13.56341,
+      "cagr_pct": -13.54528,
       "drawdown_pct": 24.20751,
       "orders": 1397,
       "campaigns": 467,
       "win_pct": 5.567,
       "payoff": 1.40554,
-      "avg_exposure_pct": 0.91941,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.91809,
+      "time_invested_pct": 20.67,
       "cost_pct": 24.16154,
       "stops": 0,
       "bear_add_orders": 36,
@@ -1264,22 +1264,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 11.99985,
-      "excess_hold10_pp": -20.55272,
+      "excess_hold100_pp": 11.88333,
+      "excess_hold10_pp": -20.56443,
       "excess_daily_pp": -24.8806
     },
     "three_chan:ban:0.10:signal": {
       "net_pct": -21.76704,
-      "cagr_pct": -12.1195,
+      "cagr_pct": -12.10316,
       "drawdown_pct": 21.78369,
       "orders": 1346,
       "campaigns": 435,
       "win_pct": 5.287,
       "payoff": 1.6002,
-      "avg_exposure_pct": 0.86169,
-      "time_invested_pct": 19.7586,
+      "avg_exposure_pct": 0.86046,
+      "time_invested_pct": 19.7302,
       "cost_pct": 22.12599,
       "stops": 0,
       "bear_add_orders": 0,
@@ -1291,22 +1291,22 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 14.42418,
-      "excess_hold10_pp": -18.12839,
+      "excess_hold100_pp": 14.30766,
+      "excess_hold10_pp": -18.1401,
       "excess_daily_pp": -22.45627
     },
     "three_chan:bounce:0.10:signal": {
       "net_pct": -22.72836,
-      "cagr_pct": -12.68948,
+      "cagr_pct": -12.67243,
       "drawdown_pct": 22.74481,
       "orders": 1415,
       "campaigns": 467,
       "win_pct": 5.139,
       "payoff": 1.58115,
-      "avg_exposure_pct": 0.88474,
-      "time_invested_pct": 20.6997,
+      "avg_exposure_pct": 0.88347,
+      "time_invested_pct": 20.67,
       "cost_pct": 22.85065,
       "stops": 0,
       "bear_add_orders": 37,
@@ -1318,10 +1318,10 @@
       "regime_bars": {
         "bull": 3712,
         "range": 14976,
-        "bear": 3520
+        "bear": 3552
       },
-      "excess_hold100_pp": 13.46286,
-      "excess_hold10_pp": -19.08971,
+      "excess_hold100_pp": 13.34634,
+      "excess_hold10_pp": -19.10142,
       "excess_daily_pp": -23.41759
     }
   },
@@ -1338,9 +1338,9 @@
       "bounce_wins": 0,
       "ban_wins": 36,
       "ties": 0,
-      "min_delta_pp": -1.75883,
-      "max_delta_pp": -0.25111,
-      "mean_delta_pp": -1.08915
+      "min_delta_pp": -1.75609,
+      "max_delta_pp": -0.24935,
+      "mean_delta_pp": -1.08559
     },
     "three": {
       "bounce_wins": 0,
@@ -1431,23 +1431,23 @@
       "orders": 88
     },
     "hold100": {
-      "compounded_pct": 39.31399,
+      "compounded_pct": 39.56838,
       "positive_folds": 4,
       "worst_fold_drawdown_pct": 40.42925,
       "orders": 12
     },
     "hold10": {
-      "compounded_pct": 5.9684,
+      "compounded_pct": 5.98827,
       "positive_folds": 4,
       "worst_fold_drawdown_pct": 5.10977,
       "orders": 12
     }
   },
   "external_coverage": {
-    "observed_etf_files": 1,
-    "observed_derivatives_files": 2,
+    "observed_etf_files": 2,
+    "observed_derivatives_files": 3,
     "etf_first_eligible_in_price_clock": "2026-11-26T15:30:00+08:00",
-    "derivatives_first_eligible_in_price_clock": null,
+    "derivatives_first_eligible_in_price_clock": "2026-11-26T17:00:00+08:00",
     "splits": {
       "development": {
         "etf_bars": 0,
@@ -1462,9 +1462,9 @@
         "derivatives_filter_bars": 0
       },
       "historical_holdout": {
-        "etf_bars": 0,
-        "etf_filter_bars": 0,
-        "derivatives_bars": 0,
+        "etf_bars": 22,
+        "etf_filter_bars": 22,
+        "derivatives_bars": 20,
         "derivatives_filter_bars": 0
       }
     }
