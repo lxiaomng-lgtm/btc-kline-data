@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from statistics import mean, median, correlation
+from threading import Lock
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -199,13 +200,36 @@ def backfill_premium(data, today, prices):
     periods=range(window(START),window(today),size)
     cache=CACHE/"coinbase"
     cache.mkdir(parents=True,exist_ok=True)
+    lock=Lock()
+    next_request=0.
+
+    def paced_request(a,b):
+        nonlocal next_request
+        for attempt in range(5):
+            with lock:
+                now=time.monotonic()
+                wait=max(0.,next_request-now)
+                next_request=max(now,next_request)+.34
+            time.sleep(wait)
+            try:
+                return get(COINBASE,{"start":a,"end":b-1,"granularity":"FIFTEEN_MINUTE"},limit=16)
+            except (TimeoutError,HTTPError) as err:
+                status=getattr(err,"code",None)
+                if attempt==4 or status not in (None,429,502,503,504):
+                    raise
+                retry=(getattr(err,"headers",{}) or {}).get("Retry-After","0")
+                pause=max(2**attempt,min(25,int(retry)) if str(retry).isdigit() else 0)
+                if status==429:
+                    with lock:
+                        next_request=max(next_request,time.monotonic()+pause)
+                time.sleep(pause)
+        raise AssertionError("Request retry exhausted")
 
     def one(a):
         b=min(a+size,window(today))
         key=cache/f"{a}-{b}.json"
         try:
-            raw=(key.read_bytes() if key.exists() else get(COINBASE,
-                {"start":a,"end":b-1,"granularity":"FIFTEEN_MINUTE"},limit=16))
+            raw=key.read_bytes() if key.exists() else paced_request(a,b)
             rows=json.loads(raw)["candles"]
             found={}
             for r in rows:
@@ -594,6 +618,7 @@ def capture(now, data, prices):
             tail[k]=[row for block in by_day.values() for row in block[-16:]]
         else:
             tail[k]=values
+    source_coverage=[(k,len(d["rows"]),d["rows"]) for k,d in live.items() if d.get("rows")]
     for k,d in live.items():
         if d.get("rows"):
             d["rows"]=d["rows"][-16:]
@@ -605,6 +630,9 @@ def capture(now, data, prices):
     doc={"capture_started_at_utc":utc(now),"observed_at_utc":utc(observed),
          "strict_eligible_after_utc":utc(observed+STEP),"run_id":run,"live":live,
          "archive_tail_event_rows":tail,"errors":failures,
+         "live_coverage":{k:{"rows_in_request":n,"first_event_utc":utc(source[0][0]) if source else None,
+                             "last_event_utc":utc(source[-1][0]) if source else None}
+                          for k,n,source in source_coverage},
          "immutable_etf_reference":str(etf_files[-1]) if etf_files else None,
          "immutable_derivatives_reference":str(source_files[-1]) if source_files else None,
          "definition":"Observation time is not event time. Older archive rows cannot be used before this receipt."}
@@ -811,6 +839,8 @@ def main():
         receipt,live_errors=None,{}
     health=observe_quality(data,int(time.time()),{**live_errors,**errors},workflow_health())
     health["price_audit"]=audit
+    if receipt:
+        health["live_capture_coverage"]=json.loads(Path(receipt).read_text())["live_coverage"]
     snapshot_age=int(time.time())-epoch(audit["snapshot_close"])
     health["price_snapshot_age_seconds"]=snapshot_age
     if snapshot_age>3600:
