@@ -1,0 +1,31 @@
+{
+  "signal_close_bjt": "2026-11-27T20:45:00+08:00",
+  "captured_at_bjt": "2026-11-27T20:54:27+08:00",
+  "execution": "Research target only. Earliest hypothetical fill follows actual publication. No account writes.",
+  "daily_close_bjt": "2026-11-27T08:00:00+08:00",
+  "h3_close_bjt": "2026-11-27T20:00:00+08:00",
+  "daily_regime": "bear",
+  "etf_total_musd": -453.0,
+  "derivatives_multiplier": null,
+  "run_id": "46002534703",
+  "source_sha256": "d1bfe3a86588e038d6209b6fe53488ea224a2e133e29a0f11eeb13c7e7fe36ef",
+  "targets": {
+    "daily:ban:0.10:signal": 0.0,
+    "daily_3h:ban:0.10:signal": 0.0,
+    "daily_3h:bounce:0.10:signal": 0.025,
+    "daily_45m:ban:0.10:signal": 0.0,
+    "daily_45m:bounce:0.10:signal": 0.0,
+    "3h_45m:ban:0.10:signal": 0.05,
+    "three:ban:0.10:signal": 0.0,
+    "three:bounce:0.10:signal": 0.0,
+    "three_etf:ban:0.10:signal": 0.0,
+    "three_etf:bounce:0.10:signal": 0.0,
+    "three_etf_derivatives:ban:0.10:signal": 0.0,
+    "three_etf_derivatives:bounce:0.10:signal": 0.0,
+    "three_chan:ban:0.10:signal": 0.0,
+    "three_chan:bounce:0.10:signal": 0.0,
+    "daily:ban:0.20:signal": 0.0,
+    "buy_hold_10": 0.1,
+    "cash": 0.0
+  }
+}
