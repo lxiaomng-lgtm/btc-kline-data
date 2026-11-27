@@ -1,5 +1,5 @@
 {
-  "run_id": "45936340878",
+  "run_id": "45936557884",
   "per_side_cost": 0.0045,
   "state_outcomes": {
     "cells": 189,
@@ -46,7 +46,7 @@
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 7.078792359534415e-05,
+          "mse": 7.078792359534416e-05,
           "direction_accuracy": 0.5005401512423479,
           "trades": 0,
           "net_pct": 0.0,
@@ -66,7 +66,7 @@
       "status": "retrospective_event_clock_simulation",
       "validation": {
         "price": {
-          "mse": 0.0006966252690543031,
+          "mse": 0.0006966252690543032,
           "direction_accuracy": 0.47692307692307695,
           "trades": 0,
           "net_pct": 0.0,
@@ -165,7 +165,7 @@
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 0.000784886144689133,
+          "mse": 0.0007848861446891327,
           "direction_accuracy": 0.48307692307692307,
           "trades": 0,
           "net_pct": 0.0,
@@ -229,7 +229,7 @@
     }
   },
   "strict_point_in_time": {
-    "receipts": 3,
+    "receipts": 4,
     "days_with_same_receipt_spot_and_perp": 0,
     "usable_signal_observations": 0,
     "median_venue_alignment_age_hours": null,

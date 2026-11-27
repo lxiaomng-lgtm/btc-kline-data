@@ -1,6 +1,6 @@
 {
-  "run_id": "45936340878",
-  "generated_utc": "2026-11-27T03:49:17.666640+00:00",
+  "run_id": "45936557884",
+  "generated_utc": "2026-11-27T03:51:32.329784+00:00",
   "price_audit": {
     "archived_bars": 177755,
     "snapshot_bars": 192,
@@ -124,7 +124,7 @@
     "oi/2022-03-07": "Invalid OI at 2022-03-07T15:30:00+00:00; Invalid OI at 2022-03-07T15:45:00+00:00; Invalid OI at 2022-03-07T16:00:00+00:00; Invalid OI at 2022-03-07T16:15:00+00:00; Invalid OI at 2022-03-07T16:30:00+00:00; Invalid OI at 2022-03-07T16:45:00+00:00; Invalid OI at 2022-03-07T17:00:00+00:00; Invalid OI at 2022-03-07T17:15:00+00:00; Invalid OI at 2022-03-07T17:30:00+00:00; Invalid OI at 2022-03-07T17:45:00+00:00; Invalid OI at 2022-03-07T18:00:00+00:00; Invalid OI at 2022-03-07T18:15:00+00:00; Invalid OI at 2022-03-07T18:30:00+00:00; Invalid OI at 2022-03-07T18:45:00+00:00; Invalid OI at 2022-03-07T19:00:00+00:00; Invalid OI at 2022-03-07T19:15:00+00:00; Invalid OI at 2022-03-07T19:30:00+00:00; Invalid OI at 2022-03-07T19:45:00+00:00; Invalid OI at 2022-03-07T20:00:00+00:00; Invalid OI at 2022-03-07T20:15:00+00:00; Invalid OI at 2022-03-07T20:30:00+00:00; Invalid OI at 2022-03-07T20:45:00+00:00; Invalid OI at 2022-03-07T21:00:00+00:00; Invalid OI at 2022-03-07T21:15:00+00:00; Invalid OI at 2022-03-07T21:30:00+00:00; Invalid OI at 2022-03-07T21:45:00+00:00; Invalid OI at 2022-03-07T22:00:00+00:00; Invalid OI at 2022-03-07T22:15:00+00:00; Invalid OI at 2022-03-07T22:30:00+00:00; Invalid OI at 2022-03-07T22:45:00+00:00; Invalid OI at 2022-03-07T23:00:00+00:00; Invalid OI at 2022-03-07T23:15:00+00:00; Invalid OI at 2022-03-07T23:30:00+00:00; Invalid OI at 2022-03-07T23:45:00+00:00"
   },
   "exact_duplicates_across_files": {},
-  "live_receipt": "research/flow/observations/20261127T034909-45936340878-1.json",
+  "live_receipt": "research/flow/observations/20261127T035126-45936557884-1.json",
   "live_errors": {
     "perp": "HTTP Error 451: ",
     "binance_oi": "HTTP Error 451: ",
@@ -134,7 +134,7 @@
     "Bitstamp recent trade tape": {
       "url": "https://www.bitstamp.net/api/v2/transactions/btcusd/?time=hour",
       "status": 200,
-      "bytes": 105570
+      "bytes": 104958
     },
     "Coinbase public candle probe": {
       "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/candles?start=1795564800&end=1795568400&granularity=FIFTEEN_MINUTE",
@@ -164,7 +164,7 @@
     "OKX historic perpetual candle probe": {
       "url": "https://www.okx.com/api/v5/market/history-candles?instId=BTC-USDT-SWAP&bar=15m&limit=2",
       "status": 200,
-      "bytes": 229
+      "bytes": 232
     },
     "OKX archive catalogue": {
       "url": "https://www.okx.com/historical-data",

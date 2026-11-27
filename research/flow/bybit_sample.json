@@ -19,7 +19,12 @@
       "outside_day": 0,
       "invalid": 0,
       "coverage": 96,
-      "missing_15m": 0
+      "missing_15m": 0,
+      "descriptive_binance_same_interval": {
+        "n": 96,
+        "pearson": 0.11896944921685061,
+        "direction_agreement": 0.5729166666666666
+      }
     },
     "bybit_perpetual": {
       "archive": "https://public.bybit.com/trading/BTCUSDT/BTCUSDT2026-11-25.csv.gz",
@@ -44,7 +49,13 @@
       "outside_day": 0,
       "invalid": 0,
       "coverage": 96,
-      "missing_15m": 0
+      "missing_15m": 0,
+      "descriptive_binance_same_interval": {
+        "n": 96,
+        "pearson": 0.7166852924749606,
+        "direction_agreement": 0.59375
+      }
     }
-  }
+  },
+  "observed_at_utc": "2026-11-27T03:51:46.154790+00:00"
 }
