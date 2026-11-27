@@ -255,8 +255,10 @@ def run_tick():
         return
     live=collect()
     heartbeat=jsonfile(OPS/"external-heartbeat.json",{})
+    secondary_endpoints={"binance_perpetual_cvd":"https://fapi.binance.com/fapi/v1/klines",
+                         "binance_oi":"https://fapi.binance.com/futures/data/openInterestHist"}
     for name,v in heartbeat.get("secondary_live",{}).items():
-        if name not in ("binance_perpetual_cvd","binance_oi") or not v.get("event_at"):
+        if v.get("endpoint")!=secondary_endpoints.get(name) or name not in secondary_endpoints or not v.get("event_at"):
             continue
         age=time.time()-epoch(v["event_at"])
         max_age=1100 if "cvd" in name else 1500
@@ -301,9 +303,13 @@ def run_tick():
         fallback["status"]="closed_bar_only"
     else:
         fallback=None
+    liquidations=jsonfile(Path("research/liquidation_sample.json"),{})
+    latest_liq=liquidations[max(liquidations)] if liquidations else None
     write_json(Path("btc_daily.json"),{"schema":"btc_daily_v1","generated_at_bjt":stamp(now),"source_run_id":run,
         "price":price,"price_fallback":fallback,"candles":state,"etf":latest_etf(),
         "live_market":market,"settled_flows_reference":"research/flow/coverage.json",
+        "deribit_liquidation":{"status":"sampled_delayed_not_live" if latest_liq else "unavailable",
+                                "latest_window":latest_liq},
         "shadow":{"accounts":accounts,"latest_slot":paper["signal_at"] if paper else None,
                   "confirmed_published_at":paper["confirmed_published_at"] if paper else None,
                   "quote":paper.get("quote") if paper else None,"research_cost":{"fee_per_side":.004,"slippage_per_side":.0005,"actual_account_fee":"unverified"}},

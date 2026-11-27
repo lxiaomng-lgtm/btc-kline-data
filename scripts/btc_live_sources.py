@@ -4,7 +4,6 @@ import math
 import time
 from concurrent.futures import ThreadPoolExecutor
 from statistics import mean
-from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -98,7 +97,7 @@ def okx_taker(doc,now):
     latest=max(rows)
     # A full extra interval is required before use, irrespective of the source's bucket convention.
     tail=list(range(int(latest)-35*300,int(latest)+1,300))
-    unit="BTC as reported by OKX rubik/stat/taker-volume"
+    unit="OKX native volume units (not verified as BTC); use dimensionless imbalance"
     total=sum(rows[x][1] for x in tail) if all(x in rows for x in tail) else 0
     return latest,{"timestamp_qualification":"OKX reported bucket timestamp; conservatively wait one bucket",
                    "market_scope":"BTC all OKX futures/swaps, not Binance BTCUSDT or exact BTC-USDT-SWAP",
