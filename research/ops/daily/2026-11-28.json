@@ -1,36 +1,40 @@
 {
   "date_bjt": "2026-11-28",
-  "recorded_at": "2026-11-28T01:59:15.971481+08:00",
+  "recorded_at": "2026-11-28T03:40:34.674294+08:00",
   "scheduler": {
-    "expected_by_clock": 12,
-    "receipts": 3,
+    "expected_by_clock": 22,
+    "receipts": 4,
     "event_receipts": {
-      "push": 2,
+      "push": 3,
       "schedule": 1
     },
     "github_run_api": {
       "events": {
-        "push": 2,
+        "push": 3,
         "schedule": 1
       },
       "run_status": {
         "in_progress": 1,
-        "success": 2
+        "success": 3
       },
       "queue_wait_seconds": [
         0,
         0,
+        0,
         0
       ],
-      "api_total": 3,
+      "api_total": 4,
       "truncated": false
     }
   },
   "paper_today": {
-    "expected": 1,
-    "valid": 1,
-    "missing_at": [],
-    "coverage_pct": 100.0
+    "expected": 4,
+    "valid": 2,
+    "missing_at": [
+      "2026-11-28T02:00:00+08:00",
+      "2026-11-28T02:45:00+08:00"
+    ],
+    "coverage_pct": 50.0
   },
   "paper_30d": {
     "eligible_30_complete_days": false,
@@ -41,10 +45,13 @@
   },
   "paper_days": {
     "2026-11-28": {
-      "expected": 1,
-      "valid": 1,
-      "missing_at": [],
-      "coverage_pct": 100.0
+      "expected": 4,
+      "valid": 2,
+      "missing_at": [
+        "2026-11-28T02:00:00+08:00",
+        "2026-11-28T02:45:00+08:00"
+      ],
+      "coverage_pct": 50.0
     },
     "2026-11-27": {
       "expected": 12,
@@ -234,63 +241,63 @@
       "coverage_pct": null
     }
   },
-  "lifetime_paper_records": 15,
+  "lifetime_paper_records": 16,
   "paper_reconciliation_issues": [],
   "source_quality": {
     "bitstamp_price": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
       "archive_rows_seen_today": 0,
-      "median_live_age_seconds": 1.096
+      "median_live_age_seconds": 1.073
     },
     "coinbase_price": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
       "archive_rows_seen_today": 0,
-      "median_live_age_seconds": 0.62
+      "median_live_age_seconds": 0.5680000000000001
     },
     "bitstamp_15m": {
-      "expected_elapsed_bars": 7,
+      "expected_elapsed_bars": 14,
       "completeness_pct": 100.0,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
-      "archive_rows_seen_today": 7,
-      "median_live_age_seconds": 554.52
+      "archive_rows_seen_today": 14,
+      "median_live_age_seconds": 594.5070000000001
     },
     "binance_spot_cvd": {
-      "expected_elapsed_bars": 7,
+      "expected_elapsed_bars": 14,
       "completeness_pct": 100.0,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
-      "archive_rows_seen_today": 7,
-      "median_live_age_seconds": 554.59
+      "archive_rows_seen_today": 14,
+      "median_live_age_seconds": 594.6315
     },
     "binance_perpetual_cvd": {
-      "expected_elapsed_bars": 7,
+      "expected_elapsed_bars": 14,
       "completeness_pct": 0.0,
-      "live_checks": 3,
+      "live_checks": 4,
       "valid": 0,
-      "failures": 3,
+      "failures": 4,
       "stale": 0,
       "distinct_event_times": 0,
       "repeated_reads_same_event": 0,
@@ -300,9 +307,9 @@
     "binance_oi": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
+      "live_checks": 4,
       "valid": 0,
-      "failures": 3,
+      "failures": 4,
       "stale": 0,
       "distinct_event_times": 0,
       "repeated_reads_same_event": 0,
@@ -312,9 +319,9 @@
     "bybit_oi": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
+      "live_checks": 4,
       "valid": 0,
-      "failures": 3,
+      "failures": 4,
       "stale": 0,
       "distinct_event_times": 0,
       "repeated_reads_same_event": 0,
@@ -324,79 +331,79 @@
     "okx_oi": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
       "archive_rows_seen_today": 0,
-      "median_live_age_seconds": 0.082
+      "median_live_age_seconds": 0.081
     },
     "okx_funding": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
       "archive_rows_seen_today": 0,
-      "median_live_age_seconds": 36.606
+      "median_live_age_seconds": 33.9965
     },
     "okx_btc_contract_taker_delta": {
-      "expected_elapsed_bars": 23,
-      "completeness_pct": 95.65217391304348,
-      "live_checks": 3,
-      "valid": 3,
+      "expected_elapsed_bars": 44,
+      "completeness_pct": 97.72727272727273,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
-      "archive_rows_seen_today": 22,
-      "median_live_age_seconds": 554.215
+      "archive_rows_seen_today": 43,
+      "median_live_age_seconds": 489.2825
     },
     "coinbase_bitstamp_live_premium": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
-      "valid": 3,
+      "live_checks": 4,
+      "valid": 4,
       "failures": 0,
       "stale": 0,
-      "distinct_event_times": 3,
+      "distinct_event_times": 4,
       "repeated_reads_same_event": 0,
       "archive_rows_seen_today": 0,
       "median_live_age_seconds": null
     },
     "secondary_cloud_binance_perpetual_cvd": {
-      "expected_elapsed_bars": 7,
+      "expected_elapsed_bars": 14,
       "completeness_pct": 100.0,
-      "live_checks": 3,
-      "valid": 2,
+      "live_checks": 4,
+      "valid": 3,
       "failures": 0,
       "stale": 1,
-      "distinct_event_times": 2,
+      "distinct_event_times": 3,
       "repeated_reads_same_event": 0,
-      "archive_rows_seen_today": 7,
-      "median_live_age_seconds": 490.3334239721298
+      "archive_rows_seen_today": 14,
+      "median_live_age_seconds": 634.6742732524872
     },
     "secondary_cloud_binance_oi": {
       "expected_elapsed_bars": null,
       "completeness_pct": null,
-      "live_checks": 3,
-      "valid": 2,
+      "live_checks": 4,
+      "valid": 3,
       "failures": 0,
       "stale": 1,
-      "distinct_event_times": 2,
+      "distinct_event_times": 3,
       "repeated_reads_same_event": 0,
       "archive_rows_seen_today": 0,
-      "median_live_age_seconds": 940.3334373235703
+      "median_live_age_seconds": 855.9714741706848
     }
   },
   "publish_delay_seconds": {
-    "samples": 2,
-    "median": 785.5904330015182,
+    "samples": 3,
+    "median": 629.5965759754181,
     "maximum": 1449.6479179859161
   }
 }
