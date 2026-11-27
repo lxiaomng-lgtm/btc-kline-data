@@ -1,0 +1,87 @@
+{
+  "schema": "btc_ai_loop_v1",
+  "date": "2026-11-27",
+  "observed_at_bjt": "2026-11-27T19:26:24.078+08:00",
+  "prior_hypotheses": [],
+  "sources": [
+    "btc_daily.json",
+    "research/ops/daily/2026-11-27.json",
+    "research/ops/forward_progress.json",
+    "research/flow/research.json",
+    "BTC plugin Bitstamp 192 closed candles"
+  ],
+  "snapshot": {
+    "daily_generated": "2026-11-27T18:48:51.725255+08:00",
+    "daily_quote_expired": true,
+    "latest_trade": {
+      "price": 61625.74,
+      "time": "2026-11-27T19:26:15+08:00",
+      "age_at_receipt": 9.078
+    },
+    "latest_closed": "2026-11-27T19:15:00+08:00",
+    "close": 61558.46,
+    "validation": {
+      "count": 192,
+      "duplicates": 0,
+      "missing": 0,
+      "bad_intervals": 0,
+      "invalid": 0
+    },
+    "paper_coverage": {
+      "expected": 4,
+      "valid": 2,
+      "missing": [
+        "16:15",
+        "17:45"
+      ]
+    },
+    "eligible_features": 1,
+    "completed_forward": 0
+  },
+  "analysis": {
+    "comparison_window": "15:34:59–18:48:51 BJT; unequal snapshot spacing 3h14m, descriptive only",
+    "price_change_pct": -0.28472823494251065,
+    "okx_oi_btc_change_pct": -1.8059292154852469,
+    "binance_oi_btc_change_pct": -1.580075855946339,
+    "funding_indicated_before": 0.000066533496648,
+    "funding_indicated_after": -0.0000107580075906,
+    "price_from_daily_close_pct": 1.762354491979723,
+    "interpretation": "OI contraction with limited price decline following earlier rise; compatible with deleveraging but not proof of short covering or spot absorption. Funding snapshots refer to different settlement periods. Latest spot and perpetual increments negative, so no evidence of broad spot buying.",
+    "historical_evidence": {
+      "state_tests": 101,
+      "adjusted_positive": 0,
+      "spot_perp_3h_reused_direction_price": 0.4825351098307526,
+      "plus_flow": 0.5005401512423479,
+      "holm_p": 1,
+      "net_trades": 0
+    },
+    "new_backtest_executed": false
+  },
+  "hypotheses": [
+    {
+      "id": "AI-20261127-01",
+      "registered_observation": "2026-11-27T19:26:24.078+08:00",
+      "status": "registered_pending_future_trigger",
+      "scope": "exploratory independent of frozen ops protocol; long-only research, no orders",
+      "trigger": "After registration, use two actually archived OKX BTC-USDT-SWAP OI snapshots 3h apart ±15m, each acquired within 120s of event, and matched Bitstamp closed 15m prices at or before each snapshot no more than 15m old. OI in BTC falls >=1.5%, matched price return between -0.5% and +0.5%, and preceding 6h closed-price return >=1%. No retrospective trigger from today's observation.",
+      "prediction": "Next 6h long net return positive on average and greater than matched price-only baseline (same preceding 6h and 3h price conditions, no OI filter).",
+      "entry": "First valid archived bid/ask after trigger receipt and publication, within 60min; exit first valid archived bid/ask at or after entry+6h within 30min. Missing quotes exclude and count separately. No backfill.",
+      "cost": "buy ask*1.0005, sell bid*0.9995, fee 0.004 each side; net=(exit_bid*0.9995*(1-0.004))/(entry_ask*1.0005*(1+0.004))-1",
+      "benchmark": "cash zero and price-only matched condition, same executable quote and costs; compare disjoint chronological blocks; report selection and missingness",
+      "minimum": "100 nonoverlapping eligible completed trigger observations and 100 baseline observations, chronological future-only, no tuning; report block bootstrap 95% CI and multiple hypothesis correction as family grows",
+      "falsification": "mean net <=0 or incremental mean <=0 at minimum sample; if positive but confidence interval includes zero, inconclusive, not promotion",
+      "next": "inspect archived receipts for future triggers; no trigger or outcome claimed today"
+    }
+  ],
+  "limitations": [
+    "snapshot values expired at research time except independent BTC quote at receipt",
+    "Binance runner 451 and Bybit 403; sparse flow coverage",
+    "no prior AI loop daily file found (404); no matured AI predictions",
+    "historical archive event timestamps do not prove actual availability"
+  ],
+  "next_steps": [
+    "check missing slots and actual receipt continuity",
+    "evaluate future trigger only from persisted post-registration observations",
+    "do not change formal or shadow rules"
+  ]
+}
