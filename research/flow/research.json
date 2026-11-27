@@ -1,5 +1,5 @@
 {
-  "run_id": "45936657179",
+  "run_id": "45936911751",
   "per_side_cost": 0.0045,
   "state_outcomes": {
     "cells": 189,
@@ -198,108 +198,108 @@
     "with_oi_funding_premium/3h": {
       "matched_samples": {
         "development": 2000,
-        "validation": 1008,
-        "reused_historical": 1988
+        "validation": 955,
+        "reused_historical": 1874
       },
       "status": "retrospective_event_clock_simulation",
       "validation": {
         "price": {
-          "mse": 8.040043199869055e-05,
-          "direction_accuracy": 0.5307539682539683,
+          "mse": 8.889167690502282e-05,
+          "direction_accuracy": 0.4952879581151832,
           "trades": 0,
           "net_pct": 0.0,
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 8.086531511192217e-05,
-          "direction_accuracy": 0.5198412698412699,
+          "mse": 8.919801691914673e-05,
+          "direction_accuracy": 0.48900523560209425,
           "trades": 0,
           "net_pct": 0.0,
           "trade_close_drawdown_pct": 0.0
         },
         "net_difference_pp": 0.0,
-        "paired_loss_improvement_p": 0.87109375,
+        "paired_loss_improvement_p": 0.96337890625,
         "paired_loss_improvement_holm_p": 1.0
       },
       "reused_historical": {
         "price": {
-          "mse": 5.375383769780592e-05,
-          "direction_accuracy": 0.5120724346076458,
+          "mse": 5.974893935039889e-05,
+          "direction_accuracy": 0.49146211312700105,
           "trades": 0,
           "net_pct": 0.0,
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 5.422909111375741e-05,
-          "direction_accuracy": 0.46730382293762573,
+          "mse": 5.978239663440436e-05,
+          "direction_accuracy": 0.4829242262540021,
           "trades": 0,
           "net_pct": 0.0,
           "trade_close_drawdown_pct": 0.0
         },
         "net_difference_pp": 0.0,
-        "paired_loss_improvement_p": 0.96826171875,
+        "paired_loss_improvement_p": 0.61572265625,
         "paired_loss_improvement_holm_p": 1.0
       }
     },
     "with_oi_funding_premium/24h": {
       "matched_samples": {
-        "development": 451,
-        "validation": 228,
-        "reused_historical": 446
+        "development": 450,
+        "validation": 214,
+        "reused_historical": 421
       },
       "status": "retrospective_event_clock_simulation",
       "validation": {
         "price": {
-          "mse": 0.0007567055066259262,
-          "direction_accuracy": 0.4956140350877193,
-          "trades": 0,
-          "net_pct": 0.0,
-          "trade_close_drawdown_pct": 0.0
+          "mse": 0.0006581738278663603,
+          "direction_accuracy": 0.5327102803738317,
+          "trades": 4,
+          "net_pct": 2.156651292327383,
+          "trade_close_drawdown_pct": 6.556985687737027
         },
         "plus_flow": {
-          "mse": 0.000815904498558293,
-          "direction_accuracy": 0.49122807017543857,
-          "trades": 1,
-          "net_pct": -1.3760329779279434,
-          "trade_close_drawdown_pct": 1.3760329779279434
+          "mse": 0.0008856425675753082,
+          "direction_accuracy": 0.5046728971962616,
+          "trades": 17,
+          "net_pct": -8.008351134516579,
+          "trade_close_drawdown_pct": 14.99633156523188
         },
-        "net_difference_pp": -1.3760329779279434,
-        "paired_loss_improvement_p": 0.892578125,
+        "net_difference_pp": -10.165002426843962,
+        "paired_loss_improvement_p": 0.9970703125,
         "paired_loss_improvement_holm_p": 1.0
       },
       "reused_historical": {
         "price": {
-          "mse": 0.0004957968766205684,
-          "direction_accuracy": 0.47085201793721976,
-          "trades": 0,
-          "net_pct": 0.0,
-          "trade_close_drawdown_pct": 0.0
+          "mse": 0.0005188016632094187,
+          "direction_accuracy": 0.498812351543943,
+          "trades": 4,
+          "net_pct": 3.1300657200054927,
+          "trade_close_drawdown_pct": 1.8313520108954706
         },
         "plus_flow": {
-          "mse": 0.0005060364191715289,
-          "direction_accuracy": 0.5067264573991032,
-          "trades": 16,
-          "net_pct": -11.61020616654872,
-          "trade_close_drawdown_pct": 11.822912155760035
+          "mse": 0.0005458473536021017,
+          "direction_accuracy": 0.5368171021377672,
+          "trades": 58,
+          "net_pct": -46.21131846195635,
+          "trade_close_drawdown_pct": 47.571415306491524
         },
-        "net_difference_pp": -11.61020616654872,
-        "paired_loss_improvement_p": 0.90087890625,
+        "net_difference_pp": -49.34138418196184,
+        "paired_loss_improvement_p": 0.9873046875,
         "paired_loss_improvement_holm_p": 1.0
       }
     },
     "with_oi_funding_premium_etf/3h": {
       "matched_samples": {
         "development": 0,
-        "validation": 968,
-        "reused_historical": 1955
+        "validation": 906,
+        "reused_historical": 1841
       },
       "status": "insufficient_common_chronological_history"
     },
     "with_oi_funding_premium_etf/24h": {
       "matched_samples": {
         "development": 0,
-        "validation": 220,
-        "reused_historical": 443
+        "validation": 204,
+        "reused_historical": 417
       },
       "status": "insufficient_common_chronological_history"
     },
@@ -321,7 +321,7 @@
     }
   },
   "strict_point_in_time": {
-    "receipts": 5,
+    "receipts": 6,
     "days_with_same_receipt_spot_and_perp": 0,
     "usable_signal_observations": 0,
     "median_venue_alignment_age_hours": null,
