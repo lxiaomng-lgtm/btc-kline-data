@@ -1,0 +1,61 @@
+{
+  "control_date_utc": "2026-11-25",
+  "sources": {
+    "bybit_spot": {
+      "archive": "https://public.bybit.com/spot/BTCUSDT/BTCUSDT_2026-11-25.csv.gz",
+      "bytes": 12701105,
+      "sha256": "4eba56e8cd8a1f928961c2a450cb245f3c6c243599f43874d20e3338499010a1",
+      "fields": [
+        "id",
+        "timestamp",
+        "price",
+        "volume",
+        "side",
+        "rpi"
+      ],
+      "ticks": 1807092,
+      "duplicates_skipped": 0,
+      "unkeyed": 0,
+      "outside_day": 0,
+      "invalid": 0,
+      "coverage": 96,
+      "missing_15m": 0,
+      "descriptive_binance_same_interval": {
+        "n": 96,
+        "pearson": 0.11896944921685061,
+        "direction_agreement": 0.5729166666666666
+      }
+    },
+    "bybit_perpetual": {
+      "archive": "https://public.bybit.com/trading/BTCUSDT/BTCUSDT2026-11-25.csv.gz",
+      "bytes": 154792819,
+      "sha256": "a01504311ca6b558bb91a6020ec82f2b3e54f07a69cd06ffa2e49e95b68d4e79",
+      "fields": [
+        "timestamp",
+        "symbol",
+        "side",
+        "size",
+        "price",
+        "tickDirection",
+        "trdMatchID",
+        "grossValue",
+        "homeNotional",
+        "foreignNotional",
+        "RPI"
+      ],
+      "ticks": 4411643,
+      "duplicates_skipped": 0,
+      "unkeyed": 0,
+      "outside_day": 0,
+      "invalid": 0,
+      "coverage": 96,
+      "missing_15m": 0,
+      "descriptive_binance_same_interval": {
+        "n": 96,
+        "pearson": 0.7166852924749606,
+        "direction_agreement": 0.59375
+      }
+    }
+  },
+  "observed_at_utc": "2026-11-27T03:54:18.627932+00:00"
+}

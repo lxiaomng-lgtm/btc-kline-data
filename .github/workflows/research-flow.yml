@@ -1,0 +1,83 @@
+name: BTC flow research and quality
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, research-flow]
+    paths:
+      - '.github/workflows/research-flow.yml'
+      - 'scripts/research_flow.py'
+      - 'scripts/research_flow_vendor.py'
+  workflow_run:
+    workflows: ['BTC profitability edge research']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '23 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: btc-flow-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  flow:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-python@v5
+        if: github.event_name != 'schedule'
+        with:
+          python-version: '3.12'
+      - name: Install numerical dependency
+        if: github.event_name != 'schedule'
+        run: python -m pip install numpy==2.3.5
+      - name: Set archive cache date
+        if: github.event_name != 'schedule'
+        id: cache_date
+        run: echo "day=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v4
+        if: github.event_name != 'schedule'
+        with:
+          path: .flow-cache
+          key: binance-flow-15m-v2-${{ runner.os }}-${{ steps.cache_date.outputs.day }}
+          restore-keys: |
+            binance-flow-15m-v2-${{ runner.os }}-
+      - name: Run flow research or hourly monitoring
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python3 -m py_compile scripts/research_flow.py
+          if [ "$EVENT_NAME" = schedule ]; then
+            python3 scripts/research_flow.py --monitor-only
+          else
+            python3 scripts/research_flow.py
+          fi
+      - name: Verify cross-venue Bybit raw trade sample
+        if: github.event_name != 'schedule'
+        run: python scripts/research_flow_vendor.py
+      - name: Retain normalized interval datasets
+        if: github.event_name != 'schedule'
+        uses: actions/upload-artifact@v4
+        with:
+          name: btc-flow-interval-datasets
+          path: flow-export/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish data quality and research receipts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/flow/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish BTC funding-flow research and quality receipts'
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 4
+          done
+          exit 1

@@ -7,6 +7,10 @@ on:
       - '.github/workflows/multiframe-shadow.yml'
       - 'scripts/multiframe_btc.py'
       - 'scripts/research_paper_edge.py'
+  workflow_run:
+    workflows: ['Update BTC candles']
+    types: [completed]
+    branches: [main]
   schedule:
     # Offset by six minutes from each UTC 45-minute boundary.
     - cron: '6,51 0,3,6,9,12,15,18,21 * * *'
@@ -19,6 +23,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   observe:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
