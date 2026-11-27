@@ -1,0 +1,28 @@
+{
+  "signal_close_bjt": "2026-11-27T11:00:00+08:00",
+  "captured_at_bjt": "2026-11-27T11:35:07+08:00",
+  "execution": "Research target only. Earliest hypothetical fill follows actual publication. No account writes.",
+  "daily_close_bjt": "2026-11-27T08:00:00+08:00",
+  "h3_close_bjt": "2026-11-27T11:00:00+08:00",
+  "daily_regime": "bear",
+  "etf_total_musd": -453.0,
+  "derivatives_multiplier": null,
+  "run_id": "45935007600",
+  "source_sha256": "927e19f6dd6389494a063ab9043d0865c03aa771163d9ce4432e5426937f4747",
+  "targets": {
+    "daily:ban:0.10:signal": 0.0,
+    "daily_3h:ban:0.10:signal": 0.0,
+    "daily_3h:bounce:0.10:signal": 0.025,
+    "daily_45m:ban:0.10:signal": 0.0,
+    "daily_45m:bounce:0.10:signal": 0.025,
+    "3h_45m:ban:0.10:signal": 0.1,
+    "three:ban:0.10:signal": 0.0,
+    "three:bounce:0.10:signal": 0.025,
+    "three_etf:ban:0.10:signal": 0.0,
+    "three_etf:bounce:0.10:signal": 0.0125,
+    "three_etf_derivatives:ban:0.10:signal": 0.0,
+    "three_etf_derivatives:bounce:0.10:signal": 0.0125,
+    "three_chan:ban:0.10:signal": 0.0,
+    "three_chan:bounce:0.10:signal": 0.025
+  }
+}
