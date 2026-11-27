@@ -36,6 +36,7 @@ FEE = .0045
 START = date(2021, 11, 1)
 SPLITS = {"development": ("2022-01-01","2024-01-01"), "validation": ("2024-01-01","2025-01-01"),
           "reused_historical": ("2025-01-01","2027-01-01")}
+COINBASE = "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/candles"
 FEATURES = ("spot_imbalance", "perp_imbalance", "oi_change", "funding", "premium_bps", "liquidation_usd", "etf_musd")
 
 
@@ -193,11 +194,57 @@ def historical_context(data):
         for r in json.loads(liq.read_text()).values()} if liq.exists() else {}
 
 
+def backfill_premium(data, today, prices):
+    size=3*DAY
+    periods=range(window(START),window(today),size)
+    cache=CACHE/"coinbase"
+    cache.mkdir(parents=True,exist_ok=True)
+
+    def one(a):
+        b=min(a+size,window(today))
+        key=cache/f"{a}-{b}.json"
+        try:
+            raw=(key.read_bytes() if key.exists() else get(COINBASE,
+                {"start":a,"end":b-1,"granularity":"FIFTEEN_MINUTE"},limit=16))
+            rows=json.loads(raw)["candles"]
+            found={}
+            for r in rows:
+                t=int(r["start"])
+                if not a<=t<b:
+                    continue
+                c=float(r["close"])
+                if t%STEP or not math.isfinite(c) or c<=0 or t in found:
+                    raise ValueError(f"Bad Coinbase candle {utc(t)}")
+                found[t]=c
+            if not found:
+                raise ValueError("No eligible Coinbase candles")
+            if not key.exists():
+                key.write_bytes(raw)
+            return a,found,None
+        except (OSError,ValueError,KeyError) as e:
+            if isinstance(e,HTTPError) and e.code in (429,502,503):
+                time.sleep(2)
+            return a,{},str(e)
+
+    issues={}
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for a,rows,error in pool.map(one,periods):
+            if error:
+                issues["coinbase/"+utc(a)[:10]]=error
+            for t,c in rows.items():
+                if t in prices:
+                    v=(c/prices[t][3]-1)*1e4
+                    data["premium_15m"][t+STEP]=v
+                    if (t+STEP)%3600==0:
+                        data["premium"][t+STEP]=v
+    return issues
+
+
 def inventory(data):
     out={}
     for kind,values in data.items():
         tt=sorted(values)
-        frequency=STEP if kind in ("spot","perp","oi") else 3600 if kind=="premium" else None
+        frequency=STEP if kind in ("spot","perp","oi","premium_15m") else 3600 if kind=="premium" else None
         missing=(tt[-1]-tt[0])//frequency+1-len(tt) if frequency and tt else None
         out[kind]={"rows":len(tt),"first":utc(tt[0]) if tt else None,"last":utc(tt[-1]) if tt else None,
                    "frequency_seconds":frequency,"missing_within_span":missing,
@@ -229,7 +276,7 @@ def save_exports(data, first, end):
                            data["oi"].get(close),
                            *[v for name,ts in zip(("funding","okx_funding"),funding_sets[:2])
                              for v in total_interval(data[name],ts,t,close)],
-                           data["premium"].get(close),*total_interval(data["liquidation"],funding_sets[2],t,close),
+                           (data["premium_15m"].get(close) if step<3600 else data["premium"].get(close)),*total_interval(data["liquidation"],funding_sets[2],t,close),
                            "historical_event_clock_only",built])
 
 
@@ -306,7 +353,7 @@ def flow_rows(data, price):
         ei=bisect_right(fairs["etf"],t-2*DAY)-1
         flow=fairs["etf"][ei] if ei>=0 else 0
         etf=data["etf"].get(flow) if t-flow<=5*DAY else None
-        rows.append((t,(r3,r24,sigma),(*block,oi,funding,data["premium"].get(t),liq if n else None,etf)))
+        rows.append((t,(r3,r24,sigma),(*block,oi,funding,data["premium_15m"].get(t,data["premium"].get(t)),liq if n else None,etf)))
     return rows
 
 
@@ -434,6 +481,7 @@ def models(price, features, resolve=split_for, true_observation=False):
     import numpy as np
     report={}
     for subset,indices in (("spot_perp",(0,1)),("with_oi_funding",(0,1,2,3)),
+                           ("with_oi_funding_premium",(0,1,2,3,4)),
                            ("with_oi_funding_premium_etf",(0,1,2,3,4,6)),
                            ("all_including_sampled_liquidation",tuple(range(7)))):
         for h in (10800,DAY):
@@ -499,7 +547,7 @@ def capture(now, data, prices):
     endpoints={
         "spot":("https://data-api.binance.vision/api/v3/klines",{"symbol":"BTCUSDT","interval":"15m","limit":96}),
         "perp":("https://fapi.binance.com/fapi/v1/klines",{"symbol":"BTCUSDT","interval":"15m","limit":96}),
-        "coinbase":("https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/candles",
+        "coinbase":(COINBASE,
                     {"start":end-DAY,"end":end-1,"granularity":"FIFTEEN_MINUTE"}),
         "binance_oi":("https://fapi.binance.com/futures/data/openInterestHist",{"symbol":"BTCUSDT","period":"15m","limit":96}),
         "okx_oi":("https://www.okx.com/api/v5/public/open-interest",{"instType":"SWAP","instId":"BTC-USDT-SWAP"}),
@@ -752,6 +800,8 @@ def main():
     price={t:tuple(map(float,(o,h,l,c))) for t,o,h,l,c,_ in rows}
     data,errors,duplicates,jobs=acquire(today,args.monitor_only)
     historical_context(data)
+    if not args.monitor_only:
+        errors.update(backfill_premium(data,today,price))
     if not args.monitor_only and (not data["spot"] or not data["perp"]):
         raise ValueError(f"Missing core five-year sources: {list(errors.items())[:12]}")
     print("Archive inventory", {k:len(v) for k,v in data.items()}, "failed",len(errors),flush=True)
