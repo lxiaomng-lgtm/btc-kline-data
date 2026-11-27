@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-27T07:31:58+00:00",
+  "generated_utc": "2026-11-27T07:32:46+00:00",
   "signals_expected_in_monitored_window": 31,
   "slots_not_recorded_utc": [
     "2026-11-26T09:00:00+00:00",
@@ -28,7 +28,7 @@
     "2026-11-27T06:45:00+00:00"
   ],
   "status": "review",
-  "paper_records": 7,
+  "paper_records": 8,
   "simulated_fills": 1,
   "paper_invalid_records": [],
   "paper_warnings": [
@@ -37,15 +37,15 @@
     "published 15m snapshot older than one hour"
   ],
   "paper_last": {
-    "signal_at": "2026-11-27T11:45:00+08:00",
-    "confirmed_published_at": "2026-11-27T11:55:21.702109+08:00",
+    "signal_at": "2026-11-27T15:30:00+08:00",
+    "confirmed_published_at": "2026-11-27T15:31:59.735957+08:00",
     "quote": {
-      "exchange_at": "2026-11-27T11:55:24.316834+08:00",
-      "received_at": "2026-11-27T11:55:24.905651+08:00",
-      "bid": 61383.9,
-      "ask": 61383.91,
-      "bid_btc": 0.5,
-      "ask_btc": 0.30814626,
+      "exchange_at": "2026-11-27T15:32:01.937802+08:00",
+      "received_at": "2026-11-27T15:32:02.766402+08:00",
+      "bid": 61752.34,
+      "ask": 61752.35,
+      "bid_btc": 2.68459316,
+      "ask_btc": 0.7616619,
       "source": "https://www.bitstamp.net/api/v2/order_book/btcusd/"
     }
   },
@@ -76,8 +76,8 @@
       "max_drawdown_pct": 0.0
     },
     "buy_hold_10": {
-      "nav_usd": 10007.72464309201,
-      "return_pct": 0.07724643092008598,
+      "nav_usd": 10013.797241886446,
+      "return_pct": 0.13797241886446265,
       "max_drawdown_pct": 0.08898197843092426
     },
     "cash": {
@@ -98,7 +98,7 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 28018,
+      "age_seconds": 28066,
       "status": "available"
     },
     "perp": {
@@ -119,7 +119,7 @@
         "2026-11-26T02:45:00+00:00"
       ],
       "last_event_utc": "2026-11-25T23:45:00+00:00",
-      "age_seconds": 114418,
+      "age_seconds": 114466,
       "status": "gap"
     },
     "oi": {
@@ -127,89 +127,32 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 28018,
+      "age_seconds": 28066,
       "status": "available"
     },
     "premium": {
       "trailing_settled_day_expected": 24,
-      "missing": 3,
-      "first_12_missing_utc": [
-        "2026-11-27T04:00:00+00:00",
-        "2026-11-27T05:00:00+00:00",
-        "2026-11-27T06:00:00+00:00"
-      ],
-      "last_event_utc": "2026-11-27T03:00:00+00:00",
-      "age_seconds": 16318,
-      "status": "gap"
+      "missing": 0,
+      "first_12_missing_utc": [],
+      "last_event_utc": "2026-11-27T07:00:00+00:00",
+      "age_seconds": 1966,
+      "status": "available"
     }
   },
   "workflows": {
-    "BTC historical strategy research": [
-      {
-        "id": 45959082435,
-        "event": "push",
-        "status": "in_progress",
-        "conclusion": null,
-        "created_at": "2026-11-27T07:31:50Z"
-      },
-      {
-        "id": 45936995565,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:56:07Z"
-      },
-      {
-        "id": 45936911674,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:55:12Z"
-      },
-      {
-        "id": 45936152762,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:46:58Z"
-      }
-    ],
-    "BTC profitability edge research": [
-      {
-        "id": 45959082444,
-        "event": "push",
-        "status": "in_progress",
-        "conclusion": null,
-        "created_at": "2026-11-27T07:31:50Z"
-      },
-      {
-        "id": 45937156717,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:57:55Z"
-      },
-      {
-        "id": 45937020097,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:56:23Z"
-      },
-      {
-        "id": 45936274948,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:48:16Z"
-      }
-    ],
     "BTC flow research and quality": [
+      {
+        "id": 45959172596,
+        "event": "workflow_run",
+        "status": "in_progress",
+        "conclusion": null,
+        "created_at": "2026-11-27T07:32:38Z"
+      },
       {
         "id": 45959082352,
         "event": "push",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "created_at": "2026-11-27T07:31:49Z"
       },
       {
@@ -241,12 +184,56 @@
         "created_at": "2026-11-27T03:55:12Z"
       }
     ],
+    "BTC profitability edge research": [
+      {
+        "id": 45959122194,
+        "event": "workflow_run",
+        "status": "in_progress",
+        "conclusion": null,
+        "created_at": "2026-11-27T07:32:11Z"
+      },
+      {
+        "id": 45959082444,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T07:31:50Z"
+      },
+      {
+        "id": 45937156717,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:57:55Z"
+      },
+      {
+        "id": 45937020097,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:56:23Z"
+      },
+      {
+        "id": 45936274948,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:48:16Z"
+      }
+    ],
     "BTC multiframe shadow observations": [
+      {
+        "id": 45959101881,
+        "event": "workflow_dispatch",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T07:32:00Z"
+      },
       {
         "id": 45959082419,
         "event": "push",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "created_at": "2026-11-27T07:31:49Z"
       },
       {
@@ -276,27 +263,36 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-27T02:56:59Z"
-      },
+      }
+    ],
+    "BTC historical strategy research": [
       {
-        "id": 45889780148,
-        "event": "schedule",
+        "id": 45959082435,
+        "event": "push",
         "status": "completed",
         "conclusion": "success",
-        "created_at": "2026-11-26T20:16:01Z"
+        "created_at": "2026-11-27T07:31:50Z"
       },
       {
-        "id": 45886110370,
-        "event": "schedule",
+        "id": 45936995565,
+        "event": "push",
         "status": "completed",
         "conclusion": "success",
-        "created_at": "2026-11-26T19:46:21Z"
+        "created_at": "2026-11-27T03:56:07Z"
       },
       {
-        "id": 45879717422,
-        "event": "schedule",
+        "id": 45936911674,
+        "event": "push",
         "status": "completed",
         "conclusion": "success",
-        "created_at": "2026-11-26T18:55:31Z"
+        "created_at": "2026-11-27T03:55:12Z"
+      },
+      {
+        "id": 45936152762,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T03:46:58Z"
       }
     ],
     "Archive BTC history": [
@@ -322,13 +318,6 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-26T20:31:54Z"
-      },
-      {
-        "id": 45810954448,
-        "event": "schedule",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-26T11:28:51Z"
       }
     ]
   },
@@ -364,5 +353,5 @@
       "last_event_utc": "2026-11-27T07:30:00+00:00"
     }
   },
-  "price_snapshot_age_seconds": 15419
+  "price_snapshot_age_seconds": 15467
 }
