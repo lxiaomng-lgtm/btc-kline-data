@@ -3,13 +3,14 @@ import csv
 import gzip
 import hashlib
 from collections import defaultdict
-from datetime import date
+from datetime import datetime, timedelta, timezone
+from statistics import correlation
 from urllib.request import Request, urlopen
 
-from research_flow import CACHE, EXPORT, OUT, PERIODS, STEP, utc, window, write_csv, write_json
+from research_flow import CACHE, EXPORT, OUT, PERIODS, STEP, epoch, utc, window, write_csv, write_json
 
 
-CONTROL_DAY = date(2026, 11, 25)
+CONTROL_DAY = datetime.now(timezone.utc).date()-timedelta(days=2)
 
 
 def ticks(url, start, end):
@@ -82,12 +83,29 @@ def main():
     start=window(CONTROL_DAY)
     sources={"bybit_spot":f"https://public.bybit.com/spot/BTCUSDT/BTCUSDT_{CONTROL_DAY}.csv.gz",
              "bybit_perpetual":f"https://public.bybit.com/trading/BTCUSDT/BTCUSDT{CONTROL_DAY}.csv.gz"}
-    report={"control_date_utc":str(CONTROL_DAY),"sources":{}}
+    output=OUT/"bybit_days"/str(CONTROL_DAY)
+    output.mkdir(parents=True,exist_ok=True)
+    reference={}
+    with gzip.open(EXPORT/"15m.csv.gz","rt",newline="") as f:
+        for row in csv.DictReader(f):
+            t=epoch(row["interval_open_utc"])
+            if start<=t<start+86400:
+                reference[t]=row
+    report={"control_date_utc":str(CONTROL_DAY),"sources":{},"observed_at_utc":datetime.now(timezone.utc).isoformat()}
     for kind,url in sources.items():
         try:
             stats,data=ticks(url,start,start+86400)
+            col="spot_cvd_delta_btc" if kind=="bybit_spot" else "perp_cvd_delta_btc"
+            pairs=[(r[0],float(reference[t][col])) for t,r in data.items() if t in reference and reference[t][col]]
+            if len(pairs)>2:
+                a,b=zip(*pairs)
+                stats["descriptive_binance_same_interval"]={
+                    "n":len(a),"pearson":correlation(a,b) if len(set(a))>1 and len(set(b))>1 else None,
+                    "direction_agreement":sum((x>0)==(y>0) for x,y in pairs)/len(pairs)}
             report["sources"][kind]=stats
-            write_csv(OUT/(kind+"_sample.csv"),[{"open_utc":utc(t),"cvd_delta_btc":v[0],"volume_btc":v[1],
+            archive=output/(kind+".csv")
+            if not archive.exists():
+                write_csv(archive,[{"open_utc":utc(t),"cvd_delta_btc":v[0],"volume_btc":v[1],
                        "ticks":v[2],"venue":kind,"availability":"event_clock_only"}
                        for t,v in sorted(data.items())])
             for tf,interval in PERIODS.items():
@@ -101,7 +119,12 @@ def main():
                                              kind,"event_clock_only"))
         except (OSError,ValueError,KeyError) as err:
             report["sources"][kind]={"archive":url,"error":str(err)}
+    for filename in CACHE.joinpath("vendor").glob("*.gz"):
+        if all(filename.name not in u for u in sources.values()):
+            filename.unlink()  # Cache only; dated CSV summaries are committed separately.
     write_json(OUT/"bybit_sample.json",report)
+    if not (output/"coverage.json").exists() and any("ticks" in r for r in report["sources"].values()):
+        write_json(output/"coverage.json",report)
     print(report,flush=True)
 
 
