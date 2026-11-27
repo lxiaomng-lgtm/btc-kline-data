@@ -1,8 +1,8 @@
 {
   "protocol": "btc-flow-forward-2026-11-27-v1",
   "protocol_sha256": "d1e804a60fb945287833e60a8fa61bc628dbc0c5622d81e52960049929fa8fed",
-  "receipts": 6,
-  "eligible_feature_sets": 1,
+  "receipts": 7,
+  "eligible_feature_sets": 2,
   "comparisons": {
     "3h": {
       "completed_independent_samples": {
