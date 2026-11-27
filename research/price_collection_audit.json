@@ -1,0 +1,15 @@
+{
+  "archived_bars": 177839,
+  "snapshot_bars": 192,
+  "overlap_exact_ohlcv": 192,
+  "snapshot_appended": 0,
+  "bitstamp_gap_or_tail_bars": 15,
+  "total_bars": 177854,
+  "from": "2021-11-01T00:00:00+08:00",
+  "through_close": "2026-11-27T15:30:00+08:00",
+  "snapshot_close": "2026-11-27T11:15:00+08:00",
+  "archive_close": "2026-11-27T11:45:00+08:00",
+  "missing": 0,
+  "duplicates": 0,
+  "invalid_ohlcv": 0
+}
