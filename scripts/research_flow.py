@@ -64,7 +64,17 @@ def file_rows(url):
     directory = CACHE / ("spot" if "/spot/" in url else "um")
     directory.mkdir(parents=True,exist_ok=True)
     path=directory/name
-    payload = path.read_bytes() if path.exists() else get(url)
+    if path.exists():
+        payload=path.read_bytes()
+    else:
+        for attempt in range(2):
+            try:
+                payload=get(url)
+                break
+            except (TimeoutError,HTTPError) as e:
+                if attempt or isinstance(e,HTTPError) and e.code not in (429,500,502,503,504):
+                    raise
+                time.sleep(1)
     with ZipFile(io.BytesIO(payload)) as zip_file:
         item, = zip_file.namelist()
         records = list(csv.reader(io.StringIO(zip_file.read(item).decode("utf-8-sig"))))
@@ -525,7 +535,13 @@ def capture(now, data, prices):
     tail={}
     for k in ("spot","perp","oi","funding","okx_funding","liquidation"):
         values=sorted((t,v) for t,v in data[k].items() if t>=end-3*DAY)
-        tail[k]=values[-16:] if k in ("spot","perp","oi") else values
+        if k in ("spot","perp","oi"):
+            by_day=defaultdict(list)
+            for t,v in values:
+                by_day[t//DAY].append((t,v))
+            tail[k]=[row for block in by_day.values() for row in block[-16:]]
+        else:
+            tail[k]=values
     for k,d in live.items():
         if d.get("rows"):
             d["rows"]=d["rows"][-16:]
@@ -603,6 +619,7 @@ def observe_quality(data, now, failures, repo_health):
 def available_samples(price):
     files=sorted((OUT/"observations").glob("*.json"))
     known=[]
+    oldest_lag_hours=[]
     used=set()
     for path in files:
         snap=json.loads(path.read_text())
@@ -611,27 +628,29 @@ def available_samples(price):
         t=(t+STEP-1)//STEP*STEP
         if t in used or any(k not in price for k in (t-STEP,t-DAY,t-10800)):
             continue
-        imbalances=[]
-        for name in ("spot","perp"):
+        sources=[]
+        for name in VENUES:
             history=dict(snap["archive_tail_event_rows"][name])
             history.update(live.get(name,{}).get("rows",[]))
-            opens=sorted(k for k in history if k+STEP<=t)
-            v=None
-            if opens and t-opens[-1]<=36*3600:
-                last=opens[-1]+STEP
-                rows=[history.get(a) for a in range(last-10800,last,STEP)]
-                if all(rows):
-                    volume=sum(r[1] for r in rows)
-                    if volume>0:
-                        v=sum(r[2] for r in rows)/volume
-            imbalances.append(v)
-        if any(r is None for r in imbalances):
+            sources.append(history)
+        imbalances=None
+        for a in sorted(sources[0].keys() & sources[1].keys(),reverse=True):
+            if not STEP<=t-a<=36*3600:
+                continue
+            window=range(a+STEP-10800,a+STEP,STEP)
+            if all(k in src for src in sources for k in window):
+                vols=[sum(src[k][1] for k in window) for src in sources]
+                if min(vols)>0:
+                    imbalances=[sum(src[k][2] for k in window)/v for src,v in zip(sources,vols)]
+                    break
+        if imbalances is None:
             continue
         r3=price[t-STEP][3]/price[t-10800][0]-1
         r24=price[t-STEP][3]/price[t-DAY][0]-1
         vol=math.sqrt(sum(math.log(price[a][3]/price[a][0])**2 for a in range(t-10800,t,STEP)))
         used.add(t)
         # A reported older venue window remains an older signal. No event timestamp is promoted to availability.
+        oldest_lag_hours.append((t-a-STEP)/3600)
         tail=snap["archive_tail_event_rows"]
         oi_rows=dict(tail["oi"])
         oi_rows.update(live.get("binance_oi",{}).get("rows",[]))
@@ -657,6 +676,7 @@ def available_samples(price):
     covered={utc(r[0])[:10] for r in known}
     out={"receipts":len(files),"days_with_same_receipt_spot_and_perp":len(covered),
          "usable_signal_observations":len(known),
+         "median_venue_alignment_age_hours":median(oldest_lag_hours) if known else None,
          "per_feature_signal_coverage":{name:sum(r[2][i] is not None for r in known) for i,name in enumerate(FEATURES)},
          "first_complete_eligible_utc":utc(known[0][0]) if known else None,
          "status":"insufficient_forward_samples_no_promotion",
