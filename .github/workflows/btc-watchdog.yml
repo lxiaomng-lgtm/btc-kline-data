@@ -1,0 +1,43 @@
+name: BTC independent trigger watchdog
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/btc-watchdog.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '9,29,49 * * * *'
+permissions:
+  contents: read
+  actions: write
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      GH_TOKEN: ${{ github.token }}
+      EVENT: ${{ github.event_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Dispatch event-driven shadow recovery when due
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os, time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          p=Path("btc_daily.json")
+          stale=not p.exists() or time.time()-datetime.datetime.fromisoformat(json.loads(p.read_text())["generated_at_bjt"]).timestamp()>720
+          if stale or os.environ["EVENT"] in ("push","workflow_dispatch"):
+              endpoint=f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/actions/workflows/multiframe-shadow.yml/dispatches"
+              req=Request(endpoint,method="POST",data=b'{"ref":"main"}',
+                          headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Accept":"application/vnd.github+json","Content-Type":"application/json"})
+              with urlopen(req,timeout=15) as reply:
+                  print("Workflow dispatch returned",reply.status)
+                  if reply.status not in (200,204):
+                      raise ValueError("Github did not accept workflow dispatch")
+          else:
+              print("Fresh daily interface; no dispatch")
+          PY

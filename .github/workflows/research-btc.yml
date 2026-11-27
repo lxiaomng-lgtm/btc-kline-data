@@ -1,6 +1,11 @@
 name: BTC historical strategy research
 on:
   workflow_dispatch:
+    inputs:
+      full_research:
+        type: boolean
+        default: false
+        description: Explicitly run large historical analysis
   push:
     branches: [main, research-btc, research-mtf]
     paths:
@@ -27,8 +32,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-      - name: Verify Bitstamp and run causal backtests
-        run: python3 scripts/research_prices.py
+      - name: Verify and update Bitstamp archive tail
+        env:
+          FULL_RESEARCH: ${{ github.event_name == 'workflow_dispatch' && inputs.full_research }}
+        run: |
+          if [ "$FULL_RESEARCH" = true ]; then python3 scripts/research_prices.py
+          else python3 scripts/research_prices.py --audit-only; fi
       - name: Synchronize ETF history and test divergence
         id: etf
         continue-on-error: true
@@ -38,6 +47,7 @@ jobs:
         continue-on-error: true
         run: python3 scripts/research_derivatives.py
       - name: Run daily, 3h and 45m strategy research
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.full_research }}
         id: multiframe
         continue-on-error: true
         env:
@@ -52,6 +62,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add research/prices.json research/bitstamp_tail_15m.csv
+          if [ -f research/price_collection_audit.json ]; then git add research/price_collection_audit.json; fi
           if [ -d research/shadow_signals ]; then
             git add research/shadow_signals/
           fi

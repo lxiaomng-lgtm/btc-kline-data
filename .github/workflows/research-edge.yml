@@ -1,6 +1,11 @@
 name: BTC profitability edge research
 on:
   workflow_dispatch:
+    inputs:
+      full_research:
+        type: boolean
+        default: false
+        description: Explicitly run large historical analysis
   push:
     branches: [main, research-edge]
     paths:
@@ -27,6 +32,7 @@ jobs:
       - name: Verify Python sources
         run: python3 -m py_compile scripts/research_edge.py scripts/research_paper_edge.py scripts/multiframe_btc.py
       - name: Run five-year event and costed execution research
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.full_research }}
         run: python3 scripts/research_edge.py
       - name: Capture timestamped exchange source snapshots
         if: github.ref_name == 'main'

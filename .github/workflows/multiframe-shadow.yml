@@ -5,19 +5,18 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/multiframe-shadow.yml'
-      - 'scripts/multiframe_btc.py'
+      - 'scripts/btc_*.py'
       - 'scripts/research_paper_edge.py'
+      - 'research/ops/external-heartbeat.json'
   workflow_run:
     workflows: ['Update BTC candles']
     types: [completed]
     branches: [main]
   schedule:
-    # Offset by six minutes from each UTC 45-minute boundary.
-    - cron: '6,51 0,3,6,9,12,15,18,21 * * *'
-    - cron: '36 1,4,7,10,13,16,19,22 * * *'
-    - cron: '21 2,5,8,11,14,17,20,23 * * *'
+    - cron: '2,12,22,32,42,52 * * * *'
 permissions:
   contents: write
+  actions: read
 concurrency:
   group: btc-multiframe-shadow
   cancel-in-progress: false
@@ -25,44 +24,43 @@ jobs:
   observe:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
-      - name: Observe the most recent complete signal
+        with:
+          ref: main
+      - name: Inspect only the current open paper slot
+        id: gate
+        run: python3 scripts/btc_ops.py --gate
+      - name: Generate a new signal when the current slot needs one
+        if: steps.gate.outputs.make_signal == 'true'
+        id: signal
+        continue-on-error: true
         run: python3 scripts/multiframe_btc.py --shadow-only
-      - name: Publish new observation
-        run: |
-          if [ ! -d research/multiframe_shadow ]; then exit 0; fi
-          git add research/multiframe_shadow/
-          if git diff --cached --quiet; then exit 0; fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Publish BTC multiframe shadow signal'
-          for attempt in 1 2 3 4 5; do
-            if git pull --rebase origin main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-            sleep 4
-          done
-          exit 1
-      - name: Record next observed executable quote and paper accounts
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Publish the immutable current signal
+        id: publish_signal
+        continue-on-error: true
+        run: bash scripts/btc_push.sh 'Publish BTC multiframe shadow signal' research/multiframe_shadow
+      - name: Execute current or recoverable slot on a new quote
+        if: steps.publish_signal.outcome == 'success'
+        id: fill
+        continue-on-error: true
         run: python3 scripts/research_paper_edge.py
-      - name: Publish paper ledger without backfills
-        run: |
-          if [ ! -d research/paper_edge ]; then exit 0; fi
-          git add research/paper_edge/
-          if git diff --cached --quiet; then exit 0; fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Append prospective BTC paper journal'
-          for attempt in 1 2 3 4 5; do
-            if git pull --rebase origin main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-            sleep 4
-          done
-          exit 1
+      - name: Append one account record for the slot
+        id: commit_fill
+        continue-on-error: true
+        run: bash scripts/btc_push.sh 'Append prospective BTC paper journal' research/paper_edge
+      - name: Generate live data and daily operations reports
+        env:
+          SIGNAL_OUTCOME: ${{ steps.signal.outcome }}
+          PUBLISH_SIGNAL_OUTCOME: ${{ steps.publish_signal.outcome }}
+          FILL_OUTCOME: ${{ steps.fill.outcome }}
+          COMMIT_FILL_OUTCOME: ${{ steps.commit_fill.outcome }}
+        run: python3 scripts/btc_ops.py
+      - name: Publish the shared daily interface
+        run: bash scripts/btc_push.sh 'Publish BTC daily market and operations data' btc_daily.json research/ops/receipts research/ops/daily research/ops/forward_progress.json
+      - name: Fail visibly if the paper sequence encountered a hard error
+        if: steps.signal.outcome == 'failure' || steps.publish_signal.outcome == 'failure' || steps.fill.outcome == 'failure' || steps.commit_fill.outcome == 'failure'
+        run: exit 1

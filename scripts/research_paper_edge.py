@@ -2,7 +2,6 @@
 import json
 import math
 import os
-import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -31,10 +30,10 @@ def ts(value):
     return datetime.fromisoformat(value).timestamp()
 
 
-def next_book(after, seconds=45):
+def next_book(after, expires, seconds=40):
     errors = []
     deadline=time.monotonic()+seconds
-    while time.monotonic()<deadline:
+    while time.monotonic()<deadline and time.time()<expires:
         try:
             record=get(BOOK)
             receive=time.time()
@@ -44,7 +43,7 @@ def next_book(after, seconds=45):
                 exchange=int(record["timestamp"])
             bid,bid_size=map(float,record["bids"][0][:2])
             ask,ask_size=map(float,record["asks"][0][:2])
-            if (after < exchange <= receive+1 and receive-exchange <= 20
+            if (after < exchange <= receive < expires and receive-exchange <= 20
                     and all(map(math.isfinite,(bid,ask,bid_size,ask_size)))
                     and 0 < bid < ask and min(bid_size,ask_size)>0):
                 return dict(exchange_at=stamp(exchange),received_at=stamp(receive),
@@ -93,22 +92,23 @@ def main():
     token=os.environ["GH_TOKEN"]
     repo=os.environ["GITHUB_REPOSITORY"]
     run=os.environ["GITHUB_RUN_ID"]
-    # The workflow already pushed the immutable signal and fast-forwarded the checkout.
-    matches=[]
-    for path in sorted((OUT/"multiframe_shadow"/"paper_signals").glob("*.json"),reverse=True)[:3]:
-        doc=json.loads(path.read_text())
-        if str(doc["run_id"])==run:
-            matches.append((path,doc))
-    if not matches:
-        print("No fresh signal published by this run; no historical order may be replayed.")
-        return
-    path, doc=matches[0]
-    ROOT.mkdir(exist_ok=True)
-    journal=ROOT/(path.stem+".json")
+    # Only the still-open slot may execute, including recovery by a later workflow run.
+    now=time.time()
+    slot=int(now)//2700*2700
+    expiry=slot+2700
+    stem=datetime.fromisoformat(stamp(slot)).strftime("%Y-%m-%dT%H%M")
+    path=OUT/"multiframe_shadow"/"paper_signals"/(stem+".json")
+    journal=ROOT/(stem+".json")
     if journal.exists():
+        print("Slot already committed", stem)
         return
-    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{4}",path.stem):
-        raise ValueError("Unexpected signal path")
+    if not path.exists():
+        print("Current slot has no published signal", stem)
+        return
+    doc=json.loads(path.read_text())
+    if ts(doc["signal_close_bjt"])!=slot:
+        raise ValueError("Signal and slot differ")
+    ROOT.mkdir(exist_ok=True)
     gh=f"https://api.github.com/repos/{repo}"
     observed=get(f"{gh}/contents/{path}?ref=main",token)
     verified=time.time()
@@ -124,16 +124,21 @@ def main():
     if latest and latest[-1].stem>=path.stem:
         raise ValueError("Shadow journal is no longer chronological")
     # Conservative recorded publication upper bound from actual readback. Never use an older quote.
-    if not 0 <= verified-ts(doc["signal_close_bjt"]) <= 3600:
+    if not slot <= verified < expiry:
         print("Signal too old for a paper execution")
         return
-    quote, errors=next_book(verified)
+    quote, errors=next_book(verified,expiry)
+    if not quote:
+        write_json(Path("paper_attempt.json"),
+                   {"slot":stamp(slot),"status":"no_valid_quote_retry_current_slot","errors":errors})
+        print("No qualified quote; current slot is retryable")
+        return
     targets={name:doc["targets"][name] for name in RULES}
     accounts={}
     for name,value in targets.items():
         previous=prior.get(name,zero)
         accounts[name]=account_state(previous,value,quote,name=="buy_hold_10")
-    write_json(journal,{"run_id":run,"signal_file":str(path),"signal_at":doc["signal_close_bjt"],
+    write_json(journal,{"run_id":run,"signal_run_id":doc["run_id"],"recovered_live_slot":str(doc["run_id"])!=run,"signal_file":str(path),"signal_at":doc["signal_close_bjt"],
               "git_publication_commit_at":committed_at,"confirmed_published_at":stamp(verified),
               "publication_commit":commit["sha"],"signal_blob":observed["sha"],
               "paper_only":True,"initial_usd_each":START,"assumed_taker_fee":TAKER,

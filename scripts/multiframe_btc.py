@@ -518,7 +518,7 @@ def shadow(points, through, paper=False):
     now = int(datetime.now(TZ).timestamp())
     point = points[-1]
     t = point[0]
-    if not 0 <= now-t <= M45+STEP or t > through:
+    if not 0 <= now-t < M45 or t > through:
         return None
     folder = OUT / "multiframe_shadow"
     if paper:

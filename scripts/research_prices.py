@@ -1,5 +1,6 @@
 """Causal BTC spot research on audited Bitstamp bars. Run from repository root."""
 
+import argparse
 import csv
 import json
 from bisect import bisect_left, bisect_right
@@ -303,6 +304,9 @@ def multiframe_targets(daily, six_hour, daily_signals, six_hour_signals):
 
 
 def main():
+    args=argparse.ArgumentParser()
+    args.add_argument("--audit-only",action="store_true")
+    options=args.parse_args()
     OUT.mkdir(exist_ok=True)
     rows, audit = load_prices()
     tail = OUT / "bitstamp_tail_15m.csv"
@@ -313,6 +317,10 @@ def main():
         for t, *values in rows[audit["archived_bars"]:]:
             writer.writerow((t, stamp(t), *values))
     tmp_tail.replace(tail)
+    if options.audit_only:
+        write_json(OUT/"price_collection_audit.json",audit)
+        print(json.dumps(audit,ensure_ascii=False))
+        return
     report = {"audit": audit, "cost_per_side": COSTS,
               "execution": "Prior completed bar target; next open, long-only cash/spot, paid terminal liquidation. Drawdown at each strategy bar close including liquidation. Fixed10 rebalances each bar. Costs include assumed fees plus slippage, not taxes.",
               "split_note": "Historical holdout begins 2025. This is retrospective, not prospective. Validation and holdout start flat. Price rules fixed across costs; do not select models from the holdout table.",

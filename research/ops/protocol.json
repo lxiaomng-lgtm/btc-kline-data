@@ -1,0 +1,23 @@
+{
+  "protocol": "btc-flow-forward-2026-11-27-v1",
+  "registered_before_observations": true,
+  "quality_start_bjt": "2026-11-27T15:20:00+08:00",
+  "minimum_independent_samples_per_phase": 100,
+  "development_calendar_days": 60,
+  "validation_calendar_days": 30,
+  "outcome_horizons_seconds": [10800, 21600],
+  "decision_delay_seconds": 900,
+  "max_entry_wait_seconds": 3600,
+  "max_exit_wait_seconds": 1800,
+  "continue_or_reverse_threshold": 0.005,
+  "ridge_penalty": 20,
+  "fee_per_side": 0.004,
+  "slippage_per_side": 0.0005,
+  "features": {
+    "baseline": ["last_completed_3h_bitstamp_return"],
+    "plus_flow": ["binance_spot_taker_imbalance_3h", "okx_btc_contract_taker_imbalance_3h", "okx_btc_usdt_swap_oi_change_3h"],
+    "hypotheses": ["positive directional increment", "improved continuation and reversal decisions on prior 0.5 percent directional moves", "after-cost net benefit at the first-receipt entry and exit quotes"]
+  },
+  "method": "Standardize and fit once from the development calendar interval on matched non-overlapping executable quotes. Keep all settings fixed through validation and independent forward periods. Test price-only and augmented models on identical samples. A qualifying future receiver must have read the original feature receipt from the repository before collecting its own quote. Do not construct historical signals.",
+  "promotion": "none; report for review"
+}
