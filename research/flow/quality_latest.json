@@ -1,16 +1,7 @@
 {
-  "generated_utc": "2026-11-27T14:02:13+00:00",
+  "generated_utc": "2026-11-27T22:47:14+00:00",
   "signals_expected_in_monitored_window": 31,
   "slots_not_recorded_utc": [
-    "2026-11-26T14:15:00+00:00",
-    "2026-11-26T15:00:00+00:00",
-    "2026-11-26T15:45:00+00:00",
-    "2026-11-26T16:30:00+00:00",
-    "2026-11-26T17:15:00+00:00",
-    "2026-11-26T18:00:00+00:00",
-    "2026-11-26T21:00:00+00:00",
-    "2026-11-26T21:45:00+00:00",
-    "2026-11-26T22:30:00+00:00",
     "2026-11-26T23:15:00+00:00",
     "2026-11-27T00:00:00+00:00",
     "2026-11-27T00:45:00+00:00",
@@ -21,27 +12,33 @@
     "2026-11-27T06:45:00+00:00",
     "2026-11-27T08:15:00+00:00",
     "2026-11-27T09:45:00+00:00",
-    "2026-11-27T11:15:00+00:00"
+    "2026-11-27T11:15:00+00:00",
+    "2026-11-27T13:30:00+00:00",
+    "2026-11-27T15:00:00+00:00",
+    "2026-11-27T15:45:00+00:00",
+    "2026-11-27T18:00:00+00:00",
+    "2026-11-27T18:45:00+00:00",
+    "2026-11-27T20:15:00+00:00"
   ],
   "status": "review",
-  "paper_records": 12,
+  "paper_records": 19,
   "simulated_fills": 1,
   "paper_invalid_records": [],
   "paper_warnings": [
     "funding-input continuity gap; see per-series counts",
-    "20 missed shadow reporting slots since first ledger or last 24h; no replay",
+    "17 missed shadow reporting slots since first ledger or last 24h; no replay",
     "published 15m snapshot older than one hour"
   ],
   "paper_last": {
-    "signal_at": "2026-11-27T20:45:00+08:00",
-    "confirmed_published_at": "2026-11-27T20:54:29.317995+08:00",
+    "signal_at": "2026-11-28T06:30:00+08:00",
+    "confirmed_published_at": "2026-11-28T06:34:13.258046+08:00",
     "quote": {
-      "exchange_at": "2026-11-27T20:54:30.726974+08:00",
-      "received_at": "2026-11-27T20:54:31.919851+08:00",
-      "bid": 61372.8,
-      "ask": 61375.34,
-      "bid_btc": 0.06,
-      "ask_btc": 0.2,
+      "exchange_at": "2026-11-28T06:34:15.099751+08:00",
+      "received_at": "2026-11-28T06:34:15.787435+08:00",
+      "bid": 59697.27,
+      "ask": 59697.28,
+      "bid_btc": 1.17685159,
+      "ask_btc": 0.7008435,
       "source": "https://www.bitstamp.net/api/v2/order_book/btcusd/"
     }
   },
@@ -72,9 +69,9 @@
       "max_drawdown_pct": 0.0
     },
     "buy_hold_10": {
-      "nav_usd": 10007.562543403747,
-      "return_pct": 0.07562543403747402,
-      "max_drawdown_pct": 0.08898197843092426
+      "nav_usd": 9979.925741494297,
+      "return_pct": -0.20074258505703435,
+      "max_drawdown_pct": 0.3577524799812437
     },
     "cash": {
       "nav_usd": 10000.0,
@@ -93,7 +90,7 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 51433,
+      "age_seconds": 82934,
       "status": "available"
     },
     "perp": {
@@ -101,7 +98,7 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 51433,
+      "age_seconds": 82934,
       "status": "available"
     },
     "oi": {
@@ -109,64 +106,105 @@
       "missing": 0,
       "first_12_missing_utc": [],
       "last_event_utc": "2026-11-26T23:45:00+00:00",
-      "age_seconds": 51433,
+      "age_seconds": 82934,
       "status": "available"
     },
     "premium": {
       "trailing_settled_day_expected": 24,
-      "missing": 6,
+      "missing": 14,
       "first_12_missing_utc": [
         "2026-11-27T08:00:00+00:00",
         "2026-11-27T09:00:00+00:00",
         "2026-11-27T10:00:00+00:00",
         "2026-11-27T11:00:00+00:00",
         "2026-11-27T12:00:00+00:00",
-        "2026-11-27T13:00:00+00:00"
+        "2026-11-27T13:00:00+00:00",
+        "2026-11-27T14:00:00+00:00",
+        "2026-11-27T15:00:00+00:00",
+        "2026-11-27T16:00:00+00:00",
+        "2026-11-27T17:00:00+00:00",
+        "2026-11-27T18:00:00+00:00",
+        "2026-11-27T19:00:00+00:00"
       ],
       "last_event_utc": "2026-11-27T07:00:00+00:00",
-      "age_seconds": 25333,
+      "age_seconds": 56834,
       "status": "gap"
     }
   },
   "workflows": {
     "BTC flow research and quality": [
       {
-        "id": 46012254301,
+        "id": 46078708752,
         "event": "schedule",
         "status": "in_progress",
         "conclusion": null,
+        "created_at": "2026-11-27T22:47:06Z"
+      },
+      {
+        "id": 46012254301,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
         "created_at": "2026-11-27T14:02:04Z"
-      },
-      {
-        "id": 45959247960,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:33:16Z"
-      },
-      {
-        "id": 45959172596,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:32:38Z"
-      },
-      {
-        "id": 45959082352,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:31:49Z"
-      },
-      {
-        "id": 45937231810,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:58:47Z"
       }
     ],
     "BTC multiframe shadow observations": [
+      {
+        "id": 46077423817,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T22:34:01Z"
+      },
+      {
+        "id": 46072844829,
+        "event": "workflow_run",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T21:50:15Z"
+      },
+      {
+        "id": 46070205191,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T21:25:23Z"
+      },
+      {
+        "id": 46058326302,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T19:40:19Z"
+      },
+      {
+        "id": 46045993294,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T17:59:09Z"
+      },
+      {
+        "id": 46043487000,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T17:38:59Z"
+      },
+      {
+        "id": 46034390655,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T16:31:52Z"
+      },
+      {
+        "id": 46017632625,
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T14:37:42Z"
+      },
       {
         "id": 46002534703,
         "event": "workflow_run",
@@ -180,58 +218,16 @@
         "status": "completed",
         "conclusion": "success",
         "created_at": "2026-11-27T12:23:20Z"
-      },
-      {
-        "id": 45985212276,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T10:48:35Z"
-      },
-      {
-        "id": 45971291425,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T09:09:05Z"
-      },
-      {
-        "id": 45959436523,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:34:53Z"
-      },
-      {
-        "id": 45959382235,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:34:26Z"
-      },
-      {
-        "id": 45959101881,
-        "event": "workflow_dispatch",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:32:00Z"
-      },
-      {
-        "id": 45959082419,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:31:49Z"
-      },
-      {
-        "id": 45940260507,
-        "event": "schedule",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T04:29:43Z"
       }
     ],
     "Update BTC candles": [
+      {
+        "id": 46072814305,
+        "event": "schedule",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-11-27T21:49:59Z"
+      },
       {
         "id": 46002494330,
         "event": "schedule",
@@ -239,50 +235,18 @@
         "conclusion": "success",
         "created_at": "2026-11-27T12:54:01Z"
       }
-    ],
-    "BTC profitability edge research": [
-      {
-        "id": 45959122194,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:32:11Z"
-      },
-      {
-        "id": 45959082444,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:31:50Z"
-      },
-      {
-        "id": 45937156717,
-        "event": "workflow_run",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T03:57:55Z"
-      }
-    ],
-    "BTC historical strategy research": [
-      {
-        "id": 45959082435,
-        "event": "push",
-        "status": "completed",
-        "conclusion": "success",
-        "created_at": "2026-11-27T07:31:50Z"
-      }
     ]
   },
   "price_audit": {
     "archived_bars": 177839,
     "snapshot_bars": 192,
-    "overlap_exact_ohlcv": 156,
-    "snapshot_appended": 36,
-    "bitstamp_gap_or_tail_bars": 5,
-    "total_bars": 177880,
+    "overlap_exact_ohlcv": 120,
+    "snapshot_appended": 72,
+    "bitstamp_gap_or_tail_bars": 4,
+    "total_bars": 177915,
     "from": "2021-11-01T00:00:00+08:00",
-    "through_close": "2026-11-27T22:00:00+08:00",
-    "snapshot_close": "2026-11-27T20:45:00+08:00",
+    "through_close": "2026-11-28T06:45:00+08:00",
+    "snapshot_close": "2026-11-28T05:45:00+08:00",
     "archive_close": "2026-11-27T11:45:00+08:00",
     "missing": 0,
     "duplicates": 0,
@@ -291,19 +255,19 @@
   "live_capture_coverage": {
     "spot": {
       "rows_in_request": 95,
-      "first_event_utc": "2026-11-26T14:15:00+00:00",
-      "last_event_utc": "2026-11-27T13:45:00+00:00"
+      "first_event_utc": "2026-11-26T23:00:00+00:00",
+      "last_event_utc": "2026-11-27T22:30:00+00:00"
     },
     "coinbase": {
       "rows_in_request": 96,
-      "first_event_utc": "2026-11-26T14:00:00+00:00",
-      "last_event_utc": "2026-11-27T13:45:00+00:00"
+      "first_event_utc": "2026-11-26T22:45:00+00:00",
+      "last_event_utc": "2026-11-27T22:30:00+00:00"
     },
     "coinbase_bitstamp_15m_premium": {
       "rows_in_request": 96,
-      "first_event_utc": "2026-11-26T14:15:00+00:00",
-      "last_event_utc": "2026-11-27T14:00:00+00:00"
+      "first_event_utc": "2026-11-26T23:00:00+00:00",
+      "last_event_utc": "2026-11-27T22:45:00+00:00"
     }
   },
-  "price_snapshot_age_seconds": 4635
+  "price_snapshot_age_seconds": 3735
 }
