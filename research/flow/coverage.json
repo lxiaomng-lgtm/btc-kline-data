@@ -1,0 +1,182 @@
+{
+  "run_id": "45936040524",
+  "generated_utc": "2026-11-27T03:46:22.261007+00:00",
+  "price_audit": {
+    "archived_bars": 177755,
+    "snapshot_bars": 192,
+    "overlap_exact_ohlcv": 110,
+    "snapshot_appended": 82,
+    "bitstamp_gap_or_tail_bars": 2,
+    "total_bars": 177839,
+    "from": "2021-11-01T00:00:00+08:00",
+    "through_close": "2026-11-27T11:45:00+08:00",
+    "snapshot_close": "2026-11-27T11:15:00+08:00",
+    "archive_close": "2026-11-26T14:45:00+08:00",
+    "missing": 0,
+    "duplicates": 0,
+    "invalid_ohlcv": 0
+  },
+  "inventory": {
+    "spot": {
+      "rows": 177785,
+      "first": "2021-11-01T00:00:00+00:00",
+      "last": "2026-11-26T23:45:00+00:00",
+      "frequency_seconds": 900,
+      "missing_within_span": 7,
+      "timestamp": "open",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "perp": {
+      "rows": 177696,
+      "first": "2021-11-01T00:00:00+00:00",
+      "last": "2026-11-25T23:45:00+00:00",
+      "frequency_seconds": 900,
+      "missing_within_span": 0,
+      "timestamp": "open",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "funding": {
+      "rows": 5478,
+      "first": "2021-11-01T00:00:00+00:00",
+      "last": "2026-10-31T16:00:00+00:00",
+      "frequency_seconds": null,
+      "missing_within_span": null,
+      "timestamp": "event_or_window_close",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "oi": {
+      "rows": 175911,
+      "first": "2021-11-01T00:00:00+00:00",
+      "last": "2026-11-25T23:45:00+00:00",
+      "frequency_seconds": 900,
+      "missing_within_span": 1785,
+      "timestamp": "event_or_window_close",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "premium": {
+      "rows": 2168,
+      "first": "2026-08-28T01:00:00+00:00",
+      "last": "2026-11-26T08:00:00+00:00",
+      "frequency_seconds": 3600,
+      "missing_within_span": 0,
+      "timestamp": "event_or_window_close",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "okx_funding": {
+      "rows": 272,
+      "first": "2026-08-28T00:00:00+00:00",
+      "last": "2026-11-26T08:00:00+00:00",
+      "frequency_seconds": null,
+      "missing_within_span": null,
+      "timestamp": "event_or_window_close",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "etf": {
+      "rows": 719,
+      "first": "2024-01-11T00:00:00+00:00",
+      "last": "2026-11-25T00:00:00+00:00",
+      "frequency_seconds": null,
+      "missing_within_span": null,
+      "timestamp": "session_date_utc_label",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    },
+    "liquidation": {
+      "rows": 6,
+      "first": "2026-11-23T01:00:00+00:00",
+      "last": "2026-11-25T13:00:00+00:00",
+      "frequency_seconds": null,
+      "missing_within_span": null,
+      "timestamp": "event_or_window_close",
+      "first_historical_availability_verified": false,
+      "cost": "public unauthenticated"
+    }
+  },
+  "archive_file_requests": 2084,
+  "archive_failures": {
+    "spot/2021-12": "Invalid 15m source candle 1640321100",
+    "spot/2023-03": "Invalid 15m source candle 1679661000",
+    "perp/2026-11-26": "HTTP Error 404: Not Found",
+    "oi/2026-11-26": "HTTP Error 404: Not Found",
+    "oi/2025-07-21": "Invalid OI",
+    "oi/2025-04-15": "Invalid OI",
+    "oi/2025-04-11": "Invalid OI",
+    "oi/2025-01-08": "Invalid OI",
+    "oi/2024-08-12": "Invalid OI",
+    "oi/2024-07-15": "Invalid OI",
+    "oi/2024-07-14": "Invalid OI",
+    "oi/2024-07-13": "Invalid OI",
+    "oi/2024-07-12": "Invalid OI",
+    "oi/2024-07-11": "Invalid OI",
+    "oi/2024-07-10": "Invalid OI",
+    "oi/2024-07-09": "Invalid OI",
+    "oi/2023-11-23": "Invalid OI",
+    "oi/2023-11-20": "Invalid OI",
+    "oi/2023-11-11": "Invalid OI",
+    "oi/2023-06-06": "Invalid OI",
+    "oi/2022-03-08": "Invalid OI",
+    "oi/2022-03-07": "Invalid OI"
+  },
+  "exact_duplicates_across_files": {},
+  "live_receipt": "research/flow/observations/20261127T034556-45936040524-1.json",
+  "live_errors": {
+    "perp": "HTTP Error 451: ",
+    "binance_oi": "HTTP Error 451: ",
+    "bybit_oi": "HTTP Error 403: Forbidden"
+  },
+  "free_vendor_endpoint_probes": {
+    "Bitstamp recent trade tape": {
+      "url": "https://www.bitstamp.net/api/v2/transactions/btcusd/?time=hour",
+      "status": 200,
+      "bytes": 105060
+    },
+    "Coinbase public candle probe": {
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/candles?start=1795564800&end=1795568400&granularity=FIFTEEN_MINUTE",
+      "status": 200,
+      "bytes": 606
+    },
+    "Binance old daily OI probe": {
+      "url": "https://data.binance.vision/data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2022-01-02.zip",
+      "status": 200,
+      "bytes": "5724"
+    },
+    "Binance recent liquidation-archive naming probe": {
+      "url": "https://data.binance.vision/data/futures/um/daily/liquidationSnapshot/BTCUSDT/BTCUSDT-liquidationSnapshot-2026-11-25.zip",
+      "error": "HTTP Error 404: Not Found",
+      "status": 404
+    },
+    "Bybit perpetual archived trades probe": {
+      "url": "https://public.bybit.com/trading/BTCUSDT/BTCUSDT2026-11-25.csv.gz",
+      "status": 200,
+      "bytes": "154792819"
+    },
+    "Bybit spot archived trades probe": {
+      "url": "https://public.bybit.com/spot/BTCUSDT/BTCUSDT_2026-11-25.csv.gz",
+      "status": 200,
+      "bytes": "12701105"
+    },
+    "OKX historic perpetual candle probe": {
+      "url": "https://www.okx.com/api/v5/market/history-candles?instId=BTC-USDT-SWAP&bar=15m&limit=2",
+      "status": 200,
+      "bytes": 227
+    },
+    "OKX archive catalogue": {
+      "url": "https://www.okx.com/historical-data",
+      "status": 200,
+      "bytes": null
+    }
+  },
+  "limitations": [
+    "Historical archive publication history unverified; no strict point-in-time claims",
+    "Liquidation windows cover sampled Deribit only; missing window is not zero",
+    "CVD is signed taker-volume increment in BTC, not external capital transferred",
+    "ETF session dates differ from observation time; historical use descriptive only",
+    "OI unit is Binance contracts represented in BTC; stablecoin versus USD feeds differ"
+  ]
+}

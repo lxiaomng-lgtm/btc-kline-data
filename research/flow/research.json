@@ -1,0 +1,255 @@
+{
+  "run_id": "45936040524",
+  "per_side_cost": 0.0045,
+  "state_outcomes": {
+    "cells": 189,
+    "testable": 101,
+    "adjusted_positive_cells": 0
+  },
+  "lead_lag": {
+    "cells": 135,
+    "adjusted_cells": 10
+  },
+  "models": {
+    "spot_perp/3h": {
+      "matched_samples": {
+        "development": 2920,
+        "validation": 1464,
+        "reused_historical": 2777
+      },
+      "status": "retrospective_event_clock_simulation",
+      "validation": {
+        "price": {
+          "mse": 0.00010729032121881993,
+          "direction_accuracy": 0.4890710382513661,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.00010733126568388885,
+          "direction_accuracy": 0.5034153005464481,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.7119140625,
+        "paired_loss_improvement_holm_p": 1.0
+      },
+      "reused_historical": {
+        "price": {
+          "mse": 7.079616002840287e-05,
+          "direction_accuracy": 0.4825351098307526,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 7.078792359534416e-05,
+          "direction_accuracy": 0.5005401512423479,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.44091796875,
+        "paired_loss_improvement_holm_p": 1.0
+      }
+    },
+    "spot_perp/24h": {
+      "matched_samples": {
+        "development": 648,
+        "validation": 325,
+        "reused_historical": 617
+      },
+      "status": "retrospective_event_clock_simulation",
+      "validation": {
+        "price": {
+          "mse": 0.0006966252690543032,
+          "direction_accuracy": 0.47692307692307695,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.0006961159730534311,
+          "direction_accuracy": 0.5015384615384615,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.42236328125,
+        "paired_loss_improvement_holm_p": 1.0
+      },
+      "reused_historical": {
+        "price": {
+          "mse": 0.0004532300589932721,
+          "direction_accuracy": 0.5299837925445705,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.00045237492610494633,
+          "direction_accuracy": 0.5008103727714749,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.3076171875,
+        "paired_loss_improvement_holm_p": 1.0
+      }
+    },
+    "with_oi_funding/3h": {
+      "matched_samples": {
+        "development": 2894,
+        "validation": 1430,
+        "reused_historical": 2661
+      },
+      "status": "retrospective_event_clock_simulation",
+      "validation": {
+        "price": {
+          "mse": 7.272955456439534e-05,
+          "direction_accuracy": 0.49230769230769234,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 7.280188163661842e-05,
+          "direction_accuracy": 0.4916083916083916,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.642578125,
+        "paired_loss_improvement_holm_p": 1.0
+      },
+      "reused_historical": {
+        "price": {
+          "mse": 5.7541696863884574e-05,
+          "direction_accuracy": 0.5050732807215332,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 5.7653275739552e-05,
+          "direction_accuracy": 0.4885381435550545,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 0.0,
+        "paired_loss_improvement_p": 0.91015625,
+        "paired_loss_improvement_holm_p": 1.0
+      }
+    },
+    "with_oi_funding/24h": {
+      "matched_samples": {
+        "development": 644,
+        "validation": 318,
+        "reused_historical": 594
+      },
+      "status": "retrospective_event_clock_simulation",
+      "validation": {
+        "price": {
+          "mse": 0.0007725964905288798,
+          "direction_accuracy": 0.5125786163522013,
+          "trades": 1,
+          "net_pct": 2.4062184264919795,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.0008666299047318052,
+          "direction_accuracy": 0.4811320754716981,
+          "trades": 2,
+          "net_pct": 6.183448053653806,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "net_difference_pp": 3.7772296271618266,
+        "paired_loss_improvement_p": 0.962890625,
+        "paired_loss_improvement_holm_p": 1.0
+      },
+      "reused_historical": {
+        "price": {
+          "mse": 0.0004851121886390499,
+          "direction_accuracy": 0.5505050505050505,
+          "trades": 0,
+          "net_pct": 0.0,
+          "trade_close_drawdown_pct": 0.0
+        },
+        "plus_flow": {
+          "mse": 0.0004985981717308203,
+          "direction_accuracy": 0.4983164983164983,
+          "trades": 13,
+          "net_pct": -23.95137702186858,
+          "trade_close_drawdown_pct": 23.95137702186858
+        },
+        "net_difference_pp": -23.95137702186858,
+        "paired_loss_improvement_p": 0.9990234375,
+        "paired_loss_improvement_holm_p": 1.0
+      }
+    },
+    "with_oi_funding_premium_etf/3h": {
+      "matched_samples": {
+        "development": 0,
+        "validation": 0,
+        "reused_historical": 258
+      },
+      "status": "insufficient_common_chronological_history"
+    },
+    "with_oi_funding_premium_etf/24h": {
+      "matched_samples": {
+        "development": 0,
+        "validation": 0,
+        "reused_historical": 58
+      },
+      "status": "insufficient_common_chronological_history"
+    },
+    "all_including_sampled_liquidation/3h": {
+      "matched_samples": {
+        "development": 0,
+        "validation": 0,
+        "reused_historical": 0
+      },
+      "status": "insufficient_common_chronological_history"
+    },
+    "all_including_sampled_liquidation/24h": {
+      "matched_samples": {
+        "development": 0,
+        "validation": 0,
+        "reused_historical": 0
+      },
+      "status": "insufficient_common_chronological_history"
+    }
+  },
+  "strict_point_in_time": {
+    "receipts": 1,
+    "days_with_same_receipt_spot_and_perp": 0,
+    "usable_signal_observations": 0,
+    "per_feature_signal_coverage": {
+      "spot_imbalance": 0,
+      "perp_imbalance": 0,
+      "oi_change": 0,
+      "funding": 0,
+      "premium_bps": 0,
+      "liquidation_usd": 0,
+      "etf_musd": 0
+    },
+    "first_complete_eligible_utc": null,
+    "status": "insufficient_forward_samples_no_promotion",
+    "future_gate": "First 60 calendar days development, next 30 validation, following days forward; at least 100 non-overlapping matched outcomes each; no promotion."
+  },
+  "notes": [
+    "Binance archive timestamps are event clocks with an assumed 15m latency; results retrospective only.",
+    "States use price and venue taker imbalance, OI and funding; inferred interpretations are hypotheses.",
+    "Negative/zero/positive lag compares past/same/future 3h price windows, not causal direction.",
+    "Train 2022–23; validate 2024; previously seen 2025+ comparison. Same matched rows for paired regressions.",
+    "The true future records are separate; do not promote models on retrospective scores."
+  ]
+}
