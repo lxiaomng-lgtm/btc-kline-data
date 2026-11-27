@@ -1,5 +1,5 @@
 {
-  "run_id": "45937112633",
+  "run_id": "45937231810",
   "per_side_cost": 0.0045,
   "state_outcomes": {
     "cells": 189,
@@ -46,7 +46,7 @@
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 7.078792359534416e-05,
+          "mse": 7.078792359534415e-05,
           "direction_accuracy": 0.5005401512423479,
           "trades": 0,
           "net_pct": 0.0,
@@ -66,7 +66,7 @@
       "status": "retrospective_event_clock_simulation",
       "validation": {
         "price": {
-          "mse": 0.0006966252690543032,
+          "mse": 0.0006966252690543031,
           "direction_accuracy": 0.47692307692307695,
           "trades": 0,
           "net_pct": 0.0,
@@ -165,7 +165,7 @@
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 0.0007848861446891327,
+          "mse": 0.000784886144689133,
           "direction_accuracy": 0.48307692307692307,
           "trades": 0,
           "net_pct": 0.0,
@@ -223,14 +223,14 @@
       },
       "reused_historical": {
         "price": {
-          "mse": 6.190010366312314e-05,
+          "mse": 6.190010366312313e-05,
           "direction_accuracy": 0.4940209267563528,
           "trades": 0,
           "net_pct": 0.0,
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 6.236628136633857e-05,
+          "mse": 6.236628136633856e-05,
           "direction_accuracy": 0.5123318385650224,
           "trades": 0,
           "net_pct": 0.0,
@@ -257,7 +257,7 @@
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 0.0007754283108870114,
+          "mse": 0.0007754283108870112,
           "direction_accuracy": 0.5076923076923077,
           "trades": 1,
           "net_pct": 2.4062184264919795,
@@ -276,7 +276,7 @@
           "trade_close_drawdown_pct": 0.0
         },
         "plus_flow": {
-          "mse": 0.00044263691951239607,
+          "mse": 0.000442636919512396,
           "direction_accuracy": 0.5243697478991597,
           "trades": 1,
           "net_pct": 0.3190388822759793,
@@ -321,7 +321,7 @@
     }
   },
   "strict_point_in_time": {
-    "receipts": 7,
+    "receipts": 8,
     "days_with_same_receipt_spot_and_perp": 0,
     "usable_signal_observations": 0,
     "median_venue_alignment_age_hours": null,
