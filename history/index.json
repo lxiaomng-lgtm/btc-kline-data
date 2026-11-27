@@ -366,12 +366,12 @@
     },
     {
       "path": "history/15m/2026-11.csv",
-      "count": 2459,
+      "count": 2543,
       "first_open": 1793462400,
-      "last_close": 1795675500
+      "last_close": 1795751100
     }
   ],
-  "count": 177755,
-  "latest_close": 1795675500,
-  "validated_at": "2026-11-26T14:59:39.255119+08:00"
+  "count": 177839,
+  "latest_close": 1795751100,
+  "validated_at": "2026-11-27T11:46:41.698222+08:00"
 }
