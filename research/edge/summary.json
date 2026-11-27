@@ -1,15 +1,15 @@
 {
   "audit": {
-    "archived_bars": 177755,
+    "archived_bars": 177839,
     "snapshot_bars": 192,
     "overlap_exact_ohlcv": 192,
     "snapshot_appended": 0,
-    "bitstamp_gap_or_tail_bars": 7,
-    "total_bars": 177762,
+    "bitstamp_gap_or_tail_bars": 0,
+    "total_bars": 177839,
     "from": "2021-11-01T00:00:00+08:00",
-    "through_close": "2026-11-26T16:30:00+08:00",
-    "snapshot_close": "2026-11-26T10:30:00+08:00",
-    "archive_close": "2026-11-26T14:45:00+08:00",
+    "through_close": "2026-11-27T11:45:00+08:00",
+    "snapshot_close": "2026-11-27T11:15:00+08:00",
+    "archive_close": "2026-11-27T11:45:00+08:00",
     "missing": 0,
     "duplicates": 0,
     "invalid_ohlcv": 0
@@ -19,7 +19,7 @@
     0.0045,
     0.006
   ],
-  "comparison_to": "2026-11-26T08:00:00+08:00",
+  "comparison_to": "2026-11-27T08:00:00+08:00",
   "event_rows": 567,
   "tested_cells": {
     "development": 133,
@@ -30,14 +30,14 @@
     "daily:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": 2.24592,
-        "cagr_pct": 1.17578,
+        "cagr_pct": 1.17407,
         "drawdown_pct": 1.27435,
         "orders": 47,
         "campaigns": 12,
         "win_pct": 33.333,
         "payoff": 4.82633,
-        "avg_exposure_pct": 2.16853,
-        "time_invested_pct": 33.1412,
+        "avg_exposure_pct": 2.16541,
+        "time_invested_pct": 33.0935,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -49,19 +49,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": 1.8545,
-        "cagr_pct": 0.97175,
+        "cagr_pct": 0.97035,
         "drawdown_pct": 1.36626,
         "orders": 47,
         "campaigns": 12,
         "win_pct": 33.333,
         "payoff": 4.08302,
-        "avg_exposure_pct": 2.16853,
-        "time_invested_pct": 33.1412,
+        "avg_exposure_pct": 2.16541,
+        "time_invested_pct": 33.0935,
         "cost_pct": 0.38818,
         "stops": 0,
         "bear_add_orders": 0,
@@ -73,19 +73,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": 1.07616,
-        "cagr_pct": 0.56493,
+        "cagr_pct": 0.56412,
         "drawdown_pct": 1.54984,
         "orders": 47,
         "campaigns": 12,
         "win_pct": 33.333,
         "payoff": 2.99592,
-        "avg_exposure_pct": 2.16853,
-        "time_invested_pct": 33.1412,
+        "avg_exposure_pct": 2.16541,
+        "time_invested_pct": 33.0935,
         "cost_pct": 1.16007,
         "stops": 0,
         "bear_add_orders": 0,
@@ -97,7 +97,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 2.236236,
@@ -112,14 +112,14 @@
     "daily_3h:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": -2.05129,
-        "cagr_pct": -1.08486,
+        "cagr_pct": -1.08331,
         "drawdown_pct": 3.18194,
         "orders": 599,
         "campaigns": 155,
         "win_pct": 19.355,
         "payoff": 3.13442,
-        "avg_exposure_pct": 1.96274,
-        "time_invested_pct": 35.3386,
+        "avg_exposure_pct": 1.95991,
+        "time_invested_pct": 35.2878,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -131,19 +131,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -5.55818,
-        "cagr_pct": -2.96479,
+        "cagr_pct": -2.96059,
         "drawdown_pct": 6.14466,
         "orders": 599,
         "campaigns": 155,
         "win_pct": 16.129,
         "payoff": 2.46018,
-        "avg_exposure_pct": 1.96274,
-        "time_invested_pct": 35.3386,
+        "avg_exposure_pct": 1.95991,
+        "time_invested_pct": 35.2878,
         "cost_pct": 3.53392,
         "stops": 0,
         "bear_add_orders": 0,
@@ -155,19 +155,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -12.19979,
-        "cagr_pct": -6.61814,
+        "cagr_pct": -6.60894,
         "drawdown_pct": 12.47692,
         "orders": 599,
         "campaigns": 155,
         "win_pct": 10.323,
         "payoff": 1.78195,
-        "avg_exposure_pct": 1.96274,
-        "time_invested_pct": 35.3386,
+        "avg_exposure_pct": 1.95991,
+        "time_invested_pct": 35.2878,
         "cost_pct": 10.22746,
         "stops": 0,
         "bear_add_orders": 0,
@@ -179,7 +179,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": -1.972325,
@@ -195,14 +195,14 @@
     "daily_3h:bounce:0.10:signal": {
       "zero_cost": {
         "net_pct": -2.31435,
-        "cagr_pct": -1.22477,
+        "cagr_pct": -1.22301,
         "drawdown_pct": 3.37716,
         "orders": 650,
         "campaigns": 176,
         "win_pct": 18.182,
         "payoff": 3.28452,
-        "avg_exposure_pct": 2.03234,
-        "time_invested_pct": 38.1124,
+        "avg_exposure_pct": 2.02941,
+        "time_invested_pct": 38.0576,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 30,
@@ -214,19 +214,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -5.95917,
-        "cagr_pct": -3.18184,
+        "cagr_pct": -3.17734,
         "drawdown_pct": 6.47352,
         "orders": 650,
         "campaigns": 176,
         "win_pct": 15.341,
         "payoff": 2.51875,
-        "avg_exposure_pct": 2.03234,
-        "time_invested_pct": 38.1124,
+        "avg_exposure_pct": 2.02941,
+        "time_invested_pct": 38.0576,
         "cost_pct": 3.68008,
         "stops": 0,
         "bear_add_orders": 30,
@@ -238,19 +238,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -12.84591,
-        "cagr_pct": -6.98044,
+        "cagr_pct": -6.97075,
         "drawdown_pct": 13.121,
         "orders": 650,
         "campaigns": 176,
         "win_pct": 9.659,
         "payoff": 1.83684,
-        "avg_exposure_pct": 2.03234,
-        "time_invested_pct": 38.1124,
+        "avg_exposure_pct": 2.02941,
+        "time_invested_pct": 38.0576,
         "cost_pct": 10.63441,
         "stops": 0,
         "bear_add_orders": 30,
@@ -262,7 +262,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": -2.211492,
@@ -278,14 +278,14 @@
     "daily_45m:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.37756,
-        "cagr_pct": 0.19853,
+        "cagr_pct": 0.19824,
         "drawdown_pct": 1.34708,
         "orders": 2343,
         "campaigns": 811,
         "win_pct": 27.99,
         "payoff": 2.6605,
-        "avg_exposure_pct": 1.60596,
-        "time_invested_pct": 35.8474,
+        "avg_exposure_pct": 1.60365,
+        "time_invested_pct": 35.7959,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -297,19 +297,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -11.00663,
-        "cagr_pct": -5.95242,
+        "cagr_pct": -5.94411,
         "drawdown_pct": 11.13549,
         "orders": 2343,
         "campaigns": 811,
         "win_pct": 14.18,
         "payoff": 2.48274,
-        "avg_exposure_pct": 1.60596,
-        "time_invested_pct": 35.8474,
+        "avg_exposure_pct": 1.60365,
+        "time_invested_pct": 35.7959,
         "cost_pct": 11.32691,
         "stops": 0,
         "bear_add_orders": 0,
@@ -321,19 +321,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -30.04808,
-        "cagr_pct": -17.14471,
+        "cagr_pct": -17.12229,
         "drawdown_pct": 30.08584,
         "orders": 2343,
         "campaigns": 811,
         "win_pct": 6.782,
         "payoff": 1.54135,
-        "avg_exposure_pct": 1.60596,
-        "time_invested_pct": 35.8474,
+        "avg_exposure_pct": 1.60365,
+        "time_invested_pct": 35.7959,
         "cost_pct": 30.26948,
         "stops": 0,
         "bear_add_orders": 0,
@@ -345,7 +345,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 0.221402,
@@ -360,98 +360,98 @@
     },
     "daily_45m:bounce:0.10:signal": {
       "zero_cost": {
-        "net_pct": 0.37719,
-        "cagr_pct": 0.19833,
+        "net_pct": 0.38095,
+        "cagr_pct": 0.20002,
         "drawdown_pct": 1.32227,
         "orders": 2508,
         "campaigns": 889,
         "win_pct": 28.684,
-        "payoff": 2.56577,
-        "avg_exposure_pct": 1.67538,
-        "time_invested_pct": 38.6077,
+        "payoff": 2.56657,
+        "avg_exposure_pct": 1.67399,
+        "time_invested_pct": 38.5926,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 86,
         "regime_log_pct": {
           "bull": 0.96417,
           "range": -0.59008,
-          "bear": 0.0024
+          "bear": 0.00615
         },
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
-        "net_pct": -11.52544,
-        "cagr_pct": -6.24136,
+        "net_pct": -11.52213,
+        "cagr_pct": -6.23082,
         "drawdown_pct": 11.66963,
         "orders": 2508,
         "campaigns": 889,
         "win_pct": 15.186,
-        "payoff": 2.31059,
-        "avg_exposure_pct": 1.67538,
-        "time_invested_pct": 38.6077,
-        "cost_pct": 11.86211,
+        "payoff": 2.31153,
+        "avg_exposure_pct": 1.67399,
+        "time_invested_pct": 38.5926,
+        "cost_pct": 11.86212,
         "stops": 0,
         "bear_add_orders": 86,
         "regime_log_pct": {
           "bull": -3.23896,
           "range": -8.37931,
-          "bear": -0.62723
+          "bear": -0.62349
         },
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
-        "net_pct": -31.26385,
-        "cagr_pct": -17.90573,
+        "net_pct": -31.26129,
+        "cagr_pct": -17.88081,
         "drawdown_pct": 31.30826,
         "orders": 2508,
         "campaigns": 889,
-        "win_pct": 7.199,
-        "payoff": 1.46619,
-        "avg_exposure_pct": 1.67538,
-        "time_invested_pct": 38.6077,
-        "cost_pct": 31.52961,
+        "win_pct": 7.312,
+        "payoff": 1.44268,
+        "avg_exposure_pct": 1.67399,
+        "time_invested_pct": 38.5926,
+        "cost_pct": 31.52962,
         "stops": 0,
         "bear_add_orders": 86,
         "regime_log_pct": {
           "bull": -11.64524,
           "range": -23.95777,
-          "bear": -1.88649
+          "bear": -1.88276
         },
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
-      "gross_same_paid_fills_pct": 0.265755,
+      "gross_same_paid_fills_pct": 0.268333,
       "median_hold_hours": 4.5,
       "median_btc_mfe_pct": 0.3789272312559877,
       "median_btc_mae_pct": -0.39692112015087266,
-      "top5_share_positive_pnl_pct": 42.976624683488474,
+      "top5_share_positive_pnl_pct": 42.95367315121407,
       "loss_reasons": {
-        "cost_flip": 191,
+        "cost_flip": 190,
         "negative_gross_edge": 634
       }
     },
     "3h_45m:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": -0.80058,
-        "cagr_pct": -0.42214,
+        "cagr_pct": -0.42153,
         "drawdown_pct": 2.70078,
         "orders": 1480,
         "campaigns": 488,
         "win_pct": 25.0,
         "payoff": 2.80776,
-        "avg_exposure_pct": 1.56033,
-        "time_invested_pct": 21.9921,
+        "avg_exposure_pct": 1.55808,
+        "time_invested_pct": 21.9604,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 87,
@@ -463,19 +463,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -11.76623,
-        "cagr_pct": -6.37575,
+        "cagr_pct": -6.36687,
         "drawdown_pct": 12.097,
         "orders": 1480,
         "campaigns": 488,
         "win_pct": 14.139,
         "payoff": 2.49036,
-        "avg_exposure_pct": 1.56033,
-        "time_invested_pct": 21.9921,
+        "avg_exposure_pct": 1.55808,
+        "time_invested_pct": 21.9604,
         "cost_pct": 10.99691,
         "stops": 0,
         "bear_add_orders": 87,
@@ -487,19 +487,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -30.19504,
-        "cagr_pct": -17.23637,
+        "cagr_pct": -17.21384,
         "drawdown_pct": 30.24569,
         "orders": 1480,
         "campaigns": 488,
         "win_pct": 6.762,
         "payoff": 1.72829,
-        "avg_exposure_pct": 1.56033,
-        "time_invested_pct": 21.9921,
+        "avg_exposure_pct": 1.55808,
+        "time_invested_pct": 21.9604,
         "cost_pct": 29.48248,
         "stops": 0,
         "bear_add_orders": 87,
@@ -511,7 +511,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": -0.712569,
@@ -527,14 +527,14 @@
     "three:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.28884,
-        "cagr_pct": 0.15191,
+        "cagr_pct": 0.15169,
         "drawdown_pct": 1.28496,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 26.207,
         "payoff": 2.93734,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -546,19 +546,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.2053,
-        "cagr_pct": -3.31529,
+        "cagr_pct": -3.3106,
         "drawdown_pct": 6.39784,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 14.023,
         "payoff": 2.74622,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 6.46276,
         "stops": 0,
         "bear_add_orders": 0,
@@ -570,19 +570,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -17.95924,
-        "cagr_pct": -9.89373,
+        "cagr_pct": -9.88022,
         "drawdown_pct": 17.98903,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 6.207,
         "payoff": 2.06322,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 18.15861,
         "stops": 0,
         "bear_add_orders": 0,
@@ -594,7 +594,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 0.19937,
@@ -610,14 +610,14 @@
     "three:bounce:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.041,
-        "cagr_pct": 0.02158,
+        "cagr_pct": 0.02154,
         "drawdown_pct": 1.25825,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 25.91,
         "payoff": 2.8761,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 36,
@@ -629,19 +629,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.66099,
-        "cagr_pct": -3.56278,
+        "cagr_pct": -3.55775,
         "drawdown_pct": 6.83638,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 14.133,
         "payoff": 2.63696,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 6.68282,
         "stops": 0,
         "bear_add_orders": 36,
@@ -653,19 +653,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -18.74811,
-        "cagr_pct": -10.35076,
+        "cagr_pct": -10.33666,
         "drawdown_pct": 18.7776,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 6.21,
         "payoff": 1.99887,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 18.73457,
         "stops": 0,
         "bear_add_orders": 36,
@@ -677,7 +677,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": -0.013534,
@@ -693,14 +693,14 @@
     "three_etf:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.28884,
-        "cagr_pct": 0.15191,
+        "cagr_pct": 0.15169,
         "drawdown_pct": 1.28496,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 26.207,
         "payoff": 2.93734,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -712,19 +712,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.2053,
-        "cagr_pct": -3.31529,
+        "cagr_pct": -3.3106,
         "drawdown_pct": 6.39784,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 14.023,
         "payoff": 2.74622,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 6.46276,
         "stops": 0,
         "bear_add_orders": 0,
@@ -736,19 +736,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -17.95924,
-        "cagr_pct": -9.89373,
+        "cagr_pct": -9.88022,
         "drawdown_pct": 17.98903,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 6.207,
         "payoff": 2.06322,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 18.15861,
         "stops": 0,
         "bear_add_orders": 0,
@@ -760,7 +760,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 0.19937,
@@ -776,14 +776,14 @@
     "three_etf:bounce:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.041,
-        "cagr_pct": 0.02158,
+        "cagr_pct": 0.02154,
         "drawdown_pct": 1.25825,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 25.91,
         "payoff": 2.8761,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 36,
@@ -795,19 +795,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.66099,
-        "cagr_pct": -3.56278,
+        "cagr_pct": -3.55775,
         "drawdown_pct": 6.83638,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 14.133,
         "payoff": 2.63696,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 6.68282,
         "stops": 0,
         "bear_add_orders": 36,
@@ -819,19 +819,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -18.74811,
-        "cagr_pct": -10.35076,
+        "cagr_pct": -10.33666,
         "drawdown_pct": 18.7776,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 6.21,
         "payoff": 1.99887,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 18.73457,
         "stops": 0,
         "bear_add_orders": 36,
@@ -843,7 +843,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": -0.013534,
@@ -859,14 +859,14 @@
     "three_etf_derivatives:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.28884,
-        "cagr_pct": 0.15191,
+        "cagr_pct": 0.15169,
         "drawdown_pct": 1.28496,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 26.207,
         "payoff": 2.93734,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -878,19 +878,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.2053,
-        "cagr_pct": -3.31529,
+        "cagr_pct": -3.3106,
         "drawdown_pct": 6.39784,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 14.023,
         "payoff": 2.74622,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 6.46276,
         "stops": 0,
         "bear_add_orders": 0,
@@ -902,19 +902,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -17.95924,
-        "cagr_pct": -9.89373,
+        "cagr_pct": -9.88022,
         "drawdown_pct": 17.98903,
         "orders": 1329,
         "campaigns": 435,
         "win_pct": 6.207,
         "payoff": 2.06322,
-        "avg_exposure_pct": 0.89583,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.89454,
+        "time_invested_pct": 19.7302,
         "cost_pct": 18.15861,
         "stops": 0,
         "bear_add_orders": 0,
@@ -926,7 +926,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 0.19937,
@@ -942,14 +942,14 @@
     "three_etf_derivatives:bounce:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.041,
-        "cagr_pct": 0.02158,
+        "cagr_pct": 0.02154,
         "drawdown_pct": 1.25825,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 25.91,
         "payoff": 2.8761,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 36,
@@ -961,19 +961,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.66099,
-        "cagr_pct": -3.56278,
+        "cagr_pct": -3.55775,
         "drawdown_pct": 6.83638,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 14.133,
         "payoff": 2.63696,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 6.68282,
         "stops": 0,
         "bear_add_orders": 36,
@@ -985,19 +985,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -18.74811,
-        "cagr_pct": -10.35076,
+        "cagr_pct": -10.33666,
         "drawdown_pct": 18.7776,
         "orders": 1397,
         "campaigns": 467,
         "win_pct": 6.21,
         "payoff": 1.99887,
-        "avg_exposure_pct": 0.91941,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.91809,
+        "time_invested_pct": 20.67,
         "cost_pct": 18.73457,
         "stops": 0,
         "bear_add_orders": 36,
@@ -1009,7 +1009,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": -0.013534,
@@ -1025,14 +1025,14 @@
     "three_chan:ban:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.4864,
-        "cagr_pct": 0.25569,
+        "cagr_pct": 0.25533,
         "drawdown_pct": 1.21323,
         "orders": 1346,
         "campaigns": 435,
         "win_pct": 25.517,
         "payoff": 3.14397,
-        "avg_exposure_pct": 0.86169,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.86046,
+        "time_invested_pct": 19.7302,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 0,
@@ -1044,19 +1044,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -5.60958,
-        "cagr_pct": -2.99259,
+        "cagr_pct": -2.98835,
         "drawdown_pct": 5.82886,
         "orders": 1346,
         "campaigns": 435,
         "win_pct": 13.563,
         "payoff": 2.97477,
-        "avg_exposure_pct": 0.86169,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.86046,
+        "time_invested_pct": 19.7302,
         "cost_pct": 6.06189,
         "stops": 0,
         "bear_add_orders": 0,
@@ -1068,19 +1068,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -16.71454,
-        "cagr_pct": -9.17683,
+        "cagr_pct": -9.16425,
         "drawdown_pct": 16.74478,
         "orders": 1346,
         "campaigns": 435,
         "win_pct": 5.977,
         "payoff": 2.24428,
-        "avg_exposure_pct": 0.86169,
-        "time_invested_pct": 19.7586,
+        "avg_exposure_pct": 0.86046,
+        "time_invested_pct": 19.7302,
         "cost_pct": 17.1032,
         "stops": 0,
         "bear_add_orders": 0,
@@ -1092,7 +1092,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 0.388662,
@@ -1108,14 +1108,14 @@
     "three_chan:bounce:0.10:signal": {
       "zero_cost": {
         "net_pct": 0.20684,
-        "cagr_pct": 0.1088,
+        "cagr_pct": 0.10865,
         "drawdown_pct": 1.21731,
         "orders": 1415,
         "campaigns": 467,
         "win_pct": 25.268,
         "payoff": 3.04922,
-        "avg_exposure_pct": 0.88474,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.88347,
+        "time_invested_pct": 20.67,
         "cost_pct": 0.0,
         "stops": 0,
         "bear_add_orders": 37,
@@ -1127,19 +1127,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "prior_fee": {
         "net_pct": -6.09731,
-        "cagr_pct": -3.25671,
+        "cagr_pct": -3.2521,
         "drawdown_pct": 6.26043,
         "orders": 1415,
         "campaigns": 467,
         "win_pct": 13.704,
         "payoff": 2.8222,
-        "avg_exposure_pct": 0.88474,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.88347,
+        "time_invested_pct": 20.67,
         "cost_pct": 6.28149,
         "stops": 0,
         "bear_add_orders": 37,
@@ -1151,19 +1151,19 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "costed": {
         "net_pct": -17.54074,
-        "cagr_pct": -9.65211,
+        "cagr_pct": -9.63892,
         "drawdown_pct": 17.57067,
         "orders": 1415,
         "campaigns": 467,
         "win_pct": 5.782,
         "payoff": 2.23127,
-        "avg_exposure_pct": 0.88474,
-        "time_invested_pct": 20.6997,
+        "avg_exposure_pct": 0.88347,
+        "time_invested_pct": 20.67,
         "cost_pct": 17.6827,
         "stops": 0,
         "bear_add_orders": 37,
@@ -1175,7 +1175,7 @@
         "regime_bars": {
           "bull": 3712,
           "range": 14976,
-          "bear": 3520
+          "bear": 3552
         }
       },
       "gross_same_paid_fills_pct": 0.141962,
@@ -3134,10 +3134,10 @@
         "0.0015": {
           "legacy": {
             "net_pct": 1.8545,
-            "cagr_pct": 0.97175,
+            "cagr_pct": 0.97035,
             "drawdown_pct": 1.36626,
-            "annual_vol_pct": 1.52282,
-            "avg_exposure_pct": 2.16853,
+            "annual_vol_pct": 1.52173,
+            "avg_exposure_pct": 2.16541,
             "fees_pct": 0.38818,
             "orders": 47,
             "months_positive": 5,
@@ -3170,10 +3170,10 @@
           },
           "lowturn_direct": {
             "net_pct": -4.77696,
-            "cagr_pct": -2.54318,
+            "cagr_pct": -2.53957,
             "drawdown_pct": 5.30656,
-            "annual_vol_pct": 1.70827,
-            "avg_exposure_pct": 2.17379,
+            "annual_vol_pct": 1.70705,
+            "avg_exposure_pct": 2.17066,
             "fees_pct": 2.62259,
             "orders": 321,
             "months_positive": 4,
@@ -3206,10 +3206,10 @@
           },
           "lowturn_wait": {
             "net_pct": -5.0226,
-            "cagr_pct": -2.67557,
+            "cagr_pct": -2.67177,
             "drawdown_pct": 5.48933,
-            "annual_vol_pct": 1.72681,
-            "avg_exposure_pct": 2.18587,
+            "annual_vol_pct": 1.72557,
+            "avg_exposure_pct": 2.18273,
             "fees_pct": 2.63535,
             "orders": 321,
             "months_positive": 4,
@@ -3242,10 +3242,10 @@
           },
           "lowturn_threshold": {
             "net_pct": -4.77696,
-            "cagr_pct": -2.54318,
+            "cagr_pct": -2.53957,
             "drawdown_pct": 5.30656,
-            "annual_vol_pct": 1.70827,
-            "avg_exposure_pct": 2.17379,
+            "annual_vol_pct": 1.70705,
+            "avg_exposure_pct": 2.17066,
             "fees_pct": 2.62259,
             "orders": 321,
             "months_positive": 4,
@@ -3278,10 +3278,10 @@
           },
           "lowturn_confirm": {
             "net_pct": -4.65111,
-            "cagr_pct": -2.47541,
+            "cagr_pct": -2.4719,
             "drawdown_pct": 5.23451,
-            "annual_vol_pct": 1.8263,
-            "avg_exposure_pct": 2.18279,
+            "annual_vol_pct": 1.82499,
+            "avg_exposure_pct": 2.17965,
             "fees_pct": 2.4297,
             "orders": 273,
             "months_positive": 2,
@@ -3314,10 +3314,10 @@
           },
           "lowturn_vol": {
             "net_pct": -5.08916,
-            "cagr_pct": -2.71147,
+            "cagr_pct": -2.70763,
             "drawdown_pct": 5.60734,
-            "annual_vol_pct": 1.92007,
-            "avg_exposure_pct": 2.45685,
+            "annual_vol_pct": 1.9187,
+            "avg_exposure_pct": 2.45331,
             "fees_pct": 3.14546,
             "orders": 519,
             "months_positive": 4,
@@ -3350,10 +3350,10 @@
           },
           "lowturn_risk": {
             "net_pct": -3.67626,
-            "cagr_pct": -1.95192,
+            "cagr_pct": -1.94914,
             "drawdown_pct": 4.13136,
-            "annual_vol_pct": 1.78489,
-            "avg_exposure_pct": 1.98947,
+            "annual_vol_pct": 1.78361,
+            "avg_exposure_pct": 1.98661,
             "fees_pct": 2.48534,
             "orders": 489,
             "months_positive": 3,
@@ -3385,12 +3385,12 @@
             }
           },
           "hold_same_risk": {
-            "net_pct": -1.91605,
-            "cagr_pct": -1.01301,
+            "net_pct": -1.90972,
+            "cagr_pct": -1.0082,
             "drawdown_pct": 3.95503,
-            "annual_vol_pct": 2.14702,
-            "avg_exposure_pct": 5.08304,
-            "fees_pct": 0.01326,
+            "annual_vol_pct": 2.14552,
+            "avg_exposure_pct": 5.08084,
+            "fees_pct": 0.01327,
             "orders": 2,
             "months_positive": 11,
             "months": 23,
@@ -3417,7 +3417,7 @@
               "2026-08": 0.9370999897331478,
               "2026-09": 0.3109785995076164,
               "2026-10": -0.3816247258431993,
-              "2026-11": -0.994595444599955
+              "2026-11": -0.9882107375557392
             }
           },
           "cash": {
@@ -3457,8 +3457,8 @@
             }
           },
           "treasury_3m_proxy": {
-            "net_pct": 7.55877,
-            "cagr_pct": 3.90938,
+            "net_pct": 7.57083,
+            "cagr_pct": 3.90977,
             "drawdown_pct": 0.0,
             "annual_vol_pct": 0.01323,
             "avg_exposure_pct": 0.0,
@@ -3489,17 +3489,17 @@
               "2026-08": 0.31023710313153874,
               "2026-09": 0.31572968888418096,
               "2026-10": 0.33778302317732933,
-              "2026-11": 0.27811142808475964
+              "2026-11": 0.2893549649107152
             }
           }
         },
         "0.0045": {
           "legacy": {
             "net_pct": 1.07616,
-            "cagr_pct": 0.56493,
+            "cagr_pct": 0.56412,
             "drawdown_pct": 1.54984,
-            "annual_vol_pct": 1.51737,
-            "avg_exposure_pct": 2.16853,
+            "annual_vol_pct": 1.51628,
+            "avg_exposure_pct": 2.16541,
             "fees_pct": 1.16007,
             "orders": 47,
             "months_positive": 5,
@@ -3532,10 +3532,10 @@
           },
           "lowturn_direct": {
             "net_pct": -9.77433,
-            "cagr_pct": -5.26927,
+            "cagr_pct": -5.26189,
             "drawdown_pct": 10.0988,
-            "annual_vol_pct": 1.84466,
-            "avg_exposure_pct": 2.17379,
+            "annual_vol_pct": 1.84336,
+            "avg_exposure_pct": 2.17066,
             "fees_pct": 7.66074,
             "orders": 321,
             "months_positive": 1,
@@ -3568,10 +3568,10 @@
           },
           "lowturn_wait": {
             "net_pct": -10.03404,
-            "cagr_pct": -5.41288,
+            "cagr_pct": -5.4053,
             "drawdown_pct": 10.32416,
-            "annual_vol_pct": 1.86407,
-            "avg_exposure_pct": 2.18587,
+            "annual_vol_pct": 1.86275,
+            "avg_exposure_pct": 2.18273,
             "fees_pct": 7.69697,
             "orders": 321,
             "months_positive": 1,
@@ -3604,10 +3604,10 @@
           },
           "lowturn_threshold": {
             "net_pct": -9.77433,
-            "cagr_pct": -5.26927,
+            "cagr_pct": -5.26189,
             "drawdown_pct": 10.0988,
-            "annual_vol_pct": 1.84466,
-            "avg_exposure_pct": 2.17379,
+            "annual_vol_pct": 1.84336,
+            "avg_exposure_pct": 2.17066,
             "fees_pct": 7.66074,
             "orders": 321,
             "months_positive": 1,
@@ -3640,10 +3640,10 @@
           },
           "lowturn_confirm": {
             "net_pct": -9.29321,
-            "cagr_pct": -5.00376,
+            "cagr_pct": -4.99674,
             "drawdown_pct": 9.59671,
-            "annual_vol_pct": 1.95322,
-            "avg_exposure_pct": 2.18279,
+            "annual_vol_pct": 1.95184,
+            "avg_exposure_pct": 2.17965,
             "fees_pct": 7.11131,
             "orders": 273,
             "months_positive": 1,
@@ -3676,10 +3676,10 @@
           },
           "lowturn_vol": {
             "net_pct": -11.02979,
-            "cagr_pct": -5.9653,
+            "cagr_pct": -5.95698,
             "drawdown_pct": 11.35192,
-            "annual_vol_pct": 2.09111,
-            "avg_exposure_pct": 2.45685,
+            "annual_vol_pct": 2.08964,
+            "avg_exposure_pct": 2.45331,
             "fees_pct": 9.13987,
             "orders": 519,
             "months_positive": 1,
@@ -3712,10 +3712,10 @@
           },
           "lowturn_risk": {
             "net_pct": -8.44003,
-            "cagr_pct": -4.53455,
+            "cagr_pct": -4.52818,
             "drawdown_pct": 8.62425,
-            "annual_vol_pct": 1.92747,
-            "avg_exposure_pct": 1.98947,
+            "annual_vol_pct": 1.9261,
+            "avg_exposure_pct": 1.98661,
             "fees_pct": 7.27097,
             "orders": 489,
             "months_positive": 1,
@@ -3747,12 +3747,12 @@
             }
           },
           "hold_same_risk": {
-            "net_pct": -1.94226,
-            "cagr_pct": -1.02693,
+            "net_pct": -1.93595,
+            "cagr_pct": -1.02212,
             "drawdown_pct": 3.95503,
-            "annual_vol_pct": 2.14679,
-            "avg_exposure_pct": 5.08304,
-            "fees_pct": 0.03978,
+            "annual_vol_pct": 2.14538,
+            "avg_exposure_pct": 5.08084,
+            "fees_pct": 0.03981,
             "orders": 2,
             "months_positive": 11,
             "months": 23,
@@ -3779,7 +3779,7 @@
               "2026-08": 0.9370999897331478,
               "2026-09": 0.3109785995075942,
               "2026-10": -0.3816247258431882,
-              "2026-11": -1.0051006477991509
+              "2026-11": -0.9987351236504072
             }
           },
           "cash": {
@@ -3819,8 +3819,8 @@
             }
           },
           "treasury_3m_proxy": {
-            "net_pct": 7.55877,
-            "cagr_pct": 3.90938,
+            "net_pct": 7.57083,
+            "cagr_pct": 3.90977,
             "drawdown_pct": 0.0,
             "annual_vol_pct": 0.01323,
             "avg_exposure_pct": 0.0,
@@ -3851,17 +3851,17 @@
               "2026-08": 0.31023710313153874,
               "2026-09": 0.31572968888418096,
               "2026-10": 0.33778302317732933,
-              "2026-11": 0.27811142808475964
+              "2026-11": 0.2893549649107152
             }
           }
         },
         "0.006": {
           "legacy": {
             "net_pct": 0.68923,
-            "cagr_pct": 0.36214,
+            "cagr_pct": 0.36162,
             "drawdown_pct": 1.65128,
-            "annual_vol_pct": 1.51658,
-            "avg_exposure_pct": 2.16853,
+            "annual_vol_pct": 1.51549,
+            "avg_exposure_pct": 2.16541,
             "fees_pct": 1.5438,
             "orders": 47,
             "months_positive": 5,
@@ -3894,10 +3894,10 @@
           },
           "lowturn_direct": {
             "net_pct": -12.17378,
-            "cagr_pct": -6.60359,
+            "cagr_pct": -6.59441,
             "drawdown_pct": 12.45072,
-            "annual_vol_pct": 1.92757,
-            "avg_exposure_pct": 2.17379,
+            "annual_vol_pct": 1.92623,
+            "avg_exposure_pct": 2.17066,
             "fees_pct": 10.07995,
             "orders": 321,
             "months_positive": 1,
@@ -3930,10 +3930,10 @@
           },
           "lowturn_wait": {
             "net_pct": -12.43971,
-            "cagr_pct": -6.75252,
+            "cagr_pct": -6.74314,
             "drawdown_pct": 12.68307,
-            "annual_vol_pct": 1.94742,
-            "avg_exposure_pct": 2.18587,
+            "annual_vol_pct": 1.94606,
+            "avg_exposure_pct": 2.18273,
             "fees_pct": 10.12694,
             "orders": 321,
             "months_positive": 1,
@@ -3966,10 +3966,10 @@
           },
           "lowturn_threshold": {
             "net_pct": -12.17378,
-            "cagr_pct": -6.60359,
+            "cagr_pct": -6.59441,
             "drawdown_pct": 12.45072,
-            "annual_vol_pct": 1.92757,
-            "avg_exposure_pct": 2.17379,
+            "annual_vol_pct": 1.92623,
+            "avg_exposure_pct": 2.17066,
             "fees_pct": 10.07995,
             "orders": 321,
             "months_positive": 1,
@@ -4002,10 +4002,10 @@
           },
           "lowturn_confirm": {
             "net_pct": -11.52881,
-            "cagr_pct": -6.24324,
+            "cagr_pct": -6.23455,
             "drawdown_pct": 11.79473,
-            "annual_vol_pct": 2.02916,
-            "avg_exposure_pct": 2.18279,
+            "annual_vol_pct": 2.02773,
+            "avg_exposure_pct": 2.17965,
             "fees_pct": 9.36613,
             "orders": 273,
             "months_positive": 1,
@@ -4038,10 +4038,10 @@
           },
           "lowturn_vol": {
             "net_pct": -13.85918,
-            "cagr_pct": -7.55117,
+            "cagr_pct": -7.54073,
             "drawdown_pct": 14.12999,
-            "annual_vol_pct": 2.19475,
-            "avg_exposure_pct": 2.45685,
+            "annual_vol_pct": 2.19323,
+            "avg_exposure_pct": 2.45331,
             "fees_pct": 11.99505,
             "orders": 519,
             "months_positive": 1,
@@ -4074,10 +4074,10 @@
           },
           "lowturn_risk": {
             "net_pct": -10.73283,
-            "cagr_pct": -5.80024,
+            "cagr_pct": -5.79215,
             "drawdown_pct": 10.88877,
-            "annual_vol_pct": 2.0169,
-            "avg_exposure_pct": 1.98947,
+            "annual_vol_pct": 2.01548,
+            "avg_exposure_pct": 1.98661,
             "fees_pct": 9.57433,
             "orders": 489,
             "months_positive": 1,
@@ -4109,12 +4109,12 @@
             }
           },
           "hold_same_risk": {
-            "net_pct": -1.95536,
-            "cagr_pct": -1.03389,
+            "net_pct": -1.94906,
+            "cagr_pct": -1.02907,
             "drawdown_pct": 3.95503,
-            "annual_vol_pct": 2.14671,
-            "avg_exposure_pct": 5.08304,
-            "fees_pct": 0.05303,
+            "annual_vol_pct": 2.14534,
+            "avg_exposure_pct": 5.08084,
+            "fees_pct": 0.05307,
             "orders": 2,
             "months_positive": 11,
             "months": 23,
@@ -4141,7 +4141,7 @@
               "2026-08": 0.9370999897331478,
               "2026-09": 0.3109785995075942,
               "2026-10": -0.3816247258431882,
-              "2026-11": -1.0103532493987433
+              "2026-11": -1.0039973166977467
             }
           },
           "cash": {
@@ -4181,8 +4181,8 @@
             }
           },
           "treasury_3m_proxy": {
-            "net_pct": 7.55877,
-            "cagr_pct": 3.90938,
+            "net_pct": 7.57083,
+            "cagr_pct": 3.90977,
             "drawdown_pct": 0.0,
             "annual_vol_pct": 0.01323,
             "avg_exposure_pct": 0.0,
@@ -4213,7 +4213,7 @@
               "2026-08": 0.31023710313153874,
               "2026-09": 0.31572968888418096,
               "2026-10": 0.33778302317732933,
-              "2026-11": 0.27811142808475964
+              "2026-11": 0.2893549649107152
             }
           }
         }
@@ -4673,10 +4673,10 @@
       "2026-07-01": {
         "legacy": {
           "net_pct": 0.40683,
-          "cagr_pct": 1.007,
+          "cagr_pct": 1.0002,
           "drawdown_pct": 1.27175,
-          "annual_vol_pct": 2.08239,
-          "avg_exposure_pct": 2.61192,
+          "annual_vol_pct": 2.07534,
+          "avg_exposure_pct": 2.59439,
           "fees_pct": 0.27452,
           "orders": 9,
           "months_positive": 1,
@@ -4684,10 +4684,10 @@
         },
         "lowturn_direct": {
           "net_pct": -1.23701,
-          "cagr_pct": -3.0251,
+          "cagr_pct": -3.00511,
           "drawdown_pct": 2.53031,
-          "annual_vol_pct": 2.20302,
-          "avg_exposure_pct": 2.43221,
+          "annual_vol_pct": 2.1956,
+          "avg_exposure_pct": 2.41589,
           "fees_pct": 1.30314,
           "orders": 57,
           "months_positive": 1,
@@ -4695,10 +4695,10 @@
         },
         "lowturn_wait": {
           "net_pct": -1.28705,
-          "cagr_pct": -3.14632,
+          "cagr_pct": -3.12553,
           "drawdown_pct": 2.54332,
-          "annual_vol_pct": 2.22008,
-          "avg_exposure_pct": 2.44535,
+          "annual_vol_pct": 2.21261,
+          "avg_exposure_pct": 2.42894,
           "fees_pct": 1.31007,
           "orders": 57,
           "months_positive": 1,
@@ -4706,10 +4706,10 @@
         },
         "lowturn_threshold": {
           "net_pct": -1.23701,
-          "cagr_pct": -3.0251,
+          "cagr_pct": -3.00511,
           "drawdown_pct": 2.53031,
-          "annual_vol_pct": 2.20302,
-          "avg_exposure_pct": 2.43221,
+          "annual_vol_pct": 2.1956,
+          "avg_exposure_pct": 2.41589,
           "fees_pct": 1.30314,
           "orders": 57,
           "months_positive": 1,
@@ -4717,10 +4717,10 @@
         },
         "lowturn_confirm": {
           "net_pct": -1.11308,
-          "cagr_pct": -2.72453,
+          "cagr_pct": -2.70649,
           "drawdown_pct": 2.5675,
-          "annual_vol_pct": 2.35895,
-          "avg_exposure_pct": 2.50368,
+          "annual_vol_pct": 2.35099,
+          "avg_exposure_pct": 2.48688,
           "fees_pct": 1.28362,
           "orders": 51,
           "months_positive": 1,
@@ -4728,10 +4728,10 @@
         },
         "lowturn_vol": {
           "net_pct": -1.69594,
-          "cagr_pct": -4.13339,
+          "cagr_pct": -4.10622,
           "drawdown_pct": 2.82277,
-          "annual_vol_pct": 2.42672,
-          "avg_exposure_pct": 2.71229,
+          "annual_vol_pct": 2.41858,
+          "avg_exposure_pct": 2.69408,
           "fees_pct": 1.65224,
           "orders": 105,
           "months_positive": 1,
@@ -4739,22 +4739,22 @@
         },
         "lowturn_risk": {
           "net_pct": -0.93814,
-          "cagr_pct": -2.29929,
+          "cagr_pct": -2.28403,
           "drawdown_pct": 2.3589,
-          "annual_vol_pct": 2.1979,
-          "avg_exposure_pct": 2.22888,
+          "annual_vol_pct": 2.19048,
+          "avg_exposure_pct": 2.21392,
           "fees_pct": 1.18148,
           "orders": 96,
           "months_positive": 1,
           "months": 5
         },
         "hold_same_risk": {
-          "net_pct": 0.11911,
-          "cagr_pct": 0.29421,
+          "net_pct": 0.12918,
+          "cagr_pct": 0.31696,
           "drawdown_pct": 2.80538,
-          "annual_vol_pct": 2.63962,
-          "avg_exposure_pct": 6.6098,
-          "fees_pct": 0.0491,
+          "annual_vol_pct": 2.63186,
+          "avg_exposure_pct": 6.60271,
+          "fees_pct": 0.04914,
           "orders": 2,
           "months_positive": 3,
           "months": 5
