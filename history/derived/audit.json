@@ -1,31 +1,31 @@
 {
   "source": "Bitstamp",
-  "raw_count": 177839,
+  "raw_count": 177934,
   "first_open": 1635696000,
-  "latest_close": 1795751100,
+  "latest_close": 1795836600,
   "duplicates": 0,
   "missing": 0,
   "invalid_ohlcv": 0,
   "periods": {
     "45m": {
-      "count": 59279,
+      "count": 59311,
       "first_open": 1635696000,
-      "last_close": 1795749300
+      "last_close": 1795835700
     },
     "3h": {
-      "count": 14819,
+      "count": 14827,
       "first_open": 1635696000,
-      "last_close": 1795741200
+      "last_close": 1795827600
     },
     "6h": {
-      "count": 7409,
+      "count": 7413,
       "first_open": 1635696000,
-      "last_close": 1795730400
+      "last_close": 1795816800
     },
     "1d": {
-      "count": 1852,
+      "count": 1853,
       "first_open": 1635696000,
-      "last_close": 1795708800
+      "last_close": 1795795200
     },
     "1w": {
       "count": 264,
@@ -38,5 +38,5 @@
       "last_close": 1793462400
     }
   },
-  "audited_at": "2026-11-27T11:46:47.148162+08:00"
+  "audited_at": "2026-11-28T11:30:41.164385+08:00"
 }
