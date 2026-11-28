@@ -1,37 +1,37 @@
 {
   "schema": "btc_daily_v1",
-  "generated_at_bjt": "2026-11-28T11:24:22.475701+08:00",
-  "source_run_id": "46102672228",
+  "generated_at_bjt": "2026-11-28T11:40:18.854851+08:00",
+  "source_run_id": "46103954842",
   "price": {
-    "event_at": "2026-11-28T11:24:21+08:00",
-    "acquired_at": "2026-11-28T11:24:21.860286+08:00",
-    "requested_at": "2026-11-28T11:24:21.821892+08:00",
+    "event_at": "2026-11-28T11:40:17+08:00",
+    "acquired_at": "2026-11-28T11:40:18.368609+08:00",
+    "requested_at": "2026-11-28T11:40:18.212867+08:00",
     "source_published_at": null,
-    "age_seconds": 0.86,
+    "age_seconds": 1.369,
     "max_age_seconds": 30,
     "status": "valid",
     "endpoint": "https://www.bitstamp.net/api/v2/ticker/btcusd/",
     "parameters": null,
     "value": {
-      "last": 59851.04,
-      "bid": 59861.02,
-      "ask": 59861.03
+      "last": 59895.18,
+      "bid": 59895.18,
+      "ask": 59895.19
     },
-    "valid_until_bjt": "2026-11-28T11:24:51+08:00"
+    "valid_until_bjt": "2026-11-28T11:40:47+08:00"
   },
   "price_fallback": null,
   "candles": {
     "15m": {
-      "expected_closed_at": "2026-11-28T11:15:00+08:00",
-      "actual_closed_at": "2026-11-28T11:15:00+08:00",
+      "expected_closed_at": "2026-11-28T11:30:00+08:00",
+      "actual_closed_at": "2026-11-28T11:30:00+08:00",
       "status": "valid",
-      "forming_since": "2026-11-28T11:15:00+08:00",
+      "forming_since": "2026-11-28T11:30:00+08:00",
       "ohlcv": {
-        "open": 59900.02,
-        "high": 59957.69,
-        "low": 59885.01,
-        "close": 59922.61,
-        "volume_btc": 3.94343632
+        "open": 59922.62,
+        "high": 59926.39,
+        "low": 59850.0,
+        "close": 59850.01,
+        "volume_btc": 0.62704457
       },
       "alignment": "Asia/Shanghai 08:00 anchor"
     },
@@ -95,10 +95,10 @@
   "etf": {
     "status": "FINAL",
     "us_session": "2026-11-25",
-    "observed_at": "2026-11-27T07:31:57.290875+00:00",
-    "observation_age_seconds": 71545.58005356789,
+    "observed_at": "2026-11-28T03:30:59.096608+00:00",
+    "observation_age_seconds": 560.2377922534943,
     "total_usd_m": -453.0,
-    "source_last_session_listed": "2026-11-25",
+    "source_last_session_listed": "2026-11-27",
     "freshness": "recent_observation",
     "funds_usd_m": {
       "IBIT": -329.7,
@@ -121,28 +121,28 @@
   },
   "live_market": {
     "bitstamp_price": {
-      "event_at": "2026-11-28T11:24:21+08:00",
-      "acquired_at": "2026-11-28T11:24:21.860286+08:00",
-      "requested_at": "2026-11-28T11:24:21.821892+08:00",
+      "event_at": "2026-11-28T11:40:17+08:00",
+      "acquired_at": "2026-11-28T11:40:18.368609+08:00",
+      "requested_at": "2026-11-28T11:40:18.212867+08:00",
       "source_published_at": null,
-      "age_seconds": 0.86,
+      "age_seconds": 1.369,
       "max_age_seconds": 30,
       "status": "valid",
       "endpoint": "https://www.bitstamp.net/api/v2/ticker/btcusd/",
       "parameters": null,
       "value": {
-        "last": 59851.04,
-        "bid": 59861.02,
-        "ask": 59861.03
+        "last": 59895.18,
+        "bid": 59895.18,
+        "ask": 59895.19
       },
-      "valid_until_bjt": "2026-11-28T11:24:51+08:00"
+      "valid_until_bjt": "2026-11-28T11:40:47+08:00"
     },
     "coinbase_price": {
-      "event_at": "2026-11-28T11:24:21.475346+08:00",
-      "acquired_at": "2026-11-28T11:24:21.867549+08:00",
-      "requested_at": "2026-11-28T11:24:21.822601+08:00",
+      "event_at": "2026-11-28T11:40:17.462277+08:00",
+      "acquired_at": "2026-11-28T11:40:18.286132+08:00",
+      "requested_at": "2026-11-28T11:40:18.213346+08:00",
       "source_published_at": null,
-      "age_seconds": 0.392,
+      "age_seconds": 0.824,
       "max_age_seconds": 30,
       "status": "valid",
       "endpoint": "https://api.coinbase.com/api/v3/brokerage/market/products/BTC-USD/ticker",
@@ -150,18 +150,18 @@
         "limit": 1
       },
       "value": {
-        "last": 59853.25,
-        "bid": 59853.25,
-        "ask": 59853.26
+        "last": 59889.99,
+        "bid": 59889.99,
+        "ask": 59890.0
       },
-      "valid_until_bjt": "2026-11-28T11:24:51.475346+08:00"
+      "valid_until_bjt": "2026-11-28T11:40:47.462277+08:00"
     },
     "bitstamp_15m": {
-      "event_at": "2026-11-28T11:15:00+08:00",
-      "acquired_at": "2026-11-28T11:24:22.129232+08:00",
-      "requested_at": "2026-11-28T11:24:21.823065+08:00",
+      "event_at": "2026-11-28T11:30:00+08:00",
+      "acquired_at": "2026-11-28T11:40:18.581403+08:00",
+      "requested_at": "2026-11-28T11:40:18.213711+08:00",
       "source_published_at": null,
-      "age_seconds": 562.129,
+      "age_seconds": 618.581,
       "max_age_seconds": 960,
       "status": "valid",
       "endpoint": "https://www.bitstamp.net/api/v2/ohlc/btcusd/",
@@ -175,14 +175,14 @@
         "missing": 0,
         "duplicates": 0
       },
-      "valid_until_bjt": "2026-11-28T11:31:00+08:00"
+      "valid_until_bjt": "2026-11-28T11:46:00+08:00"
     },
     "binance_spot_cvd": {
-      "event_at": "2026-11-28T11:15:00+08:00",
-      "acquired_at": "2026-11-28T11:24:22.474470+08:00",
-      "requested_at": "2026-11-28T11:24:21.823560+08:00",
+      "event_at": "2026-11-28T11:30:00+08:00",
+      "acquired_at": "2026-11-28T11:40:18.853889+08:00",
+      "requested_at": "2026-11-28T11:40:18.214070+08:00",
       "source_published_at": null,
-      "age_seconds": 562.474,
+      "age_seconds": 618.854,
       "max_age_seconds": 1100,
       "status": "valid",
       "endpoint": "https://data-api.binance.vision/api/v3/klines",
@@ -194,15 +194,15 @@
       "value": {
         "period_seconds": 900,
         "unit": "BTC",
-        "increment": -74.12487999999999
+        "increment": 34.809560000000005
       },
-      "valid_until_bjt": "2026-11-28T11:33:20+08:00"
+      "valid_until_bjt": "2026-11-28T11:48:20+08:00"
     },
     "binance_perpetual_cvd": {
       "status": "unavailable",
       "event_at": null,
-      "acquired_at": "2026-11-28T11:24:21.927461+08:00",
-      "requested_at": "2026-11-28T11:24:21.824380+08:00",
+      "acquired_at": "2026-11-28T11:40:18.381507+08:00",
+      "requested_at": "2026-11-28T11:40:18.214464+08:00",
       "source_published_at": null,
       "endpoint": "https://fapi.binance.com/fapi/v1/klines",
       "parameters": {
@@ -216,8 +216,8 @@
     "binance_oi": {
       "status": "unavailable",
       "event_at": null,
-      "acquired_at": "2026-11-28T11:24:21.927146+08:00",
-      "requested_at": "2026-11-28T11:24:21.824815+08:00",
+      "acquired_at": "2026-11-28T11:40:18.382221+08:00",
+      "requested_at": "2026-11-28T11:40:18.214892+08:00",
       "source_published_at": null,
       "endpoint": "https://fapi.binance.com/futures/data/openInterestHist",
       "parameters": {
@@ -231,8 +231,8 @@
     "bybit_oi": {
       "status": "unavailable",
       "event_at": null,
-      "acquired_at": "2026-11-28T11:24:22.001767+08:00",
-      "requested_at": "2026-11-28T11:24:21.829710+08:00",
+      "acquired_at": "2026-11-28T11:40:18.376257+08:00",
+      "requested_at": "2026-11-28T11:40:18.217900+08:00",
       "source_published_at": null,
       "endpoint": "https://api.bybit.com/v5/market/open-interest",
       "parameters": {
@@ -245,11 +245,11 @@
       "error": "HTTP Error 403: Forbidden"
     },
     "okx_oi": {
-      "event_at": "2026-11-28T11:24:22.084000+08:00",
-      "acquired_at": "2026-11-28T11:24:22.176407+08:00",
-      "requested_at": "2026-11-28T11:24:21.832692+08:00",
+      "event_at": "2026-11-28T11:40:18.382000+08:00",
+      "acquired_at": "2026-11-28T11:40:18.469477+08:00",
+      "requested_at": "2026-11-28T11:40:18.220885+08:00",
       "source_published_at": null,
-      "age_seconds": 0.092,
+      "age_seconds": 0.087,
       "max_age_seconds": 120,
       "status": "valid",
       "endpoint": "https://www.okx.com/api/v5/public/open-interest",
@@ -259,18 +259,18 @@
       },
       "value": {
         "instrument": "BTC-USDT-SWAP",
-        "contracts": 3211082.2900000154,
-        "btc": 32110.822900000152,
-        "usd": 1923457558.2037492
+        "contracts": 3209237.010000015,
+        "btc": 32092.37010000015,
+        "usd": 1923552479.053809
       },
-      "valid_until_bjt": "2026-11-28T11:26:22.084000+08:00"
+      "valid_until_bjt": "2026-11-28T11:42:18.382000+08:00"
     },
     "okx_funding": {
-      "event_at": "2026-11-28T11:23:15.773000+08:00",
-      "acquired_at": "2026-11-28T11:24:22.186399+08:00",
-      "requested_at": "2026-11-28T11:24:21.835746+08:00",
+      "event_at": "2026-11-28T11:40:02.516000+08:00",
+      "acquired_at": "2026-11-28T11:40:18.469762+08:00",
+      "requested_at": "2026-11-28T11:40:18.223962+08:00",
       "source_published_at": null,
-      "age_seconds": 66.413,
+      "age_seconds": 15.954,
       "max_age_seconds": 300,
       "status": "valid",
       "endpoint": "https://www.okx.com/api/v5/public/funding-rate",
@@ -279,19 +279,19 @@
       },
       "value": {
         "instrument": "BTC-USDT-SWAP",
-        "rate": 6.56521587506e-05,
+        "rate": 6.83348496328e-05,
         "funding_event_at": "2026-11-28T16:00:00+08:00",
         "next_funding_at": "2026-11-29T00:00:00+08:00",
         "kind": "live indicated rate; separate from settled funding"
       },
-      "valid_until_bjt": "2026-11-28T11:28:15.773000+08:00"
+      "valid_until_bjt": "2026-11-28T11:45:02.516000+08:00"
     },
     "okx_btc_contract_taker_delta": {
-      "event_at": "2026-11-28T11:15:00+08:00",
-      "acquired_at": "2026-11-28T11:24:22.185457+08:00",
-      "requested_at": "2026-11-28T11:24:21.838695+08:00",
+      "event_at": "2026-11-28T11:35:00+08:00",
+      "acquired_at": "2026-11-28T11:40:18.472934+08:00",
+      "requested_at": "2026-11-28T11:40:18.226890+08:00",
       "source_published_at": null,
-      "age_seconds": 562.185,
+      "age_seconds": 318.473,
       "max_age_seconds": 1200,
       "status": "valid",
       "endpoint": "https://www.okx.com/api/v5/rubik/stat/taker-volume",
@@ -305,18 +305,18 @@
         "market_scope": "BTC all OKX futures/swaps, not Binance BTCUSDT or exact BTC-USDT-SWAP",
         "unit": "OKX native volume units (not verified as BTC); use dimensionless imbalance",
         "period_seconds": 300,
-        "latest_increment": 1936568.1726000002,
-        "imbalance_3h": 0.027120463828661793
+        "latest_increment": -1987994.6927999994,
+        "imbalance_3h": -0.0024306051115672487
       },
-      "valid_until_bjt": "2026-11-28T11:35:00+08:00"
+      "valid_until_bjt": "2026-11-28T11:55:00+08:00"
     },
     "coinbase_bitstamp_live_premium": {
       "status": "valid",
-      "event_at": "2026-11-28T11:24:21+08:00",
-      "acquired_at": "2026-11-28T11:24:21.867549+08:00",
+      "event_at": "2026-11-28T11:40:17+08:00",
+      "acquired_at": "2026-11-28T11:40:18.368609+08:00",
       "source_published_at": null,
       "value": {
-        "basis_points": -1.298006507571836,
+        "basis_points": -0.8665137272723111,
         "maximum_event_separation_seconds": 15
       }
     }
@@ -325,9 +325,9 @@
   "deribit_liquidation": {
     "status": "sampled_delayed_not_live",
     "latest_window": {
-      "through_exclusive": "2026-11-26T13:00:00+00:00",
-      "first_observed_utc": "2026-11-27T03:47:25+00:00",
-      "verified_trades": 22620,
+      "through_exclusive": "2026-11-27T13:00:00+00:00",
+      "first_observed_utc": "2026-11-28T03:30:59+00:00",
+      "verified_trades": 31461,
       "flags": {},
       "liquidated_trade_usd": 0.0,
       "buy_trade_usd": 0.0,
@@ -490,22 +490,22 @@
     },
     "reconciliation_errors": 0,
     "scheduler": {
-      "expected_by_clock": 69,
-      "receipts": 11,
+      "expected_by_clock": 70,
+      "receipts": 12,
       "event_receipts": {
         "push": 8,
         "schedule": 2,
-        "workflow_run": 1
+        "workflow_run": 2
       },
       "github_run_api": {
         "events": {
+          "workflow_run": 2,
           "push": 8,
-          "schedule": 2,
-          "workflow_run": 1
+          "schedule": 2
         },
         "run_status": {
           "in_progress": 1,
-          "success": 10
+          "success": 11
         },
         "queue_wait_seconds": [
           0,
@@ -518,18 +518,19 @@
           0,
           0,
           0,
+          0,
           0
         ],
-        "api_total": 11,
+        "api_total": 12,
         "truncated": false
       }
     },
     "kline_15m": {
-      "event_at": "2026-11-28T11:15:00+08:00",
-      "acquired_at": "2026-11-28T11:24:22.129232+08:00",
-      "requested_at": "2026-11-28T11:24:21.823065+08:00",
+      "event_at": "2026-11-28T11:30:00+08:00",
+      "acquired_at": "2026-11-28T11:40:18.581403+08:00",
+      "requested_at": "2026-11-28T11:40:18.213711+08:00",
       "source_published_at": null,
-      "age_seconds": 562.129,
+      "age_seconds": 618.581,
       "max_age_seconds": 960,
       "status": "valid",
       "endpoint": "https://www.bitstamp.net/api/v2/ohlc/btcusd/",
@@ -543,7 +544,7 @@
         "missing": 0,
         "duplicates": 0
       },
-      "valid_until_bjt": "2026-11-28T11:31:00+08:00"
+      "valid_until_bjt": "2026-11-28T11:46:00+08:00"
     },
     "funding_live_validity": {
       "bitstamp_price": "valid",
@@ -566,8 +567,8 @@
   "forward_research": {
     "protocol": "btc-flow-forward-2026-11-27-v1",
     "protocol_sha256": "d1e804a60fb945287833e60a8fa61bc628dbc0c5622d81e52960049929fa8fed",
-    "receipts": 20,
-    "eligible_feature_sets": 8,
+    "receipts": 21,
+    "eligible_feature_sets": 9,
     "comparisons": {
       "3h": {
         "completed_independent_samples": {
