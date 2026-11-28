@@ -75,5 +75,23 @@
     "liquidated_trade_usd": 0.0,
     "buy_trade_usd": 0.0,
     "sell_trade_usd": 0.0
+  },
+  "2026-11-27T00:00:00+00:00": {
+    "through_exclusive": "2026-11-27T01:00:00+00:00",
+    "first_observed_utc": "2026-11-28T03:30:59+00:00",
+    "verified_trades": 21145,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
+  },
+  "2026-11-27T12:00:00+00:00": {
+    "through_exclusive": "2026-11-27T13:00:00+00:00",
+    "first_observed_utc": "2026-11-28T03:30:59+00:00",
+    "verified_trades": 31461,
+    "flags": {},
+    "liquidated_trade_usd": 0.0,
+    "buy_trade_usd": 0.0,
+    "sell_trade_usd": 0.0
   }
 }

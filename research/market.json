@@ -1,8 +1,8 @@
 {
-  "observed_at_utc": "2026-11-27T07:31:57+00:00",
+  "observed_at_utc": "2026-11-28T03:30:59+00:00",
   "coverage_utc": {
-    "from": "2026-08-29T00:00:00+00:00",
-    "through": "2026-11-27T07:00:00+00:00"
+    "from": "2026-08-30T00:00:00+00:00",
+    "through": "2026-11-28T03:00:00+00:00"
   },
   "definitions": {
     "oi": "Binance USD-M BTCUSDT, hourly snapshots in BTC and USDT",
@@ -14,122 +14,124 @@
   "coverage": {
     "futures_delta_btc": {
       "n": 2136,
-      "missing": 31,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "missing": 27,
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-26T23:00:00+00:00"
     },
     "futures_volume_btc": {
       "n": 2136,
-      "missing": 31,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "missing": 27,
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-26T23:00:00+00:00"
     },
     "cvd_segment_btc": {
       "n": 2136,
-      "missing": 31,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-25T23:00:00+00:00"
+      "missing": 27,
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-26T23:00:00+00:00"
     },
     "oi_btc": {
-      "n": 2159,
-      "missing": 8,
-      "first": "2026-08-29T00:00:00+00:00",
+      "n": 2135,
+      "missing": 28,
+      "first": "2026-08-30T00:00:00+00:00",
       "last": "2026-11-26T23:00:00+00:00"
     },
     "oi_usdt": {
-      "n": 2159,
-      "missing": 8,
-      "first": "2026-08-29T00:00:00+00:00",
+      "n": 2135,
+      "missing": 28,
+      "first": "2026-08-30T00:00:00+00:00",
       "last": "2026-11-26T23:00:00+00:00"
     },
     "spot_binance_close_usdt": {
-      "n": 2167,
+      "n": 2163,
       "missing": 0,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-27T06:00:00+00:00"
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-28T02:00:00+00:00"
     },
     "coinbase_close_usd": {
-      "n": 2167,
+      "n": 2163,
       "missing": 0,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-27T06:00:00+00:00"
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-28T02:00:00+00:00"
     },
     "bitstamp_close_usd": {
-      "n": 2167,
+      "n": 2163,
       "missing": 0,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-27T06:00:00+00:00"
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-28T02:00:00+00:00"
     },
     "coinbase_vs_binance_bps": {
-      "n": 2167,
+      "n": 2163,
       "missing": 0,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-27T06:00:00+00:00"
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-28T02:00:00+00:00"
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2167,
+      "n": 2163,
       "missing": 0,
-      "first": "2026-08-29T00:00:00+00:00",
-      "last": "2026-11-27T06:00:00+00:00"
+      "first": "2026-08-30T00:00:00+00:00",
+      "last": "2026-11-28T02:00:00+00:00"
     }
   },
-  "funding_events_last_90_days": 192,
+  "funding_events_last_90_days": 189,
   "okx_funding_events_last_90_days": 271,
-  "liquidation_hours_verified": 8,
+  "liquidation_hours_verified": 10,
   "liquidation_trades_flagged": 73,
   "next_hour_price_study": {
     "futures_delta_btc": {
       "n": 2136,
-      "pearson_r": 0.02073,
-      "mean_return_pct": -0.0099,
-      "up_pct": 48.97
+      "pearson_r": 0.02122,
+      "mean_return_pct": -0.00992,
+      "up_pct": 48.923
     },
     "oi_btc": {
-      "n": 2158,
-      "pearson_r": 0.0379,
-      "mean_return_pct": -0.00969,
-      "up_pct": 49.073
+      "n": 2134,
+      "pearson_r": 0.03777,
+      "mean_return_pct": -0.01007,
+      "up_pct": 48.922
     },
     "coinbase_vs_binance_bps": {
-      "n": 2166,
-      "pearson_r": -0.01128,
-      "mean_return_pct": -0.00876,
-      "up_pct": 49.123
+      "n": 2162,
+      "pearson_r": -0.01119,
+      "mean_return_pct": -0.01029,
+      "up_pct": 48.751
     },
     "coinbase_vs_bitstamp_bps": {
-      "n": 2166,
-      "pearson_r": -0.00227,
-      "mean_return_pct": -0.00876,
-      "up_pct": 49.123
+      "n": 2162,
+      "pearson_r": 0.00193,
+      "mean_return_pct": -0.01029,
+      "up_pct": 48.751
     },
     "funding_rate": {
-      "n": 192,
-      "pearson_r": 0.1333,
-      "mean_return_pct": -0.03366,
-      "up_pct": 46.875
+      "n": 189,
+      "pearson_r": 0.12862,
+      "mean_return_pct": -0.03522,
+      "up_pct": 46.032
     },
     "okx_funding_rate": {
       "n": 271,
-      "pearson_r": 0.01317,
-      "mean_return_pct": -0.03117,
-      "up_pct": 45.018
+      "pearson_r": 0.01205,
+      "mean_return_pct": -0.03065,
+      "up_pct": 44.28
     },
     "liquidation_sample": {
-      "n": 8,
-      "pearson_r": 0.10901,
-      "mean_return_pct": 0.12642,
-      "up_pct": 37.5
+      "n": 10,
+      "pearson_r": 0.11791,
+      "mean_return_pct": 0.08137,
+      "up_pct": 40.0
     }
   },
   "research_caveat": "Descriptive only. first_observed_utc records when the row was first stored, and may precede later field backfills. Historical file arrival times are unknown and Deribit may delay public liquidation flags. These inputs were not used in simulated signals.",
   "source_error_counts": {
+    "oi": 1,
     "futures": 1,
     "funding_api": 1,
     "oi_api": 1,
     "futures_api": 1
   },
   "source_error_examples": {
-    "('futures', 1795651200)": "HTTP Error 404: Not Found",
+    "('oi', 1795737600)": "HTTP Error 404: Not Found",
+    "('futures', 1795737600)": "HTTP Error 404: Not Found",
     "('funding_api', 0)": "HTTP Error 451: ",
     "('oi_api', 0)": "HTTP Error 451: ",
     "('futures_api', 0)": "HTTP Error 451: "

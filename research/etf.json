@@ -3,13 +3,13 @@
     "recent": "https://farside.co.uk/btc/",
     "history": "https://farside.co.uk/bitcoin-etf-flow-all-data/"
   },
-  "observed_at": "2026-11-27T07:31:57.290875+00:00",
+  "observed_at": "2026-11-28T03:30:59.096608+00:00",
   "from": "2024-01-11",
-  "through": "2026-11-25",
+  "through": "2026-11-27",
   "counts": {
     "HISTORICAL_ONLY": 706,
     "NO_FLOW_ROW": 16,
-    "PENDING": 3,
+    "PENDING": 4,
     "FINAL": 13
   },
   "latest_double_verified": {
@@ -27,10 +27,10 @@
       "up_pct": 50.209
     },
     "late_entry_24h": {
-      "n": 718,
-      "pearson_r": 0.00121,
-      "mean_return_pct": 0.06427,
-      "up_pct": 51.114
+      "n": 719,
+      "pearson_r": 0.00216,
+      "mean_return_pct": 0.06279,
+      "up_pct": 51.043
     },
     "divergence_inflow_btc_down": {
       "n": 165,
@@ -39,10 +39,10 @@
       "up_pct": 50.303
     },
     "divergence_outflow_btc_up": {
-      "n": 105,
-      "pearson_r": -0.04093,
-      "mean_return_pct": 0.00522,
-      "up_pct": 49.524
+      "n": 106,
+      "pearson_r": -0.03378,
+      "mean_return_pct": -0.00426,
+      "up_pct": 49.057
     },
     "agreement_inflow_btc_up": {
       "n": 255,
@@ -142,10 +142,10 @@
         "up_pct": 50.667
       },
       "late_entry_24h": {
-        "n": 224,
-        "pearson_r": -0.01198,
-        "mean_return_pct": -0.16459,
-        "up_pct": 48.661
+        "n": 225,
+        "pearson_r": -0.00987,
+        "mean_return_pct": -0.16831,
+        "up_pct": 48.444
       },
       "divergence_inflow_btc_down": {
         "n": 32,
@@ -154,10 +154,10 @@
         "up_pct": 62.5
       },
       "divergence_outflow_btc_up": {
-        "n": 36,
-        "pearson_r": -0.08461,
-        "mean_return_pct": -0.1302,
-        "up_pct": 52.778
+        "n": 37,
+        "pearson_r": -0.06637,
+        "mean_return_pct": -0.1537,
+        "up_pct": 51.351
       },
       "agreement_inflow_btc_up": {
         "n": 77,
@@ -174,7 +174,7 @@
     }
   },
   "page_sha256": {
-    "recent": "3556e3c0299ad84814dd0b5d291227c3554bc17759645c686ef8b7de6032330d",
-    "history": "f397786a3e17847e9df7e40ba974e758b249bff22c5c0941d6ef7a746d401a12"
+    "recent": "caaefb345b93d1615d344faa46c1231106b8ff3645589c7ad0e2b8ee66c77db2",
+    "history": "7a31c69e8a58d8643e12884dfc8e411df14e15628531dff5efbe065b2c8c0d6a"
   }
 }
