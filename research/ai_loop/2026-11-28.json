@@ -1,0 +1,85 @@
+{
+  "schema": "btc_ai_loop_v1",
+  "date": "2026-11-28",
+  "observed_at_bjt": "2026-11-28T19:52:36.762+08:00",
+  "sources": [
+    "btc_daily.json",
+    "research/ops/daily/2026-11-28.json",
+    "research/ops/forward_progress.json",
+    "research/ai_loop/2026-11-27.json",
+    "latest.json",
+    "BTC plugin"
+  ],
+  "snapshot": {
+    "daily_generated": "2026-11-28T19:18:57.557963+08:00",
+    "latest_json_close": "2026-11-28T11:30:00+08:00",
+    "independent_quote": 59182.97,
+    "quote_time": "2026-11-28T19:52:26+08:00",
+    "quote_age_at_receipt": 10.762,
+    "latest_close": "2026-11-28T19:45:00+08:00",
+    "validation": {
+      "count": 192,
+      "duplicates": 0,
+      "missing": 0,
+      "bad_intervals": 0,
+      "invalid_ohlcv": 0
+    },
+    "paper_today": {
+      "expected": 25,
+      "valid": 15,
+      "coverage_pct": 60
+    },
+    "prior_day": {
+      "expected": 12,
+      "valid": 6
+    },
+    "eligible_features": 11,
+    "completed_development": {
+      "h3": 1,
+      "h6": 1
+    },
+    "completed_forward": 0
+  },
+  "prior_hypotheses": [
+    {
+      "id": "AI-20261127-01",
+      "status": "pending_unverified_trigger_scan",
+      "reason": "Receipt directory listed and latest receipt read, full pair scan exceeded tool call budget. No claim of zero triggers or completed outcomes. Formation observation excluded. Price change between research quotes -3.96% is descriptive only."
+    }
+  ],
+  "analysis": {
+    "historical_snapshot": {
+      "time": "2026-11-28T19:18:57+08:00",
+      "okx_oi_btc": 32388.3616,
+      "okx_indicated_funding": 0.0000651097733149,
+      "okx_3h_imbalance": -0.08311826086779997,
+      "binance_spot_increment_btc": 4.94391
+    },
+    "interpretation": "Positive indicated funding and negative taker imbalance coexist; different measurement windows and scopes, no causal or predictive inference. All expired at research time. ETF daily interface still Nov25 despite earlier conversation reporting Nov27 final; not independently revalidated this run.",
+    "quality": {
+      "scheduler_expected": 116,
+      "receipts": 20,
+      "scheduled": 3,
+      "push": 14,
+      "binance_direct_failures": 20,
+      "secondary_valid": 5,
+      "secondary_stale": 2,
+      "secondary_perp_coverage_pct": 33.7662337662,
+      "median_publish_delay_seconds": 844.615396
+    },
+    "new_backtest_executed": false
+  },
+  "hypotheses": [],
+  "weekly_summary": {
+    "registered": 1,
+    "confirmed": 0,
+    "falsified": 0,
+    "pending": 1,
+    "verified_completed_ai_samples": null
+  },
+  "next_steps": [
+    "Scan archived receipt pairs in bounded batches, apply frozen trigger without changing thresholds, distinguish missing data from non-trigger.",
+    "Investigate missing slot publication and Binance HTTP451 without modifying frozen rules.",
+    "No strategy promotion."
+  ]
+}
